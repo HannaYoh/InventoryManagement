@@ -37,7 +37,7 @@
             this.lblForgotPassword = new System.Windows.Forms.Label();
             this.lblNewAccount = new System.Windows.Forms.Label();
             this.lblPassword = new System.Windows.Forms.Label();
-            this.lblUserEmail = new System.Windows.Forms.Label();
+            this.lblEmail = new System.Windows.Forms.Label();
             this.lblWelcomeBack = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -53,7 +53,7 @@
             this.panel1.Controls.Add(this.lblForgotPassword);
             this.panel1.Controls.Add(this.lblNewAccount);
             this.panel1.Controls.Add(this.lblPassword);
-            this.panel1.Controls.Add(this.lblUserEmail);
+            this.panel1.Controls.Add(this.lblEmail);
             this.panel1.Controls.Add(this.lblWelcomeBack);
             this.panel1.Location = new System.Drawing.Point(30, 23);
             this.panel1.Name = "panel1";
@@ -85,7 +85,7 @@
             // 
             // btnLogin
             // 
-            this.btnLogin.BackColor = System.Drawing.SystemColors.Control;
+            this.btnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(46)))), ((int)(((byte)(46)))));
             this.btnLogin.Location = new System.Drawing.Point(94, 301);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(194, 37);
@@ -115,9 +115,9 @@
             this.lblForgotPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblForgotPassword.Location = new System.Drawing.Point(139, 354);
             this.lblForgotPassword.Name = "lblForgotPassword";
-            this.lblForgotPassword.Size = new System.Drawing.Size(109, 16);
+            this.lblForgotPassword.Size = new System.Drawing.Size(116, 16);
             this.lblForgotPassword.TabIndex = 4;
-            this.lblForgotPassword.Text = "Forgot Password";
+            this.lblForgotPassword.Text = "Forgot Password?";
             // 
             // lblNewAccount
             // 
@@ -139,21 +139,21 @@
             this.lblPassword.TabIndex = 2;
             this.lblPassword.Text = "Password";
             // 
-            // lblUserEmail
+            // lblEmail
             // 
-            this.lblUserEmail.AutoSize = true;
-            this.lblUserEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUserEmail.Location = new System.Drawing.Point(67, 88);
-            this.lblUserEmail.Name = "lblUserEmail";
-            this.lblUserEmail.Size = new System.Drawing.Size(83, 16);
-            this.lblUserEmail.TabIndex = 1;
-            this.lblUserEmail.Text = "User Email";
+            this.lblEmail.AutoSize = true;
+            this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmail.Location = new System.Drawing.Point(67, 88);
+            this.lblEmail.Name = "lblEmail";
+            this.lblEmail.Size = new System.Drawing.Size(46, 16);
+            this.lblEmail.TabIndex = 1;
+            this.lblEmail.Text = "Email";
             // 
             // lblWelcomeBack
             // 
             this.lblWelcomeBack.AutoSize = true;
             this.lblWelcomeBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblWelcomeBack.Location = new System.Drawing.Point(67, 34);
+            this.lblWelcomeBack.Location = new System.Drawing.Point(79, 34);
             this.lblWelcomeBack.Name = "lblWelcomeBack";
             this.lblWelcomeBack.Size = new System.Drawing.Size(221, 36);
             this.lblWelcomeBack.TabIndex = 0;
@@ -185,7 +185,7 @@
         private System.Windows.Forms.Label lblForgotPassword;
         private System.Windows.Forms.Label lblNewAccount;
         private System.Windows.Forms.Label lblPassword;
-        private System.Windows.Forms.Label lblUserEmail;
+        private System.Windows.Forms.Label lblEmail;
         private System.Windows.Forms.Label lblWelcomeBack;
     }
 }

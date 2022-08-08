@@ -30,13 +30,13 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btnViewReport = new System.Windows.Forms.Button();
-            this.btnAddStaff = new System.Windows.Forms.Button();
-            this.lblAdmin = new System.Windows.Forms.Label();
+            this.btnManageStaff = new System.Windows.Forms.Button();
+            this.btnSupplier = new System.Windows.Forms.Button();
+            this.lblIMS = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblLogout = new System.Windows.Forms.Label();
+            this.lblName = new System.Windows.Forms.Label();
+            this.lblDashboard = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
@@ -51,82 +51,86 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.panel2.Controls.Add(this.btnViewReport);
-            this.panel2.Controls.Add(this.btnAddStaff);
-            this.panel2.Controls.Add(this.lblAdmin);
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+            this.panel2.Controls.Add(this.btnManageStaff);
+            this.panel2.Controls.Add(this.btnSupplier);
+            this.panel2.Controls.Add(this.lblIMS);
             this.panel2.Location = new System.Drawing.Point(3, 4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(265, 503);
             this.panel2.TabIndex = 1;
             // 
-            // btnViewReport
+            // btnManageStaff
             // 
-            this.btnViewReport.Location = new System.Drawing.Point(3, 219);
-            this.btnViewReport.Name = "btnViewReport";
-            this.btnViewReport.Size = new System.Drawing.Size(259, 56);
-            this.btnViewReport.TabIndex = 2;
-            this.btnViewReport.Text = "View Report";
-            this.btnViewReport.UseVisualStyleBackColor = true;
+            this.btnManageStaff.Location = new System.Drawing.Point(3, 219);
+            this.btnManageStaff.Name = "btnManageStaff";
+            this.btnManageStaff.Size = new System.Drawing.Size(259, 56);
+            this.btnManageStaff.TabIndex = 2;
+            this.btnManageStaff.Text = "Manage Staff";
+            this.btnManageStaff.UseVisualStyleBackColor = true;
             // 
-            // btnAddStaff
+            // btnSupplier
             // 
-            this.btnAddStaff.Location = new System.Drawing.Point(3, 154);
-            this.btnAddStaff.Name = "btnAddStaff";
-            this.btnAddStaff.Size = new System.Drawing.Size(259, 59);
-            this.btnAddStaff.TabIndex = 1;
-            this.btnAddStaff.Text = "Add Staff";
-            this.btnAddStaff.UseVisualStyleBackColor = true;
+            this.btnSupplier.Location = new System.Drawing.Point(3, 154);
+            this.btnSupplier.Name = "btnSupplier";
+            this.btnSupplier.Size = new System.Drawing.Size(259, 59);
+            this.btnSupplier.TabIndex = 1;
+            this.btnSupplier.Text = "Supplier";
+            this.btnSupplier.UseVisualStyleBackColor = true;
             // 
-            // lblAdmin
+            // lblIMS
             // 
-            this.lblAdmin.AutoSize = true;
-            this.lblAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAdmin.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.lblAdmin.Location = new System.Drawing.Point(89, 38);
-            this.lblAdmin.Name = "lblAdmin";
-            this.lblAdmin.Size = new System.Drawing.Size(81, 39);
-            this.lblAdmin.TabIndex = 0;
-            this.lblAdmin.Text = "IMS";
-            this.lblAdmin.Click += new System.EventHandler(this.lblAdmin_Click);
+            this.lblIMS.AutoSize = true;
+            this.lblIMS.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIMS.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.lblIMS.Location = new System.Drawing.Point(89, 38);
+            this.lblIMS.Name = "lblIMS";
+            this.lblIMS.Size = new System.Drawing.Size(77, 38);
+            this.lblIMS.TabIndex = 0;
+            this.lblIMS.Text = "IMS";
+            this.lblIMS.Click += new System.EventHandler(this.lblAdmin_Click);
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.SystemColors.Control;
-            this.panel3.Controls.Add(this.label3);
-            this.panel3.Controls.Add(this.label2);
-            this.panel3.Controls.Add(this.label1);
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(81)))), ((int)(((byte)(91)))));
+            this.panel3.Controls.Add(this.lblLogout);
+            this.panel3.Controls.Add(this.lblName);
+            this.panel3.Controls.Add(this.lblDashboard);
             this.panel3.Location = new System.Drawing.Point(274, 4);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(647, 52);
             this.panel3.TabIndex = 2;
             // 
-            // label1
+            // lblLogout
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(48, 17);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(44, 16);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "label1";
+            this.lblLogout.AutoSize = true;
+            this.lblLogout.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.lblLogout.Location = new System.Drawing.Point(562, 17);
+            this.lblLogout.Name = "lblLogout";
+            this.lblLogout.Size = new System.Drawing.Size(48, 16);
+            this.lblLogout.TabIndex = 2;
+            this.lblLogout.Text = "Logout";
             // 
-            // label2
+            // lblName
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(480, 17);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(44, 16);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "label2";
+            this.lblName.AutoSize = true;
+            this.lblName.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.lblName.Location = new System.Drawing.Point(480, 17);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(44, 16);
+            this.lblName.TabIndex = 1;
+            this.lblName.Text = "Name";
             // 
-            // label3
+            // lblDashboard
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(562, 17);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(44, 16);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "label3";
+            this.lblDashboard.AutoSize = true;
+            this.lblDashboard.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDashboard.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.lblDashboard.Location = new System.Drawing.Point(46, 10);
+            this.lblDashboard.Name = "lblDashboard";
+            this.lblDashboard.Size = new System.Drawing.Size(108, 25);
+            this.lblDashboard.TabIndex = 0;
+            this.lblDashboard.Text = "Dashboard";
             // 
             // AdminPage
             // 
@@ -150,12 +154,12 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button btnViewReport;
-        private System.Windows.Forms.Button btnAddStaff;
-        private System.Windows.Forms.Label lblAdmin;
+        private System.Windows.Forms.Button btnManageStaff;
+        private System.Windows.Forms.Button btnSupplier;
+        private System.Windows.Forms.Label lblIMS;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblLogout;
+        private System.Windows.Forms.Label lblName;
+        private System.Windows.Forms.Label lblDashboard;
     }
 }
