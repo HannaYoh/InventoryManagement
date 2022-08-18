@@ -59,7 +59,19 @@ namespace InventoryManagement
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-
+            errorProvider1.Clear();
+            if (txtEmail.Text == "")
+            {
+                errorProvider1.SetError(txtEmail, "Requiered");
+            }
+            else if (txtPassword.Text == "")
+            {
+                errorProvider1.SetError(txtPassword, "Requiered");
+            }
+            else if (!rbAdmin.Checked && !rbStaff.Checked)
+            {
+                errorProvider1.SetError(groupBox1, "Admin or Staff must be selcted");
+            }
         }
 
         private void label5_Click(object sender, EventArgs e)
