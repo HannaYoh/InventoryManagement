@@ -98,8 +98,8 @@ namespace InventoryManagement
 
         private void label6_Click(object sender, EventArgs e)
         {
-            AdminPage Admin = new AdminPage();
-            Admin.Show();
+            Signup signup = new Signup();
+            signup.Show();
             Hide();
         }
     }

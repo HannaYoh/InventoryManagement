@@ -23,3 +23,4 @@ C:\Users\Administrator\source\repos\InventoryManagement\InventoryManagement\Inve
 C:\Users\Administrator\source\repos\InventoryManagement\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.csproj.CoreCompileInputs.cache
 C:\Users\Administrator\source\repos\InventoryManagement\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.exe
 C:\Users\Administrator\source\repos\InventoryManagement\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.pdb
+C:\Users\Administrator\source\repos\InventoryManagement\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.Signup.resources
