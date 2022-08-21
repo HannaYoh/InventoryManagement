@@ -36,12 +36,12 @@ namespace InventoryManagement
 
         private void textBox1_Enter(object sender, EventArgs e)
         {
-            textBox1.Text = "";
+            txtProducts.Text = "";
         }
 
         private void textBox1_Leave(object sender, EventArgs e)
         {
-            textBox1.Text = "Search for Products";
+            txtProducts.Text = "Search for Products";
 
         }
 
@@ -221,7 +221,10 @@ namespace InventoryManagement
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
+            errorProvider1.Clear();
             panelSubMenu.Visible = false;
+            if (txtProducts.Text == "" || txtProducts.Text == "Search for Products")
+                errorProvider1.SetError(pictureBox3,"Enter Product!");
 
         }
 
@@ -238,12 +241,12 @@ namespace InventoryManagement
 
         private void textBox1_Enter_1(object sender, EventArgs e)
         {
-            textBox1.Text = "";
+            txtProducts.Text = "";
         }
 
         private void textBox1_Leave_1(object sender, EventArgs e)
         {
-            textBox1.Text = "Search for Products";
+            txtProducts.Text = "Search for Products";
         }
 
         private void label4_Click_1(object sender, EventArgs e)

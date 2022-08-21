@@ -30,3 +30,4 @@ C:\Users\Administrator\source\repos\InventoryManagement\InventoryManagement\Inve
 C:\Users\Administrator\source\repos\InventoryManagement\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.AdminDiscount.resources
 C:\Users\Administrator\source\repos\InventoryManagement\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.AdminInventory.resources
 C:\Users\Administrator\source\repos\InventoryManagement\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.AdminManageStaff.resources
+C:\Users\Administrator\source\repos\InventoryManagement\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.AdminRecentActivities.resources
