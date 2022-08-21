@@ -48,7 +48,6 @@
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.lblPwd = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -86,6 +85,8 @@
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(225, 26);
             this.txtName.TabIndex = 7;
+            this.txtName.Enter += new System.EventHandler(this.txtName_Enter);
+            this.txtName.Leave += new System.EventHandler(this.txtName_Leave);
             // 
             // txtEmail
             // 
@@ -276,17 +277,6 @@
             this.label1.TabIndex = 24;
             this.label1.Text = "Email";
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(457, 198);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(69, 17);
-            this.label3.TabIndex = 25;
-            this.label3.Text = "Password";
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -370,7 +360,7 @@
             this.dateTimePicker1.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
             this.dateTimePicker1.CalendarTitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
             this.dateTimePicker1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(460, 218);
+            this.dateTimePicker1.Location = new System.Drawing.Point(460, 221);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(225, 23);
             this.dateTimePicker1.TabIndex = 33;
@@ -404,7 +394,6 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblPwd);
             this.Controls.Add(this.comboBox2);
@@ -454,7 +443,6 @@
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.Label lblPwd;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
