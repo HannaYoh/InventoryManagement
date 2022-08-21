@@ -15,6 +15,7 @@ namespace InventoryManagement
         public AdminPage()
         {
             InitializeComponent();
+            openChildForm(new AdminDashboardChild());
         }
 
 
@@ -153,14 +154,14 @@ namespace InventoryManagement
         private void button2_Click_1(object sender, EventArgs e)
         {
             showSubMenu();
-            lblActiveTab.Text = "Products";
+            //lblActiveTab.Text = "Products";
         }
 
         private void button4_Click_1(object sender, EventArgs e)
         {
             panelSubMenu.Visible = false;
             lblActiveTab.Text = "Manage Staff";
-
+            openChildForm(new AdminManageStaff());
 
         }
 
@@ -178,20 +179,21 @@ namespace InventoryManagement
         {
             panelSubMenu.Visible = false;
             lblActiveTab.Text = "Products - Inventory";
-
+            openChildForm(new AdminInventory());
         }
 
         private void button6_Click_1(object sender, EventArgs e)
         {
             panelSubMenu.Visible = false;
             lblActiveTab.Text = "Products - Discount";
-
+            openChildForm(new AdminDiscount());
         }
 
         private void btnDashboard_Click_3(object sender, EventArgs e)
         {
             panelSubMenu.Visible = false;
             lblActiveTab.Text = "Dashboard";
+            openChildForm(new AdminDashboardChild());
 
         }
 
@@ -199,7 +201,7 @@ namespace InventoryManagement
         {
             panelSubMenu.Visible = false;
             lblActiveTab.Text = "Orders";
-
+            openChildForm(new AdminOrders());
 
         }
 
@@ -207,6 +209,7 @@ namespace InventoryManagement
         {
             panelSubMenu.Visible = false;
             lblActiveTab.Text = "Supplier";
+            openChildForm(new AdminSupplier());
 
         }
 
@@ -248,6 +251,21 @@ namespace InventoryManagement
             Login login = new Login();
             login.Show();
             Hide();
+        }
+
+        private Form activeForm = null;
+        private void openChildForm(Form childForm)
+        {
+            if(activeForm != null)
+                activeForm.Close();
+            activeForm = childForm;
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            panelChildForm.Controls.Add(childForm);
+            panelChildForm.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();   
         }
     }
 }

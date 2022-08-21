@@ -47,11 +47,47 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdminDashboardChild.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminDashboardChild.Designer.cs">
+      <DependentUpon>AdminDashboardChild.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminDiscount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminDiscount.Designer.cs">
+      <DependentUpon>AdminDiscount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminInventory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminInventory.Designer.cs">
+      <DependentUpon>AdminInventory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminManageStaff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminManageStaff.Designer.cs">
+      <DependentUpon>AdminManageStaff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminOrders.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminOrders.Designer.cs">
+      <DependentUpon>AdminOrders.cs</DependentUpon>
+    </Compile>
     <Compile Include="AdminPage.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="AdminPage.Designer.cs">
       <DependentUpon>AdminPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminSupplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminSupplier.Designer.cs">
+      <DependentUpon>AdminSupplier.cs</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -73,8 +109,26 @@
     <Compile Include="Signup.Designer.cs">
       <DependentUpon>Signup.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AdminDashboardChild.resx">
+      <DependentUpon>AdminDashboardChild.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminDiscount.resx">
+      <DependentUpon>AdminDiscount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminInventory.resx">
+      <DependentUpon>AdminInventory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminManageStaff.resx">
+      <DependentUpon>AdminManageStaff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminOrders.resx">
+      <DependentUpon>AdminOrders.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AdminPage.resx">
       <DependentUpon>AdminPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminSupplier.resx">
+      <DependentUpon>AdminSupplier.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
