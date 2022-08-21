@@ -77,7 +77,8 @@ namespace InventoryManagement
         private void label5_Click(object sender, EventArgs e)
         {
             lblPwd.Text = "Backup Password";
-
+            txtPassword.Text = "";
+            txtEmail.Text = "";
             label5.Visible = false;
             label3.Visible = true; 
             
@@ -91,7 +92,8 @@ namespace InventoryManagement
         private void label3_Click_1(object sender, EventArgs e)
         {
             lblPwd.Text = "Password";
-
+            txtPassword.Text = "";
+            txtEmail.Text = "";
             label5.Visible = true;
             label3.Visible = false;
         }

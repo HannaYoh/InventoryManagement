@@ -113,5 +113,15 @@ namespace InventoryManagement
             login.Show();
             Hide();
         }
+
+        private void txtName_Enter(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void txtName_Leave(object sender, EventArgs e)
+        {
+
+        }
     }
 }

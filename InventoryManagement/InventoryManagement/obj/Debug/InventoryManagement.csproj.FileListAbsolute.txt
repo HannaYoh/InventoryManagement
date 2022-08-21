@@ -24,3 +24,10 @@ C:\Users\Administrator\source\repos\InventoryManagement\InventoryManagement\Inve
 C:\Users\Administrator\source\repos\InventoryManagement\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.exe
 C:\Users\Administrator\source\repos\InventoryManagement\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.pdb
 C:\Users\Administrator\source\repos\InventoryManagement\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.Signup.resources
+C:\Users\Administrator\source\repos\InventoryManagement\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.AdminDashboardChild.resources
+C:\Users\Administrator\source\repos\InventoryManagement\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.AdminOrders.resources
+C:\Users\Administrator\source\repos\InventoryManagement\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.AdminSupplier.resources
+C:\Users\Administrator\source\repos\InventoryManagement\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.AdminDiscount.resources
+C:\Users\Administrator\source\repos\InventoryManagement\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.AdminInventory.resources
+C:\Users\Administrator\source\repos\InventoryManagement\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.AdminManageStaff.resources
+C:\Users\Administrator\source\repos\InventoryManagement\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.AdminRecentActivities.resources
