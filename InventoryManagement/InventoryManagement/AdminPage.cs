@@ -160,6 +160,11 @@ namespace InventoryManagement
         private void button4_Click_1(object sender, EventArgs e)
         {
             panelSubMenu.Visible = false;
+            pnlDashboardActive.Visible = false;
+            pnlManageStaffActive.Visible = true;
+            pnlOrdersActive.Visible = false;
+            pnlProductsActive.Visible = false;
+            pnlSupplierActive.Visible = false;
             lblActiveTab.Text = "Manage Staff";
             openChildForm(new AdminManageStaff());
 
@@ -178,6 +183,12 @@ namespace InventoryManagement
         private void button5_Click(object sender, EventArgs e)
         {
             panelSubMenu.Visible = false;
+            pnlDashboardActive.Visible = false;
+            pnlManageStaffActive.Visible = false;
+            pnlOrdersActive.Visible = false;
+            pnlProductsActive.Visible = true;
+            pnlSupplierActive.Visible = false;
+
             lblActiveTab.Text = "Products - Inventory";
             openChildForm(new AdminInventory());
         }
@@ -185,6 +196,11 @@ namespace InventoryManagement
         private void button6_Click_1(object sender, EventArgs e)
         {
             panelSubMenu.Visible = false;
+            pnlDashboardActive.Visible = false;
+            pnlManageStaffActive.Visible = false;
+            pnlOrdersActive.Visible = false;
+            pnlProductsActive.Visible = true;
+            pnlSupplierActive.Visible = false;
             lblActiveTab.Text = "Products - Discount";
             openChildForm(new AdminDiscount());
         }
@@ -192,6 +208,12 @@ namespace InventoryManagement
         private void btnDashboard_Click_3(object sender, EventArgs e)
         {
             panelSubMenu.Visible = false;
+            pnlDashboardActive.Visible = true;
+            pnlManageStaffActive.Visible = false;
+            pnlOrdersActive.Visible = false;
+            pnlProductsActive.Visible = false;
+            pnlSupplierActive.Visible = false;
+            
             lblActiveTab.Text = "Dashboard";
             openChildForm(new AdminDashboardChild());
 
@@ -200,6 +222,12 @@ namespace InventoryManagement
         private void button1_Click_2(object sender, EventArgs e)
         {
             panelSubMenu.Visible = false;
+            pnlDashboardActive.Visible = false;
+            pnlManageStaffActive.Visible = false;
+            pnlOrdersActive.Visible = true;
+            pnlProductsActive.Visible = false;
+            pnlSupplierActive.Visible = false;
+
             lblActiveTab.Text = "Orders";
             openChildForm(new AdminOrders());
 
@@ -208,6 +236,11 @@ namespace InventoryManagement
         private void button3_Click_1(object sender, EventArgs e)
         {
             panelSubMenu.Visible = false;
+            pnlDashboardActive.Visible = false;
+            pnlManageStaffActive.Visible = false;
+            pnlOrdersActive.Visible = false;
+            pnlProductsActive.Visible = false;
+            pnlSupplierActive.Visible = true;
             lblActiveTab.Text = "Supplier";
             openChildForm(new AdminSupplier());
 

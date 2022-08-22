@@ -65,6 +65,10 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panelChildForm = new System.Windows.Forms.Panel();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.pnlOrdersActive = new System.Windows.Forms.Panel();
+            this.pnlProductsActive = new System.Windows.Forms.Panel();
+            this.pnlSupplierActive = new System.Windows.Forms.Panel();
+            this.pnlManageStaffActive = new System.Windows.Forms.Panel();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             this.panel3.SuspendLayout();
@@ -150,6 +154,8 @@
             // 
             this.panel3.AutoScroll = true;
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+            this.panel3.Controls.Add(this.pnlProductsActive);
+            this.panel3.Controls.Add(this.pnlOrdersActive);
             this.panel3.Controls.Add(this.panel5);
             this.panel3.Controls.Add(this.panelSubMenu);
             this.panel3.Controls.Add(this.pnlDashboardActive);
@@ -168,6 +174,8 @@
             // 
             // panel5
             // 
+            this.panel5.Controls.Add(this.pnlManageStaffActive);
+            this.panel5.Controls.Add(this.pnlSupplierActive);
             this.panel5.Controls.Add(this.pictureBox8);
             this.panel5.Controls.Add(this.pictureBox7);
             this.panel5.Controls.Add(this.button4);
@@ -516,6 +524,42 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
+            // pnlOrdersActive
+            // 
+            this.pnlOrdersActive.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(46)))), ((int)(((byte)(46)))));
+            this.pnlOrdersActive.Location = new System.Drawing.Point(0, 39);
+            this.pnlOrdersActive.Name = "pnlOrdersActive";
+            this.pnlOrdersActive.Size = new System.Drawing.Size(10, 39);
+            this.pnlOrdersActive.TabIndex = 19;
+            this.pnlOrdersActive.Visible = false;
+            // 
+            // pnlProductsActive
+            // 
+            this.pnlProductsActive.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(46)))), ((int)(((byte)(46)))));
+            this.pnlProductsActive.Location = new System.Drawing.Point(0, 78);
+            this.pnlProductsActive.Name = "pnlProductsActive";
+            this.pnlProductsActive.Size = new System.Drawing.Size(10, 42);
+            this.pnlProductsActive.TabIndex = 19;
+            this.pnlProductsActive.Visible = false;
+            // 
+            // pnlSupplierActive
+            // 
+            this.pnlSupplierActive.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(46)))), ((int)(((byte)(46)))));
+            this.pnlSupplierActive.Location = new System.Drawing.Point(0, 6);
+            this.pnlSupplierActive.Name = "pnlSupplierActive";
+            this.pnlSupplierActive.Size = new System.Drawing.Size(10, 39);
+            this.pnlSupplierActive.TabIndex = 19;
+            this.pnlSupplierActive.Visible = false;
+            // 
+            // pnlManageStaffActive
+            // 
+            this.pnlManageStaffActive.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(46)))), ((int)(((byte)(46)))));
+            this.pnlManageStaffActive.Location = new System.Drawing.Point(0, 51);
+            this.pnlManageStaffActive.Name = "pnlManageStaffActive";
+            this.pnlManageStaffActive.Size = new System.Drawing.Size(10, 39);
+            this.pnlManageStaffActive.TabIndex = 19;
+            this.pnlManageStaffActive.Visible = false;
+            // 
             // AdminPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -592,5 +636,9 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panelChildForm;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.Panel pnlProductsActive;
+        private System.Windows.Forms.Panel pnlOrdersActive;
+        private System.Windows.Forms.Panel pnlManageStaffActive;
+        private System.Windows.Forms.Panel pnlSupplierActive;
     }
 }
