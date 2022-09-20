@@ -31,3 +31,12 @@ C:\Users\Administrator\source\repos\InventoryManagement\InventoryManagement\Inve
 C:\Users\Administrator\source\repos\InventoryManagement\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.AdminInventory.resources
 C:\Users\Administrator\source\repos\InventoryManagement\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.AdminManageStaff.resources
 C:\Users\Administrator\source\repos\InventoryManagement\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.AdminRecentActivities.resources
+C:\Users\hanyo\source\repos\InventoryManagement\InventoryManagement\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.AdminDashboardChild.resources
+C:\Users\hanyo\source\repos\InventoryManagement\InventoryManagement\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.AdminDiscount.resources
+C:\Users\hanyo\source\repos\InventoryManagement\InventoryManagement\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.AdminInventory.resources
+C:\Users\hanyo\source\repos\InventoryManagement\InventoryManagement\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.AdminManageStaff.resources
+C:\Users\hanyo\source\repos\InventoryManagement\InventoryManagement\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.AdminOrders.resources
+C:\Users\hanyo\source\repos\InventoryManagement\InventoryManagement\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.AdminRecentActivities.resources
+C:\Users\hanyo\source\repos\InventoryManagement\InventoryManagement\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.AdminSupplier.resources
+C:\Users\hanyo\source\repos\InventoryManagement\InventoryManagement\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.Login.resources
+C:\Users\hanyo\source\repos\InventoryManagement\InventoryManagement\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.Signup.resources

@@ -12,6 +12,7 @@ namespace InventoryManagement
 {
     public partial class Login : Form
     {
+       Models.Admin admin = new Models.Admin();
         public Login()
         {
             InitializeComponent();
@@ -71,6 +72,32 @@ namespace InventoryManagement
             else if (!rbAdmin.Checked && !rbStaff.Checked)
             {
                 errorProvider1.SetError(groupBox1, "Admin or Staff must be selcted");
+            }
+            else
+            {
+                if (rbAdmin.Checked)
+                {
+                    admin.Email = txtEmail.Text;
+                    admin.Password = txtPassword.Text;
+                    bool status = admin.adminAuthentication();
+                    if (status)
+                    {
+                        AdminPage adminPage = new AdminPage();
+                        adminPage.Show();
+                        Hide();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Invalid input");
+                        txtEmail.Clear();
+                        txtPassword.Clear();
+                    }
+
+                }
+                else
+                {
+                    MessageBox.Show("Staff Checked");
+                }
             }
         }
 
