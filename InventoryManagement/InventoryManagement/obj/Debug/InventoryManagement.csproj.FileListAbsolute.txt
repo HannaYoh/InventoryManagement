@@ -40,3 +40,4 @@ C:\Users\hanyo\source\repos\InventoryManagement\InventoryManagement\InventoryMan
 C:\Users\hanyo\source\repos\InventoryManagement\InventoryManagement\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.AdminSupplier.resources
 C:\Users\hanyo\source\repos\InventoryManagement\InventoryManagement\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.Login.resources
 C:\Users\hanyo\source\repos\InventoryManagement\InventoryManagement\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.Signup.resources
+C:\Users\hanyo\source\repos\InventoryManagement\InventoryManagement\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.AddInventoryForm.resources
