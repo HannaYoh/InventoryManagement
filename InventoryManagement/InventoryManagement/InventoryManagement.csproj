@@ -49,6 +49,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddInventoryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddInventoryForm.Designer.cs">
+      <DependentUpon>AddInventoryForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="AdminDashboardChild.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -117,6 +123,9 @@
     <Compile Include="Signup.Designer.cs">
       <DependentUpon>Signup.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AddInventoryForm.resx">
+      <DependentUpon>AddInventoryForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AdminDashboardChild.resx">
       <DependentUpon>AdminDashboardChild.cs</DependentUpon>
     </EmbeddedResource>

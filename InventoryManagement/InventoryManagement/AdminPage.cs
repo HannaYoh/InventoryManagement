@@ -303,5 +303,15 @@ namespace InventoryManagement
             childForm.BringToFront();
             childForm.Show();   
         }
+
+        private void pictureBox10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panelChildForm_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
