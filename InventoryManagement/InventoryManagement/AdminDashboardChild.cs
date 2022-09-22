@@ -20,12 +20,18 @@ namespace InventoryManagement
 
         private void AdminDashboardChild_Load(object sender, EventArgs e)
         {
-            dtLowOnStock.DataSource = null;
-            dtLowOnStock.DataSource = inventory.displayLowOnStock();
+            
+            List<Models.Inventory> list = new List<Models.Inventory>();
+            list = inventory.displayLowOnStock();
+            foreach (var product in list)
+            {
+                dtLowOnStock.Rows.Add(new object[]
+                {
+                    product.ProductName,
+                    product.AmountAvailable
+                });
 
-            /*int n = dtLowOnStock.Rows.Add();
-            dtLowOnStock.Rows[n].Cells[0].Value = inventory.ProductName;
-            dtLowOnStock.Rows[n].Cells[1].Value = inventory.AmountAvailable;*/
+            }
 
         }
     }
