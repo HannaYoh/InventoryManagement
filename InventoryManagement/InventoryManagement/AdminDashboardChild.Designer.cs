@@ -30,6 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminDashboardChild));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -52,6 +55,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
+            this.chartGrossRevenue = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -62,6 +66,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtLowOnStock)).BeginInit();
+            this.panel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chartGrossRevenue)).BeginInit();
             this.SuspendLayout();
             // 
             // flowLayoutPanel1
@@ -70,7 +76,7 @@
             this.flowLayoutPanel1.Controls.Add(this.panel1);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Right;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(894, 0);
-            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(259, 651);
             this.flowLayoutPanel1.TabIndex = 0;
@@ -79,7 +85,7 @@
             // 
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(4, 4);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(231, 75);
             this.panel1.TabIndex = 0;
@@ -102,7 +108,7 @@
             this.panel3.Controls.Add(this.lblTitle);
             this.panel3.Controls.Add(this.pictureBox1);
             this.panel3.Location = new System.Drawing.Point(44, 32);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(256, 66);
             this.panel3.TabIndex = 4;
@@ -135,7 +141,7 @@
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(9, 12);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(45, 46);
             this.pictureBox1.TabIndex = 0;
@@ -172,7 +178,7 @@
             this.panel4.Controls.Add(this.label3);
             this.panel4.Controls.Add(this.pictureBox2);
             this.panel4.Location = new System.Drawing.Point(323, 32);
-            this.panel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(256, 66);
             this.panel4.TabIndex = 6;
@@ -181,7 +187,7 @@
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(9, 12);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(45, 46);
             this.pictureBox2.TabIndex = 0;
@@ -194,7 +200,7 @@
             this.panel5.Controls.Add(this.label5);
             this.panel5.Controls.Add(this.pictureBox3);
             this.panel5.Location = new System.Drawing.Point(604, 32);
-            this.panel5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel5.Margin = new System.Windows.Forms.Padding(4);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(256, 66);
             this.panel5.TabIndex = 7;
@@ -227,7 +233,7 @@
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
             this.pictureBox3.Location = new System.Drawing.Point(9, 12);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(45, 46);
             this.pictureBox3.TabIndex = 0;
@@ -240,7 +246,7 @@
             this.panel6.Controls.Add(this.dtLowOnStock);
             this.panel6.Controls.Add(this.label7);
             this.panel6.Location = new System.Drawing.Point(44, 411);
-            this.panel6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel6.Margin = new System.Windows.Forms.Padding(4);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(816, 228);
             this.panel6.TabIndex = 8;
@@ -265,7 +271,7 @@
             this.dtLowOnStock.DefaultCellStyle = dataGridViewCellStyle1;
             this.dtLowOnStock.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dtLowOnStock.Location = new System.Drawing.Point(0, 32);
-            this.dtLowOnStock.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtLowOnStock.Margin = new System.Windows.Forms.Padding(4);
             this.dtLowOnStock.Name = "dtLowOnStock";
             this.dtLowOnStock.ReadOnly = true;
             this.dtLowOnStock.RowHeadersWidth = 51;
@@ -303,8 +309,9 @@
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.panel7.Controls.Add(this.chartGrossRevenue);
             this.panel7.Location = new System.Drawing.Point(44, 149);
-            this.panel7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel7.Margin = new System.Windows.Forms.Padding(4);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(816, 255);
             this.panel7.TabIndex = 9;
@@ -321,6 +328,22 @@
             this.label6.TabIndex = 10;
             this.label6.Text = "Gross Revenue";
             // 
+            // chartGrossRevenue
+            // 
+            chartArea1.Name = "ChartArea1";
+            this.chartGrossRevenue.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chartGrossRevenue.Legends.Add(legend1);
+            this.chartGrossRevenue.Location = new System.Drawing.Point(33, 3);
+            this.chartGrossRevenue.Name = "chartGrossRevenue";
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Total Sold";
+            this.chartGrossRevenue.Series.Add(series1);
+            this.chartGrossRevenue.Size = new System.Drawing.Size(708, 249);
+            this.chartGrossRevenue.TabIndex = 0;
+            this.chartGrossRevenue.Text = "chart1";
+            // 
             // AdminDashboardChild
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -334,7 +357,7 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.flowLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "AdminDashboardChild";
             this.Text = "AdminDashboardChild";
             this.Load += new System.EventHandler(this.AdminDashboardChild_Load);
@@ -353,6 +376,8 @@
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtLowOnStock)).EndInit();
+            this.panel7.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.chartGrossRevenue)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -382,5 +407,6 @@
         private System.Windows.Forms.DataGridView dtLowOnStock;
         private System.Windows.Forms.DataGridViewTextBoxColumn Product;
         private System.Windows.Forms.DataGridViewTextBoxColumn Unit;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chartGrossRevenue;
     }
 }

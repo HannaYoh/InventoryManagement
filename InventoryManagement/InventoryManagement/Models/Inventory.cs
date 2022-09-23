@@ -16,6 +16,7 @@ namespace InventoryManagement.Models
         public double WholesalePrice { get; set; }
         public string ManufactureDate { get; set; }
         public int AmountAvailable { get; set; }
+        public bool isAvailable { get; set; }
         public int SupplierId { get; set; }
 
         //methods
@@ -29,10 +30,10 @@ namespace InventoryManagement.Models
             SqlCommand cmd = new SqlCommand(query, conn);
 
             SqlDataReader reader = cmd.ExecuteReader();
-            Inventory model = new Inventory();
+           
             while (reader.Read())
             {
-                
+                Inventory model = new Inventory();
                 model.ProductName = reader["ProductName"].ToString();
                 model.AmountAvailable = Convert.ToInt32(reader["AmountAvailable"]);
 
