@@ -12,7 +12,7 @@ namespace InventoryManagement
 {
     public partial class Login : Form
     {
-       Models.Admin admin = new Models.Admin();
+       Models.Employee employee = new Models.Employee();
         public Login()
         {
             InitializeComponent();
@@ -77,9 +77,9 @@ namespace InventoryManagement
             {
                 if (rbAdmin.Checked)
                 {
-                    admin.Email = txtEmail.Text;
-                    admin.Password = txtPassword.Text;
-                    bool status = admin.adminAuthentication();
+                    employee.Email = txtEmail.Text;
+                    employee.Password = txtPassword.Text;
+                    bool status = employee.adminAuthentication();
                     if (status)
                     {
                         AdminPage adminPage = new AdminPage();

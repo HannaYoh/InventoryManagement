@@ -7,10 +7,10 @@ using System.Data.SqlClient;
 
 namespace InventoryManagement.Models
 {
-    internal class Admin : DBConnection
+    internal class Employee : DBConnection
     {
         //variables
-        public int AdminId { get; set; }
+        public int EmployeeId { get; set; }
         public string FullName { get; set; }
         public string Email { get; set; }
         public string Address { get; set; }
@@ -18,16 +18,18 @@ namespace InventoryManagement.Models
         public string Password { get; set; }
         public string BackupPassword { get; set; }
         public string Gender { get; set; }
+        public string Roll { get; set; }
         public string DateOfBirth { get; set; }
+        public int DepId { get; set; }
 
         //methods
         public bool adminAuthentication()
         {
             createConnection();
 
-            List<Admin> adminList = new List<Admin>();
+            List<Employee> adminList = new List<Employee>();
 
-            string query = "exec SelectOneAdmin @Email, @Password";
+            string query = "exec SelectAdmin @Email, @Password";
             SqlCommand cmd = new SqlCommand(query, conn);
             cmd.Parameters.AddWithValue("Email", Email);
             cmd.Parameters.AddWithValue("Password", Password);
@@ -37,7 +39,7 @@ namespace InventoryManagement.Models
 
             if (reader.Read())
             {
-                Admin temp = new Admin();
+                Employee temp = new Employee();
                 temp.Email = reader["Email"].ToString();
                 temp.Password = reader["Password"].ToString();
                 adminList.Add(temp);

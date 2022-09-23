@@ -13,6 +13,7 @@ namespace InventoryManagement
     public partial class AdminDashboardChild : Form
     {
         Models.Inventory inventory = new Models.Inventory();
+        Models.Orders orders = new Models.Orders(); 
         public AdminDashboardChild()
         {
             InitializeComponent();
@@ -20,7 +21,7 @@ namespace InventoryManagement
 
         private void AdminDashboardChild_Load(object sender, EventArgs e)
         {
-            
+            //dataGridView
             List<Models.Inventory> list = new List<Models.Inventory>();
             list = inventory.displayLowOnStock();
             foreach (var product in list)
@@ -32,6 +33,10 @@ namespace InventoryManagement
                 });
 
             }
+            //chart
+           /* chartGrossRevenue.DataSource = orders.displayGrossRevenue();
+            chartGrossRevenue.Series["Total Sold"].XValueMember = "OrderDate";
+            chartGrossRevenue.Series["Total Sold"].YValueMembers = "total";*/
 
         }
     }
