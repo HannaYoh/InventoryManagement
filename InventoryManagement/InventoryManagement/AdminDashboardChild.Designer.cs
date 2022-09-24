@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminDashboardChild));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -56,6 +56,8 @@
             this.panel7 = new System.Windows.Forms.Panel();
             this.chartGrossRevenue = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.label6 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -104,6 +106,7 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.panel3.Controls.Add(this.label9);
             this.panel3.Controls.Add(this.lblMessage);
             this.panel3.Controls.Add(this.lblTitle);
             this.panel3.Controls.Add(this.pictureBox1);
@@ -118,12 +121,12 @@
             this.lblMessage.AutoSize = true;
             this.lblMessage.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMessage.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(46)))), ((int)(((byte)(46)))));
-            this.lblMessage.Location = new System.Drawing.Point(63, 33);
+            this.lblMessage.Location = new System.Drawing.Point(84, 33);
             this.lblMessage.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblMessage.Name = "lblMessage";
-            this.lblMessage.Size = new System.Drawing.Size(75, 22);
+            this.lblMessage.Size = new System.Drawing.Size(59, 22);
             this.lblMessage.TabIndex = 5;
-            this.lblMessage.Text = "$ 00.00";
+            this.lblMessage.Text = "00.00";
             // 
             // lblTitle
             // 
@@ -150,14 +153,14 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(46)))), ((int)(((byte)(46)))));
-            this.label2.Location = new System.Drawing.Point(63, 33);
+            this.label2.Location = new System.Drawing.Point(82, 34);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(80, 22);
+            this.label2.Size = new System.Drawing.Size(60, 21);
             this.label2.TabIndex = 5;
-            this.label2.Text = " $ 00.00";
+            this.label2.Text = " 00.00";
             // 
             // label3
             // 
@@ -174,6 +177,7 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.panel4.Controls.Add(this.label8);
             this.panel4.Controls.Add(this.label2);
             this.panel4.Controls.Add(this.label3);
             this.panel4.Controls.Add(this.pictureBox2);
@@ -261,14 +265,14 @@
             this.dtLowOnStock.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Product,
             this.Unit});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(46)))), ((int)(((byte)(46)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtLowOnStock.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(46)))), ((int)(((byte)(46)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtLowOnStock.DefaultCellStyle = dataGridViewCellStyle1;
             this.dtLowOnStock.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dtLowOnStock.Location = new System.Drawing.Point(0, 32);
             this.dtLowOnStock.Margin = new System.Windows.Forms.Padding(4);
@@ -318,17 +322,19 @@
             // 
             // chartGrossRevenue
             // 
-            chartArea3.Name = "ChartArea1";
-            this.chartGrossRevenue.ChartAreas.Add(chartArea3);
-            legend3.Name = "Legend1";
-            this.chartGrossRevenue.Legends.Add(legend3);
+            chartArea1.Name = "ChartArea1";
+            this.chartGrossRevenue.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chartGrossRevenue.Legends.Add(legend1);
             this.chartGrossRevenue.Location = new System.Drawing.Point(33, 3);
             this.chartGrossRevenue.Name = "chartGrossRevenue";
             this.chartGrossRevenue.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.EarthTones;
-            series3.ChartArea = "ChartArea1";
-            series3.Legend = "Legend1";
-            series3.Name = "Total Revenue";
-            this.chartGrossRevenue.Series.Add(series3);
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series1.Legend = "Legend1";
+            series1.Name = "Total Revenue";
+            series1.YValuesPerPoint = 2;
+            this.chartGrossRevenue.Series.Add(series1);
             this.chartGrossRevenue.Size = new System.Drawing.Size(708, 249);
             this.chartGrossRevenue.TabIndex = 0;
             this.chartGrossRevenue.Text = "chart1";
@@ -344,6 +350,28 @@
             this.label6.Size = new System.Drawing.Size(184, 28);
             this.label6.TabIndex = 10;
             this.label6.Text = "Gross Revenue";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(46)))), ((int)(((byte)(46)))));
+            this.label8.Location = new System.Drawing.Point(65, 34);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(20, 21);
+            this.label8.TabIndex = 6;
+            this.label8.Text = "$";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(46)))), ((int)(((byte)(46)))));
+            this.label9.Location = new System.Drawing.Point(64, 33);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(20, 21);
+            this.label9.TabIndex = 7;
+            this.label9.Text = "$";
             // 
             // AdminDashboardChild
             // 
@@ -409,5 +437,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Product;
         private System.Windows.Forms.DataGridViewTextBoxColumn Unit;
         private System.Windows.Forms.DataVisualization.Charting.Chart chartGrossRevenue;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label8;
     }
 }

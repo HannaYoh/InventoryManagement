@@ -44,11 +44,12 @@ namespace InventoryManagement
             label4.Text = orderResult.ToString();
 
             //profit
-            /*double profitResult = orderDetail.calculateProfit();
-            label2.Text = profitResult.ToString();*/
+            decimal profitResult = orderDetail.calculateProfit();
+            label2.Text = profitResult.ToString();
 
             //earnings
-
+            decimal earningsResult = orderDetail.calculateEarnings();
+            lblMessage.Text = earningsResult.ToString();
         }
     }
 }
