@@ -69,5 +69,10 @@ namespace InventoryManagement
         {
             txtOrderId.Text = "Search Order ID"; 
         }
+
+        private void AdminOrders_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

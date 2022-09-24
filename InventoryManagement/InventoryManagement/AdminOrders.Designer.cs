@@ -50,6 +50,9 @@ namespace InventoryManagement
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox3.AutoSize = false; //Allows you to change height to have bottom padding
+            this.pictureBox3.Controls.Add(new Label()
+            { Height = 2, Dock = DockStyle.Bottom, BackColor = Color.Black });
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
             this.pictureBox3.Location = new System.Drawing.Point(335, 33);
             this.pictureBox3.Margin = new System.Windows.Forms.Padding(4);
@@ -64,6 +67,9 @@ namespace InventoryManagement
             // 
             this.txtOrderId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.txtOrderId.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtOrderId.AutoSize = false; //Allows you to change height to have bottom padding
+            this.txtOrderId.Controls.Add(new Label()
+            { Height = 2, Dock = DockStyle.Bottom, BackColor = Color.Black });
             this.txtOrderId.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtOrderId.ForeColor = System.Drawing.Color.Black;
             this.txtOrderId.Location = new System.Drawing.Point(41, 33);
@@ -106,6 +112,9 @@ namespace InventoryManagement
             // 
             this.cmbSupplier.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.cmbSupplier.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbSupplier.AutoSize = false; //Allows you to change height to have bottom padding
+            this.cmbSupplier.Controls.Add(new Label()
+            { Height = 2, Dock = DockStyle.Bottom, BackColor = Color.Black });
             this.cmbSupplier.Font = new System.Drawing.Font("Century Gothic", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbSupplier.FormattingEnabled = true;
             this.cmbSupplier.ItemHeight = 25;
@@ -172,6 +181,7 @@ namespace InventoryManagement
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "AdminOrders";
             this.Text = "AdminOrders";
+            this.Load += new System.EventHandler(this.AdminOrders_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
