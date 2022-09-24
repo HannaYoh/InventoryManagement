@@ -118,6 +118,7 @@
     </Compile>
     <Compile Include="Models\Employee.cs" />
     <Compile Include="Models\Inventory.cs" />
+    <Compile Include="Models\OrderDetail.cs" />
     <Compile Include="Models\Orders.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
