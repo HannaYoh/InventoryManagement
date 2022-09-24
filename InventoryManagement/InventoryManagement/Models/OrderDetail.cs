@@ -47,7 +47,7 @@ namespace InventoryManagement.Models
             return list;
         }
 
-        /*public double calculateProfit()
+        public decimal calculateProfit()
         {
             createConnection();
 
@@ -57,7 +57,20 @@ namespace InventoryManagement.Models
             var result = cmd.ExecuteScalar();
 
             closeConnection();
-            return (double)result;
-        }*/
+            return Convert.ToDecimal(result);
+        }
+
+        public decimal calculateEarnings()
+        {
+            createConnection();
+
+            string query = "select dbo.calculateEarnings()";
+            SqlCommand cmd = new SqlCommand(query, conn);
+
+            var result = cmd.ExecuteScalar();
+
+            closeConnection();
+            return Convert.ToDecimal(result);
+        }
     }
 }
