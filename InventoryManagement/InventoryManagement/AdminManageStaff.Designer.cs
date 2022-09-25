@@ -35,6 +35,7 @@ namespace InventoryManagement
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminManageStaff));
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.pnlAdminTable = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -53,12 +54,27 @@ namespace InventoryManagement
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.txtSearchEmployee = new System.Windows.Forms.TextBox();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.pnlTableChanger = new System.Windows.Forms.Panel();
+            this.lblAdmin = new System.Windows.Forms.Label();
+            this.lblStaff = new System.Windows.Forms.Label();
+            this.pnlStaffTable = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.pnlGenerateAccessCode = new System.Windows.Forms.Panel();
+            this.pictureBox12 = new System.Windows.Forms.PictureBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
+            this.pnlAdminTable.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            this.pnlTableChanger.SuspendLayout();
+            this.pnlStaffTable.SuspendLayout();
+            this.pnlGenerateAccessCode.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -95,6 +111,16 @@ namespace InventoryManagement
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(256, 658);
             this.panel2.TabIndex = 2;
+            // 
+            // pnlAdminTable
+            // 
+            this.pnlAdminTable.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.pnlAdminTable.Controls.Add(this.label5);
+            this.pnlAdminTable.Location = new System.Drawing.Point(44, 158);
+            this.pnlAdminTable.Name = "pnlAdminTable";
+            this.pnlAdminTable.Size = new System.Drawing.Size(827, 460);
+            this.pnlAdminTable.TabIndex = 17;
+            this.pnlAdminTable.Visible = false;
             // 
             // pictureBox2
             // 
@@ -301,11 +327,128 @@ namespace InventoryManagement
             // 
             this.errorProvider1.ContainerControl = this;
             // 
+            // pnlTableChanger
+            // 
+            this.pnlTableChanger.Controls.Add(this.lblAdmin);
+            this.pnlTableChanger.Controls.Add(this.lblStaff);
+            this.pnlTableChanger.Location = new System.Drawing.Point(44, 101);
+            this.pnlTableChanger.Name = "pnlTableChanger";
+            this.pnlTableChanger.Size = new System.Drawing.Size(827, 38);
+            this.pnlTableChanger.TabIndex = 14;
+            // 
+            // lblAdmin
+            // 
+            this.lblAdmin.AutoSize = true;
+            this.lblAdmin.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAdmin.Location = new System.Drawing.Point(146, 2);
+            this.lblAdmin.Name = "lblAdmin";
+            this.lblAdmin.Padding = new System.Windows.Forms.Padding(0, 0, 0, 10);
+            this.lblAdmin.Size = new System.Drawing.Size(63, 31);
+            this.lblAdmin.TabIndex = 1;
+            this.lblAdmin.Text = "Admin";
+            this.lblAdmin.Click += new System.EventHandler(this.lblAdmin_Click);
+            // 
+            // lblStaff
+            // 
+            this.lblStaff.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStaff.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(81)))), ((int)(((byte)(81)))));
+            this.lblStaff.Location = new System.Drawing.Point(3, 2);
+            this.lblStaff.Name = "lblStaff";
+            this.lblStaff.Padding = new System.Windows.Forms.Padding(0, 0, 0, 10);
+            this.lblStaff.Size = new System.Drawing.Size(47, 31);
+            this.lblStaff.TabIndex = 0;
+            this.lblStaff.Text = "Staff";
+            this.lblStaff.Click += new System.EventHandler(this.lblStaff_Click);
+            // 
+            // pnlStaffTable
+            // 
+            this.pnlStaffTable.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.pnlStaffTable.Controls.Add(this.label7);
+            this.pnlStaffTable.Controls.Add(this.label4);
+            this.pnlStaffTable.Location = new System.Drawing.Point(44, 158);
+            this.pnlStaffTable.Name = "pnlStaffTable";
+            this.pnlStaffTable.Size = new System.Drawing.Size(827, 460);
+            this.pnlStaffTable.TabIndex = 18;
+            this.pnlStaffTable.Visible = false;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(367, 172);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(134, 30);
+            this.label4.TabIndex = 17;
+            this.label4.Text = "Staff table";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(203, 232);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(160, 30);
+            this.label5.TabIndex = 18;
+            this.label5.Text = "Admin table";
+            // 
+            // pnlGenerateAccessCode
+            // 
+            this.pnlGenerateAccessCode.Controls.Add(this.label6);
+            this.pnlGenerateAccessCode.Controls.Add(this.pictureBox12);
+            this.pnlGenerateAccessCode.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pnlGenerateAccessCode.Location = new System.Drawing.Point(689, 49);
+            this.pnlGenerateAccessCode.Name = "pnlGenerateAccessCode";
+            this.pnlGenerateAccessCode.Size = new System.Drawing.Size(182, 34);
+            this.pnlGenerateAccessCode.TabIndex = 19;
+            this.pnlGenerateAccessCode.Paint += new System.Windows.Forms.PaintEventHandler(this.panel7_Paint);
+            // 
+            // pictureBox12
+            // 
+            this.pictureBox12.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox12.Image")));
+            this.pictureBox12.Location = new System.Drawing.Point(0, 4);
+            this.pictureBox12.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox12.Name = "pictureBox12";
+            this.pictureBox12.Size = new System.Drawing.Size(28, 29);
+            this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox12.TabIndex = 12;
+            this.pictureBox12.TabStop = false;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label6.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.Black;
+            this.label6.Location = new System.Drawing.Point(36, 6);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(142, 23);
+            this.label6.TabIndex = 9;
+            this.label6.Text = "Access Code";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(257, 215);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(439, 30);
+            this.label7.TabIndex = 18;
+            this.label7.Text = "with deactivate button for staff only";
+            // 
             // AdminManageStaff
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1153, 657);
+            this.Controls.Add(this.pnlGenerateAccessCode);
+            this.Controls.Add(this.pnlStaffTable);
+            this.Controls.Add(this.pnlAdminTable);
+            this.Controls.Add(this.pnlTableChanger);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.txtSearchEmployee);
             this.Controls.Add(this.panel2);
@@ -315,12 +458,22 @@ namespace InventoryManagement
             this.Text = "AdminManageStaff";
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.pnlAdminTable.ResumeLayout(false);
+            this.pnlAdminTable.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            this.pnlTableChanger.ResumeLayout(false);
+            this.pnlTableChanger.PerformLayout();
+            this.pnlStaffTable.ResumeLayout(false);
+            this.pnlStaffTable.PerformLayout();
+            this.pnlGenerateAccessCode.ResumeLayout(false);
+            this.pnlGenerateAccessCode.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -346,5 +499,16 @@ namespace InventoryManagement
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.TextBox txtSearchEmployee;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private Panel pnlTableChanger;
+        private Label lblAdmin;
+        private Label lblStaff;
+        private Panel pnlAdminTable;
+        private Label label5;
+        private Panel pnlStaffTable;
+        private Label label4;
+        private Panel pnlGenerateAccessCode;
+        private PictureBox pictureBox12;
+        private Label label6;
+        private Label label7;
     }
 }
