@@ -96,7 +96,7 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(46)))), ((int)(((byte)(46)))));
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(81)))), ((int)(((byte)(81)))));
             this.panel2.Controls.Add(this.panel7);
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.pictureBox11);
