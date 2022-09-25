@@ -54,8 +54,10 @@
             this.Unit = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label7 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
             this.chartGrossRevenue = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -104,6 +106,7 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.panel3.Controls.Add(this.label9);
             this.panel3.Controls.Add(this.lblMessage);
             this.panel3.Controls.Add(this.lblTitle);
             this.panel3.Controls.Add(this.pictureBox1);
@@ -118,12 +121,12 @@
             this.lblMessage.AutoSize = true;
             this.lblMessage.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMessage.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(46)))), ((int)(((byte)(46)))));
-            this.lblMessage.Location = new System.Drawing.Point(63, 33);
+            this.lblMessage.Location = new System.Drawing.Point(84, 33);
             this.lblMessage.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblMessage.Name = "lblMessage";
-            this.lblMessage.Size = new System.Drawing.Size(75, 22);
+            this.lblMessage.Size = new System.Drawing.Size(59, 22);
             this.lblMessage.TabIndex = 5;
-            this.lblMessage.Text = "$ 00.00";
+            this.lblMessage.Text = "00.00";
             // 
             // lblTitle
             // 
@@ -150,14 +153,14 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(46)))), ((int)(((byte)(46)))));
-            this.label2.Location = new System.Drawing.Point(63, 33);
+            this.label2.Location = new System.Drawing.Point(82, 34);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(75, 22);
+            this.label2.Size = new System.Drawing.Size(60, 21);
             this.label2.TabIndex = 5;
-            this.label2.Text = "$ 00.00";
+            this.label2.Text = " 00.00";
             // 
             // label3
             // 
@@ -174,6 +177,7 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.panel4.Controls.Add(this.label8);
             this.panel4.Controls.Add(this.label2);
             this.panel4.Controls.Add(this.label3);
             this.panel4.Controls.Add(this.pictureBox2);
@@ -316,6 +320,25 @@
             this.panel7.Size = new System.Drawing.Size(816, 255);
             this.panel7.TabIndex = 9;
             // 
+            // chartGrossRevenue
+            // 
+            chartArea1.Name = "ChartArea1";
+            this.chartGrossRevenue.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chartGrossRevenue.Legends.Add(legend1);
+            this.chartGrossRevenue.Location = new System.Drawing.Point(33, 3);
+            this.chartGrossRevenue.Name = "chartGrossRevenue";
+            this.chartGrossRevenue.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.EarthTones;
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series1.Legend = "Legend1";
+            series1.Name = "Total Revenue";
+            series1.YValuesPerPoint = 2;
+            this.chartGrossRevenue.Series.Add(series1);
+            this.chartGrossRevenue.Size = new System.Drawing.Size(708, 249);
+            this.chartGrossRevenue.TabIndex = 0;
+            this.chartGrossRevenue.Text = "chart1";
+            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -328,21 +351,27 @@
             this.label6.TabIndex = 10;
             this.label6.Text = "Gross Revenue";
             // 
-            // chartGrossRevenue
+            // label8
             // 
-            chartArea1.Name = "ChartArea1";
-            this.chartGrossRevenue.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chartGrossRevenue.Legends.Add(legend1);
-            this.chartGrossRevenue.Location = new System.Drawing.Point(33, 3);
-            this.chartGrossRevenue.Name = "chartGrossRevenue";
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Total Sold";
-            this.chartGrossRevenue.Series.Add(series1);
-            this.chartGrossRevenue.Size = new System.Drawing.Size(708, 249);
-            this.chartGrossRevenue.TabIndex = 0;
-            this.chartGrossRevenue.Text = "chart1";
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(46)))), ((int)(((byte)(46)))));
+            this.label8.Location = new System.Drawing.Point(65, 34);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(20, 21);
+            this.label8.TabIndex = 6;
+            this.label8.Text = "$";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(46)))), ((int)(((byte)(46)))));
+            this.label9.Location = new System.Drawing.Point(64, 33);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(20, 21);
+            this.label9.TabIndex = 7;
+            this.label9.Text = "$";
             // 
             // AdminDashboardChild
             // 
@@ -408,5 +437,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Product;
         private System.Windows.Forms.DataGridViewTextBoxColumn Unit;
         private System.Windows.Forms.DataVisualization.Charting.Chart chartGrossRevenue;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label8;
     }
 }

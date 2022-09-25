@@ -14,6 +14,7 @@ namespace InventoryManagement
     {
         Models.Inventory inventory = new Models.Inventory();
         Models.Orders orders = new Models.Orders(); 
+        Models.OrderDetail orderDetail = new Models.OrderDetail();
         public AdminDashboardChild()
         {
             InitializeComponent();
@@ -34,10 +35,21 @@ namespace InventoryManagement
 
             }
             //chart
-           /* chartGrossRevenue.DataSource = orders.displayGrossRevenue();
-            chartGrossRevenue.Series["Total Sold"].XValueMember = "OrderDate";
-            chartGrossRevenue.Series["Total Sold"].YValueMembers = "total";*/
+            chartGrossRevenue.DataSource = orderDetail.displayGrossRevenue();
+            chartGrossRevenue.Series["Total Revenue"].XValueMember = "OrderDate";
+            chartGrossRevenue.Series["Total Revenue"].YValueMembers = "Total";
 
+            //orders
+            int orderResult = orders.totalOrder();
+            label4.Text = orderResult.ToString();
+
+            //profit
+            decimal profitResult = orderDetail.calculateProfit();
+            label2.Text = profitResult.ToString();
+
+            //earnings
+            decimal earningsResult = orderDetail.calculateEarnings();
+            lblMessage.Text = earningsResult.ToString();
         }
     }
 }
