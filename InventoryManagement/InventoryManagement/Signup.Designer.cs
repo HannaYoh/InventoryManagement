@@ -59,6 +59,7 @@
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -83,7 +84,7 @@
             this.txtName.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtName.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtName.Location = new System.Drawing.Point(124, 186);
-            this.txtName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtName.Margin = new System.Windows.Forms.Padding(4);
             this.txtName.Multiline = true;
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(300, 32);
@@ -97,7 +98,7 @@
             this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtEmail.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmail.Location = new System.Drawing.Point(124, 268);
-            this.txtEmail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(4);
             this.txtEmail.Multiline = true;
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(300, 32);
@@ -109,7 +110,7 @@
             this.txtBackupPwd.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtBackupPwd.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBackupPwd.Location = new System.Drawing.Point(124, 426);
-            this.txtBackupPwd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtBackupPwd.Margin = new System.Windows.Forms.Padding(4);
             this.txtBackupPwd.Multiline = true;
             this.txtBackupPwd.Name = "txtBackupPwd";
             this.txtBackupPwd.Size = new System.Drawing.Size(300, 32);
@@ -122,9 +123,9 @@
             this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.groupBox1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(647, 497);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(252, 49);
             this.groupBox1.TabIndex = 11;
             this.groupBox1.TabStop = false;
@@ -133,7 +134,7 @@
             // 
             this.rbStaff.AutoSize = true;
             this.rbStaff.Location = new System.Drawing.Point(173, 18);
-            this.rbStaff.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbStaff.Margin = new System.Windows.Forms.Padding(4);
             this.rbStaff.Name = "rbStaff";
             this.rbStaff.Size = new System.Drawing.Size(64, 23);
             this.rbStaff.TabIndex = 1;
@@ -145,7 +146,7 @@
             // 
             this.rbAdmin.AutoSize = true;
             this.rbAdmin.Location = new System.Drawing.Point(0, 18);
-            this.rbAdmin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbAdmin.Margin = new System.Windows.Forms.Padding(4);
             this.rbAdmin.Name = "rbAdmin";
             this.rbAdmin.Size = new System.Drawing.Size(84, 23);
             this.rbAdmin.TabIndex = 0;
@@ -159,7 +160,7 @@
             this.txtConfirmBackupPwd.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtConfirmBackupPwd.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtConfirmBackupPwd.Location = new System.Drawing.Point(613, 426);
-            this.txtConfirmBackupPwd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtConfirmBackupPwd.Margin = new System.Windows.Forms.Padding(4);
             this.txtConfirmBackupPwd.Multiline = true;
             this.txtConfirmBackupPwd.Name = "txtConfirmBackupPwd";
             this.txtConfirmBackupPwd.Size = new System.Drawing.Size(300, 32);
@@ -171,7 +172,7 @@
             this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPassword.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPassword.Location = new System.Drawing.Point(613, 346);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(4);
             this.txtPassword.Multiline = true;
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(300, 32);
@@ -183,7 +184,7 @@
             this.txtAccessCode.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtAccessCode.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAccessCode.Location = new System.Drawing.Point(1064, 426);
-            this.txtAccessCode.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtAccessCode.Margin = new System.Windows.Forms.Padding(4);
             this.txtAccessCode.Multiline = true;
             this.txtAccessCode.Name = "txtAccessCode";
             this.txtAccessCode.Size = new System.Drawing.Size(300, 32);
@@ -195,7 +196,7 @@
             this.txtConfirmPwd.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtConfirmPwd.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtConfirmPwd.Location = new System.Drawing.Point(1064, 346);
-            this.txtConfirmPwd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtConfirmPwd.Margin = new System.Windows.Forms.Padding(4);
             this.txtConfirmPwd.Multiline = true;
             this.txtConfirmPwd.Name = "txtConfirmPwd";
             this.txtConfirmPwd.Size = new System.Drawing.Size(300, 32);
@@ -207,7 +208,7 @@
             this.txtAddress.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtAddress.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAddress.Location = new System.Drawing.Point(1064, 268);
-            this.txtAddress.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtAddress.Margin = new System.Windows.Forms.Padding(4);
             this.txtAddress.Multiline = true;
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(300, 32);
@@ -218,11 +219,11 @@
             this.txtMobile.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
             this.txtMobile.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtMobile.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMobile.Location = new System.Drawing.Point(1064, 186);
-            this.txtMobile.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtMobile.Location = new System.Drawing.Point(1117, 186);
+            this.txtMobile.Margin = new System.Windows.Forms.Padding(4);
             this.txtMobile.Multiline = true;
             this.txtMobile.Name = "txtMobile";
-            this.txtMobile.Size = new System.Drawing.Size(300, 32);
+            this.txtMobile.Size = new System.Drawing.Size(247, 32);
             this.txtMobile.TabIndex = 16;
             // 
             // btnLogin
@@ -232,7 +233,7 @@
             this.btnLogin.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnLogin.Location = new System.Drawing.Point(620, 580);
-            this.btnLogin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnLogin.Margin = new System.Windows.Forms.Padding(4);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(281, 46);
             this.btnLogin.TabIndex = 20;
@@ -386,7 +387,7 @@
             this.dateTimePicker1.CalendarTitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
             this.dateTimePicker1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker1.Location = new System.Drawing.Point(613, 272);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(299, 27);
             this.dateTimePicker1.TabIndex = 33;
@@ -400,7 +401,7 @@
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(124, 82);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(27, 23);
             this.pictureBox1.TabIndex = 34;
@@ -419,11 +420,24 @@
             this.label3.TabIndex = 35;
             this.label3.Text = "Date of Birth";
             // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.label11.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(1060, 187);
+            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(49, 19);
+            this.label11.TabIndex = 36;
+            this.label11.Text = "+251";
+            // 
             // Signup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1485, 727);
+            this.Controls.Add(this.label11);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.dateTimePicker1);
@@ -450,7 +464,7 @@
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.txtName);
             this.Controls.Add(this.label2);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Signup";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Signup";
@@ -495,5 +509,6 @@
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label11;
     }
 }
