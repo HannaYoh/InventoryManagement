@@ -164,6 +164,7 @@ namespace InventoryManagement
             pnlManageStaffActive.Visible = true;
             pnlOrdersActive.Visible = false;
             pnlProductsActive.Visible = false;
+            pnlEditProfile.Visible = false;
             pnlSupplierActive.Visible = false;
             lblActiveTab.Text = "Manage Staff";
             openChildForm(new AdminManageStaff());
@@ -188,6 +189,7 @@ namespace InventoryManagement
             pnlOrdersActive.Visible = false;
             pnlProductsActive.Visible = true;
             pnlSupplierActive.Visible = false;
+            pnlEditProfile.Visible = false;
 
             lblActiveTab.Text = "Products - Inventory";
             openChildForm(new AdminInventory());
@@ -200,6 +202,7 @@ namespace InventoryManagement
             pnlManageStaffActive.Visible = false;
             pnlOrdersActive.Visible = false;
             pnlProductsActive.Visible = true;
+            pnlEditProfile.Visible = false;
             pnlSupplierActive.Visible = false;
             lblActiveTab.Text = "Products - Discount";
             openChildForm(new AdminDiscount());
@@ -213,7 +216,8 @@ namespace InventoryManagement
             pnlOrdersActive.Visible = false;
             pnlProductsActive.Visible = false;
             pnlSupplierActive.Visible = false;
-            
+            pnlEditProfile.Visible = false;
+
             lblActiveTab.Text = "Dashboard";
             openChildForm(new AdminDashboardChild());
 
@@ -227,6 +231,7 @@ namespace InventoryManagement
             pnlOrdersActive.Visible = true;
             pnlProductsActive.Visible = false;
             pnlSupplierActive.Visible = false;
+            pnlEditProfile.Visible = false;
 
             lblActiveTab.Text = "Orders";
             openChildForm(new AdminOrders());
@@ -241,6 +246,8 @@ namespace InventoryManagement
             pnlOrdersActive.Visible = false;
             pnlProductsActive.Visible = false;
             pnlSupplierActive.Visible = true;
+            pnlEditProfile.Visible = false;
+
             lblActiveTab.Text = "Supplier";
             openChildForm(new AdminSupplier());
 
@@ -312,6 +319,19 @@ namespace InventoryManagement
         private void panelChildForm_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            panelSubMenu.Visible = false;
+            pnlDashboardActive.Visible = false;
+            pnlManageStaffActive.Visible = false;
+            pnlOrdersActive.Visible = false;
+            pnlProductsActive.Visible = false;
+            pnlSupplierActive.Visible = false;
+            pnlEditProfile.Visible = true;
+            lblActiveTab.Text = "Change Password";
+            openChildForm(new AdminManageStaff());
         }
     }
 }

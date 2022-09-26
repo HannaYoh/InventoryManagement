@@ -37,12 +37,14 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.label9 = new System.Windows.Forms.Label();
             this.lblMessage = new System.Windows.Forms.Label();
             this.lblTitle = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.label8 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
@@ -56,8 +58,6 @@
             this.panel7 = new System.Windows.Forms.Panel();
             this.chartGrossRevenue = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.label6 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -115,6 +115,17 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(256, 66);
             this.panel3.TabIndex = 4;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(46)))), ((int)(((byte)(46)))));
+            this.label9.Location = new System.Drawing.Point(64, 33);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(20, 21);
+            this.label9.TabIndex = 7;
+            this.label9.Text = "$";
             // 
             // lblMessage
             // 
@@ -186,6 +197,17 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(256, 66);
             this.panel4.TabIndex = 6;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(46)))), ((int)(((byte)(46)))));
+            this.label8.Location = new System.Drawing.Point(65, 34);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(20, 21);
+            this.label8.TabIndex = 6;
+            this.label8.Text = "$";
             // 
             // pictureBox2
             // 
@@ -326,7 +348,7 @@
             this.chartGrossRevenue.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
             this.chartGrossRevenue.Legends.Add(legend1);
-            this.chartGrossRevenue.Location = new System.Drawing.Point(33, 3);
+            this.chartGrossRevenue.Location = new System.Drawing.Point(0, 3);
             this.chartGrossRevenue.Name = "chartGrossRevenue";
             this.chartGrossRevenue.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.EarthTones;
             series1.ChartArea = "ChartArea1";
@@ -335,7 +357,7 @@
             series1.Name = "Total Revenue";
             series1.YValuesPerPoint = 2;
             this.chartGrossRevenue.Series.Add(series1);
-            this.chartGrossRevenue.Size = new System.Drawing.Size(708, 249);
+            this.chartGrossRevenue.Size = new System.Drawing.Size(816, 249);
             this.chartGrossRevenue.TabIndex = 0;
             this.chartGrossRevenue.Text = "chart1";
             // 
@@ -350,28 +372,6 @@
             this.label6.Size = new System.Drawing.Size(184, 28);
             this.label6.TabIndex = 10;
             this.label6.Text = "Gross Revenue";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(46)))), ((int)(((byte)(46)))));
-            this.label8.Location = new System.Drawing.Point(65, 34);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(20, 21);
-            this.label8.TabIndex = 6;
-            this.label8.Text = "$";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(46)))), ((int)(((byte)(46)))));
-            this.label9.Location = new System.Drawing.Point(64, 33);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(20, 21);
-            this.label9.TabIndex = 7;
-            this.label9.Text = "$";
             // 
             // AdminDashboardChild
             // 
