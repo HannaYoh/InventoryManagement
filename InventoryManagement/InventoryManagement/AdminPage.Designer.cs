@@ -71,6 +71,9 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panelChildForm = new System.Windows.Forms.Panel();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.pnlEditProfile = new System.Windows.Forms.Panel();
+            this.pictureBox13 = new System.Windows.Forms.PictureBox();
+            this.button7 = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
@@ -92,6 +95,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -225,6 +229,9 @@
             // 
             // panel5
             // 
+            this.panel5.Controls.Add(this.pnlEditProfile);
+            this.panel5.Controls.Add(this.pictureBox13);
+            this.panel5.Controls.Add(this.button7);
             this.panel5.Controls.Add(this.pnlManageStaffActive);
             this.panel5.Controls.Add(this.pnlSupplierActive);
             this.panel5.Controls.Add(this.pictureBox8);
@@ -235,7 +242,7 @@
             this.panel5.Location = new System.Drawing.Point(0, 256);
             this.panel5.Margin = new System.Windows.Forms.Padding(4);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(333, 138);
+            this.panel5.Size = new System.Drawing.Size(333, 167);
             this.panel5.TabIndex = 31;
             // 
             // pnlManageStaffActive
@@ -628,6 +635,43 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
+            // pnlEditProfile
+            // 
+            this.pnlEditProfile.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(46)))), ((int)(((byte)(46)))));
+            this.pnlEditProfile.Location = new System.Drawing.Point(0, 119);
+            this.pnlEditProfile.Margin = new System.Windows.Forms.Padding(4);
+            this.pnlEditProfile.Name = "pnlEditProfile";
+            this.pnlEditProfile.Size = new System.Drawing.Size(13, 48);
+            this.pnlEditProfile.TabIndex = 30;
+            this.pnlEditProfile.Visible = false;
+            // 
+            // pictureBox13
+            // 
+            this.pictureBox13.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox13.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox13.Image")));
+            this.pictureBox13.Location = new System.Drawing.Point(46, 127);
+            this.pictureBox13.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox13.Name = "pictureBox13";
+            this.pictureBox13.Size = new System.Drawing.Size(39, 32);
+            this.pictureBox13.TabIndex = 32;
+            this.pictureBox13.TabStop = false;
+            // 
+            // button7
+            // 
+            this.button7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+            this.button7.FlatAppearance.BorderSize = 0;
+            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button7.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button7.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button7.Location = new System.Drawing.Point(2, 119);
+            this.button7.Margin = new System.Windows.Forms.Padding(4);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(333, 48);
+            this.button7.TabIndex = 31;
+            this.button7.Text = "Edit Profile";
+            this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
             // AdminPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -667,6 +711,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -713,5 +758,8 @@
         private System.Windows.Forms.Panel pnlSupplierActive;
         private System.Windows.Forms.PictureBox pictureBox12;
         private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Panel pnlEditProfile;
+        private System.Windows.Forms.PictureBox pictureBox13;
+        private System.Windows.Forms.Button button7;
     }
 }
