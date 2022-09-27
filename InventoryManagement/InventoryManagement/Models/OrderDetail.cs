@@ -19,6 +19,11 @@ namespace InventoryManagement.Models
         public double WholesalePrice { get; set; }
 
         public string OrderDate { get; set; }   //from orders
+        public string DeliveryDate { get; set; }
+        public string FullName { get; set; }
+        public string ProductName { get; set; }
+
+
         public double Total { get; set; }      //aggregate
 
         //methods
@@ -71,6 +76,73 @@ namespace InventoryManagement.Models
 
             closeConnection();
             return Convert.ToDecimal(result);
+        }
+
+        public List<OrderDetail> viewAllOrders()
+        {
+            createConnection();
+
+            List<OrderDetail> list = new List<OrderDetail>();
+
+            string query = "select * from viewAllOrders()";
+            SqlCommand cmd = new SqlCommand(query, conn);
+
+            SqlDataReader reader = cmd.ExecuteReader();
+
+            while (reader.Read())
+            {
+                OrderDetail temp = new OrderDetail();
+
+                temp.FullName = reader["FullName"].ToString();
+                temp.OrderId = Convert.ToInt32(reader["OrderId"]);
+                temp.OrderDate = reader["OrderDate"].ToString();
+                temp.DeliveryDate = reader["DeliveryDate"].ToString();
+                temp.ProductId = Convert.ToInt32(reader["ProductId"]);
+                temp.ProductName = reader["ProductName"].ToString();
+                temp.Quantity = Convert.ToInt32(reader["Quantity"]);
+                temp.TotalPrice = Convert.ToDouble(reader["TotalPrice"]);
+                temp.RetailPrice = Convert.ToDouble(reader["RetailPrice"]);
+                temp.WholesalePrice = Convert.ToDouble(reader["WholesalePrice"]);
+
+                list.Add(temp);
+            }
+
+            closeConnection();
+            return list;
+        }
+
+        public List<OrderDetail> searchByOrderId()
+        {
+            createConnection();
+
+            List<OrderDetail> list = new List<OrderDetail>();
+
+            string query = "select * from searchByOrderId(@OrderId)";
+            SqlCommand cmd = new SqlCommand(query, conn);
+            cmd.Parameters.AddWithValue("OrderId", OrderId);
+
+            SqlDataReader reader = cmd.ExecuteReader();
+
+            while (reader.Read())
+            {
+                OrderDetail temp = new OrderDetail();
+
+                temp.FullName = reader["FullName"].ToString();
+                temp.OrderId = Convert.ToInt32(reader["OrderId"]);
+                temp.OrderDate = reader["OrderDate"].ToString();
+                temp.DeliveryDate = reader["DeliveryDate"].ToString();
+                temp.ProductId = Convert.ToInt32(reader["ProductId"]);
+                temp.ProductName = reader["ProductName"].ToString();
+                temp.Quantity = Convert.ToInt32(reader["Quantity"]);
+                temp.TotalPrice = Convert.ToDouble(reader["TotalPrice"]);
+                temp.RetailPrice = Convert.ToDouble(reader["RetailPrice"]);
+                temp.WholesalePrice = Convert.ToDouble(reader["WholesalePrice"]);
+
+                list.Add(temp);
+            }
+
+            closeConnection();
+            return list;
         }
     }
 }

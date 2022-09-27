@@ -12,6 +12,8 @@ namespace InventoryManagement
 {
     public partial class AdminOrders : Form
     {
+        Models.OrderDetail detail = new Models. OrderDetail();
+
         public AdminOrders()
         {
             InitializeComponent();
@@ -28,6 +30,32 @@ namespace InventoryManagement
 
             if (txtOrderId.Text == "" || txtOrderId.Text == "Search Order ID")
                 errorProvider1.SetError(pictureBox3, "Enter Order Id!");
+            else
+            {
+                detail.OrderId = int.Parse(txtOrderId.Text);
+
+                this.dataGridView1.Rows.Clear();
+
+                List<Models.OrderDetail> list = new List<Models.OrderDetail>();
+                list = detail.searchByOrderId();
+                foreach (var orders in list)
+                {
+                    dataGridView1.Rows.Add(new object[]
+                    {
+                   orders.FullName,
+                   orders.OrderId,
+                   orders.OrderDate,
+                   orders.DeliveryDate,
+                   orders.ProductId,
+                   orders.ProductName,
+                   orders.Quantity,
+                   orders.TotalPrice,
+                   orders.RetailPrice,
+                   orders.WholesalePrice
+                    });
+
+                }
+            }
         }
 
         private void dateTimePicker2_ValueChanged(object sender, EventArgs e)
@@ -72,7 +100,25 @@ namespace InventoryManagement
 
         private void AdminOrders_Load(object sender, EventArgs e)
         {
+            List<Models.OrderDetail> list = new List<Models.OrderDetail>();
+            list = detail.viewAllOrders();
+            foreach (var orders in list)
+            {
+                dataGridView1.Rows.Add(new object[]
+                {
+                   orders.FullName,
+                   orders.OrderId,
+                   orders.OrderDate,
+                   orders.DeliveryDate,
+                   orders.ProductId,
+                   orders.ProductName,
+                   orders.Quantity,
+                   orders.TotalPrice,
+                   orders.RetailPrice,
+                   orders.WholesalePrice
+                });
 
+            }
         }
     }
 }
