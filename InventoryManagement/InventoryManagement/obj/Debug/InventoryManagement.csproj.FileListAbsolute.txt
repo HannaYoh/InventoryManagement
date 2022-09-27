@@ -65,3 +65,5 @@ C:\Users\Henok B\source\repos\InventoryManagement\InventoryManagement\InventoryM
 C:\Users\Henok B\source\repos\InventoryManagement\InventoryManagement\InventoryManagement\bin\Debug\InventoryManagement.pdb
 C:\Users\Henok B\source\repos\InventoryManagement\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.GenerateAccessCode.resources
 C:\Users\Henok B\source\repos\InventoryManagement\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.AdminEditProfile.resources
+C:\Users\hanyo\source\repos\InventoryManagement\InventoryManagement\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.AdminEditProfile.resources
+C:\Users\hanyo\source\repos\InventoryManagement\InventoryManagement\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.GenerateAccessCode.resources
