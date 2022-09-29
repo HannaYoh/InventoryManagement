@@ -343,6 +343,14 @@ namespace InventoryManagement
             this.pnlTableChanger.Controls.Add(this.lblAdmin);
             this.pnlTableChanger.Controls.Add(this.lblStaff);
             this.pnlTableChanger.Location = new System.Drawing.Point(44, 101);
+            this.pnlTableChanger.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.pnlTableChanger.AutoSize = false; //Allows you to change height to have bottom padding
+            this.pnlTableChanger.Controls.Add(new Label()
+            {
+                Height = 1,
+                Dock = DockStyle.Bottom,
+                BackColor = Color.Black
+            });
             this.pnlTableChanger.Name = "pnlTableChanger";
             this.pnlTableChanger.Size = new System.Drawing.Size(827, 38);
             this.pnlTableChanger.TabIndex = 14;
@@ -363,6 +371,7 @@ namespace InventoryManagement
             // 
             this.lblStaff.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblStaff.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(81)))), ((int)(((byte)(81)))));
+            this.lblStaff.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(81)))), ((int)(((byte)(81)))));
             this.lblStaff.Location = new System.Drawing.Point(3, 2);
             this.lblStaff.Name = "lblStaff";
             this.lblStaff.Padding = new System.Windows.Forms.Padding(0, 0, 0, 10);
@@ -380,18 +389,17 @@ namespace InventoryManagement
             this.pnlStaffTable.Name = "pnlStaffTable";
             this.pnlStaffTable.Size = new System.Drawing.Size(827, 460);
             this.pnlStaffTable.TabIndex = 18;
-            this.pnlStaffTable.Visible = false;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(257, 215);
+            this.label7.Location = new System.Drawing.Point(243, 224);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(439, 30);
+            this.label7.Size = new System.Drawing.Size(382, 30);
             this.label7.TabIndex = 18;
-            this.label7.Text = "with deactivate button for staff only";
+            this.label7.Text = "with deactivate button for staff";
             // 
             // label4
             // 
@@ -428,6 +436,7 @@ namespace InventoryManagement
             this.label6.Size = new System.Drawing.Size(142, 23);
             this.label6.TabIndex = 9;
             this.label6.Text = "Access Code";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // pictureBox12
             // 
