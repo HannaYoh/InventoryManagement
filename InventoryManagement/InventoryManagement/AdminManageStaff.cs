@@ -70,12 +70,13 @@ namespace InventoryManagement
 
         private void panel7_Paint(object sender, PaintEventArgs e)
         {
-            GenerateAccessCode gn = new GenerateAccessCode();
         }
 
         private void label6_Click(object sender, EventArgs e)
         {
-
+            GenerateAccessCode gn = new GenerateAccessCode();
+            gn.Owner = this;
+            gn.ShowDialog();
         }
     }
 }

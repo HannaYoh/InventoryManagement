@@ -42,12 +42,14 @@ namespace InventoryManagement
 
         private void lblAdd_Click(object sender, EventArgs e)
         {
-
+            GenerateDiscount gn = new GenerateDiscount();
+            gn.Owner = this;
+            gn.ShowDialog();
         }
 
         private void pnlAddInventory_Paint(object sender, PaintEventArgs e)
         {
-            GenerateDiscount gn = new GenerateDiscount();
+            
         }
     }
 }

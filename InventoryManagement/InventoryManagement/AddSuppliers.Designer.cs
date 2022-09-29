@@ -1,6 +1,6 @@
 ﻿namespace InventoryManagement
 {
-    partial class GenerateDiscount
+    partial class AddSuppliers
     {
         /// <summary>
         /// Required designer variable.
@@ -30,14 +30,14 @@
         {
             this.SuspendLayout();
             // 
-            // GenerateDiscount
+            // AddSuppliers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(449, 603);
-            this.Name = "GenerateDiscount";
+            this.Name = "AddSuppliers";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "GenerateDiscount";
+            this.Text = "AddSuppliers";
             this.ResumeLayout(false);
 
         }

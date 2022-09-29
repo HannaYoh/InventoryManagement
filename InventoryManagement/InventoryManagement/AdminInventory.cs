@@ -56,5 +56,10 @@ namespace InventoryManagement
         {
 
         }
+
+        private void pnlAddInventory_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

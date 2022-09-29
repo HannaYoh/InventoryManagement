@@ -55,6 +55,12 @@
     <Compile Include="AddInventoryForm.Designer.cs">
       <DependentUpon>AddInventoryForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="AddSuppliers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddSuppliers.Designer.cs">
+      <DependentUpon>AddSuppliers.cs</DependentUpon>
+    </Compile>
     <Compile Include="AdminEditProfile.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -122,6 +128,12 @@
     <Compile Include="GenerateAccessCode.Designer.cs">
       <DependentUpon>GenerateAccessCode.cs</DependentUpon>
     </Compile>
+    <Compile Include="GenerateDiscount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GenerateDiscount.Designer.cs">
+      <DependentUpon>GenerateDiscount.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -145,6 +157,9 @@
     </Compile>
     <EmbeddedResource Include="AddInventoryForm.resx">
       <DependentUpon>AddInventoryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddSuppliers.resx">
+      <DependentUpon>AddSuppliers.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AdminEditProfile.resx">
       <DependentUpon>AdminEditProfile.cs</DependentUpon>
@@ -178,6 +193,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GenerateAccessCode.resx">
       <DependentUpon>GenerateAccessCode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GenerateDiscount.resx">
+      <DependentUpon>GenerateDiscount.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>

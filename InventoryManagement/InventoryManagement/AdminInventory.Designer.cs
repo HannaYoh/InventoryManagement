@@ -52,10 +52,6 @@ namespace InventoryManagement
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.pictureBox3.AutoSize = false; //Allows you to change height to have bottom padding
-            this.pictureBox3.Controls.Add(new Label()
-            { Height = 2, Dock = DockStyle.Bottom, BackColor = Color.Black });
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
             this.pictureBox3.Location = new System.Drawing.Point(305, 33);
             this.pictureBox3.Margin = new System.Windows.Forms.Padding(4);
@@ -70,9 +66,6 @@ namespace InventoryManagement
             // 
             this.txtSearchById.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.txtSearchById.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtSearchById.AutoSize = false; //Allows you to change height to have bottom padding
-            this.txtSearchById.Controls.Add(new Label()
-            { Height = 2, Dock = DockStyle.Bottom, BackColor = Color.Black });
             this.txtSearchById.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSearchById.ForeColor = System.Drawing.Color.Black;
             this.txtSearchById.Location = new System.Drawing.Point(43, 33);
@@ -95,9 +88,6 @@ namespace InventoryManagement
             // 
             this.cmbCatagory.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.cmbCatagory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmbCatagory.AutoSize = false; //Allows you to change height to have bottom padding
-            this.cmbCatagory.Controls.Add(new Label()
-            { Height = 2, Dock = DockStyle.Bottom, BackColor = Color.Black });
             this.cmbCatagory.Font = new System.Drawing.Font("Century Gothic", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbCatagory.FormattingEnabled = true;
             this.cmbCatagory.ItemHeight = 25;
@@ -142,9 +132,6 @@ namespace InventoryManagement
             this.cmbSupplier.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbSupplier.Font = new System.Drawing.Font("Century Gothic", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbSupplier.FormattingEnabled = true;
-            this.cmbSupplier.AutoSize = false; //Allows you to change height to have bottom padding
-            this.cmbSupplier.Controls.Add(new Label()
-            { Height = 2, Dock = DockStyle.Bottom, BackColor = Color.Black });
             this.cmbSupplier.ItemHeight = 25;
             this.cmbSupplier.Items.AddRange(new object[] {
             "Male",
@@ -165,6 +152,7 @@ namespace InventoryManagement
             this.pnlAddInventory.Name = "pnlAddInventory";
             this.pnlAddInventory.Size = new System.Drawing.Size(104, 36);
             this.pnlAddInventory.TabIndex = 27;
+            this.pnlAddInventory.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlAddInventory_Paint);
             // 
             // panel1
             // 
@@ -197,7 +185,6 @@ namespace InventoryManagement
             this.pnlAddInventory.ResumeLayout(false);
             this.pnlAddInventory.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 

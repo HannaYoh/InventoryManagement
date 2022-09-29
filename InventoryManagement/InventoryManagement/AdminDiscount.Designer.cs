@@ -37,12 +37,12 @@
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.lblAdd = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pnlAddInventory = new System.Windows.Forms.Panel();
+            this.pnlAddDiscount = new System.Windows.Forms.Panel();
             this.cmbSupplier = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderTxt)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
-            this.pnlAddInventory.SuspendLayout();
+            this.pnlAddDiscount.SuspendLayout();
             this.SuspendLayout();
             // 
             // pictureBox3
@@ -131,16 +131,16 @@
             this.panel1.Size = new System.Drawing.Size(1008, 460);
             this.panel1.TabIndex = 34;
             // 
-            // pnlAddInventory
+            // pnlAddDiscount
             // 
-            this.pnlAddInventory.Controls.Add(this.pictureBox11);
-            this.pnlAddInventory.Controls.Add(this.lblAdd);
-            this.pnlAddInventory.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pnlAddInventory.Location = new System.Drawing.Point(950, 34);
-            this.pnlAddInventory.Name = "pnlAddInventory";
-            this.pnlAddInventory.Size = new System.Drawing.Size(104, 36);
-            this.pnlAddInventory.TabIndex = 33;
-            this.pnlAddInventory.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlAddInventory_Paint);
+            this.pnlAddDiscount.Controls.Add(this.pictureBox11);
+            this.pnlAddDiscount.Controls.Add(this.lblAdd);
+            this.pnlAddDiscount.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pnlAddDiscount.Location = new System.Drawing.Point(950, 34);
+            this.pnlAddDiscount.Name = "pnlAddDiscount";
+            this.pnlAddDiscount.Size = new System.Drawing.Size(104, 36);
+            this.pnlAddDiscount.TabIndex = 33;
+            this.pnlAddDiscount.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlAddInventory_Paint);
             // 
             // cmbSupplier
             // 
@@ -168,17 +168,17 @@
             this.Controls.Add(this.txtSearchByName);
             this.Controls.Add(this.cmbStatus);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.pnlAddInventory);
+            this.Controls.Add(this.pnlAddDiscount);
             this.Controls.Add(this.cmbSupplier);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "AdminDiscount";
             this.Text = "AdminDiscount";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderTxt)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
-            this.pnlAddInventory.ResumeLayout(false);
-            this.pnlAddInventory.PerformLayout();
+            this.pnlAddDiscount.ResumeLayout(false);
+            this.pnlAddDiscount.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -191,7 +191,7 @@
         private System.Windows.Forms.ErrorProvider errorProviderTxt;
         private System.Windows.Forms.ComboBox cmbStatus;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel pnlAddInventory;
+        private System.Windows.Forms.Panel pnlAddDiscount;
         private System.Windows.Forms.PictureBox pictureBox11;
         private System.Windows.Forms.Label lblAdd;
         private System.Windows.Forms.ComboBox cmbSupplier;
