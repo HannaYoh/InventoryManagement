@@ -28,60 +28,66 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtSearchById = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtProductName = new System.Windows.Forms.TextBox();
+            this.txtRetailPrice = new System.Windows.Forms.TextBox();
+            this.txtAmountAvailable = new System.Windows.Forms.TextBox();
             this.cmbSupplier = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.btnLogin = new System.Windows.Forms.Button();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.dtpManufacturingDate = new System.Windows.Forms.DateTimePicker();
+            this.btnAddProduct = new System.Windows.Forms.Button();
+            this.txtWholeSalesPrice = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // txtSearchById
+            // txtProductName
             // 
-            this.txtSearchById.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.txtSearchById.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtSearchById.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearchById.ForeColor = System.Drawing.Color.Black;
-            this.txtSearchById.Location = new System.Drawing.Point(86, 64);
-            this.txtSearchById.Margin = new System.Windows.Forms.Padding(4, 55, 4, 4);
-            this.txtSearchById.Multiline = true;
-            this.txtSearchById.Name = "txtSearchById";
-            this.txtSearchById.Size = new System.Drawing.Size(267, 34);
-            this.txtSearchById.TabIndex = 11;
-            this.txtSearchById.Text = "Product Name";
-            this.txtSearchById.WordWrap = false;
+            this.txtProductName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.txtProductName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtProductName.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtProductName.ForeColor = System.Drawing.Color.Black;
+            this.txtProductName.Location = new System.Drawing.Point(86, 64);
+            this.txtProductName.Margin = new System.Windows.Forms.Padding(4, 55, 4, 4);
+            this.txtProductName.Multiline = true;
+            this.txtProductName.Name = "txtProductName";
+            this.txtProductName.Size = new System.Drawing.Size(267, 34);
+            this.txtProductName.TabIndex = 11;
+            this.txtProductName.Text = "Product Name";
+            this.txtProductName.WordWrap = false;
+            this.txtProductName.Enter += new System.EventHandler(this.txtProductName_Enter);
+            this.txtProductName.Leave += new System.EventHandler(this.txtProductName_Leave);
             // 
-            // textBox1
+            // txtRetailPrice
             // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.Color.Black;
-            this.textBox1.Location = new System.Drawing.Point(86, 124);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 55, 4, 4);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(267, 34);
-            this.textBox1.TabIndex = 12;
-            this.textBox1.Text = "Retail Price";
-            this.textBox1.WordWrap = false;
+            this.txtRetailPrice.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.txtRetailPrice.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtRetailPrice.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRetailPrice.ForeColor = System.Drawing.Color.Black;
+            this.txtRetailPrice.Location = new System.Drawing.Point(86, 124);
+            this.txtRetailPrice.Margin = new System.Windows.Forms.Padding(4, 55, 4, 4);
+            this.txtRetailPrice.Multiline = true;
+            this.txtRetailPrice.Name = "txtRetailPrice";
+            this.txtRetailPrice.Size = new System.Drawing.Size(267, 34);
+            this.txtRetailPrice.TabIndex = 12;
+            this.txtRetailPrice.Text = "Retail Price";
+            this.txtRetailPrice.WordWrap = false;
+            this.txtRetailPrice.Enter += new System.EventHandler(this.txtRetailPrice_Enter);
+            this.txtRetailPrice.Leave += new System.EventHandler(this.txtRetailPrice_Leave);
             // 
-            // textBox2
+            // txtAmountAvailable
             // 
-            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.ForeColor = System.Drawing.Color.Black;
-            this.textBox2.Location = new System.Drawing.Point(86, 243);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4, 55, 4, 4);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(267, 34);
-            this.textBox2.TabIndex = 13;
-            this.textBox2.Text = "Amount Available";
-            this.textBox2.WordWrap = false;
+            this.txtAmountAvailable.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.txtAmountAvailable.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtAmountAvailable.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAmountAvailable.ForeColor = System.Drawing.Color.Black;
+            this.txtAmountAvailable.Location = new System.Drawing.Point(86, 243);
+            this.txtAmountAvailable.Margin = new System.Windows.Forms.Padding(4, 55, 4, 4);
+            this.txtAmountAvailable.Multiline = true;
+            this.txtAmountAvailable.Name = "txtAmountAvailable";
+            this.txtAmountAvailable.Size = new System.Drawing.Size(267, 34);
+            this.txtAmountAvailable.TabIndex = 13;
+            this.txtAmountAvailable.Text = "Amount Available";
+            this.txtAmountAvailable.WordWrap = false;
+            this.txtAmountAvailable.Enter += new System.EventHandler(this.txtAmountAvailable_Enter);
+            this.txtAmountAvailable.Leave += new System.EventHandler(this.txtAmountAvailable_Leave);
             // 
             // cmbSupplier
             // 
@@ -112,59 +118,61 @@
             this.label3.TabIndex = 37;
             this.label3.Text = "Manufactured Date";
             // 
-            // dateTimePicker1
+            // dtpManufacturingDate
             // 
-            this.dateTimePicker1.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
-            this.dateTimePicker1.CalendarTitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
-            this.dateTimePicker1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(86, 387);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(267, 27);
-            this.dateTimePicker1.TabIndex = 36;
+            this.dtpManufacturingDate.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.dtpManufacturingDate.CalendarTitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.dtpManufacturingDate.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpManufacturingDate.Location = new System.Drawing.Point(86, 387);
+            this.dtpManufacturingDate.Margin = new System.Windows.Forms.Padding(4);
+            this.dtpManufacturingDate.Name = "dtpManufacturingDate";
+            this.dtpManufacturingDate.Size = new System.Drawing.Size(267, 27);
+            this.dtpManufacturingDate.TabIndex = 36;
             // 
-            // btnLogin
+            // btnAddProduct
             // 
-            this.btnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(46)))), ((int)(((byte)(46)))));
-            this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLogin.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogin.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnLogin.Location = new System.Drawing.Point(102, 463);
-            this.btnLogin.Margin = new System.Windows.Forms.Padding(4);
-            this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(210, 46);
-            this.btnLogin.TabIndex = 38;
-            this.btnLogin.Text = "Add Product";
-            this.btnLogin.UseVisualStyleBackColor = false;
+            this.btnAddProduct.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(46)))), ((int)(((byte)(46)))));
+            this.btnAddProduct.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddProduct.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddProduct.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnAddProduct.Location = new System.Drawing.Point(102, 463);
+            this.btnAddProduct.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAddProduct.Name = "btnAddProduct";
+            this.btnAddProduct.Size = new System.Drawing.Size(210, 46);
+            this.btnAddProduct.TabIndex = 38;
+            this.btnAddProduct.Text = "Add Product";
+            this.btnAddProduct.UseVisualStyleBackColor = false;
             // 
-            // textBox3
+            // txtWholeSalesPrice
             // 
-            this.textBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.ForeColor = System.Drawing.Color.Black;
-            this.textBox3.Location = new System.Drawing.Point(86, 183);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(4, 55, 4, 4);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(267, 34);
-            this.textBox3.TabIndex = 39;
-            this.textBox3.Text = "WholeSales Price";
-            this.textBox3.WordWrap = false;
+            this.txtWholeSalesPrice.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.txtWholeSalesPrice.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtWholeSalesPrice.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtWholeSalesPrice.ForeColor = System.Drawing.Color.Black;
+            this.txtWholeSalesPrice.Location = new System.Drawing.Point(86, 183);
+            this.txtWholeSalesPrice.Margin = new System.Windows.Forms.Padding(4, 55, 4, 4);
+            this.txtWholeSalesPrice.Multiline = true;
+            this.txtWholeSalesPrice.Name = "txtWholeSalesPrice";
+            this.txtWholeSalesPrice.Size = new System.Drawing.Size(267, 34);
+            this.txtWholeSalesPrice.TabIndex = 39;
+            this.txtWholeSalesPrice.Text = "WholeSales Price";
+            this.txtWholeSalesPrice.WordWrap = false;
+            this.txtWholeSalesPrice.Enter += new System.EventHandler(this.txtWholeSalesPrice_Enter);
+            this.txtWholeSalesPrice.Leave += new System.EventHandler(this.txtWholeSalesPrice_Leave);
             // 
             // AddInventoryForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(449, 603);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.btnLogin);
+            this.Controls.Add(this.txtWholeSalesPrice);
+            this.Controls.Add(this.btnAddProduct);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.dtpManufacturingDate);
             this.Controls.Add(this.cmbSupplier);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.txtSearchById);
+            this.Controls.Add(this.txtAmountAvailable);
+            this.Controls.Add(this.txtRetailPrice);
+            this.Controls.Add(this.txtProductName);
             this.MaximizeBox = false;
             this.Name = "AddInventoryForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
@@ -176,13 +184,13 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox txtSearchById;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtProductName;
+        private System.Windows.Forms.TextBox txtRetailPrice;
+        private System.Windows.Forms.TextBox txtAmountAvailable;
         private System.Windows.Forms.ComboBox cmbSupplier;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.Button btnLogin;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.DateTimePicker dtpManufacturingDate;
+        private System.Windows.Forms.Button btnAddProduct;
+        private System.Windows.Forms.TextBox txtWholeSalesPrice;
     }
 }

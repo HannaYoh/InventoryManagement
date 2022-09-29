@@ -16,5 +16,45 @@ namespace InventoryManagement
         {
             InitializeComponent();
         }
+
+        private void txtProductName_Enter(object sender, EventArgs e)
+        {
+            txtProductName.Text = "";
+        }
+
+        private void txtProductName_Leave(object sender, EventArgs e)
+        {
+            txtProductName.Text = "Product Name";
+        }
+
+        private void txtRetailPrice_Leave(object sender, EventArgs e)
+        {
+            txtRetailPrice.Text = "Retail Price";
+        }
+
+        private void txtRetailPrice_Enter(object sender, EventArgs e)
+        {
+            txtRetailPrice.Text = "";
+        }
+
+        private void txtWholeSalesPrice_Leave(object sender, EventArgs e)
+        {
+            txtWholeSalesPrice.Text = "WholeSales Price";
+        }
+
+        private void txtWholeSalesPrice_Enter(object sender, EventArgs e)
+        {
+            txtWholeSalesPrice.Text = "";
+        }
+
+        private void txtAmountAvailable_Leave(object sender, EventArgs e)
+        {
+            txtAmountAvailable.Text = "Available Amount";
+        }
+
+        private void txtAmountAvailable_Enter(object sender, EventArgs e)
+        {
+            txtAmountAvailable.Text = "";
+        }
     }
 }
