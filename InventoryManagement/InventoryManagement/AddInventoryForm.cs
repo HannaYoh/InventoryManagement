@@ -29,7 +29,7 @@ namespace InventoryManagement
 
         private void txtRetailPrice_Leave(object sender, EventArgs e)
         {
-            txtRetailPrice.Text = "Retail Price";
+            txtRetailPrice.Text = "Retail Price ";
         }
 
         private void txtRetailPrice_Enter(object sender, EventArgs e)
@@ -40,6 +40,7 @@ namespace InventoryManagement
         private void txtWholeSalesPrice_Leave(object sender, EventArgs e)
         {
             txtWholeSalesPrice.Text = "WholeSales Price";
+
         }
 
         private void txtWholeSalesPrice_Enter(object sender, EventArgs e)
@@ -49,12 +50,21 @@ namespace InventoryManagement
 
         private void txtAmountAvailable_Leave(object sender, EventArgs e)
         {
-            txtAmountAvailable.Text = "Available Amount";
+            txtAmountAvailable.Text = "Amount Available";
         }
 
         private void txtAmountAvailable_Enter(object sender, EventArgs e)
         {
             txtAmountAvailable.Text = "";
+        }
+
+        private void txtMobile_Leave(object sender, EventArgs e)
+        {
+        }
+
+        private void txtMobile_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

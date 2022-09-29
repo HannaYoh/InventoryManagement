@@ -31,11 +31,11 @@
             this.txtProductName = new System.Windows.Forms.TextBox();
             this.txtRetailPrice = new System.Windows.Forms.TextBox();
             this.txtAmountAvailable = new System.Windows.Forms.TextBox();
-            this.cmbSupplier = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.dtpManufacturingDate = new System.Windows.Forms.DateTimePicker();
             this.btnAddProduct = new System.Windows.Forms.Button();
             this.txtWholeSalesPrice = new System.Windows.Forms.TextBox();
+            this.dtpManufacturingDate = new System.Windows.Forms.DateTimePicker();
+            this.label3 = new System.Windows.Forms.Label();
+            this.cmbSupplier = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // txtProductName
@@ -89,46 +89,6 @@
             this.txtAmountAvailable.Enter += new System.EventHandler(this.txtAmountAvailable_Enter);
             this.txtAmountAvailable.Leave += new System.EventHandler(this.txtAmountAvailable_Leave);
             // 
-            // cmbSupplier
-            // 
-            this.cmbSupplier.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.cmbSupplier.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmbSupplier.Font = new System.Drawing.Font("Century Gothic", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbSupplier.FormattingEnabled = true;
-            this.cmbSupplier.ItemHeight = 25;
-            this.cmbSupplier.Items.AddRange(new object[] {
-            "Male",
-            "Female"});
-            this.cmbSupplier.Location = new System.Drawing.Point(86, 300);
-            this.cmbSupplier.Margin = new System.Windows.Forms.Padding(17, 4, 4, 4);
-            this.cmbSupplier.Name = "cmbSupplier";
-            this.cmbSupplier.Size = new System.Drawing.Size(267, 33);
-            this.cmbSupplier.TabIndex = 27;
-            this.cmbSupplier.Text = "Supplier";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(82, 359);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(180, 21);
-            this.label3.TabIndex = 37;
-            this.label3.Text = "Manufactured Date";
-            // 
-            // dtpManufacturingDate
-            // 
-            this.dtpManufacturingDate.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
-            this.dtpManufacturingDate.CalendarTitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
-            this.dtpManufacturingDate.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpManufacturingDate.Location = new System.Drawing.Point(86, 387);
-            this.dtpManufacturingDate.Margin = new System.Windows.Forms.Padding(4);
-            this.dtpManufacturingDate.Name = "dtpManufacturingDate";
-            this.dtpManufacturingDate.Size = new System.Drawing.Size(267, 27);
-            this.dtpManufacturingDate.TabIndex = 36;
-            // 
             // btnAddProduct
             // 
             this.btnAddProduct.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(46)))), ((int)(((byte)(46)))));
@@ -160,6 +120,46 @@
             this.txtWholeSalesPrice.Enter += new System.EventHandler(this.txtWholeSalesPrice_Enter);
             this.txtWholeSalesPrice.Leave += new System.EventHandler(this.txtWholeSalesPrice_Leave);
             // 
+            // dtpManufacturingDate
+            // 
+            this.dtpManufacturingDate.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.dtpManufacturingDate.CalendarTitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.dtpManufacturingDate.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpManufacturingDate.Location = new System.Drawing.Point(86, 387);
+            this.dtpManufacturingDate.Margin = new System.Windows.Forms.Padding(4);
+            this.dtpManufacturingDate.Name = "dtpManufacturingDate";
+            this.dtpManufacturingDate.Size = new System.Drawing.Size(267, 27);
+            this.dtpManufacturingDate.TabIndex = 36;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(82, 359);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(180, 21);
+            this.label3.TabIndex = 37;
+            this.label3.Text = "Manufactured Date";
+            // 
+            // cmbSupplier
+            // 
+            this.cmbSupplier.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.cmbSupplier.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbSupplier.Font = new System.Drawing.Font("Century Gothic", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbSupplier.FormattingEnabled = true;
+            this.cmbSupplier.ItemHeight = 25;
+            this.cmbSupplier.Items.AddRange(new object[] {
+            "Male",
+            "Female"});
+            this.cmbSupplier.Location = new System.Drawing.Point(86, 300);
+            this.cmbSupplier.Margin = new System.Windows.Forms.Padding(17, 4, 4, 4);
+            this.cmbSupplier.Name = "cmbSupplier";
+            this.cmbSupplier.Size = new System.Drawing.Size(267, 33);
+            this.cmbSupplier.TabIndex = 27;
+            this.cmbSupplier.Text = "Supplier";
+            // 
             // AddInventoryForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -187,10 +187,10 @@
         private System.Windows.Forms.TextBox txtProductName;
         private System.Windows.Forms.TextBox txtRetailPrice;
         private System.Windows.Forms.TextBox txtAmountAvailable;
-        private System.Windows.Forms.ComboBox cmbSupplier;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DateTimePicker dtpManufacturingDate;
         private System.Windows.Forms.Button btnAddProduct;
         private System.Windows.Forms.TextBox txtWholeSalesPrice;
+        private System.Windows.Forms.DateTimePicker dtpManufacturingDate;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ComboBox cmbSupplier;
     }
 }
