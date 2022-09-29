@@ -18,10 +18,15 @@ namespace InventoryManagement.Models
         public double RetailPrice { get; set; }
         public double WholesalePrice { get; set; }
 
-        public string OrderDate { get; set; }   //from orders
+        public string OrderDate { get; set; }   //orders variables
+        public string OrderDate2 { get; set; }
         public string DeliveryDate { get; set; }
         public string FullName { get; set; }
         public string ProductName { get; set; }
+
+        public int SupplierId { get; set; }
+        public string SupplierName { get; set; }   //supplier variable
+
 
 
         public double Total { get; set; }      //aggregate
@@ -97,6 +102,8 @@ namespace InventoryManagement.Models
                 temp.OrderId = Convert.ToInt32(reader["OrderId"]);
                 temp.OrderDate = reader["OrderDate"].ToString();
                 temp.DeliveryDate = reader["DeliveryDate"].ToString();
+                temp.SupplierId = Convert.ToInt32(reader["SupplierId"]);
+                temp.SupplierName = reader["SupplierName"].ToString();
                 temp.ProductId = Convert.ToInt32(reader["ProductId"]);
                 temp.ProductName = reader["ProductName"].ToString();
                 temp.Quantity = Convert.ToInt32(reader["Quantity"]);
@@ -131,6 +138,8 @@ namespace InventoryManagement.Models
                 temp.OrderId = Convert.ToInt32(reader["OrderId"]);
                 temp.OrderDate = reader["OrderDate"].ToString();
                 temp.DeliveryDate = reader["DeliveryDate"].ToString();
+                temp.SupplierId = Convert.ToInt32(reader["SupplierId"]);
+                temp.SupplierName = reader["SupplierName"].ToString();
                 temp.ProductId = Convert.ToInt32(reader["ProductId"]);
                 temp.ProductName = reader["ProductName"].ToString();
                 temp.Quantity = Convert.ToInt32(reader["Quantity"]);
@@ -144,5 +153,80 @@ namespace InventoryManagement.Models
             closeConnection();
             return list;
         }
+        public List<OrderDetail> searchByDate()
+        {
+            createConnection();
+
+            List<OrderDetail> list = new List<OrderDetail>();
+
+            string query = "select * from searchByDate(@OrderId, @OrderDate, @OrderDate2)";
+            SqlCommand cmd = new SqlCommand(query, conn);
+            cmd.Parameters.AddWithValue("OrderId", OrderId);
+            cmd.Parameters.AddWithValue("OrderDate", OrderDate);
+            cmd.Parameters.AddWithValue("OrderDate2", OrderDate2);
+
+
+
+            SqlDataReader reader = cmd.ExecuteReader();
+
+            while (reader.Read())
+            {
+                OrderDetail temp = new OrderDetail();
+
+                temp.FullName = reader["FullName"].ToString();
+                temp.OrderId = Convert.ToInt32(reader["OrderId"]);
+                temp.OrderDate = reader["OrderDate"].ToString();
+                temp.DeliveryDate = reader["DeliveryDate"].ToString();
+                temp.SupplierId = Convert.ToInt32(reader["SupplierId"]);
+                temp.SupplierName = reader["SupplierName"].ToString();
+                temp.ProductId = Convert.ToInt32(reader["ProductId"]);
+                temp.ProductName = reader["ProductName"].ToString();
+                temp.Quantity = Convert.ToInt32(reader["Quantity"]);
+                temp.TotalPrice = Convert.ToDouble(reader["TotalPrice"]);
+                temp.RetailPrice = Convert.ToDouble(reader["RetailPrice"]);
+                temp.WholesalePrice = Convert.ToDouble(reader["WholesalePrice"]);
+
+                list.Add(temp);
+            }
+
+            closeConnection();
+            return list;
+        }
+        public List<OrderDetail> categoryBySupplier()
+        {
+            createConnection();
+
+            List<OrderDetail> list = new List<OrderDetail>();
+
+            string query = "select * from categoryBySupplier(@SupplierName)";
+            SqlCommand cmd = new SqlCommand(query, conn);
+            cmd.Parameters.AddWithValue("SupplierName", SupplierName);
+
+            SqlDataReader reader = cmd.ExecuteReader();
+
+            while (reader.Read())
+            {
+                OrderDetail temp = new OrderDetail();
+
+                temp.FullName = reader["FullName"].ToString();
+                temp.OrderId = Convert.ToInt32(reader["OrderId"]);
+                temp.OrderDate = reader["OrderDate"].ToString();
+                temp.DeliveryDate = reader["DeliveryDate"].ToString();
+                temp.SupplierId = Convert.ToInt32(reader["SupplierId"]);
+                temp.SupplierName = reader["SupplierName"].ToString();
+                temp.ProductId = Convert.ToInt32(reader["ProductId"]);
+                temp.ProductName = reader["ProductName"].ToString();
+                temp.Quantity = Convert.ToInt32(reader["Quantity"]);
+                temp.TotalPrice = Convert.ToDouble(reader["TotalPrice"]);
+                temp.RetailPrice = Convert.ToDouble(reader["RetailPrice"]);
+                temp.WholesalePrice = Convert.ToDouble(reader["WholesalePrice"]);
+
+                list.Add(temp);
+            }
+
+            closeConnection();
+            return list;
+        }
+
     }
 }

@@ -34,10 +34,14 @@ namespace InventoryManagement
             {
                 detail.OrderId = int.Parse(txtOrderId.Text);
 
+                detail.OrderDate = dateTimePicker1.Value.ToString();
+
+                detail.OrderDate2 = dateTimePicker2.Value.ToString();
+
                 this.dataGridView1.Rows.Clear();
 
                 List<Models.OrderDetail> list = new List<Models.OrderDetail>();
-                list = detail.searchByOrderId();
+                list = detail.searchByDate();
                 foreach (var orders in list)
                 {
                     dataGridView1.Rows.Add(new object[]
@@ -46,6 +50,8 @@ namespace InventoryManagement
                    orders.OrderId,
                    orders.OrderDate,
                    orders.DeliveryDate,
+                   orders.SupplierId,
+                   orders.SupplierName,
                    orders.ProductId,
                    orders.ProductName,
                    orders.Quantity,
@@ -110,6 +116,8 @@ namespace InventoryManagement
                    orders.OrderId,
                    orders.OrderDate,
                    orders.DeliveryDate,
+                   orders.SupplierId,
+                   orders.SupplierName,
                    orders.ProductId,
                    orders.ProductName,
                    orders.Quantity,
@@ -120,5 +128,96 @@ namespace InventoryManagement
 
             }
         }
+
+        private void cmbSupplier_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmbSupplier.SelectedIndex == 0)
+            {
+                detail.SupplierName = "SupA";
+
+                this.dataGridView1.Rows.Clear();
+
+                List<Models.OrderDetail> list = new List<Models.OrderDetail>();
+                list = detail.categoryBySupplier();
+                foreach (var orders in list)
+                {
+                    dataGridView1.Rows.Add(new object[]
+                    {
+                   orders.FullName,
+                   orders.OrderId,
+                   orders.OrderDate,
+                   orders.DeliveryDate,
+                   orders.SupplierId,
+                   orders.SupplierName,
+                   orders.ProductId,
+                   orders.ProductName,
+                   orders.Quantity,
+                   orders.TotalPrice,
+                   orders.RetailPrice,
+                   orders.WholesalePrice
+                    });
+
+                }
+
+            }
+            else if (cmbSupplier.SelectedIndex == 1)
+            {
+                detail.SupplierName = "SupB";
+
+                this.dataGridView1.Rows.Clear();
+
+                List<Models.OrderDetail> list = new List<Models.OrderDetail>();
+                list = detail.categoryBySupplier();
+                foreach (var orders in list)
+                {
+                    dataGridView1.Rows.Add(new object[]
+                    {
+                   orders.FullName,
+                   orders.OrderId,
+                   orders.OrderDate,
+                   orders.DeliveryDate,
+                   orders.SupplierId,
+                   orders.SupplierName,
+                   orders.ProductId,
+                   orders.ProductName,
+                   orders.Quantity,
+                   orders.TotalPrice,
+                   orders.RetailPrice,
+                   orders.WholesalePrice
+                    });
+
+                }
+
+            }
+            else
+            {
+                cmbSupplier.SelectedIndex = -1;
+                this.dataGridView1.Rows.Clear();
+
+                List<Models.OrderDetail> list = new List<Models.OrderDetail>();
+                list = detail.categoryBySupplier();
+                foreach (var orders in list)
+                {
+                    dataGridView1.Rows.Add(new object[]
+                    {
+                   orders.FullName,
+                   orders.OrderId,
+                   orders.OrderDate,
+                   orders.DeliveryDate,
+                   orders.SupplierId,
+                   orders.SupplierName,
+                   orders.ProductId,
+                   orders.ProductName,
+                   orders.Quantity,
+                   orders.TotalPrice,
+                   orders.RetailPrice,
+                   orders.WholesalePrice
+                    });
+
+                }
+
+            }
+        }
+
     }
 }
