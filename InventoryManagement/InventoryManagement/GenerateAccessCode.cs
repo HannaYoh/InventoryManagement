@@ -21,7 +21,7 @@ namespace InventoryManagement
         {
             this.pbar.Font = new System.Drawing.Font("Century Gothic", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             pbar.Text = ((pbar.Value)).ToString()+" sec";
-            pbar.Value -= 10;
+            pbar.Value -= 1;
             if(pbar.Value == 0)
             {
                 timer1.Enabled = false;
