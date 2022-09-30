@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.pnlEditProfileContainer = new System.Windows.Forms.Panel();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
@@ -37,15 +38,15 @@
             this.label7 = new System.Windows.Forms.Label();
             this.txtMobile = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtAddress = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
             this.lblPwd = new System.Windows.Forms.Label();
             this.txtName = new System.Windows.Forms.TextBox();
             this.pnlChangePassword = new System.Windows.Forms.Panel();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtConfirmPwd = new System.Windows.Forms.TextBox();
+            this.txtNewPwd = new System.Windows.Forms.TextBox();
+            this.txtCurrentPwd = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
@@ -53,19 +54,21 @@
             this.pnlNotification = new System.Windows.Forms.Panel();
             this.pnlSms = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
-            this.chSmsNotification = new InventoryManagement.RJToggleButton();
             this.label15 = new System.Windows.Forms.Label();
             this.pnlEmail = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
-            this.chEmailNotification = new InventoryManagement.RJToggleButton();
             this.label5 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.btnLogin = new System.Windows.Forms.Button();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.chSmsNotification = new InventoryManagement.RJToggleButton();
+            this.chEmailNotification = new InventoryManagement.RJToggleButton();
             this.pnlEditProfileContainer.SuspendLayout();
             this.pnlChangePassword.SuspendLayout();
             this.pnlNotification.SuspendLayout();
             this.pnlSms.SuspendLayout();
             this.pnlEmail.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -89,9 +92,9 @@
             this.pnlEditProfileContainer.Controls.Add(this.label7);
             this.pnlEditProfileContainer.Controls.Add(this.txtMobile);
             this.pnlEditProfileContainer.Controls.Add(this.label4);
-            this.pnlEditProfileContainer.Controls.Add(this.textBox3);
+            this.pnlEditProfileContainer.Controls.Add(this.txtAddress);
             this.pnlEditProfileContainer.Controls.Add(this.label3);
-            this.pnlEditProfileContainer.Controls.Add(this.textBox2);
+            this.pnlEditProfileContainer.Controls.Add(this.txtEmail);
             this.pnlEditProfileContainer.Controls.Add(this.lblPwd);
             this.pnlEditProfileContainer.Controls.Add(this.txtName);
             this.pnlEditProfileContainer.Location = new System.Drawing.Point(48, 70);
@@ -107,6 +110,10 @@
             this.comboBox2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.ItemHeight = 21;
+            this.comboBox2.Items.AddRange(new object[] {
+            "DepA",
+            "DepB",
+            "DepC"});
             this.comboBox2.Location = new System.Drawing.Point(36, 444);
             this.comboBox2.Margin = new System.Windows.Forms.Padding(17, 4, 4, 4);
             this.comboBox2.Name = "comboBox2";
@@ -185,17 +192,17 @@
             this.label4.TabIndex = 31;
             this.label4.Text = "Address";
             // 
-            // textBox3
+            // txtAddress
             // 
-            this.textBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(35, 294);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(375, 32);
-            this.textBox3.TabIndex = 30;
+            this.txtAddress.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.txtAddress.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtAddress.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAddress.Location = new System.Drawing.Point(35, 294);
+            this.txtAddress.Margin = new System.Windows.Forms.Padding(4);
+            this.txtAddress.Multiline = true;
+            this.txtAddress.Name = "txtAddress";
+            this.txtAddress.Size = new System.Drawing.Size(375, 32);
+            this.txtAddress.TabIndex = 30;
             // 
             // label3
             // 
@@ -209,17 +216,17 @@
             this.label3.TabIndex = 29;
             this.label3.Text = "Email";
             // 
-            // textBox2
+            // txtEmail
             // 
-            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(35, 211);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(375, 32);
-            this.textBox2.TabIndex = 28;
+            this.txtEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtEmail.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmail.Location = new System.Drawing.Point(35, 211);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(4);
+            this.txtEmail.Multiline = true;
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(375, 32);
+            this.txtEmail.TabIndex = 28;
             // 
             // lblPwd
             // 
@@ -248,9 +255,9 @@
             // pnlChangePassword
             // 
             this.pnlChangePassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlChangePassword.Controls.Add(this.textBox5);
-            this.pnlChangePassword.Controls.Add(this.textBox4);
-            this.pnlChangePassword.Controls.Add(this.textBox1);
+            this.pnlChangePassword.Controls.Add(this.txtConfirmPwd);
+            this.pnlChangePassword.Controls.Add(this.txtNewPwd);
+            this.pnlChangePassword.Controls.Add(this.txtCurrentPwd);
             this.pnlChangePassword.Controls.Add(this.label9);
             this.pnlChangePassword.Controls.Add(this.label10);
             this.pnlChangePassword.Controls.Add(this.label12);
@@ -259,44 +266,44 @@
             this.pnlChangePassword.Size = new System.Drawing.Size(446, 286);
             this.pnlChangePassword.TabIndex = 5;
             // 
-            // textBox5
+            // txtConfirmPwd
             // 
-            this.textBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
-            this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(35, 211);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox5.Multiline = true;
-            this.textBox5.Name = "textBox5";
-            this.textBox5.PasswordChar = '*';
-            this.textBox5.Size = new System.Drawing.Size(375, 32);
-            this.textBox5.TabIndex = 34;
+            this.txtConfirmPwd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.txtConfirmPwd.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtConfirmPwd.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtConfirmPwd.Location = new System.Drawing.Point(35, 211);
+            this.txtConfirmPwd.Margin = new System.Windows.Forms.Padding(4);
+            this.txtConfirmPwd.Multiline = true;
+            this.txtConfirmPwd.Name = "txtConfirmPwd";
+            this.txtConfirmPwd.PasswordChar = '*';
+            this.txtConfirmPwd.Size = new System.Drawing.Size(375, 32);
+            this.txtConfirmPwd.TabIndex = 34;
             // 
-            // textBox4
+            // txtNewPwd
             // 
-            this.textBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
-            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(35, 130);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.PasswordChar = '*';
-            this.textBox4.Size = new System.Drawing.Size(375, 32);
-            this.textBox4.TabIndex = 33;
+            this.txtNewPwd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.txtNewPwd.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtNewPwd.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNewPwd.Location = new System.Drawing.Point(35, 130);
+            this.txtNewPwd.Margin = new System.Windows.Forms.Padding(4);
+            this.txtNewPwd.Multiline = true;
+            this.txtNewPwd.Name = "txtNewPwd";
+            this.txtNewPwd.PasswordChar = '*';
+            this.txtNewPwd.Size = new System.Drawing.Size(375, 32);
+            this.txtNewPwd.TabIndex = 33;
             // 
-            // textBox1
+            // txtCurrentPwd
             // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(35, 51);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.PasswordChar = '*';
-            this.textBox1.Size = new System.Drawing.Size(375, 32);
-            this.textBox1.TabIndex = 32;
+            this.txtCurrentPwd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.txtCurrentPwd.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtCurrentPwd.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCurrentPwd.Location = new System.Drawing.Point(35, 51);
+            this.txtCurrentPwd.Margin = new System.Windows.Forms.Padding(4);
+            this.txtCurrentPwd.Multiline = true;
+            this.txtCurrentPwd.Name = "txtCurrentPwd";
+            this.txtCurrentPwd.PasswordChar = '*';
+            this.txtCurrentPwd.Size = new System.Drawing.Size(375, 32);
+            this.txtCurrentPwd.TabIndex = 32;
             // 
             // label9
             // 
@@ -378,20 +385,6 @@
             this.label8.TabIndex = 39;
             this.label8.Text = "Turn on to get updates through sms";
             // 
-            // chSmsNotification
-            // 
-            this.chSmsNotification.AutoSize = true;
-            this.chSmsNotification.Location = new System.Drawing.Point(346, 14);
-            this.chSmsNotification.MinimumSize = new System.Drawing.Size(45, 22);
-            this.chSmsNotification.Name = "chSmsNotification";
-            this.chSmsNotification.OffBackColor = System.Drawing.Color.Gray;
-            this.chSmsNotification.OffToggleColor = System.Drawing.Color.Gainsboro;
-            this.chSmsNotification.OnBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(81)))), ((int)(((byte)(91)))));
-            this.chSmsNotification.OnToggleColor = System.Drawing.Color.WhiteSmoke;
-            this.chSmsNotification.Size = new System.Drawing.Size(45, 22);
-            this.chSmsNotification.TabIndex = 1;
-            this.chSmsNotification.UseVisualStyleBackColor = true;
-            // 
             // label15
             // 
             this.label15.AutoSize = true;
@@ -425,22 +418,6 @@
             this.label6.Size = new System.Drawing.Size(251, 18);
             this.label6.TabIndex = 39;
             this.label6.Text = "Turn on to get updates through email";
-            // 
-            // chEmailNotification
-            // 
-            this.chEmailNotification.AutoSize = true;
-            this.chEmailNotification.Checked = true;
-            this.chEmailNotification.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chEmailNotification.Location = new System.Drawing.Point(346, 14);
-            this.chEmailNotification.MinimumSize = new System.Drawing.Size(45, 22);
-            this.chEmailNotification.Name = "chEmailNotification";
-            this.chEmailNotification.OffBackColor = System.Drawing.Color.Gray;
-            this.chEmailNotification.OffToggleColor = System.Drawing.Color.Gainsboro;
-            this.chEmailNotification.OnBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(81)))), ((int)(((byte)(91)))));
-            this.chEmailNotification.OnToggleColor = System.Drawing.Color.WhiteSmoke;
-            this.chEmailNotification.Size = new System.Drawing.Size(45, 22);
-            this.chEmailNotification.TabIndex = 1;
-            this.chEmailNotification.UseVisualStyleBackColor = true;
             // 
             // label5
             // 
@@ -477,6 +454,41 @@
             this.btnLogin.TabIndex = 37;
             this.btnLogin.Text = "Save";
             this.btnLogin.UseVisualStyleBackColor = false;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
+            // chSmsNotification
+            // 
+            this.chSmsNotification.AutoSize = true;
+            this.chSmsNotification.Location = new System.Drawing.Point(346, 14);
+            this.chSmsNotification.MinimumSize = new System.Drawing.Size(45, 22);
+            this.chSmsNotification.Name = "chSmsNotification";
+            this.chSmsNotification.OffBackColor = System.Drawing.Color.Gray;
+            this.chSmsNotification.OffToggleColor = System.Drawing.Color.Gainsboro;
+            this.chSmsNotification.OnBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(81)))), ((int)(((byte)(91)))));
+            this.chSmsNotification.OnToggleColor = System.Drawing.Color.WhiteSmoke;
+            this.chSmsNotification.Size = new System.Drawing.Size(45, 22);
+            this.chSmsNotification.TabIndex = 1;
+            this.chSmsNotification.UseVisualStyleBackColor = true;
+            // 
+            // chEmailNotification
+            // 
+            this.chEmailNotification.AutoSize = true;
+            this.chEmailNotification.Checked = true;
+            this.chEmailNotification.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chEmailNotification.Location = new System.Drawing.Point(346, 14);
+            this.chEmailNotification.MinimumSize = new System.Drawing.Size(45, 22);
+            this.chEmailNotification.Name = "chEmailNotification";
+            this.chEmailNotification.OffBackColor = System.Drawing.Color.Gray;
+            this.chEmailNotification.OffToggleColor = System.Drawing.Color.Gainsboro;
+            this.chEmailNotification.OnBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(81)))), ((int)(((byte)(91)))));
+            this.chEmailNotification.OnToggleColor = System.Drawing.Color.WhiteSmoke;
+            this.chEmailNotification.Size = new System.Drawing.Size(45, 22);
+            this.chEmailNotification.TabIndex = 1;
+            this.chEmailNotification.UseVisualStyleBackColor = true;
             // 
             // AdminEditProfile
             // 
@@ -502,6 +514,7 @@
             this.pnlSms.PerformLayout();
             this.pnlEmail.ResumeLayout(false);
             this.pnlEmail.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -512,9 +525,9 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel pnlEditProfileContainer;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtAddress;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Label lblPwd;
         private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.Label label11;
@@ -524,9 +537,9 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.Panel pnlChangePassword;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtConfirmPwd;
+        private System.Windows.Forms.TextBox txtNewPwd;
+        private System.Windows.Forms.TextBox txtCurrentPwd;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label12;
@@ -542,5 +555,6 @@
         private System.Windows.Forms.Label label6;
         private RJToggleButton chEmailNotification;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

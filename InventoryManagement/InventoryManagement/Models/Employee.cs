@@ -54,6 +54,36 @@ namespace InventoryManagement.Models
             }
         }
 
+        public Employee returnEmployeeInfo()
+        {
+            createConnection();           
+
+            string query = "select * from returnEmployeeInfo(@Email)";
+            SqlCommand cmd = new SqlCommand(query, conn);
+            cmd.Parameters.AddWithValue("Email", Email);
+
+            SqlDataReader reader = cmd.ExecuteReader();
+
+            Employee temp = new Employee();
+
+            while (reader.Read())
+            {
+                temp.EmployeeId = Convert.ToInt32(reader["EmployeeId"]);
+                temp.FullName = reader["FullName"].ToString();
+                temp.Email = reader["Email"].ToString();
+                temp.Address = reader["Address"].ToString();
+                temp.Phone = reader["Phone"].ToString();
+                temp.Password = reader["Password"].ToString();
+                temp.BackupPassword = reader["BackupPassword"].ToString();
+                temp.Gender = reader["Gender"].ToString();
+                temp.DateOfBirth = reader["DateOfBirth"].ToString();
+                temp.Roll = reader["Roll"].ToString();
+                temp.DepId = Convert.ToInt32(reader["DepId"]);            
+            }
+            closeConnection();
+            return temp;
+        }
+
     }
 }
 

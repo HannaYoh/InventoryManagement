@@ -82,7 +82,10 @@ namespace InventoryManagement
                     bool status = employee.adminAuthentication();
                     if (status)
                     {
-                        AdminPage adminPage = new AdminPage();
+                        Models.Employee model = new Models.Employee();
+                        model = employee.returnEmployeeInfo();
+
+                        AdminPage adminPage = new AdminPage(model.FullName, this, employee.Email);
                         adminPage.Show();
                         Hide();
                     }

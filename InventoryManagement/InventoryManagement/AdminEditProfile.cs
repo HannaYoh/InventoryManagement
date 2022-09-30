@@ -8,6 +8,7 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Text.RegularExpressions;
 
 namespace InventoryManagement
 {
@@ -43,6 +44,47 @@ namespace InventoryManagement
         private void pnlEditProfileContainer_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            errorProvider1.Clear();
+            if (comboBox2.SelectedIndex == -1)
+            {
+                errorProvider1.SetError(comboBox2, "Required!");
+            }
+            else if (txtName.Text == "")
+            {
+                errorProvider1.SetError(txtName, "Required!");
+            }
+            else if (txtMobile.Text == "")
+            {
+                errorProvider1.SetError(txtMobile, "Required!");
+            }
+            else if (txtEmail.Text != "")
+            {
+                errorProvider1.SetError(txtEmail, "Required!");
+            }
+            else if (txtAddress.Text != "")
+            {
+                errorProvider1.SetError(txtAddress, "Required!");
+            }
+            else if (txtCurrentPwd.Text != "")
+            {
+                errorProvider1.SetError(txtCurrentPwd, "Required!");
+            }
+            else if (txtNewPwd.Text != "")
+            {
+                errorProvider1.SetError(txtNewPwd, "Required!");
+            }
+            else if (txtConfirmPwd.Text != "")
+            {
+                errorProvider1.SetError(txtConfirmPwd, "Required!");
+            }
+            else
+            {
+                MessageBox.Show("checked");
+            }
         }
     }
 }

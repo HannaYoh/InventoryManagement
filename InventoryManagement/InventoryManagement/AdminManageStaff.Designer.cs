@@ -49,7 +49,7 @@ namespace InventoryManagement
             this.lblAgeTitle = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.EmployeeId = new System.Windows.Forms.Label();
+            this.lblEmployeeId = new System.Windows.Forms.Label();
             this.pnlAdminTable = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
@@ -105,7 +105,7 @@ namespace InventoryManagement
             this.panel2.Controls.Add(this.lblAgeTitle);
             this.panel2.Controls.Add(this.lblName);
             this.panel2.Controls.Add(this.pictureBox1);
-            this.panel2.Controls.Add(this.EmployeeId);
+            this.panel2.Controls.Add(this.lblEmployeeId);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Location = new System.Drawing.Point(898, 0);
             this.panel2.Name = "panel2";
@@ -273,14 +273,14 @@ namespace InventoryManagement
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
             // 
-            // EmployeeId
+            // lblEmployeeId
             // 
-            this.EmployeeId.AutoSize = true;
-            this.EmployeeId.Location = new System.Drawing.Point(81, 92);
-            this.EmployeeId.Name = "EmployeeId";
-            this.EmployeeId.Size = new System.Drawing.Size(82, 16);
-            this.EmployeeId.TabIndex = 2;
-            this.EmployeeId.Text = "EmployeeID";
+            this.lblEmployeeId.AutoSize = true;
+            this.lblEmployeeId.Location = new System.Drawing.Point(81, 92);
+            this.lblEmployeeId.Name = "lblEmployeeId";
+            this.lblEmployeeId.Size = new System.Drawing.Size(82, 16);
+            this.lblEmployeeId.TabIndex = 2;
+            this.lblEmployeeId.Text = "EmployeeID";
             // 
             // pnlAdminTable
             // 
@@ -343,14 +343,6 @@ namespace InventoryManagement
             this.pnlTableChanger.Controls.Add(this.lblAdmin);
             this.pnlTableChanger.Controls.Add(this.lblStaff);
             this.pnlTableChanger.Location = new System.Drawing.Point(44, 101);
-            this.pnlTableChanger.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.pnlTableChanger.AutoSize = false; //Allows you to change height to have bottom padding
-            this.pnlTableChanger.Controls.Add(new Label()
-            {
-                Height = 1,
-                Dock = DockStyle.Bottom,
-                BackColor = Color.Black
-            });
             this.pnlTableChanger.Name = "pnlTableChanger";
             this.pnlTableChanger.Size = new System.Drawing.Size(827, 38);
             this.pnlTableChanger.TabIndex = 14;
@@ -370,7 +362,6 @@ namespace InventoryManagement
             // lblStaff
             // 
             this.lblStaff.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStaff.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(81)))), ((int)(((byte)(81)))));
             this.lblStaff.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(81)))), ((int)(((byte)(81)))));
             this.lblStaff.Location = new System.Drawing.Point(3, 2);
             this.lblStaff.Name = "lblStaff";
@@ -465,6 +456,7 @@ namespace InventoryManagement
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "AdminManageStaff";
             this.Text = "AdminManageStaff";
+            this.Load += new System.EventHandler(this.AdminManageStaff_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -491,7 +483,7 @@ namespace InventoryManagement
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label EmployeeId;
+        private System.Windows.Forms.Label lblEmployeeId;
         private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.Label lblGender;
         private System.Windows.Forms.Label lblGenderTitle;
