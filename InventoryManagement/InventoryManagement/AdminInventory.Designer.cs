@@ -185,6 +185,7 @@ namespace InventoryManagement
             this.pnlAddInventory.ResumeLayout(false);
             this.pnlAddInventory.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 

@@ -12,9 +12,11 @@ namespace InventoryManagement
 {
     public partial class AdminManageStaff : Form
     {
-        public AdminManageStaff()
+        Models.Employee employee = new Models.Employee();
+        public AdminManageStaff(string email)
         {
             InitializeComponent();
+            employee.Email = email;
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
@@ -77,6 +79,20 @@ namespace InventoryManagement
             GenerateAccessCode gn = new GenerateAccessCode();
             gn.Owner = this;
             gn.ShowDialog();
+        }
+
+        private void AdminManageStaff_Load(object sender, EventArgs e)
+        {
+            Models.Employee model = new Models.Employee();
+            model = employee.returnEmployeeInfo();
+
+            lblEmployeeId.Text = model.EmployeeId.ToString();
+            lblName.Text = model.FullName;
+            lblGender.Text = model.Gender;
+            lblDob.Text = model.DateOfBirth;
+            lblAddress.Text = model.Address;
+
+
         }
     }
 }

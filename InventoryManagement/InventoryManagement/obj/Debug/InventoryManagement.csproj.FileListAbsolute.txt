@@ -73,3 +73,9 @@ C:\Users\Henok B\source\repos\InventoryManagement\InventoryManagement\InventoryM
 C:\Users\Henok B\source\repos\InventoryManagement\InventoryManagement\InventoryManagement\bin\Debug\WinFormAnimation.dll
 C:\Users\Henok B\source\repos\InventoryManagement\InventoryManagement\InventoryManagement\bin\Debug\CircularProgressBar.xml
 C:\Users\Henok B\source\repos\InventoryManagement\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.csproj.CopyComplete
+C:\Users\hanyo\source\repos\InventoryManagement\InventoryManagement\InventoryManagement\InventoryManagement\bin\Debug\CircularProgressBar.dll
+C:\Users\hanyo\source\repos\InventoryManagement\InventoryManagement\InventoryManagement\InventoryManagement\bin\Debug\WinFormAnimation.dll
+C:\Users\hanyo\source\repos\InventoryManagement\InventoryManagement\InventoryManagement\InventoryManagement\bin\Debug\CircularProgressBar.xml
+C:\Users\hanyo\source\repos\InventoryManagement\InventoryManagement\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.AddSuppliers.resources
+C:\Users\hanyo\source\repos\InventoryManagement\InventoryManagement\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.GenerateDiscount.resources
+C:\Users\hanyo\source\repos\InventoryManagement\InventoryManagement\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.csproj.CopyComplete
