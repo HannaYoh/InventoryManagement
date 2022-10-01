@@ -54,15 +54,15 @@
             this.pnlNotification = new System.Windows.Forms.Panel();
             this.pnlSms = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
+            this.chSmsNotification = new InventoryManagement.RJToggleButton();
             this.label15 = new System.Windows.Forms.Label();
             this.pnlEmail = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
+            this.chEmailNotification = new InventoryManagement.RJToggleButton();
             this.label5 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.btnLogin = new System.Windows.Forms.Button();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.chSmsNotification = new InventoryManagement.RJToggleButton();
-            this.chEmailNotification = new InventoryManagement.RJToggleButton();
             this.pnlEditProfileContainer.SuspendLayout();
             this.pnlChangePassword.SuspendLayout();
             this.pnlNotification.SuspendLayout();
@@ -385,6 +385,20 @@
             this.label8.TabIndex = 39;
             this.label8.Text = "Turn on to get updates through sms";
             // 
+            // chSmsNotification
+            // 
+            this.chSmsNotification.AutoSize = true;
+            this.chSmsNotification.Location = new System.Drawing.Point(346, 14);
+            this.chSmsNotification.MinimumSize = new System.Drawing.Size(45, 22);
+            this.chSmsNotification.Name = "chSmsNotification";
+            this.chSmsNotification.OffBackColor = System.Drawing.Color.Gray;
+            this.chSmsNotification.OffToggleColor = System.Drawing.Color.Gainsboro;
+            this.chSmsNotification.OnBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(81)))), ((int)(((byte)(91)))));
+            this.chSmsNotification.OnToggleColor = System.Drawing.Color.WhiteSmoke;
+            this.chSmsNotification.Size = new System.Drawing.Size(45, 22);
+            this.chSmsNotification.TabIndex = 1;
+            this.chSmsNotification.UseVisualStyleBackColor = true;
+            // 
             // label15
             // 
             this.label15.AutoSize = true;
@@ -418,6 +432,22 @@
             this.label6.Size = new System.Drawing.Size(251, 18);
             this.label6.TabIndex = 39;
             this.label6.Text = "Turn on to get updates through email";
+            // 
+            // chEmailNotification
+            // 
+            this.chEmailNotification.AutoSize = true;
+            this.chEmailNotification.Checked = true;
+            this.chEmailNotification.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chEmailNotification.Location = new System.Drawing.Point(346, 14);
+            this.chEmailNotification.MinimumSize = new System.Drawing.Size(45, 22);
+            this.chEmailNotification.Name = "chEmailNotification";
+            this.chEmailNotification.OffBackColor = System.Drawing.Color.Gray;
+            this.chEmailNotification.OffToggleColor = System.Drawing.Color.Gainsboro;
+            this.chEmailNotification.OnBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(81)))), ((int)(((byte)(91)))));
+            this.chEmailNotification.OnToggleColor = System.Drawing.Color.WhiteSmoke;
+            this.chEmailNotification.Size = new System.Drawing.Size(45, 22);
+            this.chEmailNotification.TabIndex = 1;
+            this.chEmailNotification.UseVisualStyleBackColor = true;
             // 
             // label5
             // 
@@ -460,36 +490,6 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
-            // chSmsNotification
-            // 
-            this.chSmsNotification.AutoSize = true;
-            this.chSmsNotification.Location = new System.Drawing.Point(346, 14);
-            this.chSmsNotification.MinimumSize = new System.Drawing.Size(45, 22);
-            this.chSmsNotification.Name = "chSmsNotification";
-            this.chSmsNotification.OffBackColor = System.Drawing.Color.Gray;
-            this.chSmsNotification.OffToggleColor = System.Drawing.Color.Gainsboro;
-            this.chSmsNotification.OnBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(81)))), ((int)(((byte)(91)))));
-            this.chSmsNotification.OnToggleColor = System.Drawing.Color.WhiteSmoke;
-            this.chSmsNotification.Size = new System.Drawing.Size(45, 22);
-            this.chSmsNotification.TabIndex = 1;
-            this.chSmsNotification.UseVisualStyleBackColor = true;
-            // 
-            // chEmailNotification
-            // 
-            this.chEmailNotification.AutoSize = true;
-            this.chEmailNotification.Checked = true;
-            this.chEmailNotification.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chEmailNotification.Location = new System.Drawing.Point(346, 14);
-            this.chEmailNotification.MinimumSize = new System.Drawing.Size(45, 22);
-            this.chEmailNotification.Name = "chEmailNotification";
-            this.chEmailNotification.OffBackColor = System.Drawing.Color.Gray;
-            this.chEmailNotification.OffToggleColor = System.Drawing.Color.Gainsboro;
-            this.chEmailNotification.OnBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(81)))), ((int)(((byte)(91)))));
-            this.chEmailNotification.OnToggleColor = System.Drawing.Color.WhiteSmoke;
-            this.chEmailNotification.Size = new System.Drawing.Size(45, 22);
-            this.chEmailNotification.TabIndex = 1;
-            this.chEmailNotification.UseVisualStyleBackColor = true;
-            // 
             // AdminEditProfile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -505,6 +505,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AdminEditProfile";
             this.Text = "AdminChangePassword";
+            this.Load += new System.EventHandler(this.AdminEditProfile_Load);
             this.pnlEditProfileContainer.ResumeLayout(false);
             this.pnlEditProfileContainer.PerformLayout();
             this.pnlChangePassword.ResumeLayout(false);
