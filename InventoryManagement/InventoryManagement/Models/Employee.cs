@@ -13,6 +13,7 @@ namespace InventoryManagement.Models
         public int EmployeeId { get; set; }
         public string FullName { get; set; }
         public string Email { get; set; }
+        public string NewEmail { get; set; }
         public string Address { get; set; }
         public string Phone { get; set; }
         public string Password { get; set; }
@@ -82,6 +83,26 @@ namespace InventoryManagement.Models
             }
             closeConnection();
             return temp;
+        }
+        public void updateEmployeeInfo()
+        {
+            createConnection();
+
+            string query = "exec updateEmployeeInfo @FullName, @Email, @NewEmail, @Address, @Phone, @Password, @DateOfBirth, @DepId";
+            SqlCommand cmd = new SqlCommand(query, conn);
+            cmd.Parameters.AddWithValue("FullName", FullName);
+            cmd.Parameters.AddWithValue("Email", Email);
+            cmd.Parameters.AddWithValue("NewEmail", NewEmail);
+            cmd.Parameters.AddWithValue("Address", Address);
+            cmd.Parameters.AddWithValue("Phone", Phone);
+            cmd.Parameters.AddWithValue("Password", Password);
+            cmd.Parameters.AddWithValue("DateOfBirth", DateOfBirth);
+            cmd.Parameters.AddWithValue("DepId", DepId);
+
+            cmd.ExecuteNonQuery();
+
+            closeConnection();
+
         }
 
     }

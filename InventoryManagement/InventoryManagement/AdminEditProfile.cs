@@ -107,7 +107,27 @@ namespace InventoryManagement
             }
             else
             {
-                MessageBox.Show("checked");
+                employee.FullName = txtName.Text;
+                employee.Phone = txtMobile.Text;
+                employee.NewEmail = txtEmail.Text;
+                employee.Password = txtConfirmPwd.Text;
+                employee.Address = txtAddress.Text;
+                employee.DateOfBirth = dateTimePicker1.Value.ToString();
+                if (comboBox2.SelectedIndex == 0)
+                {
+                    employee.DepId = 1;
+                }
+                else if(comboBox2.SelectedIndex == 1)
+                {
+                    employee.DepId = 2;
+                }
+                else
+                {
+                    employee.DepId = 3;
+                }
+                employee.updateEmployeeInfo();
+
+                MessageBox.Show("profile updated");
             }
         }
 
