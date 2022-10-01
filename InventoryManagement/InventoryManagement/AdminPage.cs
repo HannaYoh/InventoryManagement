@@ -336,7 +336,7 @@ namespace InventoryManagement
             pnlSupplierActive.Visible = false;
             pnlEditProfile.Visible = true;
             lblActiveTab.Text = "Change Password";
-            openChildForm(new AdminEditProfile());
+            openChildForm(new AdminEditProfile(employee.Email));
         }
     }
 }
