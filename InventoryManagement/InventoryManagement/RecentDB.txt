@@ -120,11 +120,17 @@ insert into Customer values('CustB', 'CustB@gmail.com', 'Adama', '2519234569', '
 
 insert into Supplier values('SupA', 'SupA@gmail.com', 'Bahir Dar', '2519123455')
 insert into Supplier values('SupB', 'SupB@gmail.com', 'Addis Ababa', '2519123458')
+insert into Supplier values('SupC', 'SupC@gmail.com', 'Addis Ababa', '2519123459')
+
+update Supplier set Email = 'SupNew@gmail.com' where SupplierName = 'SupC'
+
 
 insert into Inventory values('ProdA', 25, 20, '2022-05-05', 4, 1, 1)
 insert into Inventory values('ProdB', 35, 30, '2022-06-05', 6, 1, 1)
 insert into Inventory values('ProdC', 45, 40, '2022-07-05', 3, 1, 2)
 insert into Inventory values('ProdD', 55, 50, '2022-07-01', 7, 1, 2)
+insert into Inventory values('ProdE', 65, 60, '2022-04-01', 8, 1, 1)
+
 
 insert into Orders values(1, getdate(), getdate() + 3)
 insert into Orders values(1, getdate() - 1, getdate() + 3)
@@ -245,4 +251,78 @@ returns table
 as
 return (select * from Employee where Email = @email)
 select * from returnEmployeeInfo('EmpC@gmail.com')
+
+create function returnRecentActivity()
+returns table
+as
+return (select * from RecentActivity)
+select * from returnRecentActivity()
+
+create function returnRecentSupplierInfo()
+returns table
+as 
+return (select R.ActivityDate, R.ActivityType, E.FullName, S.SupplierName from RecentActivity R join Employee E on R.EmployeeId = E.EmployeeId join Supplier S on R.SupplierId = S.SupplierId) 
+select * from returnRecentSupplierInfo()
+
+create function returnRecentInventoryInfo()
+returns table
+as 
+return (select R.ActivityDate, R.ActivityType, E.FullName, I.ProductName from RecentActivity R join Employee E on R.EmployeeId = E.EmployeeId join Inventory I on R.ProductId = I.ProductId) 
+select * from returnRecentInventoryInfo()
+
+
+--Trigger
+create trigger addIntoRecentActivity
+on Supplier
+after insert, update, delete
+as
+begin
+declare @ActivityType char, @EmployeeId int, @SupplierId int, @ProductId int
+if (select count(*) from deleted) = 0 and (select count(*) from inserted) >=1
+  begin
+  set @ActivityType = 'I'
+  select @SupplierId = SupplierId from inserted
+  end
+else if (select count(*) from inserted) = 0 and (select count(*) from deleted) >=1
+  begin
+  set @ActivityType = 'D'
+  select @SupplierId = SupplierId from deleted
+  end
+else
+  begin
+  set @ActivityType = 'U'
+  select @SupplierId = SupplierId from inserted
+  end
+set @EmployeeId = 1
+insert into RecentActivity values (cast(getdate() as date), @ActivityType, @EmployeeId, @SupplierId, @ProductId)
+end
+
+create trigger addIntoRecentsInventory
+on Inventory
+after insert, update, delete
+as
+begin
+declare @ActivityType char, @EmployeeId int, @SupplierId int, @ProductId int
+if (select count(*) from deleted) = 0 and (select count(*) from inserted) >=1
+  begin
+  set @ActivityType = 'I'
+  select @ProductId = ProductId from inserted
+  end
+else if (select count(*) from inserted) = 0 and (select count(*) from deleted) >=1
+  begin
+  set @ActivityType = 'D'
+  select @ProductId = ProductId from deleted
+  end
+else
+  begin
+  set @ActivityType = 'U'
+  select @ProductId = ProductId from inserted
+  end
+set @EmployeeId = 1
+insert into RecentActivity values (cast(getdate() as date), @ActivityType, @EmployeeId, @SupplierId, @ProductId)
+end
+
+
+
+
 
