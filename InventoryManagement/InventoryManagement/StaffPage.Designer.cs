@@ -1,6 +1,6 @@
 ﻿namespace InventoryManagement
 {
-    partial class AdminPage
+    partial class StaffPage
     {
         /// <summary>
         /// Required designer variable.
@@ -29,33 +29,13 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminPage));
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.pnlLogoutContainer = new System.Windows.Forms.Panel();
-            this.pbLogoutIcon = new System.Windows.Forms.PictureBox();
-            this.lblLogout = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.pictureBox11 = new System.Windows.Forms.PictureBox();
-            this.lblActiveTab = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.pnlProductsActive = new System.Windows.Forms.Panel();
-            this.pnlOrdersActive = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.pnlEditProfile = new System.Windows.Forms.Panel();
-            this.pictureBox13 = new System.Windows.Forms.PictureBox();
-            this.btnEditProfile = new System.Windows.Forms.Button();
-            this.pnlManageStaffActive = new System.Windows.Forms.Panel();
-            this.pnlSupplierActive = new System.Windows.Forms.Panel();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.btnManageStaff = new System.Windows.Forms.Button();
-            this.btnSupplier = new System.Windows.Forms.Button();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StaffPage));
             this.panelSubMenu = new System.Windows.Forms.Panel();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.btnDiscount = new System.Windows.Forms.Button();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.btnInventory = new System.Windows.Forms.Button();
-            this.pnlDashboardActive = new System.Windows.Forms.Panel();
+            this.pnlReportsActive = new System.Windows.Forms.Panel();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.btnProducts = new System.Windows.Forms.Button();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
@@ -71,18 +51,26 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtProducts = new System.Windows.Forms.TextBox();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.panelChildForm = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.pnlProductsActive = new System.Windows.Forms.Panel();
+            this.pnlOrdersActive = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.pnlCustomerActive = new System.Windows.Forms.Panel();
+            this.pnlSupplierActive = new System.Windows.Forms.Panel();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.btnCustomer = new System.Windows.Forms.Button();
+            this.btnSupplier = new System.Windows.Forms.Button();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.panel2.SuspendLayout();
-            this.pnlLogoutContainer.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbLogoutIcon)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
-            this.panel3.SuspendLayout();
-            this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.pictureBox12 = new System.Windows.Forms.PictureBox();
+            this.lbl = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.pictureBox11 = new System.Windows.Forms.PictureBox();
+            this.lblActiveTab = new System.Windows.Forms.Label();
             this.panelSubMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
@@ -95,266 +83,16 @@
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel1.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            this.panel2.SuspendLayout();
+            this.panel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             this.SuspendLayout();
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(81)))), ((int)(((byte)(81)))));
-            this.panel2.Controls.Add(this.pnlLogoutContainer);
-            this.panel2.Controls.Add(this.label5);
-            this.panel2.Controls.Add(this.pictureBox11);
-            this.panel2.Controls.Add(this.lblActiveTab);
-            this.panel2.Location = new System.Drawing.Point(331, -4);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1153, 74);
-            this.panel2.TabIndex = 1;
-            // 
-            // pnlLogoutContainer
-            // 
-            this.pnlLogoutContainer.Controls.Add(this.pbLogoutIcon);
-            this.pnlLogoutContainer.Controls.Add(this.lblLogout);
-            this.pnlLogoutContainer.Location = new System.Drawing.Point(955, 4);
-            this.pnlLogoutContainer.Name = "pnlLogoutContainer";
-            this.pnlLogoutContainer.Size = new System.Drawing.Size(158, 55);
-            this.pnlLogoutContainer.TabIndex = 13;
-            // 
-            // pbLogoutIcon
-            // 
-            this.pbLogoutIcon.Image = ((System.Drawing.Image)(resources.GetObject("pbLogoutIcon.Image")));
-            this.pbLogoutIcon.Location = new System.Drawing.Point(21, 24);
-            this.pbLogoutIcon.Margin = new System.Windows.Forms.Padding(4);
-            this.pbLogoutIcon.Name = "pbLogoutIcon";
-            this.pbLogoutIcon.Size = new System.Drawing.Size(28, 29);
-            this.pbLogoutIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbLogoutIcon.TabIndex = 12;
-            this.pbLogoutIcon.TabStop = false;
-            // 
-            // lblLogout
-            // 
-            this.lblLogout.AutoSize = true;
-            this.lblLogout.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lblLogout.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.lblLogout.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLogout.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblLogout.Location = new System.Drawing.Point(52, 21);
-            this.lblLogout.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblLogout.Name = "lblLogout";
-            this.lblLogout.Size = new System.Drawing.Size(102, 32);
-            this.lblLogout.TabIndex = 9;
-            this.lblLogout.Text = "Logout";
-            this.lblLogout.Click += new System.EventHandler(this.label4_Click_1);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label5.Location = new System.Drawing.Point(819, 28);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(111, 23);
-            this.label5.TabIndex = 11;
-            this.label5.Text = "First Name";
-            // 
-            // pictureBox11
-            // 
-            this.pictureBox11.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox11.Image")));
-            this.pictureBox11.Location = new System.Drawing.Point(774, 23);
-            this.pictureBox11.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.Size = new System.Drawing.Size(37, 36);
-            this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox11.TabIndex = 10;
-            this.pictureBox11.TabStop = false;
-            // 
-            // lblActiveTab
-            // 
-            this.lblActiveTab.AutoSize = true;
-            this.lblActiveTab.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.lblActiveTab.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblActiveTab.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblActiveTab.Location = new System.Drawing.Point(36, 16);
-            this.lblActiveTab.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblActiveTab.Name = "lblActiveTab";
-            this.lblActiveTab.Size = new System.Drawing.Size(200, 40);
-            this.lblActiveTab.TabIndex = 8;
-            this.lblActiveTab.Text = "Dashboard";
-            this.lblActiveTab.Click += new System.EventHandler(this.label4_Click);
-            // 
-            // panel3
-            // 
-            this.panel3.AutoScroll = true;
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-            this.panel3.Controls.Add(this.pnlProductsActive);
-            this.panel3.Controls.Add(this.pnlOrdersActive);
-            this.panel3.Controls.Add(this.panel5);
-            this.panel3.Controls.Add(this.panelSubMenu);
-            this.panel3.Controls.Add(this.pnlDashboardActive);
-            this.panel3.Controls.Add(this.pictureBox6);
-            this.panel3.Controls.Add(this.btnProducts);
-            this.panel3.Controls.Add(this.pictureBox5);
-            this.panel3.Controls.Add(this.btnOrders);
-            this.panel3.Controls.Add(this.pictureBox4);
-            this.panel3.Controls.Add(this.btnDashboard);
-            this.panel3.Controls.Add(this.panel6);
-            this.panel3.Location = new System.Drawing.Point(0, 171);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(333, 564);
-            this.panel3.TabIndex = 19;
-            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
-            // 
-            // pnlProductsActive
-            // 
-            this.pnlProductsActive.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(46)))), ((int)(((byte)(46)))));
-            this.pnlProductsActive.Location = new System.Drawing.Point(0, 96);
-            this.pnlProductsActive.Margin = new System.Windows.Forms.Padding(4);
-            this.pnlProductsActive.Name = "pnlProductsActive";
-            this.pnlProductsActive.Size = new System.Drawing.Size(13, 52);
-            this.pnlProductsActive.TabIndex = 19;
-            this.pnlProductsActive.Visible = false;
-            // 
-            // pnlOrdersActive
-            // 
-            this.pnlOrdersActive.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(46)))), ((int)(((byte)(46)))));
-            this.pnlOrdersActive.Location = new System.Drawing.Point(0, 48);
-            this.pnlOrdersActive.Margin = new System.Windows.Forms.Padding(4);
-            this.pnlOrdersActive.Name = "pnlOrdersActive";
-            this.pnlOrdersActive.Size = new System.Drawing.Size(13, 48);
-            this.pnlOrdersActive.TabIndex = 19;
-            this.pnlOrdersActive.Visible = false;
-            // 
-            // panel5
-            // 
-            this.panel5.Controls.Add(this.pnlEditProfile);
-            this.panel5.Controls.Add(this.pictureBox13);
-            this.panel5.Controls.Add(this.btnEditProfile);
-            this.panel5.Controls.Add(this.pnlManageStaffActive);
-            this.panel5.Controls.Add(this.pnlSupplierActive);
-            this.panel5.Controls.Add(this.pictureBox8);
-            this.panel5.Controls.Add(this.pictureBox7);
-            this.panel5.Controls.Add(this.btnManageStaff);
-            this.panel5.Controls.Add(this.btnSupplier);
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel5.Location = new System.Drawing.Point(0, 256);
-            this.panel5.Margin = new System.Windows.Forms.Padding(4);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(333, 167);
-            this.panel5.TabIndex = 31;
-            // 
-            // pnlEditProfile
-            // 
-            this.pnlEditProfile.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(46)))), ((int)(((byte)(46)))));
-            this.pnlEditProfile.Location = new System.Drawing.Point(0, 119);
-            this.pnlEditProfile.Margin = new System.Windows.Forms.Padding(4);
-            this.pnlEditProfile.Name = "pnlEditProfile";
-            this.pnlEditProfile.Size = new System.Drawing.Size(13, 48);
-            this.pnlEditProfile.TabIndex = 30;
-            this.pnlEditProfile.Visible = false;
-            // 
-            // pictureBox13
-            // 
-            this.pictureBox13.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox13.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox13.Image")));
-            this.pictureBox13.Location = new System.Drawing.Point(39, 127);
-            this.pictureBox13.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox13.Name = "pictureBox13";
-            this.pictureBox13.Size = new System.Drawing.Size(39, 32);
-            this.pictureBox13.TabIndex = 32;
-            this.pictureBox13.TabStop = false;
-            // 
-            // btnEditProfile
-            // 
-            this.btnEditProfile.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-            this.btnEditProfile.FlatAppearance.BorderSize = 0;
-            this.btnEditProfile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEditProfile.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditProfile.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnEditProfile.Location = new System.Drawing.Point(2, 119);
-            this.btnEditProfile.Margin = new System.Windows.Forms.Padding(4);
-            this.btnEditProfile.Name = "btnEditProfile";
-            this.btnEditProfile.Size = new System.Drawing.Size(333, 48);
-            this.btnEditProfile.TabIndex = 31;
-            this.btnEditProfile.Text = "Edit Profile";
-            this.btnEditProfile.UseVisualStyleBackColor = false;
-            this.btnEditProfile.Click += new System.EventHandler(this.button7_Click);
-            // 
-            // pnlManageStaffActive
-            // 
-            this.pnlManageStaffActive.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(46)))), ((int)(((byte)(46)))));
-            this.pnlManageStaffActive.Location = new System.Drawing.Point(0, 63);
-            this.pnlManageStaffActive.Margin = new System.Windows.Forms.Padding(4);
-            this.pnlManageStaffActive.Name = "pnlManageStaffActive";
-            this.pnlManageStaffActive.Size = new System.Drawing.Size(13, 48);
-            this.pnlManageStaffActive.TabIndex = 19;
-            this.pnlManageStaffActive.Visible = false;
-            // 
-            // pnlSupplierActive
-            // 
-            this.pnlSupplierActive.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(46)))), ((int)(((byte)(46)))));
-            this.pnlSupplierActive.Location = new System.Drawing.Point(0, 7);
-            this.pnlSupplierActive.Margin = new System.Windows.Forms.Padding(4);
-            this.pnlSupplierActive.Name = "pnlSupplierActive";
-            this.pnlSupplierActive.Size = new System.Drawing.Size(13, 48);
-            this.pnlSupplierActive.TabIndex = 19;
-            this.pnlSupplierActive.Visible = false;
-            // 
-            // pictureBox8
-            // 
-            this.pictureBox8.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
-            this.pictureBox8.Location = new System.Drawing.Point(39, 71);
-            this.pictureBox8.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(39, 32);
-            this.pictureBox8.TabIndex = 29;
-            this.pictureBox8.TabStop = false;
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
-            this.pictureBox7.Location = new System.Drawing.Point(40, 18);
-            this.pictureBox7.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(37, 32);
-            this.pictureBox7.TabIndex = 27;
-            this.pictureBox7.TabStop = false;
-            // 
-            // btnManageStaff
-            // 
-            this.btnManageStaff.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-            this.btnManageStaff.FlatAppearance.BorderSize = 0;
-            this.btnManageStaff.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnManageStaff.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnManageStaff.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnManageStaff.Location = new System.Drawing.Point(-5, 63);
-            this.btnManageStaff.Margin = new System.Windows.Forms.Padding(4);
-            this.btnManageStaff.Name = "btnManageStaff";
-            this.btnManageStaff.Size = new System.Drawing.Size(333, 48);
-            this.btnManageStaff.TabIndex = 28;
-            this.btnManageStaff.Text = "Manage Staff";
-            this.btnManageStaff.UseVisualStyleBackColor = false;
-            this.btnManageStaff.Click += new System.EventHandler(this.button4_Click_1);
-            // 
-            // btnSupplier
-            // 
-            this.btnSupplier.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-            this.btnSupplier.FlatAppearance.BorderSize = 0;
-            this.btnSupplier.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSupplier.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSupplier.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnSupplier.Location = new System.Drawing.Point(-3, 7);
-            this.btnSupplier.Margin = new System.Windows.Forms.Padding(4);
-            this.btnSupplier.Name = "btnSupplier";
-            this.btnSupplier.Size = new System.Drawing.Size(331, 48);
-            this.btnSupplier.TabIndex = 26;
-            this.btnSupplier.Text = "Supplier";
-            this.btnSupplier.UseVisualStyleBackColor = false;
-            this.btnSupplier.Click += new System.EventHandler(this.button3_Click_1);
             // 
             // panelSubMenu
             // 
@@ -370,7 +108,6 @@
             this.panelSubMenu.Size = new System.Drawing.Size(333, 112);
             this.panelSubMenu.TabIndex = 30;
             this.panelSubMenu.Visible = false;
-            this.panelSubMenu.Paint += new System.Windows.Forms.PaintEventHandler(this.panelSubMenu_Paint_1);
             // 
             // pictureBox10
             // 
@@ -382,7 +119,6 @@
             this.pictureBox10.Size = new System.Drawing.Size(37, 32);
             this.pictureBox10.TabIndex = 20;
             this.pictureBox10.TabStop = false;
-            this.pictureBox10.Click += new System.EventHandler(this.pictureBox10_Click);
             // 
             // btnDiscount
             // 
@@ -402,8 +138,7 @@
             this.btnDiscount.TabIndex = 19;
             this.btnDiscount.Text = "Discount";
             this.btnDiscount.UseVisualStyleBackColor = false;
-            this.btnDiscount.Click += new System.EventHandler(this.button6_Click_1);
-            this.btnDiscount.MouseHover += new System.EventHandler(this.button6_MouseHover);
+            this.btnDiscount.Click += new System.EventHandler(this.btnDiscount_Click);
             // 
             // pictureBox9
             // 
@@ -434,16 +169,17 @@
             this.btnInventory.TabIndex = 17;
             this.btnInventory.Text = "Inventory";
             this.btnInventory.UseVisualStyleBackColor = false;
-            this.btnInventory.Click += new System.EventHandler(this.button5_Click);
+            this.btnInventory.Click += new System.EventHandler(this.btnInventory_Click);
             // 
-            // pnlDashboardActive
+            // pnlReportsActive
             // 
-            this.pnlDashboardActive.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(46)))), ((int)(((byte)(46)))));
-            this.pnlDashboardActive.Location = new System.Drawing.Point(0, 4);
-            this.pnlDashboardActive.Margin = new System.Windows.Forms.Padding(4);
-            this.pnlDashboardActive.Name = "pnlDashboardActive";
-            this.pnlDashboardActive.Size = new System.Drawing.Size(13, 44);
-            this.pnlDashboardActive.TabIndex = 18;
+            this.pnlReportsActive.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(46)))), ((int)(((byte)(46)))));
+            this.pnlReportsActive.Location = new System.Drawing.Point(0, 4);
+            this.pnlReportsActive.Margin = new System.Windows.Forms.Padding(4);
+            this.pnlReportsActive.Name = "pnlReportsActive";
+            this.pnlReportsActive.Size = new System.Drawing.Size(13, 44);
+            this.pnlReportsActive.TabIndex = 18;
+            this.pnlReportsActive.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlDashboardActive_Paint);
             // 
             // pictureBox6
             // 
@@ -471,7 +207,7 @@
             this.btnProducts.TabIndex = 24;
             this.btnProducts.Text = "Products";
             this.btnProducts.UseVisualStyleBackColor = false;
-            this.btnProducts.Click += new System.EventHandler(this.button2_Click_1);
+            this.btnProducts.Click += new System.EventHandler(this.button2_Click_2);
             // 
             // pictureBox5
             // 
@@ -499,7 +235,7 @@
             this.btnOrders.TabIndex = 22;
             this.btnOrders.Text = "Orders";
             this.btnOrders.UseVisualStyleBackColor = false;
-            this.btnOrders.Click += new System.EventHandler(this.button1_Click_2);
+            this.btnOrders.Click += new System.EventHandler(this.btnOrders_Click);
             // 
             // pictureBox4
             // 
@@ -526,9 +262,9 @@
             this.btnDashboard.Name = "btnDashboard";
             this.btnDashboard.Size = new System.Drawing.Size(333, 48);
             this.btnDashboard.TabIndex = 20;
-            this.btnDashboard.Text = "Dashboard";
+            this.btnDashboard.Text = "Reports";
             this.btnDashboard.UseVisualStyleBackColor = false;
-            this.btnDashboard.Click += new System.EventHandler(this.btnDashboard_Click_3);
+            this.btnDashboard.Click += new System.EventHandler(this.btnDashboard_Click_4);
             // 
             // panel6
             // 
@@ -643,61 +379,262 @@
             this.txtProducts.TabIndex = 6;
             this.txtProducts.Text = "Search for Products";
             this.txtProducts.WordWrap = false;
-            this.txtProducts.TextChanged += new System.EventHandler(this.textBox1_TextChanged_1);
-            this.txtProducts.Enter += new System.EventHandler(this.textBox1_Enter_1);
-            this.txtProducts.Leave += new System.EventHandler(this.textBox1_Leave_1);
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.panel4);
-            this.panel1.Controls.Add(this.panel3);
-            this.panel1.Location = new System.Drawing.Point(0, -4);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(333, 731);
-            this.panel1.TabIndex = 2;
+            this.txtProducts.TextChanged += new System.EventHandler(this.txtProducts_TextChanged);
+            this.txtProducts.Enter += new System.EventHandler(this.txtProducts_Enter);
+            this.txtProducts.Leave += new System.EventHandler(this.txtProducts_Leave);
             // 
             // panelChildForm
             // 
             this.panelChildForm.BackColor = System.Drawing.Color.White;
             this.panelChildForm.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.panelChildForm.Location = new System.Drawing.Point(335, 70);
+            this.panelChildForm.Location = new System.Drawing.Point(335, 72);
             this.panelChildForm.Margin = new System.Windows.Forms.Padding(4);
             this.panelChildForm.Name = "panelChildForm";
             this.panelChildForm.Size = new System.Drawing.Size(1149, 657);
-            this.panelChildForm.TabIndex = 3;
-            this.panelChildForm.Paint += new System.Windows.Forms.PaintEventHandler(this.panelChildForm_Paint);
+            this.panelChildForm.TabIndex = 6;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.panel4);
+            this.panel1.Controls.Add(this.panel3);
+            this.panel1.Location = new System.Drawing.Point(0, -2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(333, 731);
+            this.panel1.TabIndex = 5;
+            // 
+            // panel3
+            // 
+            this.panel3.AutoScroll = true;
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+            this.panel3.Controls.Add(this.pnlProductsActive);
+            this.panel3.Controls.Add(this.pnlOrdersActive);
+            this.panel3.Controls.Add(this.panel5);
+            this.panel3.Controls.Add(this.panelSubMenu);
+            this.panel3.Controls.Add(this.pnlReportsActive);
+            this.panel3.Controls.Add(this.pictureBox6);
+            this.panel3.Controls.Add(this.btnProducts);
+            this.panel3.Controls.Add(this.pictureBox5);
+            this.panel3.Controls.Add(this.btnOrders);
+            this.panel3.Controls.Add(this.pictureBox4);
+            this.panel3.Controls.Add(this.btnDashboard);
+            this.panel3.Controls.Add(this.panel6);
+            this.panel3.Location = new System.Drawing.Point(0, 171);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(333, 564);
+            this.panel3.TabIndex = 19;
+            // 
+            // pnlProductsActive
+            // 
+            this.pnlProductsActive.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(46)))), ((int)(((byte)(46)))));
+            this.pnlProductsActive.Location = new System.Drawing.Point(0, 96);
+            this.pnlProductsActive.Margin = new System.Windows.Forms.Padding(4);
+            this.pnlProductsActive.Name = "pnlProductsActive";
+            this.pnlProductsActive.Size = new System.Drawing.Size(13, 52);
+            this.pnlProductsActive.TabIndex = 19;
+            this.pnlProductsActive.Visible = false;
+            // 
+            // pnlOrdersActive
+            // 
+            this.pnlOrdersActive.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(46)))), ((int)(((byte)(46)))));
+            this.pnlOrdersActive.Location = new System.Drawing.Point(0, 48);
+            this.pnlOrdersActive.Margin = new System.Windows.Forms.Padding(4);
+            this.pnlOrdersActive.Name = "pnlOrdersActive";
+            this.pnlOrdersActive.Size = new System.Drawing.Size(13, 48);
+            this.pnlOrdersActive.TabIndex = 19;
+            this.pnlOrdersActive.Visible = false;
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.pnlCustomerActive);
+            this.panel5.Controls.Add(this.pnlSupplierActive);
+            this.panel5.Controls.Add(this.pictureBox8);
+            this.panel5.Controls.Add(this.pictureBox7);
+            this.panel5.Controls.Add(this.btnCustomer);
+            this.panel5.Controls.Add(this.btnSupplier);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel5.Location = new System.Drawing.Point(0, 256);
+            this.panel5.Margin = new System.Windows.Forms.Padding(4);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(333, 167);
+            this.panel5.TabIndex = 31;
+            // 
+            // pnlCustomerActive
+            // 
+            this.pnlCustomerActive.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(46)))), ((int)(((byte)(46)))));
+            this.pnlCustomerActive.Location = new System.Drawing.Point(0, 63);
+            this.pnlCustomerActive.Margin = new System.Windows.Forms.Padding(4);
+            this.pnlCustomerActive.Name = "pnlCustomerActive";
+            this.pnlCustomerActive.Size = new System.Drawing.Size(13, 48);
+            this.pnlCustomerActive.TabIndex = 19;
+            this.pnlCustomerActive.Visible = false;
+            // 
+            // pnlSupplierActive
+            // 
+            this.pnlSupplierActive.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(46)))), ((int)(((byte)(46)))));
+            this.pnlSupplierActive.Location = new System.Drawing.Point(0, 7);
+            this.pnlSupplierActive.Margin = new System.Windows.Forms.Padding(4);
+            this.pnlSupplierActive.Name = "pnlSupplierActive";
+            this.pnlSupplierActive.Size = new System.Drawing.Size(13, 48);
+            this.pnlSupplierActive.TabIndex = 19;
+            this.pnlSupplierActive.Visible = false;
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
+            this.pictureBox8.Location = new System.Drawing.Point(39, 71);
+            this.pictureBox8.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(39, 32);
+            this.pictureBox8.TabIndex = 29;
+            this.pictureBox8.TabStop = false;
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
+            this.pictureBox7.Location = new System.Drawing.Point(40, 18);
+            this.pictureBox7.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(37, 32);
+            this.pictureBox7.TabIndex = 27;
+            this.pictureBox7.TabStop = false;
+            // 
+            // btnCustomer
+            // 
+            this.btnCustomer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+            this.btnCustomer.FlatAppearance.BorderSize = 0;
+            this.btnCustomer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCustomer.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCustomer.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnCustomer.Location = new System.Drawing.Point(-5, 63);
+            this.btnCustomer.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCustomer.Name = "btnCustomer";
+            this.btnCustomer.Size = new System.Drawing.Size(333, 48);
+            this.btnCustomer.TabIndex = 28;
+            this.btnCustomer.Text = "Customer";
+            this.btnCustomer.UseVisualStyleBackColor = false;
+            this.btnCustomer.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // btnSupplier
+            // 
+            this.btnSupplier.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+            this.btnSupplier.FlatAppearance.BorderSize = 0;
+            this.btnSupplier.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSupplier.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSupplier.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnSupplier.Location = new System.Drawing.Point(-3, 7);
+            this.btnSupplier.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSupplier.Name = "btnSupplier";
+            this.btnSupplier.Size = new System.Drawing.Size(331, 48);
+            this.btnSupplier.TabIndex = 26;
+            this.btnSupplier.Text = "Supplier";
+            this.btnSupplier.UseVisualStyleBackColor = false;
+            this.btnSupplier.Click += new System.EventHandler(this.btnSupplier_Click);
             // 
             // errorProvider1
             // 
             this.errorProvider1.ContainerControl = this;
             // 
-            // AdminPage
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(81)))), ((int)(((byte)(81)))));
+            this.panel2.Controls.Add(this.panel7);
+            this.panel2.Controls.Add(this.label5);
+            this.panel2.Controls.Add(this.pictureBox11);
+            this.panel2.Controls.Add(this.lblActiveTab);
+            this.panel2.Location = new System.Drawing.Point(331, -2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1153, 74);
+            this.panel2.TabIndex = 4;
+            // 
+            // panel7
+            // 
+            this.panel7.Controls.Add(this.pictureBox12);
+            this.panel7.Controls.Add(this.lbl);
+            this.panel7.Location = new System.Drawing.Point(955, 4);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(158, 55);
+            this.panel7.TabIndex = 13;
+            // 
+            // pictureBox12
+            // 
+            this.pictureBox12.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox12.Image")));
+            this.pictureBox12.Location = new System.Drawing.Point(21, 24);
+            this.pictureBox12.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox12.Name = "pictureBox12";
+            this.pictureBox12.Size = new System.Drawing.Size(28, 29);
+            this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox12.TabIndex = 12;
+            this.pictureBox12.TabStop = false;
+            // 
+            // lbl
+            // 
+            this.lbl.AutoSize = true;
+            this.lbl.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lbl.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.lbl.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lbl.Location = new System.Drawing.Point(52, 21);
+            this.lbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl.Name = "lbl";
+            this.lbl.Size = new System.Drawing.Size(102, 32);
+            this.lbl.TabIndex = 9;
+            this.lbl.Text = "Logout";
+            this.lbl.Click += new System.EventHandler(this.label4_Click_2);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label5.Location = new System.Drawing.Point(819, 28);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(111, 23);
+            this.label5.TabIndex = 11;
+            this.label5.Text = "First Name";
+            // 
+            // pictureBox11
+            // 
+            this.pictureBox11.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox11.Image")));
+            this.pictureBox11.Location = new System.Drawing.Point(774, 23);
+            this.pictureBox11.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox11.Name = "pictureBox11";
+            this.pictureBox11.Size = new System.Drawing.Size(37, 36);
+            this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox11.TabIndex = 10;
+            this.pictureBox11.TabStop = false;
+            // 
+            // lblActiveTab
+            // 
+            this.lblActiveTab.AutoSize = true;
+            this.lblActiveTab.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.lblActiveTab.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblActiveTab.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblActiveTab.Location = new System.Drawing.Point(36, 16);
+            this.lblActiveTab.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblActiveTab.Name = "lblActiveTab";
+            this.lblActiveTab.Size = new System.Drawing.Size(140, 40);
+            this.lblActiveTab.TabIndex = 8;
+            this.lblActiveTab.Text = "Reports";
+            // 
+            // StaffPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(1485, 727);
             this.Controls.Add(this.panelChildForm);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MaximizeBox = false;
-            this.Name = "AdminPage";
+            this.Name = "StaffPage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Admin";
-            this.Load += new System.EventHandler(this.AdminPage_Load);
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            this.pnlLogoutContainer.ResumeLayout(false);
-            this.pnlLogoutContainer.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbLogoutIcon)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
-            this.panel3.ResumeLayout(false);
-            this.panel5.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            this.Text = "StaffPage";
             this.panelSubMenu.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
@@ -712,25 +649,29 @@
             this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel1.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            this.panel5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.PictureBox pictureBox8;
-        private System.Windows.Forms.PictureBox pictureBox7;
-        private System.Windows.Forms.Button btnManageStaff;
-        private System.Windows.Forms.Button btnSupplier;
+
         private System.Windows.Forms.Panel panelSubMenu;
         private System.Windows.Forms.PictureBox pictureBox10;
         private System.Windows.Forms.Button btnDiscount;
         private System.Windows.Forms.PictureBox pictureBox9;
         private System.Windows.Forms.Button btnInventory;
-        private System.Windows.Forms.Panel pnlDashboardActive;
+        private System.Windows.Forms.Panel pnlReportsActive;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.Button btnProducts;
         private System.Windows.Forms.PictureBox pictureBox5;
@@ -746,21 +687,25 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtProducts;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label lblActiveTab;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.PictureBox pictureBox11;
-        private System.Windows.Forms.Label lblLogout;
         private System.Windows.Forms.Panel panelChildForm;
-        private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel pnlProductsActive;
         private System.Windows.Forms.Panel pnlOrdersActive;
-        private System.Windows.Forms.Panel pnlManageStaffActive;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Panel pnlCustomerActive;
         private System.Windows.Forms.Panel pnlSupplierActive;
-        private System.Windows.Forms.PictureBox pbLogoutIcon;
-        private System.Windows.Forms.Panel pnlLogoutContainer;
-        private System.Windows.Forms.Panel pnlEditProfile;
-        private System.Windows.Forms.PictureBox pictureBox13;
-        private System.Windows.Forms.Button btnEditProfile;
+        private System.Windows.Forms.PictureBox pictureBox8;
+        private System.Windows.Forms.PictureBox pictureBox7;
+        private System.Windows.Forms.Button btnCustomer;
+        private System.Windows.Forms.Button btnSupplier;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.PictureBox pictureBox12;
+        private System.Windows.Forms.Label lbl;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.PictureBox pictureBox11;
+        private System.Windows.Forms.Label lblActiveTab;
     }
 }
