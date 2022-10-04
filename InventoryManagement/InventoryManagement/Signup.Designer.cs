@@ -265,6 +265,10 @@
             this.comboBox2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.ItemHeight = 21;
+            this.comboBox2.Items.AddRange(new object[] {
+            "DepA",
+            "DepB",
+            "DepC"});
             this.comboBox2.Location = new System.Drawing.Point(124, 347);
             this.comboBox2.Margin = new System.Windows.Forms.Padding(17, 4, 4, 4);
             this.comboBox2.Name = "comboBox2";

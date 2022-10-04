@@ -99,11 +99,34 @@ namespace InventoryManagement.Models
             cmd.Parameters.AddWithValue("DateOfBirth", DateOfBirth);
             cmd.Parameters.AddWithValue("DepId", DepId);
 
+            closeConnection();
+
+        }
+
+        public void addEmployee()
+        {
+            createConnection();
+
+            string query = "exec addEmployee @FullName, @Email, @Address, @Phone, @Password, @BackupPassword, @Gender, @DateOfBirth, @Roll, @DepId";
+            SqlCommand cmd = new SqlCommand(query, conn);
+            cmd.Parameters.AddWithValue("FullName", FullName);
+            cmd.Parameters.AddWithValue("Email", Email);
+            cmd.Parameters.AddWithValue("Address", Address);
+            cmd.Parameters.AddWithValue("Phone", Phone);
+            cmd.Parameters.AddWithValue("Password", Password);
+            cmd.Parameters.AddWithValue("BackupPassword", BackupPassword);
+            cmd.Parameters.AddWithValue("Gender", Gender);
+            cmd.Parameters.AddWithValue("DateOfBirth", DateOfBirth);
+            cmd.Parameters.AddWithValue("Roll", Roll);      
+            cmd.Parameters.AddWithValue("DepId", DepId);
+
             cmd.ExecuteNonQuery();
 
             closeConnection();
 
         }
+
+
 
     }
 }

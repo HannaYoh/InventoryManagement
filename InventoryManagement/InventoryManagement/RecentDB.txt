@@ -114,6 +114,7 @@ insert into Department values('DepC', 'Addis Ababa')
 insert into Employee values('EmpA', 'EmpA@gmail.com', 'Addis Ababa', '2519123456', 'EmpA1234', 'EmpA5678', 'Female', '2001-01-01', 'Admin', 1)
 insert into Employee values('EmpB', 'EmpB@gmail.com', 'Addis Ababa', '2519234567', 'EmpB1234', 'EmpB5678', 'Male', '2002-02-02', 'Staff', 2)
 insert into Employee values('EmpC', 'EmpC@gmail.com', 'Addis Ababa', '2519234568', 'EmpC1234', 'EmpC5678', 'Male', '2002-03-02', 'Admin', 2)
+--new employees added
 
 insert into Customer values('CustA', 'CustA@gmail.com', 'Addis Ababa', '2519234568', 'Male', '2002-02-02')
 insert into Customer values('CustB', 'CustB@gmail.com', 'Adama', '2519234569', 'Female', '2003-03-23')
@@ -179,6 +180,23 @@ set FullName = @FullName, Email = @NewEmail, Address = @Address, Phone = @Phone,
 where Email = @Email
 end
 exec updateEmployeeInfo 'EmpNew', 'EmpC@gmail.com', 'EmpNew@gmail.com', 'Addis Ababa', '912345678','EmpNew1234', '2002-04-23', 1
+
+create procedure addEmployee
+@FullName varchar(50),
+@Email varchar(100),
+@Address varchar(50),
+@Phone varchar(20),
+@Password varchar(50),
+@BackupPassword varchar(50),
+@Gender varchar(50),
+@DateOfBirth date,
+@Roll varchar(10),
+@DepId int
+as
+begin
+insert into Employee values(@FullName, @Email, @Address, @Phone, @Password, @BackupPassword, @Gender, @DateOfBirth, @Roll, @DepId)
+end
+exec addEmployee 'EmpD', 'EmpD@gmail.com', 'Addis Ababa', '2519234577', 'EmpD1234', 'EmpD5678', 'Female', '2010-03-02', 'Staff', 1
 
 --function
 create function lowOnStock()
