@@ -15,6 +15,7 @@ namespace InventoryManagement
         Models.Inventory inventory = new Models.Inventory();
         Models.Orders orders = new Models.Orders(); 
         Models.OrderDetail orderDetail = new Models.OrderDetail();
+        Models.RecentActivity recent = new Models.RecentActivity();
         public AdminDashboardChild()
         {
             InitializeComponent();
@@ -50,6 +51,29 @@ namespace InventoryManagement
             //earnings
             decimal earningsResult = orderDetail.calculateEarnings();
             lblMessage.Text = earningsResult.ToString();
+
+            //recent activity
+            Models.RecentActivity modelSup = new Models.RecentActivity();
+            modelSup = recent.returnSupplier();
+            adminRecentActivities1.Date = modelSup.ActivityDate;
+            adminRecentActivities1.Title = "Supplier";
+            if (modelSup.ActivityType == 'I')
+                adminRecentActivities1.Message = modelSup.FullName + " added " + modelSup.SupplierName;
+            else if (modelSup.ActivityType == 'D')
+                adminRecentActivities1.Message = modelSup.FullName + " removed " + modelSup.SupplierName;
+            else
+                adminRecentActivities1.Message = modelSup.FullName + " updated " + modelSup.SupplierName;
+
+            Models.RecentActivity modelInv = new Models.RecentActivity();
+            modelInv = recent.returnInventory();
+            adminRecentActivities2.Date = modelInv.ActivityDate;
+            adminRecentActivities2.Title = "Product";
+            if (modelInv.ActivityType == 'I')
+                adminRecentActivities2.Message = modelInv.FullName + " added " + modelInv.ProductName;
+            else if (modelInv.ActivityType == 'D')
+                adminRecentActivities2.Message = modelInv.FullName + " removed " + modelInv.ProductName;
+            else
+                adminRecentActivities2.Message = modelInv.FullName + " updated " + modelInv.ProductName;
         }
     }
 }
