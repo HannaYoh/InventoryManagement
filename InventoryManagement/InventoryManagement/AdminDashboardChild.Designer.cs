@@ -58,6 +58,8 @@
             this.panel7 = new System.Windows.Forms.Panel();
             this.chartGrossRevenue = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.label6 = new System.Windows.Forms.Label();
+            this.adminRecentActivities1 = new InventoryManagement.AdminRecentActivities();
+            this.adminRecentActivities2 = new InventoryManagement.AdminRecentActivities();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -76,6 +78,8 @@
             // 
             this.flowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.flowLayoutPanel1.Controls.Add(this.panel1);
+            this.flowLayoutPanel1.Controls.Add(this.adminRecentActivities1);
+            this.flowLayoutPanel1.Controls.Add(this.adminRecentActivities2);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Right;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(894, 0);
             this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
@@ -373,6 +377,32 @@
             this.label6.TabIndex = 10;
             this.label6.Text = "Gross Revenue";
             // 
+            // adminRecentActivities1
+            // 
+            this.adminRecentActivities1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.adminRecentActivities1.Date = null;
+            this.adminRecentActivities1.ForeColor = System.Drawing.Color.Silver;
+            this.adminRecentActivities1.Location = new System.Drawing.Point(4, 87);
+            this.adminRecentActivities1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.adminRecentActivities1.Message = null;
+            this.adminRecentActivities1.Name = "adminRecentActivities1";
+            this.adminRecentActivities1.Size = new System.Drawing.Size(235, 164);
+            this.adminRecentActivities1.TabIndex = 1;
+            this.adminRecentActivities1.Title = null;
+            // 
+            // adminRecentActivities2
+            // 
+            this.adminRecentActivities2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.adminRecentActivities2.Date = null;
+            this.adminRecentActivities2.ForeColor = System.Drawing.Color.Silver;
+            this.adminRecentActivities2.Location = new System.Drawing.Point(4, 259);
+            this.adminRecentActivities2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.adminRecentActivities2.Message = null;
+            this.adminRecentActivities2.Name = "adminRecentActivities2";
+            this.adminRecentActivities2.Size = new System.Drawing.Size(235, 164);
+            this.adminRecentActivities2.TabIndex = 2;
+            this.adminRecentActivities2.Title = null;
+            // 
             // AdminDashboardChild
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -439,5 +469,7 @@
         private System.Windows.Forms.DataVisualization.Charting.Chart chartGrossRevenue;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
+        private AdminRecentActivities adminRecentActivities1;
+        private AdminRecentActivities adminRecentActivities2;
     }
 }
