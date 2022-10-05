@@ -99,6 +99,8 @@ namespace InventoryManagement.Models
             cmd.Parameters.AddWithValue("DateOfBirth", DateOfBirth);
             cmd.Parameters.AddWithValue("DepId", DepId);
 
+            cmd.ExecuteNonQuery();
+
             closeConnection();
 
         }
