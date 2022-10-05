@@ -13,9 +13,13 @@ namespace InventoryManagement
 {
     public partial class StaffPage : Form
     {
+        /*Models.Employee employee = new Models.Employee();
+        Login loginPage = new Login();*/
         public StaffPage()
         {
             InitializeComponent();
+            openChildForm(new StaffReports());
+
         }
 
         private Form activeForm = null;
@@ -64,9 +68,11 @@ namespace InventoryManagement
             pnlOrdersActive.Visible = false;
             pnlProductsActive.Visible = false;
             pnlSupplierActive.Visible = false;
+            pnlEditProfile.Visible = false;
+
 
             lblActiveTab.Text = "Reports";
-            //openChildForm(new AdminDashboardChild());
+            openChildForm(new StaffReports());
         }
 
         private void label4_Click_2(object sender, EventArgs e)
@@ -84,7 +90,9 @@ namespace InventoryManagement
             pnlOrdersActive.Visible = true;
             pnlProductsActive.Visible = false;
             pnlSupplierActive.Visible = false;
-            
+            pnlEditProfile.Visible = false;
+
+
 
             lblActiveTab.Text = "Orders";
             //openChildForm(new AdminOrders());
@@ -99,7 +107,9 @@ namespace InventoryManagement
             pnlOrdersActive.Visible = false;
             pnlProductsActive.Visible = true;
             pnlSupplierActive.Visible = false;
-            
+            pnlEditProfile.Visible = false;
+
+
             lblActiveTab.Text = "Products - Inventory";
             //openChildForm(new AdminInventory());
         }
@@ -112,6 +122,8 @@ namespace InventoryManagement
             pnlOrdersActive.Visible = false;
             pnlProductsActive.Visible = true;
             pnlSupplierActive.Visible = false;
+            pnlEditProfile.Visible = false;
+
             lblActiveTab.Text = "Products - Discount";
             /*openChildForm(new AdminDiscount());*/
         }
@@ -124,7 +136,9 @@ namespace InventoryManagement
             pnlOrdersActive.Visible = false;
             pnlProductsActive.Visible = false;
             pnlSupplierActive.Visible = true;
-          
+            pnlEditProfile.Visible = false;
+
+
             lblActiveTab.Text = "Supplier";
             //openChildForm(new AdminSupplier());
         }
@@ -137,6 +151,8 @@ namespace InventoryManagement
             pnlOrdersActive.Visible = false;
             pnlProductsActive.Visible = false;
             pnlSupplierActive.Visible = false;
+            pnlEditProfile.Visible = false;
+
             lblActiveTab.Text = "Customer";
             //openChildForm(new AdminManageStaff(employee.Email));
 
@@ -165,6 +181,19 @@ namespace InventoryManagement
             if (txtProducts.Text == "" || txtProducts.Text == "Search for Products")
                 errorProvider1.SetError(pictureBox3, "Enter Product!");
 
+        }
+
+        private void btnEditProfile_Click(object sender, EventArgs e)
+        {
+            panelSubMenu.Visible = false;
+            pnlReportsActive.Visible = false;
+            pnlCustomerActive.Visible = false;
+            pnlOrdersActive.Visible = false;
+            pnlProductsActive.Visible = false;
+            pnlSupplierActive.Visible = false;
+            pnlEditProfile.Visible = true;
+            lblActiveTab.Text = "Edit Profile";
+            //openChildForm(new AdminEditProfile(employee.Email));
         }
     }
 }

@@ -254,6 +254,7 @@
             this.pnlEditProfile.Size = new System.Drawing.Size(13, 48);
             this.pnlEditProfile.TabIndex = 30;
             this.pnlEditProfile.Visible = false;
+            this.pnlEditProfile.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlEditProfile_Paint);
             // 
             // pictureBox13
             // 
@@ -265,6 +266,7 @@
             this.pictureBox13.Size = new System.Drawing.Size(39, 32);
             this.pictureBox13.TabIndex = 32;
             this.pictureBox13.TabStop = false;
+            this.pictureBox13.Click += new System.EventHandler(this.pictureBox13_Click);
             // 
             // btnEditProfile
             // 
