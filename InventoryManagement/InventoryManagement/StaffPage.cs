@@ -111,7 +111,7 @@ namespace InventoryManagement
 
 
             lblActiveTab.Text = "Products - Inventory";
-            //openChildForm(new AdminInventory());
+            openChildForm(new StaffInventory());
         }
 
         private void btnDiscount_Click(object sender, EventArgs e)
