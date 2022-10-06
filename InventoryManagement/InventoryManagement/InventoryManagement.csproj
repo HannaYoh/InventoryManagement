@@ -169,6 +169,12 @@
     <Compile Include="Signup.Designer.cs">
       <DependentUpon>Signup.cs</DependentUpon>
     </Compile>
+    <Compile Include="StaffCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StaffCustomer.Designer.cs">
+      <DependentUpon>StaffCustomer.cs</DependentUpon>
+    </Compile>
     <Compile Include="StaffDiscount.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -198,6 +204,12 @@
     </Compile>
     <Compile Include="StaffReports.Designer.cs">
       <DependentUpon>StaffReports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StaffSupplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StaffSupplier.Designer.cs">
+      <DependentUpon>StaffSupplier.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="AddInventoryForm.resx">
       <DependentUpon>AddInventoryForm.cs</DependentUpon>
@@ -259,6 +271,9 @@
     <EmbeddedResource Include="Signup.resx">
       <DependentUpon>Signup.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="StaffCustomer.resx">
+      <DependentUpon>StaffCustomer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="StaffDiscount.resx">
       <DependentUpon>StaffDiscount.cs</DependentUpon>
     </EmbeddedResource>
@@ -273,6 +288,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="StaffReports.resx">
       <DependentUpon>StaffReports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StaffSupplier.resx">
+      <DependentUpon>StaffSupplier.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

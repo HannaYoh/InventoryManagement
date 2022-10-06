@@ -140,7 +140,7 @@ namespace InventoryManagement
 
 
             lblActiveTab.Text = "Supplier";
-            //openChildForm(new AdminSupplier());
+            openChildForm(new StaffSupplier());
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -154,7 +154,7 @@ namespace InventoryManagement
             pnlEditProfile.Visible = false;
 
             lblActiveTab.Text = "Customer";
-            //openChildForm(new AdminManageStaff(employee.Email));
+            openChildForm(new StaffCustomer());
 
         }
 

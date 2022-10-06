@@ -45,7 +45,7 @@
             this.pictureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(313, 64);
+            this.pictureBox3.Location = new System.Drawing.Point(307, 34);
             this.pictureBox3.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(40, 34);
@@ -60,7 +60,7 @@
             this.txtSearchById.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtSearchById.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSearchById.ForeColor = System.Drawing.Color.Black;
-            this.txtSearchById.Location = new System.Drawing.Point(51, 64);
+            this.txtSearchById.Location = new System.Drawing.Point(45, 34);
             this.txtSearchById.Margin = new System.Windows.Forms.Padding(4, 55, 4, 4);
             this.txtSearchById.Multiline = true;
             this.txtSearchById.Name = "txtSearchById";
@@ -85,7 +85,7 @@
             this.cmbCatagory.Items.AddRange(new object[] {
             "Male",
             "Female"});
-            this.cmbCatagory.Location = new System.Drawing.Point(478, 65);
+            this.cmbCatagory.Location = new System.Drawing.Point(472, 35);
             this.cmbCatagory.Margin = new System.Windows.Forms.Padding(17, 4, 4, 4);
             this.cmbCatagory.Name = "cmbCatagory";
             this.cmbCatagory.Size = new System.Drawing.Size(230, 33);
@@ -95,7 +95,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.panel1.Location = new System.Drawing.Point(51, 140);
+            this.panel1.Location = new System.Drawing.Point(45, 110);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1008, 460);
             this.panel1.TabIndex = 34;
@@ -110,7 +110,7 @@
             this.cmbSupplier.Items.AddRange(new object[] {
             "Male",
             "Female"});
-            this.cmbSupplier.Location = new System.Drawing.Point(829, 65);
+            this.cmbSupplier.Location = new System.Drawing.Point(823, 35);
             this.cmbSupplier.Margin = new System.Windows.Forms.Padding(17, 4, 4, 4);
             this.cmbSupplier.Name = "cmbSupplier";
             this.cmbSupplier.Size = new System.Drawing.Size(230, 33);
