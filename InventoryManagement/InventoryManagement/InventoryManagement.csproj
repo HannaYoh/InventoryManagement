@@ -169,6 +169,12 @@
     <Compile Include="Signup.Designer.cs">
       <DependentUpon>Signup.cs</DependentUpon>
     </Compile>
+    <Compile Include="StaffDiscount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StaffDiscount.Designer.cs">
+      <DependentUpon>StaffDiscount.cs</DependentUpon>
+    </Compile>
     <Compile Include="StaffInventory.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -252,6 +258,9 @@
     </Compile>
     <EmbeddedResource Include="Signup.resx">
       <DependentUpon>Signup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StaffDiscount.resx">
+      <DependentUpon>StaffDiscount.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="StaffInventory.resx">
       <DependentUpon>StaffInventory.cs</DependentUpon>

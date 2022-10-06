@@ -125,7 +125,7 @@ namespace InventoryManagement
             pnlEditProfile.Visible = false;
 
             lblActiveTab.Text = "Products - Discount";
-            /*openChildForm(new AdminDiscount());*/
+            openChildForm(new StaffDiscount());
         }
 
         private void btnSupplier_Click(object sender, EventArgs e)
