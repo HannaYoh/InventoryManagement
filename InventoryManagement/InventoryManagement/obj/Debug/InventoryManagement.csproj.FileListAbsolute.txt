@@ -82,3 +82,5 @@ C:\Users\hanyo\source\repos\InventoryManagement\InventoryManagement\InventoryMan
 C:\Users\Henok B\source\repos\InventoryManagement\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.StaffPage.resources
 C:\Users\hanyo\source\repos\InventoryManagement\InventoryManagement\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.StaffPage.resources
 C:\Users\Henok B\source\repos\InventoryManagement\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.StaffReports.resources
+C:\Users\Henok B\source\repos\InventoryManagement\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.StaffOrders.resources
+C:\Users\Henok B\source\repos\InventoryManagement\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.AddOrders.resources
