@@ -55,6 +55,36 @@ namespace InventoryManagement.Models
             }
         }
 
+        public bool staffAuthentication()
+        {
+            createConnection();
+
+            List<Employee> staffList = new List<Employee>();
+
+            string query = "exec SelectStaff @Email, @Password";
+            SqlCommand cmd = new SqlCommand(query, conn);
+            cmd.Parameters.AddWithValue("Email", Email);
+            cmd.Parameters.AddWithValue("Password", Password);
+
+            SqlDataReader reader = cmd.ExecuteReader();
+
+            if (reader.Read())
+            {
+                Employee temp = new Employee();
+                temp.Email = reader["Email"].ToString();
+                temp.Password = reader["Password"].ToString();
+                staffList.Add(temp);
+
+                closeConnection();
+                return true;
+            }
+            else
+            {
+                closeConnection();
+                return false;
+            }
+        }
+
         public Employee returnEmployeeInfo()
         {
             createConnection();           

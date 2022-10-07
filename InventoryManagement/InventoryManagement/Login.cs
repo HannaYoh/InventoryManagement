@@ -98,8 +98,25 @@ namespace InventoryManagement
 
                 }
                 else
-                {
-                    MessageBox.Show("Staff Checked");
+                {                  
+                    employee.Email = txtEmail.Text;
+                    employee.Password = txtPassword.Text;
+                    bool status = employee.staffAuthentication();
+                    if (status)
+                    {
+                        Models.Employee model = new Models.Employee();
+                        model = employee.returnEmployeeInfo();
+
+                        StaffPage staffPage = new StaffPage(model.FullName, this, employee.Email);
+                        staffPage.Show();
+                        Hide();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Invalid input");
+                        txtEmail.Clear();
+                        txtPassword.Clear();
+                    }
                 }
             }
         }

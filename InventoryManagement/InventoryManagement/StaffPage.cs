@@ -13,12 +13,15 @@ namespace InventoryManagement
 {
     public partial class StaffPage : Form
     {
-        /*Models.Employee employee = new Models.Employee();
-        Login loginPage = new Login();*/
-        public StaffPage()
+        Models.Employee employee = new Models.Employee();
+        Login loginPage = new Login();
+        public StaffPage(string username, Login login, string email)
         {
             InitializeComponent();
             openChildForm(new StaffReports());
+            label5.Text = username;
+            loginPage = login;
+            employee.Email = email;
 
         }
 
@@ -193,7 +196,7 @@ namespace InventoryManagement
             pnlSupplierActive.Visible = false;
             pnlEditProfile.Visible = true;
             lblActiveTab.Text = "Edit Profile";
-            //openChildForm(new AdminEditProfile(employee.Email));
+            openChildForm(new AdminEditProfile(employee.Email));
         }
     }
 }
