@@ -28,8 +28,8 @@ namespace InventoryManagement.Models
         public string SupplierName { get; set; }   //supplier variable
 
 
-
         public double Total { get; set; }      //aggregate
+        public int BestSold { get; set; }
 
         //methods
         public List<OrderDetail> displayGrossRevenue()
@@ -227,6 +227,33 @@ namespace InventoryManagement.Models
             closeConnection();
             return list;
         }
+
+
+        public List<OrderDetail> displayBestSellers()
+        {
+            createConnection();
+
+            List<OrderDetail> list = new List<OrderDetail>();
+
+            string query = "exec displayBestSellers";
+            SqlCommand cmd = new SqlCommand(query, conn);
+
+            SqlDataReader reader = cmd.ExecuteReader();
+
+            while (reader.Read())
+            {
+                OrderDetail temp = new OrderDetail();
+
+                temp.ProductName = reader["ProductName"].ToString();
+                temp.BestSold = Convert.ToInt32(reader["BestSold"]);
+
+                list.Add(temp);
+            }
+
+            closeConnection();
+            return list;
+        }
+
 
     }
 }

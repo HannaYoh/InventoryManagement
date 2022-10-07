@@ -198,6 +198,13 @@ insert into Employee values(@FullName, @Email, @Address, @Phone, @Password, @Bac
 end
 exec addEmployee 'EmpD', 'EmpD@gmail.com', 'Addis Ababa', '2519234577', 'EmpD1234', 'EmpD5678', 'Female', '2010-03-02', 'Staff', 1
 
+create procedure displayBestSellers
+as
+begin
+select sum(OD.Quantity) as BestSold, I.ProductName from OrderDetail OD join Inventory I on OD.ProductId = I.ProductId group by I.ProductName order by sum(OD.Quantity) desc
+end
+exec displayBestSellers
+
 --function
 create function lowOnStock()
 returns table

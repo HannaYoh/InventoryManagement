@@ -380,6 +380,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "StaffReports";
             this.Text = "StaffReports";
+            this.Load += new System.EventHandler(this.StaffReports_Load);
             this.panel7.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.chartGrossRevenue)).EndInit();
             this.panel6.ResumeLayout(false);
