@@ -212,6 +212,7 @@
             this.cmbSupplier.Size = new System.Drawing.Size(230, 33);
             this.cmbSupplier.TabIndex = 48;
             this.cmbSupplier.Text = "Supplier";
+            this.cmbSupplier.SelectedIndexChanged += new System.EventHandler(this.cmbSupplier_SelectedIndexChanged);
             // 
             // label3
             // 
@@ -318,6 +319,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "StaffOrders";
             this.Text = "StaffOrders";
+            this.Load += new System.EventHandler(this.StaffOrders_Load);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel1.ResumeLayout(false);
