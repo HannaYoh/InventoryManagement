@@ -43,8 +43,103 @@ namespace InventoryManagement.Models
 
             closeConnection();
             return inventoryList;
-
-
         }
+        public List<Inventory> viewAllProducts()
+        {
+            createConnection();
+
+            List<Inventory> list = new List<Inventory>();
+
+            string query = "select * from Inventory";
+            SqlCommand cmd = new SqlCommand(query, conn);
+
+            SqlDataReader reader = cmd.ExecuteReader();
+
+            while (reader.Read())
+            {
+                Inventory temp = new Inventory();
+
+                temp.ProductId = Convert.ToInt32(reader["ProductId"]);
+                temp.ProductName = reader["ProductName"].ToString();
+                temp.RetailPrice = Convert.ToDouble(reader["RetailPrice"]);
+                temp.WholesalePrice = Convert.ToDouble(reader["WholesalePrice"]);
+                temp.ManufactureDate = reader["ManufactureDate"].ToString();
+                temp.AmountAvailable = Convert.ToInt32(reader["AmountAvailable"]);
+                temp.isAvailable = Convert.ToBoolean(reader["isAvailable"]);
+                temp.SupplierId = Convert.ToInt32(reader["SupplierId"]);
+
+
+                list.Add(temp);
+            }
+
+            closeConnection();
+            return list;
+        }
+
+        public List<Inventory> searchByProductId()
+        {
+            createConnection();
+
+            List<Inventory> list = new List<Inventory>();
+
+            string query = "select * from searchByProductId(@ProductId)";
+            SqlCommand cmd = new SqlCommand(query, conn);
+            cmd.Parameters.AddWithValue("ProductId", ProductId);
+
+            SqlDataReader reader = cmd.ExecuteReader();
+
+            while (reader.Read())
+            {
+                Inventory temp = new Inventory();
+
+                temp.ProductId = Convert.ToInt32(reader["ProductId"]);
+                temp.ProductName = reader["ProductName"].ToString();
+                temp.RetailPrice = Convert.ToDouble(reader["RetailPrice"]);
+                temp.WholesalePrice = Convert.ToDouble(reader["WholesalePrice"]);
+                temp.ManufactureDate = reader["ManufactureDate"].ToString();
+                temp.AmountAvailable = Convert.ToInt32(reader["AmountAvailable"]);
+                temp.isAvailable = Convert.ToBoolean(reader["isAvailable"]);
+                temp.SupplierId = Convert.ToInt32(reader["SupplierId"]);
+
+
+                list.Add(temp);
+            }
+
+            closeConnection();
+            return list;
+        }
+
+        public List<Inventory> categoryBySupplier()
+        {
+            createConnection();
+
+            List<Inventory> list = new List<Inventory>();
+
+            string query = "select * from categoryBySupplier(@SupplierId)";
+            SqlCommand cmd = new SqlCommand(query, conn);
+            cmd.Parameters.AddWithValue("SupplierId", SupplierId);
+
+            SqlDataReader reader = cmd.ExecuteReader();
+
+            while (reader.Read())
+            {
+                Inventory temp = new Inventory();
+
+                temp.ProductId = Convert.ToInt32(reader["ProductId"]);
+                temp.ProductName = reader["ProductName"].ToString();
+                temp.RetailPrice = Convert.ToDouble(reader["RetailPrice"]);
+                temp.WholesalePrice = Convert.ToDouble(reader["WholesalePrice"]);
+                temp.ManufactureDate = reader["ManufactureDate"].ToString();
+                temp.AmountAvailable = Convert.ToInt32(reader["AmountAvailable"]);
+                temp.isAvailable = Convert.ToBoolean(reader["isAvailable"]);
+                temp.SupplierId = Convert.ToInt32(reader["SupplierId"]);
+
+                list.Add(temp);
+            }
+
+            closeConnection();
+            return list;
+        }
+
     }
 }

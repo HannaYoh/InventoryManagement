@@ -7,11 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace InventoryManagement
 {
     public partial class AdminInventory : Form
     {
+
+        Models.Inventory inventory = new Models.Inventory(); 
+
         public AdminInventory()
         {
             InitializeComponent();
@@ -38,6 +42,31 @@ namespace InventoryManagement
             
             if (txtSearchById.Text == "" || txtSearchById.Text == "Search by ID")
                 errorProviderTxt.SetError(pictureBox3, "Enter Product!");
+            else
+            {
+                inventory.ProductId = int.Parse(txtSearchById.Text);
+
+
+                this.dataGridView1.Rows.Clear();
+
+                List<Models.Inventory> list = new List<Models.Inventory>();
+                list = inventory.searchByProductId();
+                foreach (var products in list)
+                {
+                    dataGridView1.Rows.Add(new object[]
+                    {
+                   products.ProductId,
+                   products.ProductName,
+                   products.RetailPrice,
+                   products.WholesalePrice,
+                   products.ManufactureDate,
+                   products.AmountAvailable,
+                   products.isAvailable,
+                   products.SupplierId
+                    });
+
+                }
+            }
         }
 
         private void txtSearchById_TextChanged(object sender, EventArgs e)
@@ -54,12 +83,111 @@ namespace InventoryManagement
 
         private void AdminInventory_Load(object sender, EventArgs e)
         {
+            List<Models.Inventory> list = new List<Models.Inventory>();
+            list = inventory.viewAllProducts();
+            foreach (var products in list)
+            {
+                dataGridView1.Rows.Add(new object[]
+                {
+                   products.ProductId,
+                   products.ProductName,
+                   products.RetailPrice,
+                   products.WholesalePrice,
+                   products.ManufactureDate,
+                   products.AmountAvailable,
+                   products.isAvailable,
+                   products.SupplierId
+                });
 
+            }
         }
 
         private void pnlAddInventory_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void cmbSupplier_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmbSupplier.SelectedIndex == 0)
+            {
+                inventory.SupplierId = 1;
+
+                this.dataGridView1.Rows.Clear();
+
+                List<Models.Inventory> list = new List<Models.Inventory>();
+                list = inventory.categoryBySupplier();
+                foreach (var products in list)
+                {
+                    dataGridView1.Rows.Add(new object[]
+                    {
+                   products.ProductId,
+                   products.ProductName,
+                   products.RetailPrice,
+                   products.WholesalePrice,
+                   products.ManufactureDate,
+                   products.AmountAvailable,
+                   products.isAvailable,
+                   products.SupplierId
+                    });
+
+                }
+
+            }
+            else if (cmbSupplier.SelectedIndex == 1)
+            {
+                inventory.SupplierId = 2;
+
+                this.dataGridView1.Rows.Clear();
+
+                List<Models.Inventory> list = new List<Models.Inventory>();
+                list = inventory.categoryBySupplier();
+                foreach (var products in list)
+                {
+                    dataGridView1.Rows.Add(new object[]
+                    {
+                   products.ProductId,
+                   products.ProductName,
+                   products.RetailPrice,
+                   products.WholesalePrice,
+                   products.ManufactureDate,
+                   products.AmountAvailable,
+                   products.isAvailable,
+                   products.SupplierId
+                    });
+
+                }
+
+            }
+            else
+            {
+                cmbSupplier.SelectedIndex = -1;
+                this.dataGridView1.Rows.Clear();
+
+                List<Models.Inventory> list = new List<Models.Inventory>();
+                list = inventory.categoryBySupplier();
+                foreach (var products in list)
+                {
+                    dataGridView1.Rows.Add(new object[]
+                    {
+                   products.ProductId,
+                   products.ProductName,
+                   products.RetailPrice,
+                   products.WholesalePrice,
+                   products.ManufactureDate,
+                   products.AmountAvailable,
+                   products.isAvailable,
+                   products.SupplierId
+                    });
+
+                }
+
+            }
         }
     }
 }
