@@ -143,12 +143,12 @@ insert into Orders values(1, getdate() - 1, getdate() + 3)
 insert into Orders values(2, getdate(), getdate() + 3)
 insert into Orders values(2, getdate() - 1, getdate() + 3)
 
-insert into OrderDetail values(13, 1, 2, 40, 25, 20)
-insert into OrderDetail values(13, 2, 3, 90, 35, 30)
-insert into OrderDetail values(13, 3, 4, 160, 45, 40)
-insert into OrderDetail values(13, 4, 5, 250, 55, 50)
-insert into OrderDetail values(14, 1, 2, 40, 25, 20)
-insert into OrderDetail values(14, 2, 3, 90, 35, 30)
+insert into OrderDetail values(1, 1, 30, 30, 45, 40, 1)
+insert into OrderDetail values(2, 2, 15, 15, 30, 25, 2)
+insert into OrderDetail values(3, 3, 45, 45, 60, 55, 1)
+insert into OrderDetail values(4, 4, 60, 60, 75, 70, 2)
+insert into OrderDetail values(1, 5, 75, 75, 90, 85, 1)
+insert into OrderDetail values(2, 6, 90, 90, 105, 100, 2)
 
 --stored procedure
 create procedure SelectAdmin
@@ -219,7 +219,7 @@ as
 return (select ProductName, AmountAvailable from Inventory where AmountAvailable <= 5)
 select * from lowOnStock()
 
-alter function displayGrossRevenue()
+create function displayGrossRevenue()
 returns table
 as
 return (select OrderDate, sum(TotalPrice) as total from Orders O join OrderDetail OD on O.OrderId = OD.OrderId group by OrderDate)
@@ -254,29 +254,35 @@ return(select sum(totalPrice) from OrderDetail )   --earnings
 end
 select dbo.calculateEarnings()
 
-alter function viewAllOrders()
+create function viewAllOrders()
 returns table
 as
 return (select C.FullName, O.OrderId, O.OrderDate, O.DeliveryDate, S.SupplierId, S.SupplierName, OD.ProductId, I.ProductName, OD.Quantity, OD.TotalPrice, OD.RetailPrice, OD.WholesalePrice from Orders O join OrderDetail OD on O.OrderId = OD.OrderId join Customer C on O.CustId = C.CustId join Inventory I on OD.ProductId = I.ProductId join Supplier S on I.SupplierId = S.SupplierId)
 select * from viewAllOrders()
 
-alter function searchByOrderId(@id varchar(50))  --not used currently
+create function searchByOrderId(@id varchar(50))  --not used currently
 returns table
 as
 return (select C.FullName, O.OrderId, O.OrderDate, O.DeliveryDate, S.SupplierId, S.SupplierName, OD.ProductId, I.ProductName, OD.Quantity, OD.TotalPrice, OD.RetailPrice, OD.WholesalePrice from Orders O join OrderDetail OD on O.OrderId = OD.OrderId join Customer C on O.CustId = C.CustId join Inventory I on OD.ProductId = I.ProductId join Supplier S on I.SupplierId = S.SupplierId where O.OrderId like '%'+@id+'%')
-select* from searchByOrderId(1)
+select * from searchByOrderId(1)
 
 create function searchByDate(@id varchar(50), @startDate date, @endDate date)
 returns table
 as
 return (select C.FullName, O.OrderId, O.OrderDate, O.DeliveryDate, S.SupplierId, S.SupplierName, OD.ProductId, I.ProductName, OD.Quantity, OD.TotalPrice, OD.RetailPrice, OD.WholesalePrice from Orders O join OrderDetail OD on O.OrderId = OD.OrderId join Customer C on O.CustId = C.CustId join Inventory I on OD.ProductId = I.ProductId join Supplier S on I.SupplierId = S.SupplierId where O.OrderId like '%'+@id+'%' and OrderDate between @startDate and @endDate)
-select* from searchByDate(1, '2022-09-24', '2022-09-24')
+select * from searchByDate(1, '2022-09-24', '2022-09-24')
 
 create function categoryBySupplier(@supplier varchar(50))
 returns table
 as
 return (select C.FullName, O.OrderId, O.OrderDate, O.DeliveryDate, S.SupplierId, S.SupplierName, OD.ProductId, I.ProductName, OD.Quantity, OD.TotalPrice, OD.RetailPrice, OD.WholesalePrice from Orders O join OrderDetail OD on O.OrderId = OD.OrderId join Customer C on O.CustId = C.CustId join Inventory I on OD.ProductId = I.ProductId join Supplier S on I.SupplierId = S.SupplierId where S.SupplierName = @supplier)
 select * from categoryBySupplier('SupB')
+
+create function categoryBySupplierId(@id varchar(50)) --added new
+returns table
+as
+return (select * from Inventory where SupplierId = @id)
+select * from categoryBySupplierId(1)
 
 create function returnEmployeeInfo(@email varchar(50))
 returns table
@@ -363,5 +369,9 @@ set @EmployeeId = 9
 insert into RecentActivity values (cast(getdate() as date), @ActivityType, @EmployeeId, @SupplierId, @ProductId)
 end
 
+create function searchByProductId(@id varchar(50)) --added new
+returns table
+as
+return (select * from Inventory where ProductId like '%'+@id+'%')
 
 
