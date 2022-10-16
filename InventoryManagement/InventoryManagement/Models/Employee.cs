@@ -158,6 +158,67 @@ namespace InventoryManagement.Models
 
         }
 
+        public bool backupPwdLoginAdmin()
+        {
+            createConnection();
+
+            List<Employee> adminList = new List<Employee>();
+
+            string query = "exec SelectAdminBackupPwd @Email, @BackupPassword";
+            SqlCommand cmd = new SqlCommand(query, conn);
+            cmd.Parameters.AddWithValue("Email", Email);
+            cmd.Parameters.AddWithValue("BackupPassword", BackupPassword);
+
+
+            SqlDataReader reader = cmd.ExecuteReader();
+
+            if (reader.Read())
+            {
+                Employee temp = new Employee();
+                temp.Email = reader["Email"].ToString();
+                temp.BackupPassword = reader["BackupPassword"].ToString();
+                adminList.Add(temp);
+
+                closeConnection();
+                return true;
+            }
+            else
+            {
+                closeConnection();
+                return false;
+            }
+        }
+
+        public bool backupPwdLoginStaff()
+        {
+            createConnection();
+
+            List<Employee> staffList = new List<Employee>();
+
+            string query = "exec SelectStaffBackupPwd @Email, @BackupPassword";
+            SqlCommand cmd = new SqlCommand(query, conn);
+            cmd.Parameters.AddWithValue("Email", Email);
+            cmd.Parameters.AddWithValue("BackupPassword", BackupPassword);
+
+
+            SqlDataReader reader = cmd.ExecuteReader();
+
+            if (reader.Read())
+            {
+                Employee temp = new Employee();
+                temp.Email = reader["Email"].ToString();
+                temp.BackupPassword = reader["BackupPassword"].ToString();
+                staffList.Add(temp);
+
+                closeConnection();
+                return true;
+            }
+            else
+            {
+                closeConnection();
+                return false;
+            }
+        }
 
 
     }
