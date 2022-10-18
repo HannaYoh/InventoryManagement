@@ -19,18 +19,45 @@ namespace InventoryManagement
             employee.Email = email;
         }
 
-        private void pictureBox3_Click(object sender, EventArgs e)
-        {
 
-        }
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
             errorProvider1.Clear();
 
-            if (txtSearchEmployee.Text == "" || txtSearchEmployee.Text == "Search for Employee")
+            if (txtSearchEmployee.Text == "" || txtSearchEmployee.Text == "Search by ID")
                 errorProvider1.SetError(pictureBox4, "Enter Employee!");
+
+            else
+            {
+                employee.EmployeeId = int.Parse(txtSearchEmployee.Text);
+
+
+                this.dataGridView1.Rows.Clear();
+
+                List<Models.Employee> list = new List<Models.Employee>();
+                list = employee.searchByEmployeeId();
+                foreach (var employee in list)
+                {
+                    dataGridView1.Rows.Add(new object[]
+                    {
+                    employee.EmployeeId,
+                    employee.FullName,
+                    employee.Email,
+                    employee.Address,
+                    employee.Phone,
+                    employee.Password,
+                    employee.BackupPassword,
+                    employee.Gender,
+                    employee.DateOfBirth,
+                    employee.Roll,
+                    employee.DepId,
+                });
+
+                }
+            }
         }
+
 
         private void txtSearchEmployee_Enter(object sender, EventArgs e)
         {
@@ -46,11 +73,11 @@ namespace InventoryManagement
         private void lblStaff_Click(object sender, EventArgs e)
         {
             this.lblStaff.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(81)))), ((int)(((byte)(81)))));
-            
+
 
 
             this.lblAdmin.ForeColor = System.Drawing.Color.Black;
-           
+
 
             pnlAdminTable.Visible = false;
             pnlStaffTable.Visible = true;
@@ -60,11 +87,11 @@ namespace InventoryManagement
         private void lblAdmin_Click(object sender, EventArgs e)
         {
             this.lblAdmin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(81)))), ((int)(((byte)(81)))));
-            
+
 
 
             this.lblStaff.ForeColor = System.Drawing.Color.Black;
-          
+
             pnlAdminTable.Visible = true;
             pnlStaffTable.Visible = false;
 
@@ -72,6 +99,7 @@ namespace InventoryManagement
 
         private void panel7_Paint(object sender, PaintEventArgs e)
         {
+
         }
 
         private void label6_Click(object sender, EventArgs e)
@@ -92,6 +120,16 @@ namespace InventoryManagement
             lblDob.Text = model.DateOfBirth;
             lblAddress.Text = model.Address;
 
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtSearchEmployee_TextChanged(object sender, EventArgs e)
+        {
 
         }
     }

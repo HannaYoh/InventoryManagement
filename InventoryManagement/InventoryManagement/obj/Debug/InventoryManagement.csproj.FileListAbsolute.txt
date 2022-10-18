@@ -133,3 +133,41 @@ C:\Users\bbher\Documents\hilcoe\year2\first term\project\GitInventoryManagement\
 C:\Users\bbher\Documents\hilcoe\year2\first term\project\GitInventoryManagement\InventoryManagement\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.csproj.CopyComplete
 C:\Users\bbher\Documents\hilcoe\year2\first term\project\GitInventoryManagement\InventoryManagement\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.exe
 C:\Users\bbher\Documents\hilcoe\year2\first term\project\GitInventoryManagement\InventoryManagement\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.pdb
+C:\Users\pomes\OneDrive\Desktop\InventoryManagement\InventoryManagement\InventoryManagement\bin\Debug\InventoryManagement.exe.config
+C:\Users\pomes\OneDrive\Desktop\InventoryManagement\InventoryManagement\InventoryManagement\bin\Debug\InventoryManagement.exe
+C:\Users\pomes\OneDrive\Desktop\InventoryManagement\InventoryManagement\InventoryManagement\bin\Debug\InventoryManagement.pdb
+C:\Users\pomes\OneDrive\Desktop\InventoryManagement\InventoryManagement\InventoryManagement\bin\Debug\CircularProgressBar.dll
+C:\Users\pomes\OneDrive\Desktop\InventoryManagement\InventoryManagement\InventoryManagement\bin\Debug\WinFormAnimation.dll
+C:\Users\pomes\OneDrive\Desktop\InventoryManagement\InventoryManagement\InventoryManagement\bin\Debug\CircularProgressBar.xml
+C:\Users\pomes\OneDrive\Desktop\InventoryManagement\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.csproj.AssemblyReference.cache
+C:\Users\pomes\OneDrive\Desktop\InventoryManagement\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.csproj.SuggestedBindingRedirects.cache
+C:\Users\pomes\OneDrive\Desktop\InventoryManagement\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.AddInventoryForm.resources
+C:\Users\pomes\OneDrive\Desktop\InventoryManagement\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.AddOrders.resources
+C:\Users\pomes\OneDrive\Desktop\InventoryManagement\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.AddSuppliers.resources
+C:\Users\pomes\OneDrive\Desktop\InventoryManagement\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.AdminEditProfile.resources
+C:\Users\pomes\OneDrive\Desktop\InventoryManagement\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.AdminDashboardChild.resources
+C:\Users\pomes\OneDrive\Desktop\InventoryManagement\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.AdminDiscount.resources
+C:\Users\pomes\OneDrive\Desktop\InventoryManagement\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.AdminInventory.resources
+C:\Users\pomes\OneDrive\Desktop\InventoryManagement\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.AdminManageStaff.resources
+C:\Users\pomes\OneDrive\Desktop\InventoryManagement\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.AdminOrders.resources
+C:\Users\pomes\OneDrive\Desktop\InventoryManagement\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.AdminPage.resources
+C:\Users\pomes\OneDrive\Desktop\InventoryManagement\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.AdminRecentActivities.resources
+C:\Users\pomes\OneDrive\Desktop\InventoryManagement\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.AdminSupplier.resources
+C:\Users\pomes\OneDrive\Desktop\InventoryManagement\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.Form1.resources
+C:\Users\pomes\OneDrive\Desktop\InventoryManagement\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.GenerateAccessCode.resources
+C:\Users\pomes\OneDrive\Desktop\InventoryManagement\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.GenerateDiscount.resources
+C:\Users\pomes\OneDrive\Desktop\InventoryManagement\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.Login.resources
+C:\Users\pomes\OneDrive\Desktop\InventoryManagement\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.Properties.Resources.resources
+C:\Users\pomes\OneDrive\Desktop\InventoryManagement\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.Signup.resources
+C:\Users\pomes\OneDrive\Desktop\InventoryManagement\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.StaffCustomer.resources
+C:\Users\pomes\OneDrive\Desktop\InventoryManagement\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.StaffDiscount.resources
+C:\Users\pomes\OneDrive\Desktop\InventoryManagement\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.StaffInventory.resources
+C:\Users\pomes\OneDrive\Desktop\InventoryManagement\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.StaffOrders.resources
+C:\Users\pomes\OneDrive\Desktop\InventoryManagement\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.StaffPage.resources
+C:\Users\pomes\OneDrive\Desktop\InventoryManagement\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.StaffReports.resources
+C:\Users\pomes\OneDrive\Desktop\InventoryManagement\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.StaffSupplier.resources
+C:\Users\pomes\OneDrive\Desktop\InventoryManagement\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.csproj.GenerateResource.cache
+C:\Users\pomes\OneDrive\Desktop\InventoryManagement\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.csproj.CoreCompileInputs.cache
+C:\Users\pomes\OneDrive\Desktop\InventoryManagement\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.csproj.CopyComplete
+C:\Users\pomes\OneDrive\Desktop\InventoryManagement\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.exe
+C:\Users\pomes\OneDrive\Desktop\InventoryManagement\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.pdb
