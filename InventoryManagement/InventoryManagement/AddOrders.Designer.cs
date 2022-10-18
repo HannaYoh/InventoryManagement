@@ -28,160 +28,270 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtWholeSalesPrice = new System.Windows.Forms.TextBox();
-            this.btnAddProduct = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.dtpManufacturingDate = new System.Windows.Forms.DateTimePicker();
-            this.cmbSupplier = new System.Windows.Forms.ComboBox();
-            this.txtAmountAvailable = new System.Windows.Forms.TextBox();
-            this.txtRetailPrice = new System.Windows.Forms.TextBox();
-            this.txtProductName = new System.Windows.Forms.TextBox();
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem("");
+            this.btnSubmitOrder = new System.Windows.Forms.Button();
+            this.cmbProduct = new System.Windows.Forms.ComboBox();
+            this.listView1 = new System.Windows.Forms.ListView();
+            this.Product = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Qty = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Amount = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.GrpProduct = new System.Windows.Forms.GroupBox();
+            this.nudQty = new System.Windows.Forms.NumericUpDown();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.dtpDeliveryDate = new System.Windows.Forms.DateTimePicker();
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lblPrice = new System.Windows.Forms.Label();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.cmbDiscount = new System.Windows.Forms.ComboBox();
+            this.GrpProduct.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudQty)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
-            // txtWholeSalesPrice
+            // btnSubmitOrder
             // 
-            this.txtWholeSalesPrice.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.txtWholeSalesPrice.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtWholeSalesPrice.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtWholeSalesPrice.ForeColor = System.Drawing.Color.Black;
-            this.txtWholeSalesPrice.Location = new System.Drawing.Point(93, 198);
-            this.txtWholeSalesPrice.Margin = new System.Windows.Forms.Padding(4, 55, 4, 4);
-            this.txtWholeSalesPrice.Multiline = true;
-            this.txtWholeSalesPrice.Name = "txtWholeSalesPrice";
-            this.txtWholeSalesPrice.Size = new System.Drawing.Size(267, 34);
-            this.txtWholeSalesPrice.TabIndex = 47;
-            this.txtWholeSalesPrice.Text = "WholeSales Price";
-            this.txtWholeSalesPrice.WordWrap = false;
+            this.btnSubmitOrder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(46)))), ((int)(((byte)(46)))));
+            this.btnSubmitOrder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSubmitOrder.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSubmitOrder.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnSubmitOrder.Location = new System.Drawing.Point(110, 586);
+            this.btnSubmitOrder.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSubmitOrder.Name = "btnSubmitOrder";
+            this.btnSubmitOrder.Size = new System.Drawing.Size(210, 46);
+            this.btnSubmitOrder.TabIndex = 46;
+            this.btnSubmitOrder.Text = "Submit Order";
+            this.btnSubmitOrder.UseVisualStyleBackColor = false;
+            this.btnSubmitOrder.Click += new System.EventHandler(this.btnAddProduct_Click);
             // 
-            // btnAddProduct
+            // cmbProduct
             // 
-            this.btnAddProduct.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(46)))), ((int)(((byte)(46)))));
-            this.btnAddProduct.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddProduct.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddProduct.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnAddProduct.Location = new System.Drawing.Point(109, 478);
-            this.btnAddProduct.Margin = new System.Windows.Forms.Padding(4);
-            this.btnAddProduct.Name = "btnAddProduct";
-            this.btnAddProduct.Size = new System.Drawing.Size(210, 46);
-            this.btnAddProduct.TabIndex = 46;
-            this.btnAddProduct.Text = "Add Product";
-            this.btnAddProduct.UseVisualStyleBackColor = false;
+            this.cmbProduct.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.cmbProduct.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbProduct.Font = new System.Drawing.Font("Century Gothic", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbProduct.FormattingEnabled = true;
+            this.cmbProduct.ItemHeight = 25;
+            this.cmbProduct.Items.AddRange(new object[] {
+            "Product1",
+            "Product2",
+            "Product3"});
+            this.cmbProduct.Location = new System.Drawing.Point(0, 25);
+            this.cmbProduct.Margin = new System.Windows.Forms.Padding(17, 4, 4, 4);
+            this.cmbProduct.Name = "cmbProduct";
+            this.cmbProduct.Size = new System.Drawing.Size(267, 33);
+            this.cmbProduct.TabIndex = 43;
+            this.cmbProduct.Text = "Product";
             // 
-            // label3
+            // listView1
             // 
-            this.label3.AutoSize = true;
-            this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(89, 374);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(180, 21);
-            this.label3.TabIndex = 45;
-            this.label3.Text = "Manufactured Date";
+            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.Product,
+            this.Qty,
+            this.Amount});
+            this.listView1.HideSelection = false;
+            this.listView1.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
+            listViewItem3});
+            this.listView1.Location = new System.Drawing.Point(55, 418);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(347, 97);
+            this.listView1.TabIndex = 48;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.View = System.Windows.Forms.View.Details;
             // 
-            // dtpManufacturingDate
+            // Product
             // 
-            this.dtpManufacturingDate.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
-            this.dtpManufacturingDate.CalendarTitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
-            this.dtpManufacturingDate.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpManufacturingDate.Location = new System.Drawing.Point(93, 402);
-            this.dtpManufacturingDate.Margin = new System.Windows.Forms.Padding(4);
-            this.dtpManufacturingDate.Name = "dtpManufacturingDate";
-            this.dtpManufacturingDate.Size = new System.Drawing.Size(267, 27);
-            this.dtpManufacturingDate.TabIndex = 44;
+            this.Product.Text = "Product";
+            this.Product.Width = 100;
             // 
-            // cmbSupplier
+            // Qty
             // 
-            this.cmbSupplier.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.cmbSupplier.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmbSupplier.Font = new System.Drawing.Font("Century Gothic", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbSupplier.FormattingEnabled = true;
-            this.cmbSupplier.ItemHeight = 25;
-            this.cmbSupplier.Items.AddRange(new object[] {
-            "Male",
-            "Female"});
-            this.cmbSupplier.Location = new System.Drawing.Point(93, 315);
-            this.cmbSupplier.Margin = new System.Windows.Forms.Padding(17, 4, 4, 4);
-            this.cmbSupplier.Name = "cmbSupplier";
-            this.cmbSupplier.Size = new System.Drawing.Size(267, 33);
-            this.cmbSupplier.TabIndex = 43;
-            this.cmbSupplier.Text = "Supplier";
+            this.Qty.Text = "Qty";
+            this.Qty.Width = 100;
             // 
-            // txtAmountAvailable
+            // Amount
             // 
-            this.txtAmountAvailable.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.txtAmountAvailable.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtAmountAvailable.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAmountAvailable.ForeColor = System.Drawing.Color.Black;
-            this.txtAmountAvailable.Location = new System.Drawing.Point(93, 258);
-            this.txtAmountAvailable.Margin = new System.Windows.Forms.Padding(4, 55, 4, 4);
-            this.txtAmountAvailable.Multiline = true;
-            this.txtAmountAvailable.Name = "txtAmountAvailable";
-            this.txtAmountAvailable.Size = new System.Drawing.Size(267, 34);
-            this.txtAmountAvailable.TabIndex = 42;
-            this.txtAmountAvailable.Text = "Amount Available";
-            this.txtAmountAvailable.WordWrap = false;
+            this.Amount.Text = "Amount";
             // 
-            // txtRetailPrice
+            // GrpProduct
             // 
-            this.txtRetailPrice.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.txtRetailPrice.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtRetailPrice.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRetailPrice.ForeColor = System.Drawing.Color.Black;
-            this.txtRetailPrice.Location = new System.Drawing.Point(93, 139);
-            this.txtRetailPrice.Margin = new System.Windows.Forms.Padding(4, 55, 4, 4);
-            this.txtRetailPrice.Multiline = true;
-            this.txtRetailPrice.Name = "txtRetailPrice";
-            this.txtRetailPrice.Size = new System.Drawing.Size(267, 34);
-            this.txtRetailPrice.TabIndex = 41;
-            this.txtRetailPrice.Text = "Retail Price";
-            this.txtRetailPrice.WordWrap = false;
+            this.GrpProduct.Controls.Add(this.btnAdd);
+            this.GrpProduct.Controls.Add(this.nudQty);
+            this.GrpProduct.Controls.Add(this.cmbProduct);
+            this.GrpProduct.Location = new System.Drawing.Point(93, 70);
+            this.GrpProduct.Name = "GrpProduct";
+            this.GrpProduct.Size = new System.Drawing.Size(270, 117);
+            this.GrpProduct.TabIndex = 49;
+            this.GrpProduct.TabStop = false;
+            this.GrpProduct.Text = "Product";
             // 
-            // txtProductName
+            // nudQty
             // 
-            this.txtProductName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.txtProductName.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtProductName.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtProductName.ForeColor = System.Drawing.Color.Black;
-            this.txtProductName.Location = new System.Drawing.Point(93, 79);
-            this.txtProductName.Margin = new System.Windows.Forms.Padding(4, 55, 4, 4);
-            this.txtProductName.Multiline = true;
-            this.txtProductName.Name = "txtProductName";
-            this.txtProductName.Size = new System.Drawing.Size(267, 34);
-            this.txtProductName.TabIndex = 40;
-            this.txtProductName.Text = "Product Name";
-            this.txtProductName.WordWrap = false;
+            this.nudQty.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.nudQty.Location = new System.Drawing.Point(0, 66);
+            this.nudQty.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.nudQty.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.nudQty.Name = "nudQty";
+            this.nudQty.Size = new System.Drawing.Size(137, 22);
+            this.nudQty.TabIndex = 44;
+            this.nudQty.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBox1.Font = new System.Drawing.Font("Century Gothic", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.ItemHeight = 25;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Product1",
+            "Product2",
+            "Product3"});
+            this.comboBox1.Location = new System.Drawing.Point(93, 206);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(17, 4, 4, 4);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(267, 33);
+            this.comboBox1.TabIndex = 46;
+            this.comboBox1.Text = "Customer";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(89, 329);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(123, 21);
+            this.label2.TabIndex = 51;
+            this.label2.Text = "Delivery Date";
+            // 
+            // dtpDeliveryDate
+            // 
+            this.dtpDeliveryDate.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.dtpDeliveryDate.CalendarTitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.dtpDeliveryDate.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpDeliveryDate.Location = new System.Drawing.Point(93, 357);
+            this.dtpDeliveryDate.Margin = new System.Windows.Forms.Padding(4);
+            this.dtpDeliveryDate.Name = "dtpDeliveryDate";
+            this.dtpDeliveryDate.Size = new System.Drawing.Size(270, 27);
+            this.dtpDeliveryDate.TabIndex = 50;
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(46)))), ((int)(((byte)(46)))));
+            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdd.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdd.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnAdd.Location = new System.Drawing.Point(154, 66);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(109, 29);
+            this.btnAdd.TabIndex = 47;
+            this.btnAdd.Text = "Add ";
+            this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(139, 543);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(61, 22);
+            this.label1.TabIndex = 52;
+            this.label1.Text = "Total: ";
+            // 
+            // lblPrice
+            // 
+            this.lblPrice.AutoSize = true;
+            this.lblPrice.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.lblPrice.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPrice.Location = new System.Drawing.Point(196, 543);
+            this.lblPrice.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblPrice.Name = "lblPrice";
+            this.lblPrice.Size = new System.Drawing.Size(20, 21);
+            this.lblPrice.TabIndex = 53;
+            this.lblPrice.Text = "0";
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
+            // cmbDiscount
+            // 
+            this.cmbDiscount.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.cmbDiscount.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbDiscount.Font = new System.Drawing.Font("Century Gothic", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbDiscount.FormattingEnabled = true;
+            this.cmbDiscount.ItemHeight = 25;
+            this.cmbDiscount.Items.AddRange(new object[] {
+            "Product1",
+            "Product2",
+            "Product3"});
+            this.cmbDiscount.Location = new System.Drawing.Point(93, 267);
+            this.cmbDiscount.Margin = new System.Windows.Forms.Padding(17, 4, 4, 4);
+            this.cmbDiscount.Name = "cmbDiscount";
+            this.cmbDiscount.Size = new System.Drawing.Size(267, 33);
+            this.cmbDiscount.TabIndex = 54;
+            this.cmbDiscount.Text = "Discount";
             // 
             // AddOrders
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(449, 603);
-            this.Controls.Add(this.txtWholeSalesPrice);
-            this.Controls.Add(this.btnAddProduct);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.dtpManufacturingDate);
-            this.Controls.Add(this.cmbSupplier);
-            this.Controls.Add(this.txtAmountAvailable);
-            this.Controls.Add(this.txtRetailPrice);
-            this.Controls.Add(this.txtProductName);
+            this.ClientSize = new System.Drawing.Size(449, 679);
+            this.Controls.Add(this.cmbDiscount);
+            this.Controls.Add(this.lblPrice);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.dtpDeliveryDate);
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.GrpProduct);
+            this.Controls.Add(this.listView1);
+            this.Controls.Add(this.btnSubmitOrder);
             this.Name = "AddOrders";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "AddOrders";
+            this.GrpProduct.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.nudQty)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox txtWholeSalesPrice;
-        private System.Windows.Forms.Button btnAddProduct;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DateTimePicker dtpManufacturingDate;
-        private System.Windows.Forms.ComboBox cmbSupplier;
-        private System.Windows.Forms.TextBox txtAmountAvailable;
-        private System.Windows.Forms.TextBox txtRetailPrice;
-        private System.Windows.Forms.TextBox txtProductName;
+        private System.Windows.Forms.Button btnSubmitOrder;
+        private System.Windows.Forms.ComboBox cmbProduct;
+        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ColumnHeader Product;
+        private System.Windows.Forms.ColumnHeader Qty;
+        private System.Windows.Forms.ColumnHeader Amount;
+        private System.Windows.Forms.GroupBox GrpProduct;
+        private System.Windows.Forms.NumericUpDown nudQty;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.DateTimePicker dtpDeliveryDate;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblPrice;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.ComboBox cmbDiscount;
     }
 }
