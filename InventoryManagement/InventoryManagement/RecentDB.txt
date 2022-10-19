@@ -271,6 +271,12 @@ as
 return (select C.FullName, O.OrderId, O.OrderDate, O.DeliveryDate, S.SupplierId, S.SupplierName, OD.ProductId, I.ProductName, OD.Quantity, OD.TotalPrice, OD.RetailPrice, OD.WholesalePrice from Orders O join OrderDetail OD on O.OrderId = OD.OrderId join Customer C on O.CustId = C.CustId join Inventory I on OD.ProductId = I.ProductId join Supplier S on I.SupplierId = S.SupplierId)
 select * from viewAllOrders()
 
+create function searchByEmployeeId(@id varchar(50))
+returns table
+as
+return (select E.EmployeeId, E.FullName, E.Gender, E.DateOfBirth, E.Email, D.DepId from Employee E join Department D on E.EmployeeId = D.DepId where E.EmployeeId like '%'+@id+'%')
+select * from searchByEmployeeId(1)
+
 alter function searchByOrderId(@id varchar(50))  --not used currently
 returns table
 as
