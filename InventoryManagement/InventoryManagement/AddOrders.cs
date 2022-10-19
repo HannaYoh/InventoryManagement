@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace InventoryManagement
 {
@@ -19,6 +20,57 @@ namespace InventoryManagement
 
         private void btnAddProduct_Click(object sender, EventArgs e)
         {
+          
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            int price = 10;
+            errorProvider1.Clear();
+            if (cmbProduct.SelectedIndex == -1)
+            {
+                errorProvider1.SetError(GrpProduct, "Choose Product!");
+            }
+            else
+            {
+                //ListViewItem item = listView1.FindItemWithText("item_key");
+
+
+                for (int i = 0; i < listView1.Items.Count; i++)
+                {
+                    if (listView1.Items[i].SubItems[0].Text == cmbProduct.SelectedItem.ToString())
+                    {
+                        listView1.Items[i].SubItems[1].Text = (Int32.Parse(listView1.Items[i].SubItems[1].Text) + nudQty.Value).ToString();
+                        listView1.Items[i].SubItems[2].Text = (Int32.Parse(listView1.Items[i].SubItems[2].Text) + price).ToString();
+                        if(listView1.Items.Count > 2)
+                        {
+                            listView1.Items[listView1.Items.Count-1].Remove();
+
+                        }
+
+                    }
+                    else
+                    {
+
+                        string[] row = { cmbProduct.SelectedItem.ToString(), (nudQty.Value-1).ToString(), (price-10).ToString() };
+                        var listViewItem = new ListViewItem(row);
+                        listView1.Items.Add(listViewItem);
+                        lblPrice.Text = (Int32.Parse(lblPrice.Text) + (price * nudQty.Value)).ToString();
+
+
+
+                    }
+
+                }
+
+
+
+            }
+            /*else
+            {*/
+
+            /*}*/
+
 
         }
     }

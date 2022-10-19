@@ -1,5 +1,4 @@
-﻿using InventoryManagement.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -122,7 +121,7 @@ namespace InventoryManagement
                 this.dataGridView1.Rows.Clear();
 
                 List<Models.Inventory> list = new List<Models.Inventory>();
-                list = inventory.categoryBySupplierId();
+                list = inventory.categoryBySupplier();
                 foreach (var products in list)
                 {
                     dataGridView1.Rows.Add(new object[]
@@ -147,7 +146,7 @@ namespace InventoryManagement
                 this.dataGridView1.Rows.Clear();
 
                 List<Models.Inventory> list = new List<Models.Inventory>();
-                list = inventory.categoryBySupplierId();
+                list = inventory.categoryBySupplier();
                 foreach (var products in list)
                 {
                     dataGridView1.Rows.Add(new object[]
@@ -171,85 +170,7 @@ namespace InventoryManagement
                 this.dataGridView1.Rows.Clear();
 
                 List<Models.Inventory> list = new List<Models.Inventory>();
-                list = inventory.categoryBySupplierId();
-                foreach (var products in list)
-                {
-                    dataGridView1.Rows.Add(new object[]
-                    {
-                   products.ProductId,
-                   products.ProductName,
-                   products.RetailPrice,
-                   products.WholesalePrice,
-                   products.ManufactureDate,
-                   products.AmountAvailable,
-                   products.isAvailable,
-                   products.SupplierId
-                    });
-
-                }
-
-            }
-        }
-
-        private void cmbCatagory_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (cmbCatagory.SelectedIndex == 0)
-            {
-                inventory.isAvailable = true;
-
-                this.dataGridView1.Rows.Clear();
-
-                List<Models.Inventory> list = new List<Models.Inventory>();
-                list = inventory.categoryByAvailability();
-                foreach (var products in list)
-                {
-                    dataGridView1.Rows.Add(new object[]
-                    {
-                   products.ProductId,
-                   products.ProductName,
-                   products.RetailPrice,
-                   products.WholesalePrice,
-                   products.ManufactureDate,
-                   products.AmountAvailable,
-                   products.isAvailable,
-                   products.SupplierId
-                    });
-
-                }
-
-            }
-            else if (cmbCatagory.SelectedIndex == 1)
-            {
-                inventory.isAvailable = false;
-
-                this.dataGridView1.Rows.Clear();
-
-                List<Models.Inventory> list = new List<Models.Inventory>();
-                list = inventory.categoryByAvailability();
-                foreach (var products in list)
-                {
-                    dataGridView1.Rows.Add(new object[]
-                    {
-                   products.ProductId,
-                   products.ProductName,
-                   products.RetailPrice,
-                   products.WholesalePrice,
-                   products.ManufactureDate,
-                   products.AmountAvailable,
-                   products.isAvailable,
-                   products.SupplierId
-                    });
-
-                }
-
-            }
-            else
-            {
-                cmbCatagory.SelectedIndex = -1;
-                this.dataGridView1.Rows.Clear();
-
-                List<Models.Inventory> list = new List<Models.Inventory>();
-                list = inventory.categoryByAvailability();
+                list = inventory.categoryBySupplier();
                 foreach (var products in list)
                 {
                     dataGridView1.Rows.Add(new object[]
@@ -271,6 +192,12 @@ namespace InventoryManagement
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+
+        }
+
+        private void pictureBox11_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

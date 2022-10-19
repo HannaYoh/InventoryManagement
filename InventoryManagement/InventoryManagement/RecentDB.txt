@@ -164,6 +164,24 @@ select * from Employee where (Email = @email and Password = @password) and  Roll
 end
 exec SelectStaff 'EmpB@gmail.com', 'EmpB1234'
 
+create procedure SelectAdminBackupPwd    --added
+@email varchar(50),
+@backupPwd varchar(50)
+as
+begin
+select * from Employee where (Email = @email and BackupPassword = @backupPwd) and  Roll = 'Admin'
+end
+exec SelectAdminBackupPwd 'EmpA@gmail.com', 'EmpA5678'
+
+create procedure SelectStaffBackupPwd    --added
+@email varchar(50),
+@backupPwd varchar(50)
+as
+begin
+select * from Employee where (Email = @email and BackupPassword = @backupPwd) and  Roll = 'Staff'
+end
+exec SelectStaffBackupPwd 'EmpB@gmail.com', 'EmpB5678'
+
 create procedure updateEmployeeInfo
 @FullName varchar(50),
 @Email varchar(100),
@@ -253,6 +271,12 @@ as
 return (select C.FullName, O.OrderId, O.OrderDate, O.DeliveryDate, S.SupplierId, S.SupplierName, OD.ProductId, I.ProductName, OD.Quantity, OD.TotalPrice, OD.RetailPrice, OD.WholesalePrice from Orders O join OrderDetail OD on O.OrderId = OD.OrderId join Customer C on O.CustId = C.CustId join Inventory I on OD.ProductId = I.ProductId join Supplier S on I.SupplierId = S.SupplierId)
 select * from viewAllOrders()
 
+create function searchByEmployeeId(@id varchar(50))
+returns table
+as
+return (select E.EmployeeId, E.FullName, E.Gender, E.DateOfBirth, E.Email, D.DepId from Employee E join Department D on E.EmployeeId = D.DepId where E.EmployeeId like '%'+@id+'%')
+select * from searchByEmployeeId(1)
+
 alter function searchByOrderId(@id varchar(50))  --not used currently
 returns table
 as
@@ -295,6 +319,17 @@ as
 return (select R.ActivityDate, R.ActivityType, E.FullName, I.ProductName from RecentActivity R join Employee E on R.EmployeeId = E.EmployeeId join Inventory I on R.ProductId = I.ProductId) 
 select * from returnRecentInventoryInfo()
 
+create function categoryBySupplierId(@id varchar(50)) --added new
+returns table
+as
+return (select * from Inventory where SupplierId = @id)
+select * from categoryBySupplierId(1)
+
+create function searchByProductId(@id varchar(50)) --added new
+returns table
+as
+return (select * from Inventory where ProductId like '%'+@id+'%')
+select * from searchByProductId(2)
 
 --Trigger
 create trigger addIntoRecentActivity
