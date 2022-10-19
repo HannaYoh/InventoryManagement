@@ -77,45 +77,93 @@ namespace InventoryManagement
             {
                 if (rbAdmin.Checked)
                 {
-                    employee.Email = txtEmail.Text;
-                    employee.Password = txtPassword.Text;
-                    bool status = employee.adminAuthentication();
-                    if (status)
+                    if (lblPwd.Text == "Password")
                     {
-                        Models.Employee model = new Models.Employee();
-                        model = employee.returnEmployeeInfo();
+                        employee.Email = txtEmail.Text;
+                        employee.Password = txtPassword.Text;
+                        bool status = employee.adminAuthentication();
+                        if (status)
+                        {
+                            Models.Employee model = new Models.Employee();
+                            model = employee.returnEmployeeInfo();
 
-                        AdminPage adminPage = new AdminPage(model.FullName, this, employee.Email);
-                        adminPage.Show();
-                        Hide();
+                            AdminPage adminPage = new AdminPage(model.FullName, this, employee.Email);
+                            adminPage.Show();
+                            Hide();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Invalid input");
+                            txtEmail.Clear();
+                            txtPassword.Clear();
+                        }
                     }
                     else
                     {
-                        MessageBox.Show("Invalid input");
-                        txtEmail.Clear();
-                        txtPassword.Clear();
+                        employee.Email = txtEmail.Text;
+                        employee.BackupPassword = txtPassword.Text;
+                        bool status = employee.backupPwdLoginAdmin();
+                        if (status)
+                        {
+                            Models.Employee model = new Models.Employee();
+                            model = employee.returnEmployeeInfo();
+
+                            AdminPage adminPage = new AdminPage(model.FullName, this, employee.Email);
+                            adminPage.Show();
+                            Hide();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Invalid input");
+                            txtEmail.Clear();
+                            txtPassword.Clear();
+                        }
                     }
 
                 }
                 else
-                {                  
-                    employee.Email = txtEmail.Text;
-                    employee.Password = txtPassword.Text;
-                    bool status = employee.staffAuthentication();
-                    if (status)
+                {
+                    if (lblPwd.Text == "Password")
                     {
-                        Models.Employee model = new Models.Employee();
-                        model = employee.returnEmployeeInfo();
+                        employee.Email = txtEmail.Text;
+                        employee.Password = txtPassword.Text;
+                        bool status = employee.staffAuthentication();
+                        if (status)
+                        {
+                            Models.Employee model = new Models.Employee();
+                            model = employee.returnEmployeeInfo();
 
-                        StaffPage staffPage = new StaffPage(model.FullName, this, employee.Email);
-                        staffPage.Show();
-                        Hide();
+                            StaffPage staffPage = new StaffPage(model.FullName, this, employee.Email);
+                            staffPage.Show();
+                            Hide();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Invalid input");
+                            txtEmail.Clear();
+                            txtPassword.Clear();
+                        }
                     }
                     else
                     {
-                        MessageBox.Show("Invalid input");
-                        txtEmail.Clear();
-                        txtPassword.Clear();
+                        employee.Email = txtEmail.Text;
+                        employee.BackupPassword = txtPassword.Text;
+                        bool status = employee.backupPwdLoginStaff();
+                        if (status)
+                        {
+                            Models.Employee model = new Models.Employee();
+                            model = employee.returnEmployeeInfo();
+
+                            StaffPage staffPage = new StaffPage(model.FullName, this, employee.Email);
+                            staffPage.Show();
+                            Hide();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Invalid input");
+                            txtEmail.Clear();
+                            txtPassword.Clear();
+                        }
                     }
                 }
             }

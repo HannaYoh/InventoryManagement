@@ -164,6 +164,24 @@ select * from Employee where (Email = @email and Password = @password) and  Roll
 end
 exec SelectStaff 'EmpB@gmail.com', 'EmpB1234'
 
+create procedure SelectAdminBackupPwd    --added
+@email varchar(50),
+@backupPwd varchar(50)
+as
+begin
+select * from Employee where (Email = @email and BackupPassword = @backupPwd) and  Roll = 'Admin'
+end
+exec SelectAdminBackupPwd 'EmpA@gmail.com', 'EmpA5678'
+
+create procedure SelectStaffBackupPwd    --added
+@email varchar(50),
+@backupPwd varchar(50)
+as
+begin
+select * from Employee where (Email = @email and BackupPassword = @backupPwd) and  Roll = 'Staff'
+end
+exec SelectStaffBackupPwd 'EmpB@gmail.com', 'EmpB5678'
+
 create procedure updateEmployeeInfo
 @FullName varchar(50),
 @Email varchar(100),
@@ -295,6 +313,17 @@ as
 return (select R.ActivityDate, R.ActivityType, E.FullName, I.ProductName from RecentActivity R join Employee E on R.EmployeeId = E.EmployeeId join Inventory I on R.ProductId = I.ProductId) 
 select * from returnRecentInventoryInfo()
 
+create function categoryBySupplierId(@id varchar(50)) --added new
+returns table
+as
+return (select * from Inventory where SupplierId = @id)
+select * from categoryBySupplierId(1)
+
+create function searchByProductId(@id varchar(50)) --added new
+returns table
+as
+return (select * from Inventory where ProductId like '%'+@id+'%')
+select * from searchByProductId(2)
 
 --Trigger
 create trigger addIntoRecentActivity
