@@ -51,6 +51,7 @@ namespace InventoryManagement
             this.AmountAvailable = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.isAvailable = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SupplierId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DeleteProduct = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderTxt)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
@@ -110,6 +111,7 @@ namespace InventoryManagement
             this.cmbCatagory.Size = new System.Drawing.Size(174, 29);
             this.cmbCatagory.TabIndex = 22;
             this.cmbCatagory.Text = "Catagory";
+            this.cmbCatagory.SelectedIndexChanged += new System.EventHandler(this.cmbCatagory_SelectedIndexChanged);
             // 
             // lblAdd
             // 
@@ -158,7 +160,7 @@ namespace InventoryManagement
             this.pnlAddInventory.Controls.Add(this.lblAdd);
             this.pnlAddInventory.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pnlAddInventory.Location = new System.Drawing.Point(712, 28);
-            this.pnlAddInventory.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlAddInventory.Margin = new System.Windows.Forms.Padding(2);
             this.pnlAddInventory.Name = "pnlAddInventory";
             this.pnlAddInventory.Size = new System.Drawing.Size(78, 29);
             this.pnlAddInventory.TabIndex = 27;
@@ -169,7 +171,7 @@ namespace InventoryManagement
             this.panel1.BackColor = System.Drawing.SystemColors.ControlLight;
             this.panel1.Controls.Add(this.dataGridView1);
             this.panel1.Location = new System.Drawing.Point(32, 94);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(761, 375);
             this.panel1.TabIndex = 28;
@@ -187,11 +189,13 @@ namespace InventoryManagement
             this.ManufactureDate,
             this.AmountAvailable,
             this.isAvailable,
-            this.SupplierId});
-            this.dataGridView1.Location = new System.Drawing.Point(3, 14);
+            this.SupplierId,
+            this.DeleteProduct});
+            this.dataGridView1.Location = new System.Drawing.Point(3, 3);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(755, 250);
+            this.dataGridView1.Size = new System.Drawing.Size(755, 369);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // ProductId
             // 
@@ -241,6 +245,13 @@ namespace InventoryManagement
             this.SupplierId.Name = "SupplierId";
             this.SupplierId.ReadOnly = true;
             // 
+            // DeleteProduct
+            // 
+            this.DeleteProduct.HeaderText = "";
+            this.DeleteProduct.Name = "DeleteProduct";
+            this.DeleteProduct.Text = "Delete";
+            this.DeleteProduct.UseColumnTextForButtonValue = true;
+            // 
             // AdminInventory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -288,5 +299,6 @@ namespace InventoryManagement
         private DataGridViewTextBoxColumn AmountAvailable;
         private DataGridViewTextBoxColumn isAvailable;
         private DataGridViewTextBoxColumn SupplierId;
+        private DataGridViewButtonColumn DeleteProduct;
     }
 }

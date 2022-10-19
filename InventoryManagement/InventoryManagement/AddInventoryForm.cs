@@ -12,6 +12,9 @@ namespace InventoryManagement
 {
     public partial class AddInventoryForm : Form
     {
+
+        Models.Inventory inventory = new Models.Inventory();
+
         public AddInventoryForm()
         {
             InitializeComponent();
@@ -65,6 +68,14 @@ namespace InventoryManagement
         private void txtMobile_Enter(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnAddProduct_Click(object sender, EventArgs e)
+        {
+            //List<Models.Inventory> list = new List<Models.Inventory>();
+            //list.Add();
+
+            inventory.addProductToDb();
         }
     }
 }

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace InventoryManagement.Models
 {
@@ -109,13 +110,13 @@ namespace InventoryManagement.Models
             return list;
         }
 
-        public List<Inventory> categoryBySupplier()
+        public List<Inventory> categoryBySupplierId()
         {
             createConnection();
 
             List<Inventory> list = new List<Inventory>();
 
-            string query = "select * from categoryBySupplier(@SupplierId)";
+            string query = "select * from categoryBySupplierId(@SupplierId)";
             SqlCommand cmd = new SqlCommand(query, conn);
             cmd.Parameters.AddWithValue("SupplierId", SupplierId);
 
@@ -140,6 +141,61 @@ namespace InventoryManagement.Models
             closeConnection();
             return list;
         }
+        public void addProductToDb()
+        {
+            createConnection();
 
+            List<Inventory> list = new List<Inventory>();
+
+            foreach(var products in list)
+            {
+                string query = "insert into Inventory values (@ProductId, @ProductName, @RetailPrice, @WholesalePrice, @ManufactureDate, @AmountAvailable, @isAvailable, @SupplierId)";
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@ProductId", products.ProductId.ToString());
+                cmd.Parameters.AddWithValue("@ProductName", products.ProductName.ToString());
+                cmd.Parameters.AddWithValue("@RetailPrice", products.RetailPrice.ToString());
+                cmd.Parameters.AddWithValue("@WholesalePrice", products.WholesalePrice.ToString());
+                cmd.Parameters.AddWithValue("@ManufactureDate", products.ManufactureDate.ToString());
+                cmd.Parameters.AddWithValue("@AmountAvailable", products.AmountAvailable.ToString());
+                cmd.Parameters.AddWithValue("@isAvailable", products.isAvailable.ToString());
+                cmd.Parameters.AddWithValue("@SupplierId", products.SupplierId.ToString());
+
+                cmd.ExecuteNonQuery();
+            }
+
+            closeConnection();
+           
+        }
+        public List<Inventory> categoryByAvailability()
+        {
+            createConnection();
+
+            List<Inventory> list = new List<Inventory>();
+
+            string query = "select * from categoryByAvailability(@isAvailable)";
+            SqlCommand cmd = new SqlCommand(query, conn);
+            cmd.Parameters.AddWithValue("isAvailable", isAvailable);
+
+            SqlDataReader reader = cmd.ExecuteReader();
+
+            while (reader.Read())
+            {
+                Inventory temp = new Inventory();
+
+                temp.ProductId = Convert.ToInt32(reader["ProductId"]);
+                temp.ProductName = reader["ProductName"].ToString();
+                temp.RetailPrice = Convert.ToDouble(reader["RetailPrice"]);
+                temp.WholesalePrice = Convert.ToDouble(reader["WholesalePrice"]);
+                temp.ManufactureDate = reader["ManufactureDate"].ToString();
+                temp.AmountAvailable = Convert.ToInt32(reader["AmountAvailable"]);
+                temp.isAvailable = Convert.ToBoolean(reader["isAvailable"]);
+                temp.SupplierId = Convert.ToInt32(reader["SupplierId"]);
+
+                list.Add(temp);
+            }
+
+            closeConnection();
+            return list;
+        }
     }
 }

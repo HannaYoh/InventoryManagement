@@ -16,5 +16,10 @@ namespace InventoryManagement
         {
             InitializeComponent();
         }
+
+        private void btnAddProduct_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
