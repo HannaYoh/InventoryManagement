@@ -59,7 +59,7 @@ namespace InventoryManagement
             this.lblAdmin = new System.Windows.Forms.Label();
             this.lblStaff = new System.Windows.Forms.Label();
             this.pnlStaffTable = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewStaff = new System.Windows.Forms.DataGridView();
             this.pnlGenerateAccessCode = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.pictureBox12 = new System.Windows.Forms.PictureBox();
@@ -80,7 +80,7 @@ namespace InventoryManagement
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.pnlTableChanger.SuspendLayout();
             this.pnlStaffTable.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewStaff)).BeginInit();
             this.pnlGenerateAccessCode.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             this.SuspendLayout();
@@ -374,17 +374,17 @@ namespace InventoryManagement
             // pnlStaffTable
             // 
             this.pnlStaffTable.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.pnlStaffTable.Controls.Add(this.dataGridView1);
+            this.pnlStaffTable.Controls.Add(this.dataGridViewStaff);
             this.pnlStaffTable.Location = new System.Drawing.Point(33, 128);
             this.pnlStaffTable.Margin = new System.Windows.Forms.Padding(2);
             this.pnlStaffTable.Name = "pnlStaffTable";
             this.pnlStaffTable.Size = new System.Drawing.Size(620, 374);
             this.pnlStaffTable.TabIndex = 18;
             // 
-            // dataGridView1
+            // dataGridViewStaff
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewStaff.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewStaff.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2,
             this.Column3,
@@ -393,10 +393,10 @@ namespace InventoryManagement
             this.Column6,
             this.Column7,
             this.Column8});
-            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(617, 374);
-            this.dataGridView1.TabIndex = 0;
+            this.dataGridViewStaff.Location = new System.Drawing.Point(0, 0);
+            this.dataGridViewStaff.Name = "dataGridViewStaff";
+            this.dataGridViewStaff.Size = new System.Drawing.Size(617, 374);
+            this.dataGridViewStaff.TabIndex = 0;
             // 
             // pnlGenerateAccessCode
             // 
@@ -502,7 +502,7 @@ namespace InventoryManagement
             this.pnlTableChanger.ResumeLayout(false);
             this.pnlTableChanger.PerformLayout();
             this.pnlStaffTable.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewStaff)).EndInit();
             this.pnlGenerateAccessCode.ResumeLayout(false);
             this.pnlGenerateAccessCode.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
@@ -542,7 +542,7 @@ namespace InventoryManagement
         private Panel pnlGenerateAccessCode;
         private PictureBox pictureBox12;
         private Label label6;
-        private DataGridView dataGridView1;
+        private DataGridView dataGridViewStaff;
         private DataGridViewTextBoxColumn Column1;
         private DataGridViewTextBoxColumn Column2;
         private DataGridViewTextBoxColumn Column3;

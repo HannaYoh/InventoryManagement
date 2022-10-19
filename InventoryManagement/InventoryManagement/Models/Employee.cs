@@ -91,9 +91,9 @@ namespace InventoryManagement.Models
 
             List<Employee> list = new List<Employee>();
 
-            string query = "select * from searchByProductId(@ProductId)";
+            string query = "select * from searchByEmployeeId(@EmployeeId)";
             SqlCommand cmd = new SqlCommand(query, conn);
-            cmd.Parameters.AddWithValue("ProductId", EmployeeId);
+            cmd.Parameters.AddWithValue("EmployeeId", EmployeeId);
 
             SqlDataReader reader = cmd.ExecuteReader();
 

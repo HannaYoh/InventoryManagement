@@ -33,13 +33,13 @@ namespace InventoryManagement
                 employee.EmployeeId = int.Parse(txtSearchEmployee.Text);
 
 
-                this.dataGridView1.Rows.Clear();
+                this.dataGridViewStaff.Rows.Clear();
 
                 List<Models.Employee> list = new List<Models.Employee>();
                 list = employee.searchByEmployeeId();
                 foreach (var employee in list)
                 {
-                    dataGridView1.Rows.Add(new object[]
+                    dataGridViewStaff.Rows.Add(new object[]
                     {
                     employee.EmployeeId,
                     employee.FullName,
