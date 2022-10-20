@@ -62,6 +62,7 @@ namespace InventoryManagement
             this.label1 = new System.Windows.Forms.Label();
             this.lblEmail1 = new System.Windows.Forms.Label();
             this.lblFullName1 = new System.Windows.Forms.Label();
+            this.customerListControl1 = new InventoryManagement.CustomerListControl();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnSearchCustomers)).BeginInit();
@@ -79,6 +80,7 @@ namespace InventoryManagement
             // 
             this.panel1.AutoScroll = true;
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.customerListControl1);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Location = new System.Drawing.Point(43, 34);
             this.panel1.Name = "panel1";
@@ -397,6 +399,13 @@ namespace InventoryManagement
             this.lblFullName1.TabIndex = 1;
             this.lblFullName1.Text = "Full Name";
             // 
+            // customerListControl1
+            // 
+            this.customerListControl1.Location = new System.Drawing.Point(0, 81);
+            this.customerListControl1.Name = "customerListControl1";
+            this.customerListControl1.Size = new System.Drawing.Size(414, 122);
+            this.customerListControl1.TabIndex = 1;
+            // 
             // StaffCustomer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -458,5 +467,6 @@ namespace InventoryManagement
         private Label label4;
         private Label label3;
         private PictureBox pictureBox3;
+        private CustomerListControl customerListControl1;
     }
 }

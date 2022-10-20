@@ -172,3 +172,5 @@ C:\Users\pomes\OneDrive\Desktop\InventoryManagement\InventoryManagement\Inventor
 C:\Users\pomes\OneDrive\Desktop\InventoryManagement\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.exe
 C:\Users\pomes\OneDrive\Desktop\InventoryManagement\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.pdb
 C:\Users\Henok B\source\repos\InventoryManagement\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.AddCustomer.resources
+C:\Users\Henok B\source\repos\InventoryManagement\InventoryManagement\InventoryManagement\bin\Debug\MaterialSkin.dll
+C:\Users\Henok B\source\repos\InventoryManagement\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.CustomerListControl.resources
