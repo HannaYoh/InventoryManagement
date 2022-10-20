@@ -171,3 +171,4 @@ C:\Users\pomes\OneDrive\Desktop\InventoryManagement\InventoryManagement\Inventor
 C:\Users\pomes\OneDrive\Desktop\InventoryManagement\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.csproj.CopyComplete
 C:\Users\pomes\OneDrive\Desktop\InventoryManagement\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.exe
 C:\Users\pomes\OneDrive\Desktop\InventoryManagement\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.pdb
+C:\Users\Henok B\source\repos\InventoryManagement\InventoryManagement\InventoryManagement\obj\Debug\InventoryManagement.AddCustomer.resources

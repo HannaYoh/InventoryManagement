@@ -91,6 +91,31 @@ namespace InventoryManagement
         {
             txtSearchCustomer.Visible = false;
             lblTitle1.Visible = true;
+
+            AddCustomer add = new AddCustomer
+            {
+                Owner = this
+            };
+            add.ShowDialog();
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            txtSearchCustomer.Visible = false;
+            lblTitle1.Visible = true;
+
+            AddCustomer add = new AddCustomer
+            {
+                Owner = this
+            };
+            add.ShowDialog();
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            txtSearchCustomer.Visible = false;
+            lblTitle1.Visible = true;
         }
     }
 }
