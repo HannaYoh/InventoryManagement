@@ -20,7 +20,40 @@ namespace InventoryManagement
 
         private void btnAddProduct_Click(object sender, EventArgs e)
         {
-          
+            Models.Orders orders = new Models.Orders();
+            if (comboBox1.SelectedIndex == 0)
+            {
+                orders.CustId = 1;
+            }
+            else
+            {
+                orders.CustId = 2;
+            }
+            orders.DeliveryDate = dtpDeliveryDate.Value.ToString();
+            orders.addOrders();
+
+            Models.OrderDetail detail = new Models.OrderDetail();
+            if (cmbProduct.SelectedIndex == 0)
+            {
+                detail.ProductId = 1;
+            }
+            else if (cmbProduct.SelectedIndex == 1)
+            {
+                detail.ProductId = 2;
+            }
+            else
+            {
+                detail.ProductId = 3;
+            }
+
+            detail.Quantity = (int)nudQty.Value;
+            detail.TotalPrice = Convert.ToDouble(lblPrice.Text);
+            detail.SoldById = 10;
+            detail.addOrderDetails();
+
+
+            MessageBox.Show("order added");
+
         }
 
         private void button1_Click(object sender, EventArgs e)

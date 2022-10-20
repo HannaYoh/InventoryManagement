@@ -29,5 +29,19 @@ namespace InventoryManagement.Models
             closeConnection();
             return (int)result;
         }
+
+        public void addOrders()
+        {
+            createConnection();
+
+            string query = "exec insertIntoOrders @CustId, @DeliveryDate";
+            SqlCommand cmd = new SqlCommand(query, conn);
+            cmd.Parameters.AddWithValue("CustId", CustId);
+            cmd.Parameters.AddWithValue("DeliveryDate", DeliveryDate);
+
+            cmd.ExecuteNonQuery();
+
+            closeConnection();
+        }
     }
 }

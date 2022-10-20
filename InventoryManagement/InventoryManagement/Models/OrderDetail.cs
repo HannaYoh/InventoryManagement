@@ -31,6 +31,8 @@ namespace InventoryManagement.Models
         public double Total { get; set; }      //aggregate
         public int BestSold { get; set; }
 
+        public int SoldById { get; set; }     //employee
+
         //methods
         public List<OrderDetail> displayGrossRevenue()
         {
@@ -254,6 +256,21 @@ namespace InventoryManagement.Models
             return list;
         }
 
+        public void addOrderDetails()
+        {
+            createConnection();
+
+            string query = "exec insertIntoOrderDetails @ProductId, @Quantity, @TotalPrice, @SoldById ";
+            SqlCommand cmd = new SqlCommand(query, conn);
+            cmd.Parameters.AddWithValue("ProductId", ProductId);
+            cmd.Parameters.AddWithValue("Quantity", Quantity);
+            cmd.Parameters.AddWithValue("TotalPrice", TotalPrice);
+            cmd.Parameters.AddWithValue("SoldById", SoldById);
+
+            cmd.ExecuteNonQuery();
+
+            closeConnection();
+        }
 
     }
 }

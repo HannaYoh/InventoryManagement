@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem("");
+            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("");
             this.btnSubmitOrder = new System.Windows.Forms.Button();
             this.cmbProduct = new System.Windows.Forms.ComboBox();
             this.listView1 = new System.Windows.Forms.ListView();
@@ -37,11 +37,11 @@
             this.Qty = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Amount = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.GrpProduct = new System.Windows.Forms.GroupBox();
+            this.btnAdd = new System.Windows.Forms.Button();
             this.nudQty = new System.Windows.Forms.NumericUpDown();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.dtpDeliveryDate = new System.Windows.Forms.DateTimePicker();
-            this.btnAdd = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.lblPrice = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
@@ -92,7 +92,7 @@
             this.Amount});
             this.listView1.HideSelection = false;
             this.listView1.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem3});
+            listViewItem1});
             this.listView1.Location = new System.Drawing.Point(55, 418);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(347, 97);
@@ -126,6 +126,21 @@
             this.GrpProduct.TabStop = false;
             this.GrpProduct.Text = "Product";
             // 
+            // btnAdd
+            // 
+            this.btnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(46)))), ((int)(((byte)(46)))));
+            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdd.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdd.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnAdd.Location = new System.Drawing.Point(154, 66);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(109, 29);
+            this.btnAdd.TabIndex = 47;
+            this.btnAdd.Text = "Add ";
+            this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.button1_Click);
+            // 
             // nudQty
             // 
             this.nudQty.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
@@ -157,9 +172,8 @@
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.ItemHeight = 25;
             this.comboBox1.Items.AddRange(new object[] {
-            "Product1",
-            "Product2",
-            "Product3"});
+            "CustA",
+            "CustB"});
             this.comboBox1.Location = new System.Drawing.Point(93, 206);
             this.comboBox1.Margin = new System.Windows.Forms.Padding(17, 4, 4, 4);
             this.comboBox1.Name = "comboBox1";
@@ -189,21 +203,6 @@
             this.dtpDeliveryDate.Name = "dtpDeliveryDate";
             this.dtpDeliveryDate.Size = new System.Drawing.Size(270, 27);
             this.dtpDeliveryDate.TabIndex = 50;
-            // 
-            // btnAdd
-            // 
-            this.btnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(46)))), ((int)(((byte)(46)))));
-            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdd.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdd.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnAdd.Location = new System.Drawing.Point(154, 66);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(4);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(109, 29);
-            this.btnAdd.TabIndex = 47;
-            this.btnAdd.Text = "Add ";
-            this.btnAdd.UseVisualStyleBackColor = false;
-            this.btnAdd.Click += new System.EventHandler(this.button1_Click);
             // 
             // label1
             // 

@@ -223,6 +223,64 @@ select sum(OD.Quantity) as BestSold, I.ProductName from OrderDetail OD join Inve
 end
 exec displayBestSellers
 
+create procedure addOrder                --add order  inactive
+@CustId int,
+@DeliveryDate date,
+@ProductId int,
+@Quantity int,
+@TotalPrice money,
+@addedBy varchar(50)
+as
+begin
+insert into Orders values (@CustId, getdate(), @DeliveryDate)
+
+declare @orderId int
+select @orderId = OrderId from Orders
+
+declare @retail money, @wholesale money
+select @retail = RetailPrice from Inventory where ProductId = @ProductId
+select @wholesale = WholesalePrice from Inventory where ProductId = @ProductId
+
+insert into OrderDetail values(@orderId, @ProductId, @Quantity, @TotalPrice, @retail, @wholesale, @addedBy)
+end
+
+create procedure insertIntoOrders                --insert orders  added new
+@CustId int,
+@DeliveryDate date
+as
+begin
+insert into Orders values (@CustId, getdate(), @DeliveryDate)
+end
+exec insertIntoOrders 2, '2022-10-21'
+
+create procedure insertIntoOrderDetails           --added new
+@ProductId int,
+@Quantity int,
+@TotalPrice money,
+@addedBy varchar(50)
+as
+begin
+declare @lastOrderId int
+
+declare lastIdCursor scroll cursor for
+select OrderId from Orders 
+
+open lastIdCursor
+
+fetch last from lastIdCursor into @lastOrderId
+
+close lastIdCursor
+deallocate lastIdCursor
+
+declare @retail money, @wholesale money
+select @retail = RetailPrice from Inventory where ProductId = @ProductId
+select @wholesale = WholesalePrice from Inventory where ProductId = @ProductId
+
+insert into OrderDetail values(@lastOrderId, @ProductId, @Quantity, @TotalPrice, @retail, @wholesale, @addedBy)
+end
+exec insertIntoOrderDetails 2, 10, 300, 10
+
+
 --function
 create function lowOnStock()
 returns table
