@@ -374,4 +374,42 @@ returns table
 as
 return (select * from Inventory where ProductId like '%'+@id+'%')
 
+create function countDiscount()		--added new
+returns int
+as
+begin
+return(select count(DiscountId) from Discount)   
+end
+select dbo.countDiscount()
+
+create function viewAllDiscounts() --added new
+returns table
+as
+return (select D.DiscountId, D.DiscountName, D.DiscountCode, D.Status, D.DiscountAmount, DD.DiscountDetailId, DD.SupplierId, DD.AppliedDate, DD.RedeemedInTotal from Discount D join DiscountDetail DD on D.DiscountId = DD.DiscountDetailId)
+select * from viewAllDiscounts()
+
+create function searchByDiscountId(@id int) --added new
+returns table
+as
+return (select D.DiscountId, D.DiscountName, D.DiscountCode, D.Status, D.DiscountAmount, DD.DiscountDetailId, DD.SupplierId, DD.AppliedDate, DD.RedeemedInTotal from Discount D join DiscountDetail DD on D.DiscountId = DD.DiscountDetailId where D.DiscountId = @id)
+select * from searchByDiscountId(1)
+
+create function categoryByDiscountSupplierId(@id varchar(50)) --added new
+returns table
+as
+return (select D.DiscountId, D.DiscountName, D.DiscountCode, D.Status, D.DiscountAmount, DD.DiscountDetailId, DD.SupplierId, DD.AppliedDate, DD.RedeemedInTotal from Discount D join DiscountDetail DD on D.DiscountId = DD.DiscountDetailId where DD.SupplierId = @id)
+select * from categoryByDiscountSupplierId(1)
+
+create function categoryByStatus(@status varchar(50)) --added new
+returns table
+as
+return (select D.DiscountId, D.DiscountName, D.DiscountCode, D.Status, D.DiscountAmount, DD.DiscountDetailId, DD.SupplierId, DD.AppliedDate, DD.RedeemedInTotal from Discount D join DiscountDetail DD on D.DiscountId = DD.DiscountDetailId where D.Status = @status)
+select * from categoryByStatus('true')
+
+create function categoryByAvailability(@isAvailable varchar(50)) --added new
+returns table
+as
+return (select * from Inventory where isAvailable = @isAvailable)
+select * from categoryByAvailability('true')
+
 
