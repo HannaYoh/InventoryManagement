@@ -121,7 +121,7 @@ namespace InventoryManagement
                 this.dataGridView1.Rows.Clear();
 
                 List<Models.Inventory> list = new List<Models.Inventory>();
-                list = inventory.categoryBySupplier();
+                list = inventory.categoryBySupplierId();
                 foreach (var products in list)
                 {
                     dataGridView1.Rows.Add(new object[]
@@ -146,7 +146,7 @@ namespace InventoryManagement
                 this.dataGridView1.Rows.Clear();
 
                 List<Models.Inventory> list = new List<Models.Inventory>();
-                list = inventory.categoryBySupplier();
+                list = inventory.categoryBySupplierId();
                 foreach (var products in list)
                 {
                     dataGridView1.Rows.Add(new object[]
@@ -170,7 +170,7 @@ namespace InventoryManagement
                 this.dataGridView1.Rows.Clear();
 
                 List<Models.Inventory> list = new List<Models.Inventory>();
-                list = inventory.categoryBySupplier();
+                list = inventory.categoryBySupplierId();
                 foreach (var products in list)
                 {
                     dataGridView1.Rows.Add(new object[]
@@ -196,6 +196,11 @@ namespace InventoryManagement
         }
 
         private void pictureBox11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmbCatagory_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
