@@ -12,6 +12,8 @@ namespace InventoryManagement
 {
     public partial class AdminSupplier : Form
     {
+        Models.Supplier supplier = new Models.Supplier();
+
         public AdminSupplier()
         {
             InitializeComponent();
@@ -22,14 +24,14 @@ namespace InventoryManagement
             
         }
 
-        private void txtSearchByName_Enter(object sender, EventArgs e)
+        private void txtSearchById_Enter(object sender, EventArgs e)
         {
-            this.txtSearchByName.Text = "";
+            this.txtSearchById.Text = "";
         }
 
-        private void txtSearchByName_Leave(object sender, EventArgs e)
+        private void txtSearchById_Leave(object sender, EventArgs e)
         {
-            this.txtSearchByName.Text = "Search by Name";
+            this.txtSearchById.Text = "Search by Name";
 
         }
 
@@ -37,8 +39,32 @@ namespace InventoryManagement
         {
             errorProviderTxt.Clear();
 
-            if (txtSearchByName.Text == "" || txtSearchByName.Text == "Search by Name")
+            if (txtSearchById.Text == "" || txtSearchById.Text == "Search by Supplier Id")
                 errorProviderTxt.SetError(pictureBox3, "Enter Supplier Name!");
+
+            else
+            {
+                supplier.SupplierId = int.Parse(txtSearchById.Text);
+
+
+                this.dataGridViewSupplier.Rows.Clear();
+
+                List<Models.Supplier> list = new List<Models.Supplier>();
+                list = supplier.searchBySupplierId();
+                foreach (var supplier in list)
+                {
+                    dataGridViewSupplier.Rows.Add(new object[]
+                    {
+                   supplier.SupplierId,
+                   supplier.SupplierName,
+                   supplier.Email,
+                   supplier.Address,
+                   supplier.Phone,
+                  
+                    });
+
+                }
+            }
         }
 
         private void lblAdd_Click(object sender, EventArgs e)
@@ -46,6 +72,11 @@ namespace InventoryManagement
             AddSuppliers sup = new AddSuppliers();
             sup.Owner = this;
             sup.ShowDialog();
+        }
+
+        private void dataGridViewSupplier_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

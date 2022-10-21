@@ -60,5 +60,10 @@ namespace InventoryManagement
             txtMobile.Text = "";
 
         }
+
+        private void btnAddProduct_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

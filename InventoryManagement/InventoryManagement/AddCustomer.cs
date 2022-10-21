@@ -63,5 +63,10 @@ namespace InventoryManagement
             txtCustomerPhone.Text = "";
 
         }
+
+        private void btnAddCustomer_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

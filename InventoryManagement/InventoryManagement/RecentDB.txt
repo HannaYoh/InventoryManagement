@@ -343,6 +343,12 @@ as
 return (select E.EmployeeId, E.FullName, E.Gender, E.DateOfBirth, E.Email, D.DepId from Employee E join Department D on E.EmployeeId = D.DepId where E.EmployeeId like '%'+@id+'%')
 select * from searchByEmployeeId(1)
 
+create function searchBySupplierId(@id varchar(50))
+returns table
+as
+return (select * from Supplier where SupplierId like '%'+@id+'%' )
+Select * from searchBySupplierId(1)
+
 alter function searchByOrderId(@id varchar(50))  --not used currently
 returns table
 as

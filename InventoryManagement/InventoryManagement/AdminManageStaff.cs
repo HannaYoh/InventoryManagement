@@ -132,5 +132,10 @@ namespace InventoryManagement
         {
 
         }
+
+        private void dataGridViewStaff_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

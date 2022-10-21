@@ -16,7 +16,23 @@ namespace InventoryManagement.Models
         public string Address { get; set; }
         public string Phone { get; set; }
 
-        public List<Supplier> searchBySuppliertId()
+        public void addSupplier()
+        {
+            createConnection();
+
+            string query = "exec addSupplier @SupplierName, @Email, @Address, @Phone";
+            SqlCommand cmd = new SqlCommand(query, conn);
+            cmd.Parameters.AddWithValue("SupplierName", SupplierName);
+            cmd.Parameters.AddWithValue("Email", Email);
+            cmd.Parameters.AddWithValue("Address", Address);
+            cmd.Parameters.AddWithValue("Phone", Phone);
+
+            cmd.ExecuteNonQuery();
+
+            closeConnection();
+
+        }
+        public List<Supplier> searchBySupplierId()
         {
             createConnection();
 
@@ -44,5 +60,12 @@ namespace InventoryManagement.Models
             closeConnection();
             return list;
         }
+
+
     }
 }
+
+
+
+
+        

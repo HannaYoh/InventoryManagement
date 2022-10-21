@@ -14,7 +14,7 @@ namespace InventoryManagement
     {
         Models.OrderDetail detail = new Models.OrderDetail();
         Models.Employee employee = new Models.Employee();
-        Login loginPage = new Login();
+        Login login = new Login();
 
         public StaffOrders(string email)
         {

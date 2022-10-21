@@ -41,10 +41,9 @@
             this.label11.AutoSize = true;
             this.label11.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label11.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(88, 245);
-            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label11.Location = new System.Drawing.Point(66, 199);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(49, 19);
+            this.label11.Size = new System.Drawing.Size(40, 17);
             this.label11.TabIndex = 47;
             this.label11.Text = "+251";
             // 
@@ -53,11 +52,10 @@
             this.txtMobile.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.txtMobile.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtMobile.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMobile.Location = new System.Drawing.Point(145, 244);
-            this.txtMobile.Margin = new System.Windows.Forms.Padding(4);
+            this.txtMobile.Location = new System.Drawing.Point(109, 198);
             this.txtMobile.Multiline = true;
             this.txtMobile.Name = "txtMobile";
-            this.txtMobile.Size = new System.Drawing.Size(210, 32);
+            this.txtMobile.Size = new System.Drawing.Size(158, 26);
             this.txtMobile.TabIndex = 46;
             this.txtMobile.Text = "Phone";
             this.txtMobile.Enter += new System.EventHandler(this.txtMobile_Enter);
@@ -69,13 +67,13 @@
             this.btnAddProduct.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddProduct.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddProduct.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnAddProduct.Location = new System.Drawing.Point(109, 321);
-            this.btnAddProduct.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAddProduct.Location = new System.Drawing.Point(82, 261);
             this.btnAddProduct.Name = "btnAddProduct";
-            this.btnAddProduct.Size = new System.Drawing.Size(210, 46);
+            this.btnAddProduct.Size = new System.Drawing.Size(158, 37);
             this.btnAddProduct.TabIndex = 45;
             this.btnAddProduct.Text = "Add Supplier";
             this.btnAddProduct.UseVisualStyleBackColor = false;
+            this.btnAddProduct.Click += new System.EventHandler(this.btnAddProduct_Click);
             // 
             // txtAddress
             // 
@@ -83,11 +81,11 @@
             this.txtAddress.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtAddress.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAddress.ForeColor = System.Drawing.Color.Black;
-            this.txtAddress.Location = new System.Drawing.Point(88, 181);
-            this.txtAddress.Margin = new System.Windows.Forms.Padding(4, 55, 4, 4);
+            this.txtAddress.Location = new System.Drawing.Point(66, 147);
+            this.txtAddress.Margin = new System.Windows.Forms.Padding(3, 45, 3, 3);
             this.txtAddress.Multiline = true;
             this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Size = new System.Drawing.Size(267, 34);
+            this.txtAddress.Size = new System.Drawing.Size(200, 28);
             this.txtAddress.TabIndex = 44;
             this.txtAddress.Text = "Address";
             this.txtAddress.WordWrap = false;
@@ -100,11 +98,11 @@
             this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtEmail.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmail.ForeColor = System.Drawing.Color.Black;
-            this.txtEmail.Location = new System.Drawing.Point(88, 124);
-            this.txtEmail.Margin = new System.Windows.Forms.Padding(4, 55, 4, 4);
+            this.txtEmail.Location = new System.Drawing.Point(66, 101);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(3, 45, 3, 3);
             this.txtEmail.Multiline = true;
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(267, 34);
+            this.txtEmail.Size = new System.Drawing.Size(200, 28);
             this.txtEmail.TabIndex = 43;
             this.txtEmail.Text = "Email";
             this.txtEmail.WordWrap = false;
@@ -117,11 +115,11 @@
             this.txtSupplierName.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtSupplierName.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSupplierName.ForeColor = System.Drawing.Color.Black;
-            this.txtSupplierName.Location = new System.Drawing.Point(88, 64);
-            this.txtSupplierName.Margin = new System.Windows.Forms.Padding(4, 55, 4, 4);
+            this.txtSupplierName.Location = new System.Drawing.Point(66, 52);
+            this.txtSupplierName.Margin = new System.Windows.Forms.Padding(3, 45, 3, 3);
             this.txtSupplierName.Multiline = true;
             this.txtSupplierName.Name = "txtSupplierName";
-            this.txtSupplierName.Size = new System.Drawing.Size(267, 34);
+            this.txtSupplierName.Size = new System.Drawing.Size(200, 28);
             this.txtSupplierName.TabIndex = 42;
             this.txtSupplierName.Text = "Supplier Name";
             this.txtSupplierName.WordWrap = false;
@@ -130,15 +128,16 @@
             // 
             // AddSuppliers
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(449, 459);
+            this.ClientSize = new System.Drawing.Size(337, 373);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.txtMobile);
             this.Controls.Add(this.btnAddProduct);
             this.Controls.Add(this.txtAddress);
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.txtSupplierName);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "AddSuppliers";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "AddSuppliers";
