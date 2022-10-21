@@ -13,16 +13,20 @@ namespace InventoryManagement
     public partial class StaffOrders : Form
     {
         Models.OrderDetail detail = new Models.OrderDetail();
+        Models.Employee employee = new Models.Employee();
+        Login loginPage = new Login();
 
-        public StaffOrders()
+        public StaffOrders(string email)
         {
             InitializeComponent();
+            employee.Email = email;
+            detail.Email = email;
         }
 
         private void lblAdd_Click(object sender, EventArgs e)
         {
 
-            AddOrders add = new AddOrders();
+            AddOrders add = new AddOrders(detail.Email);
             add.Owner = this;
             add.ShowDialog();
         }

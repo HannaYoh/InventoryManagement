@@ -99,7 +99,7 @@ namespace InventoryManagement
 
 
             lblActiveTab.Text = "Orders";
-            openChildForm(new StaffOrders());
+            openChildForm(new StaffOrders(employee.Email));
 
         }
 

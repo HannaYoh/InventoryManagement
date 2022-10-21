@@ -100,6 +100,20 @@ namespace InventoryManagement.Models
             return Convert.ToDecimal(result);
         }
 
+        public int getEmployeeId()
+        {
+            createConnection();
+          
+            string query = "select dbo.getEmployeeId(@Email)";
+            SqlCommand cmd = new SqlCommand(query, conn);
+            cmd.Parameters.AddWithValue("Email", Email);
+           
+            var result = cmd.ExecuteScalar();
+            
+            closeConnection();
+            return (int)result;
+        }
+
         public List<OrderDetail> viewAllOrders()
         {
             createConnection();

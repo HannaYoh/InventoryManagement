@@ -13,9 +13,14 @@ namespace InventoryManagement
 {
     public partial class AddOrders : Form
     {
-        public AddOrders()
+        Models.OrderDetail orderDetail = new Models.OrderDetail();
+        Models.Employee employee = new Models.Employee();
+        Login loginPage = new Login();
+        public AddOrders(string email)
         {
             InitializeComponent();
+            employee.Email = email;
+            orderDetail.Email = email;
         }
 
         private void btnAddProduct_Click(object sender, EventArgs e)
@@ -32,24 +37,51 @@ namespace InventoryManagement
             orders.DeliveryDate = dtpDeliveryDate.Value.ToString();
             orders.addOrders();
 
-            Models.OrderDetail detail = new Models.OrderDetail();
-            if (cmbProduct.SelectedIndex == 0)
-            {
-                detail.ProductId = 1;
-            }
-            else if (cmbProduct.SelectedIndex == 1)
-            {
-                detail.ProductId = 2;
-            }
-            else
-            {
-                detail.ProductId = 3;
-            }
+            /* Models.OrderDetail detail = new Models.OrderDetail();
+             if (cmbProduct.SelectedIndex == 0)
+             {
+                 detail.ProductId = 1;
+             }
+             else if (cmbProduct.SelectedIndex == 1)
+             {
+                 detail.ProductId = 2;
+             }
+             else
+             {
+                 detail.ProductId = 3;
+             }
 
-            detail.Quantity = (int)nudQty.Value;
-            detail.TotalPrice = Convert.ToDouble(lblPrice.Text);
-            detail.SoldById = 10;
-            detail.addOrderDetails();
+             detail.Quantity = (int)nudQty.Value;
+             detail.TotalPrice = Convert.ToDouble(lblPrice.Text);
+             detail.SoldById = 10;
+             detail.addOrderDetails();*/
+
+            int result = orderDetail.getEmployeeId();
+            for (int i = 0; i < listView1.Items.Count; i++)
+            {
+                Models.OrderDetail detail = new Models.OrderDetail();
+                detail.ProductName = listView1.Items[i].SubItems[0].Text;
+
+                if (detail.ProductName == "Product1")
+                {
+                    detail.ProductId = 1;
+                }
+                else if (detail.ProductName == "Product1")
+                {
+                    detail.ProductId = 2;
+                }
+                else
+                {
+                    detail.ProductId = 3;
+                }
+                detail.Quantity = (int)nudQty.Value;
+                detail.TotalPrice = Convert.ToDouble(lblPrice.Text);
+                //detail.Quantity = Convert.ToInt32(listView1.Items[i].SubItems[1].Text);
+                //detail.TotalPrice = Convert.ToDouble(listView1.Items[i].SubItems[2].Text);
+                
+                detail.SoldById = result;
+                detail.addOrderDetails();
+            }
 
 
             MessageBox.Show("order added");
