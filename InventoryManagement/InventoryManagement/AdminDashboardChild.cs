@@ -75,5 +75,10 @@ namespace InventoryManagement
             else
                 adminRecentActivities2.Message = modelInv.FullName + " updated " + modelInv.ProductName;
         }
+
+        private void dtLowOnStock_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
