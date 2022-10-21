@@ -15,9 +15,14 @@ namespace InventoryManagement
         Models.Inventory inventory = new Models.Inventory();
         Models.Orders orders = new Models.Orders();
         Models.OrderDetail orderDetail = new Models.OrderDetail();
-        public StaffReports()
+        Models.Customer customer = new Models.Customer();
+        Models.Employee employee = new Models.Employee();
+        Login loginPage = new Login();
+        public StaffReports(string email)
         {
             InitializeComponent();
+            employee.Email = email;
+            orderDetail.Email = email;
         }
 
         private void StaffReports_Load(object sender, EventArgs e)
@@ -47,6 +52,15 @@ namespace InventoryManagement
             //orders
             int orderResult = orders.totalOrder();
             label4.Text = orderResult.ToString();
+
+            //customers
+            int custResult = customer.totalCustomer();
+            lblCustomers.Text = custResult.ToString();
+
+            //personal sales
+            
+            decimal salesResult = orderDetail.displayPersonalSales();
+            label2.Text = salesResult.ToString();
 
 
 

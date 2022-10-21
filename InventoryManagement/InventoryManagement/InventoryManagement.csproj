@@ -173,6 +173,7 @@
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\Discount.cs" />
     <Compile Include="Models\DiscountDetail.cs" />
     <Compile Include="Models\Employee.cs" />

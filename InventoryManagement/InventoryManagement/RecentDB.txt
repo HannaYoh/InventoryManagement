@@ -280,6 +280,14 @@ insert into OrderDetail values(@lastOrderId, @ProductId, @Quantity, @TotalPrice,
 end
 exec insertIntoOrderDetails 2, 10, 300, 10
 
+create procedure countCustomer
+as
+begin
+select count(CustId) from Customer
+end
+exec countCustomer
+
+
 
 --function
 create function lowOnStock()
@@ -388,6 +396,33 @@ returns table
 as
 return (select * from Inventory where ProductId like '%'+@id+'%')
 select * from searchByProductId(2)
+
+create function searchByEmployeeId(@id varchar(50))    --search by emp id
+returns table
+as
+return (select E.EmployeeId, E.FullName, E.Gender, E.DateOfBirth, E.Email, D.DepId from Employee E join Department D on E.EmployeeId = D.DepId where E.EmployeeId like '%'+@id+'%')
+
+select * from searchByEmployeeId(10)    --not active
+
+
+create function countCustomers()
+returns int
+as
+begin
+return(select count(CustId) from Customer)      --cust count
+end
+select dbo.countCustomers()
+
+create function returnEmployeeSales(@empEmail varchar(50))
+returns int
+as
+begin
+declare @empId int, @personalSales money
+select @empId = EmployeeId from Employee where Email = @empEmail
+set @personalSales = (select sum(TotalPrice) from OrderDetail where SoldById = @empId group by SoldById)
+return @personalSales
+end
+select dbo.returnEmployeeSales('EmpB@gmail.com')
 
 --Trigger
 create trigger addIntoRecentActivity

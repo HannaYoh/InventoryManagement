@@ -18,10 +18,11 @@ namespace InventoryManagement
         public StaffPage(string username, Login login, string email)
         {
             InitializeComponent();
-            openChildForm(new StaffReports());
             label5.Text = username;
             loginPage = login;
             employee.Email = email;
+            openChildForm(new StaffReports(employee.Email));
+            
 
         }
 
@@ -75,7 +76,7 @@ namespace InventoryManagement
 
 
             lblActiveTab.Text = "Reports";
-            openChildForm(new StaffReports());
+            openChildForm(new StaffReports(employee.Email));
         }
 
         private void label4_Click_2(object sender, EventArgs e)

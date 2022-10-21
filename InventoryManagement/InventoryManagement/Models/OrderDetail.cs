@@ -32,6 +32,7 @@ namespace InventoryManagement.Models
         public int BestSold { get; set; }
 
         public int SoldById { get; set; }     //employee
+        public string Email { get; set; }
 
         //methods
         public List<OrderDetail> displayGrossRevenue()
@@ -78,6 +79,20 @@ namespace InventoryManagement.Models
 
             string query = "select dbo.calculateEarnings()";
             SqlCommand cmd = new SqlCommand(query, conn);
+
+            var result = cmd.ExecuteScalar();
+
+            closeConnection();
+            return Convert.ToDecimal(result);
+        }
+
+        public decimal displayPersonalSales()
+        {
+            createConnection();
+
+            string query = "select dbo.returnEmployeeSales(@Email)";
+            SqlCommand cmd = new SqlCommand(query, conn);
+            cmd.Parameters.AddWithValue("Email", Email);
 
             var result = cmd.ExecuteScalar();
 
