@@ -44,14 +44,14 @@ namespace InventoryManagement
             this.cmbSupplier = new System.Windows.Forms.ComboBox();
             this.pnlAddInventory = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.SupplierId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.isAvailable = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.AmountAvailable = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ManufactureDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.WholesalePrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.RetailPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ProductName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ProductId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ProductName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RetailPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.WholesalePrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ManufactureDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.AmountAvailable = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.isAvailable = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SupplierId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderTxt)).BeginInit();
@@ -67,7 +67,7 @@ namespace InventoryManagement
             this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
             this.pictureBox3.Location = new System.Drawing.Point(305, 33);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(40, 34);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -133,7 +133,7 @@ namespace InventoryManagement
             // 
             this.pictureBox11.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox11.Image")));
             this.pictureBox11.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox11.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox11.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox11.Name = "pictureBox11";
             this.pictureBox11.Size = new System.Drawing.Size(37, 36);
             this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -205,58 +205,9 @@ namespace InventoryManagement
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(1010, 458);
+            this.dataGridView1.Size = new System.Drawing.Size(1017, 458);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // SupplierId
-            // 
-            this.SupplierId.HeaderText = "Supplier Id";
-            this.SupplierId.MinimumWidth = 6;
-            this.SupplierId.Name = "SupplierId";
-            this.SupplierId.ReadOnly = true;
-            // 
-            // isAvailable
-            // 
-            this.isAvailable.HeaderText = "is Available";
-            this.isAvailable.MinimumWidth = 6;
-            this.isAvailable.Name = "isAvailable";
-            this.isAvailable.ReadOnly = true;
-            // 
-            // AmountAvailable
-            // 
-            this.AmountAvailable.HeaderText = "Amount Available";
-            this.AmountAvailable.MinimumWidth = 6;
-            this.AmountAvailable.Name = "AmountAvailable";
-            this.AmountAvailable.ReadOnly = true;
-            // 
-            // ManufactureDate
-            // 
-            this.ManufactureDate.HeaderText = "Manufacture Date";
-            this.ManufactureDate.MinimumWidth = 6;
-            this.ManufactureDate.Name = "ManufactureDate";
-            this.ManufactureDate.ReadOnly = true;
-            // 
-            // WholesalePrice
-            // 
-            this.WholesalePrice.HeaderText = "Wholesale Price";
-            this.WholesalePrice.MinimumWidth = 6;
-            this.WholesalePrice.Name = "WholesalePrice";
-            this.WholesalePrice.ReadOnly = true;
-            // 
-            // RetailPrice
-            // 
-            this.RetailPrice.HeaderText = "Retail Price";
-            this.RetailPrice.MinimumWidth = 6;
-            this.RetailPrice.Name = "RetailPrice";
-            this.RetailPrice.ReadOnly = true;
-            // 
-            // ProductName
-            // 
-            this.ProductName.HeaderText = "Product Name";
-            this.ProductName.MinimumWidth = 6;
-            this.ProductName.Name = "ProductName";
-            this.ProductName.ReadOnly = true;
             // 
             // ProductId
             // 
@@ -265,14 +216,64 @@ namespace InventoryManagement
             this.ProductId.Name = "ProductId";
             this.ProductId.ReadOnly = true;
             // 
+            // ProductName
+            // 
+            this.ProductName.HeaderText = "Product Name";
+            this.ProductName.MinimumWidth = 6;
+            this.ProductName.Name = "ProductName";
+            this.ProductName.ReadOnly = true;
+            // 
+            // RetailPrice
+            // 
+            this.RetailPrice.HeaderText = "Retail Price";
+            this.RetailPrice.MinimumWidth = 6;
+            this.RetailPrice.Name = "RetailPrice";
+            this.RetailPrice.ReadOnly = true;
+            // 
+            // WholesalePrice
+            // 
+            this.WholesalePrice.HeaderText = "Wholesale Price";
+            this.WholesalePrice.MinimumWidth = 6;
+            this.WholesalePrice.Name = "WholesalePrice";
+            this.WholesalePrice.ReadOnly = true;
+            // 
+            // ManufactureDate
+            // 
+            this.ManufactureDate.HeaderText = "Manufacture Date";
+            this.ManufactureDate.MinimumWidth = 6;
+            this.ManufactureDate.Name = "ManufactureDate";
+            this.ManufactureDate.ReadOnly = true;
+            // 
+            // AmountAvailable
+            // 
+            this.AmountAvailable.HeaderText = "Amount Available";
+            this.AmountAvailable.MinimumWidth = 6;
+            this.AmountAvailable.Name = "AmountAvailable";
+            this.AmountAvailable.ReadOnly = true;
+            // 
+            // isAvailable
+            // 
+            this.isAvailable.HeaderText = "is Available";
+            this.isAvailable.MinimumWidth = 6;
+            this.isAvailable.Name = "isAvailable";
+            this.isAvailable.ReadOnly = true;
+            // 
+            // SupplierId
+            // 
+            this.SupplierId.HeaderText = "Supplier Id";
+            this.SupplierId.MinimumWidth = 6;
+            this.SupplierId.Name = "SupplierId";
+            this.SupplierId.ReadOnly = true;
+            // 
             // panel1
             // 
             this.panel1.AutoScroll = true;
             this.panel1.BackColor = System.Drawing.SystemColors.Control;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.dataGridView1);
             this.panel1.Location = new System.Drawing.Point(43, 106);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1023, 464);
+            this.panel1.Size = new System.Drawing.Size(1021, 464);
             this.panel1.TabIndex = 42;
             // 
             // AdminInventory
@@ -287,7 +288,7 @@ namespace InventoryManagement
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.txtSearchById);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "AdminInventory";
             this.Text = "AdminInventory";
             this.Load += new System.EventHandler(this.AdminInventory_Load);

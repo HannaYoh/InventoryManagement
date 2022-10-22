@@ -94,7 +94,7 @@ namespace InventoryManagement
                         else
                         {
                             MessageBox.Show("Invalid input");
-                            txtEmail.Clear();
+                            ////txtEmail.Clear();
                             txtPassword.Clear();
                         }
                     }
@@ -115,7 +115,7 @@ namespace InventoryManagement
                         else
                         {
                             MessageBox.Show("Invalid input");
-                            txtEmail.Clear();
+                            //txtEmail.Clear();
                             txtPassword.Clear();
                         }
                     }
@@ -140,7 +140,7 @@ namespace InventoryManagement
                         else
                         {
                             MessageBox.Show("Invalid input");
-                            txtEmail.Clear();
+                            //txtEmail.Clear();
                             txtPassword.Clear();
                         }
                     }
@@ -161,7 +161,7 @@ namespace InventoryManagement
                         else
                         {
                             MessageBox.Show("Invalid input");
-                            txtEmail.Clear();
+                            //txtEmail.Clear();
                             txtPassword.Clear();
                         }
                     }
