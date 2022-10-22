@@ -72,28 +72,28 @@ namespace InventoryManagement
 
         private void lblStaff_Click(object sender, EventArgs e)
         {
-            this.lblStaff.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(81)))), ((int)(((byte)(81)))));
+            //this.lblStaff.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(81)))), ((int)(((byte)(81)))));
 
 
 
-            this.lblAdmin.ForeColor = System.Drawing.Color.Black;
+            //this.lblAdmin.ForeColor = System.Drawing.Color.Black;
 
 
-            pnlAdminTable.Visible = false;
-            pnlStaffTable.Visible = true;
+            //pnlAdminTable.Visible = false;
+            //pnlStaffTable.Visible = true;
 
         }
 
         private void lblAdmin_Click(object sender, EventArgs e)
         {
-            this.lblAdmin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(81)))), ((int)(((byte)(81)))));
+            //this.lblAdmin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(81)))), ((int)(((byte)(81)))));
 
 
 
-            this.lblStaff.ForeColor = System.Drawing.Color.Black;
+            //this.lblStaff.ForeColor = System.Drawing.Color.Black;
 
-            pnlAdminTable.Visible = true;
-            pnlStaffTable.Visible = false;
+           // pnlAdminTable.Visible = true;
+           // pnlStaffTable.Visible = false;
 
         }
 
