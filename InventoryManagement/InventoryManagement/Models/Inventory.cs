@@ -31,7 +31,7 @@ namespace InventoryManagement.Models
             SqlCommand cmd = new SqlCommand(query, conn);
 
             SqlDataReader reader = cmd.ExecuteReader();
-           
+
             while (reader.Read())
             {
                 Inventory model = new Inventory();
@@ -147,15 +147,14 @@ namespace InventoryManagement.Models
 
             List<Inventory> list = new List<Inventory>();
 
-            foreach(var products in list)
+            foreach (var products in list)
             {
-                string query = "insert into Inventory values (@ProductId, @ProductName, @RetailPrice, @WholesalePrice, @ManufactureDate, @AmountAvailable, @isAvailable, @SupplierId)";
+                string query = "exec insertIntoInventory @ProductId, @ProductName, @RetailPrice, @WholesalePrice, @AmountAvailable, @isAvailable, @SupplierId";
                 SqlCommand cmd = new SqlCommand(query, conn);
                 cmd.Parameters.AddWithValue("@ProductId", products.ProductId.ToString());
                 cmd.Parameters.AddWithValue("@ProductName", products.ProductName.ToString());
                 cmd.Parameters.AddWithValue("@RetailPrice", products.RetailPrice.ToString());
                 cmd.Parameters.AddWithValue("@WholesalePrice", products.WholesalePrice.ToString());
-                cmd.Parameters.AddWithValue("@ManufactureDate", products.ManufactureDate.ToString());
                 cmd.Parameters.AddWithValue("@AmountAvailable", products.AmountAvailable.ToString());
                 cmd.Parameters.AddWithValue("@isAvailable", products.isAvailable.ToString());
                 cmd.Parameters.AddWithValue("@SupplierId", products.SupplierId.ToString());
@@ -164,7 +163,7 @@ namespace InventoryManagement.Models
             }
 
             closeConnection();
-           
+
         }
         public List<Inventory> categoryByAvailability()
         {

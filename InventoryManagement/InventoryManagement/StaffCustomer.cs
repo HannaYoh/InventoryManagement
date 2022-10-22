@@ -1,4 +1,5 @@
-﻿using System;
+﻿using InventoryManagement.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,7 @@ namespace InventoryManagement
 {
     public partial class StaffCustomer : Form
     {
+        Models.Customer customer = new Models.Customer();
         public StaffCustomer()
         {
             InitializeComponent();
@@ -50,10 +52,36 @@ namespace InventoryManagement
             errorProvider1.Clear();
             txtSearchCustomer.Visible = true;
             lblTitle1.Visible = false;
-            if (txtSearchCustomer.Text == "" || txtSearchCustomer.Text == "Search Customer") { 
+            if (txtSearchCustomer.Text == "" || txtSearchCustomer.Text == "Search Customer")
+            {
                 errorProvider1.SetError(btnSearchCustomers, "Enter Customer Name!");
+            }
+            else
+            {
+                customer.FullName = txtSearchCustomer.Text;
 
-        }
+
+                List<Models.Customer> list = new List<Models.Customer>();
+                list = customer.searchCustomerByName();
+                label4.Text = customer.FullName;
+                label5.Text = customer.Email;
+                label7.Text = customer.Phone;
+                label9.Text = customer.Gender;
+                label11.Text = customer.Address;
+
+                foreach (var transaction in list)
+                {
+                    dataGridView1.Rows.Add(new object[]
+                    {
+                   transaction.OrderId,
+                   transaction.OrdaerDate,
+                   transaction.ProductId,
+                   transaction.Quantity,
+                   transaction.TotalPrice
+                    });
+
+                }
+            }
         }
 
         private void btnSearchCustomers_MouseHover(object sender, EventArgs e)
@@ -116,6 +144,32 @@ namespace InventoryManagement
         {
             txtSearchCustomer.Visible = false;
             lblTitle1.Visible = true;
+            customer.deleteCustomer();
+            MessageBox.Show("cutomer deleted");
+        }
+
+        private void txtSearchCustomer_TextChanged(object sender, EventArgs e)
+        {
+            errorProvider1.Clear();
+            txtSearchCustomer.Visible = true;
+            lblTitle1.Visible = false;
+            if (txtSearchCustomer.Text == "" || txtSearchCustomer.Text == "Search Customer")
+            {
+                errorProvider1.SetError(btnSearchCustomers, "Enter Customer Name!");
+
+            }
+            else
+            {
+                customer.FullName = txtSearchCustomer.Text;
+
+
+                List<Models.Customer> list = new List<Models.Customer>();
+                list = customer.searchCustomerByName();
+
+
+
+
+            }
         }
     }
 }

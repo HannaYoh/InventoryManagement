@@ -37,25 +37,6 @@ namespace InventoryManagement
             orders.DeliveryDate = dtpDeliveryDate.Value.ToString();
             orders.addOrders();
 
-            /* Models.OrderDetail detail = new Models.OrderDetail();
-             if (cmbProduct.SelectedIndex == 0)
-             {
-                 detail.ProductId = 1;
-             }
-             else if (cmbProduct.SelectedIndex == 1)
-             {
-                 detail.ProductId = 2;
-             }
-             else
-             {
-                 detail.ProductId = 3;
-             }
-
-             detail.Quantity = (int)nudQty.Value;
-             detail.TotalPrice = Convert.ToDouble(lblPrice.Text);
-             detail.SoldById = 10;
-             detail.addOrderDetails();*/
-
             int result = orderDetail.getEmployeeId();
             for (int i = 0; i < listView1.Items.Count; i++)
             {

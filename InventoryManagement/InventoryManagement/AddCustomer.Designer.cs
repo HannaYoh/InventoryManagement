@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.txtCustomerAddress = new System.Windows.Forms.TextBox();
             this.btnAddCustomer = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
@@ -38,7 +39,9 @@
             this.gbCustomerGender = new System.Windows.Forms.GroupBox();
             this.rbStaff = new System.Windows.Forms.RadioButton();
             this.rbAdmin = new System.Windows.Forms.RadioButton();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.gbCustomerGender.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // txtCustomerAddress
@@ -178,6 +181,10 @@
             this.rbAdmin.Text = "Male";
             this.rbAdmin.UseVisualStyleBackColor = true;
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // AddCustomer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -191,12 +198,13 @@
             this.Controls.Add(this.txtCustomerPhone);
             this.Controls.Add(this.txtCustomerEmail);
             this.Controls.Add(this.txtCustomerName);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "AddCustomer";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "AddCustomer";
             this.gbCustomerGender.ResumeLayout(false);
             this.gbCustomerGender.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -214,5 +222,6 @@
         private System.Windows.Forms.GroupBox gbCustomerGender;
         private System.Windows.Forms.RadioButton rbStaff;
         private System.Windows.Forms.RadioButton rbAdmin;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

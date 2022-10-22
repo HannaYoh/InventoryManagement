@@ -19,7 +19,8 @@ namespace InventoryManagement
 
         private void txtCustomerName_Leave(object sender, EventArgs e)
         {
-            txtCustomerName.Text = "Customer Name";
+            if(txtCustomerName.Text == "")
+                txtCustomerName.Text = "Customer Name";
         }
 
         private void txtCustomerName_Enter(object sender, EventArgs e)
@@ -30,7 +31,8 @@ namespace InventoryManagement
 
         private void txtCustomerEmail_Leave(object sender, EventArgs e)
         {
-            txtCustomerEmail.Text = "Customer Email";
+            if (txtCustomerEmail.Text == "")
+                txtCustomerEmail.Text = "Customer Email";
 
         }
 
@@ -42,7 +44,8 @@ namespace InventoryManagement
 
         private void txtCustomerAddress_Leave(object sender, EventArgs e)
         {
-            txtCustomerAddress.Text = "Customer Address";
+            if(txtCustomerAddress.Text == "")
+                txtCustomerAddress.Text = "Customer Address";
 
         }
 
@@ -54,7 +57,8 @@ namespace InventoryManagement
 
         private void txtCustomerPhone_Leave(object sender, EventArgs e)
         {
-            txtCustomerPhone.Text = "Customer Phone";
+            if (txtCustomerPhone.Text == "")
+                txtCustomerPhone.Text = "Customer Phone";
 
         }
 
@@ -66,7 +70,17 @@ namespace InventoryManagement
 
         private void btnAddCustomer_Click(object sender, EventArgs e)
         {
+            Models.Customer customer = new Models.Customer();
 
+            customer.FullName = txtCustomerName.Text;
+            customer.Email = txtCustomerEmail.Text;
+            customer.Address = txtCustomerAddress.Text;
+            customer.Phone = txtCustomerPhone.Text;
+            customer.Gender = gbCustomerGender.ToString();
+            customer.BirthOfDate = dtpDateofBirth.Value.ToString();
+
+            customer.addCustomer();
+            MessageBox.Show("Customer Added");
         }
     }
 }

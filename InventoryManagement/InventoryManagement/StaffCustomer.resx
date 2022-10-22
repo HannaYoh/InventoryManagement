@@ -157,10 +157,25 @@
         Y16WTAsAAAAASUVORK5CYII=
 </value>
   </data>
+  <metadata name="OrderId.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="OrderDate.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="ProductId.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Quantity.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="TotalPrice.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="pictureBox2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DwAACw8BkvkDpQAAAztJREFUWEfFmE1LG2EQgPMDKgnk2tRWyI+otaSXWs9Fo8VD+w+UVouXkpCix9qA
+        DAAACwwBP0AiyAAAAztJREFUWEfFmE1LG2EQgPMDKgnk2tRWyI+otaSXWs9Fo8VD+w+UVouXkpCix9qA
         tFWRiASkGAy0aA8eUvTUElwvbYkie2iSzcdhf8J2ZrKbbuLsx7tkNwMPLJmZd2bfr51MyKv8VZRH9VZr
         odZsFuvNplxrtVR41ojOs4Q6IIW2upu/IstyBAKme5JxD75ETlaUu/pwgxNMrNpqvWeCemOQidYbjUWP
         M+aEDC/9XA/jTQY6axbAPl7Xw7kXXFJwLHED+oSEMfXwzoIOfQP4Dmylkh7eXoJYViscl7uqKC84xyCp
@@ -180,7 +195,7 @@
   <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DwAACw8BkvkDpQAAA7ZJREFUWEflmE9IFFEcx+2vVIeiQxClUXTu4skKSgqik7RmSaIdhIywDkWXUrdk
+        DAAACwwBP0AiyAAAA7ZJREFUWEflmE9IFFEcx+2vVIeiQxClUXTu4skKSgqik7RmSaIdhIywDkWXUrdk
         XcSUIi9l1CkMvFRggpeI6iRCGEriun909s2+mXENU7P/r+84b3V39u22Mzu7QX3hc9i3v/f7fef9mXkz
         Bf+NGGNrQSFYzZv+nmBiozw9XROORDqIojwlqjoMJCATSqdkVR1Ce0+YUg9+HyWI511zK0JIUVhR7qP4
         HGCZgj7hiKLcnKB0G0/lrCilu2VN60GxX+bilqB0AaN7OxgMbuGps5esKMeQOCQsaBdV/SApyj5ewr6w

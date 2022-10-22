@@ -27,12 +27,14 @@ namespace InventoryManagement
 
         private void txtProductName_Leave(object sender, EventArgs e)
         {
-            txtProductName.Text = "Product Name";
+            if (txtProductName.Text == "")
+                txtProductName.Text = "Product Name";
         }
 
         private void txtRetailPrice_Leave(object sender, EventArgs e)
         {
-            txtRetailPrice.Text = "Retail Price ";
+            if (txtRetailPrice.Text == "")
+                txtRetailPrice.Text = "Retail Price ";
         }
 
         private void txtRetailPrice_Enter(object sender, EventArgs e)
@@ -42,7 +44,8 @@ namespace InventoryManagement
 
         private void txtWholeSalesPrice_Leave(object sender, EventArgs e)
         {
-            txtWholeSalesPrice.Text = "WholeSales Price";
+            if (txtWholeSalesPrice.Text == "")
+                txtWholeSalesPrice.Text = "WholeSales Price";
 
         }
 
@@ -53,7 +56,8 @@ namespace InventoryManagement
 
         private void txtAmountAvailable_Leave(object sender, EventArgs e)
         {
-            txtAmountAvailable.Text = "Amount Available";
+            if (txtAmountAvailable.Text == "")
+                txtAmountAvailable.Text = "Amount Available";
         }
 
         private void txtAmountAvailable_Enter(object sender, EventArgs e)
@@ -72,10 +76,33 @@ namespace InventoryManagement
 
         private void btnAddProduct_Click(object sender, EventArgs e)
         {
-            //List<Models.Inventory> list = new List<Models.Inventory>();
-            //list.Add();
+            Models.Inventory inventory = new Models.Inventory();
+            if (cmbSupplier.SelectedIndex == 0)
+            {
+                inventory.SupplierId = 1;
+            }
+            else if (cmbSupplier.SelectedIndex == 1)
+            {
+                inventory.SupplierId = 2;
+            }
+            else
+            {
+                inventory.SupplierId = 3;
+            }
+
+            inventory.ProductName = txtProductName.Text;
+            inventory.RetailPrice = Convert.ToDouble(txtRetailPrice.Text);
+            inventory.WholesalePrice = Convert.ToDouble(txtWholeSalesPrice.Text);
+            inventory.ManufactureDate = dtpManufacturingDate.Value.ToString();
+            inventory.AmountAvailable = Convert.ToInt32(txtAmountAvailable.Text);
+            inventory.isAvailable = true;
+
 
             inventory.addProductToDb();
+
+            MessageBox.Show("product added");
+
+
         }
     }
 }

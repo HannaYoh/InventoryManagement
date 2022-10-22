@@ -9,7 +9,7 @@ namespace InventoryManagement
 {
     internal abstract class DBConnection
     {
-        public static string connString = "Data Source=JERUSALEM-RIA\\SQLEXPRESS;Initial Catalog=dbInventory;Integrated Security=True";
+        public static string connString = "Data Source=LAPTOP-6325QREK\\SQLEXPRESS;Initial Catalog=dbInventory;Integrated Security=True";
         public static SqlConnection conn;
 
         public void createConnection()

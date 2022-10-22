@@ -27,6 +27,21 @@ namespace InventoryManagement.Models
             closeConnection();
             return (int)result;
         }
+        public void addDiscount()
+        {
+            createConnection();
+
+            string query = "exec insertIntoDiscount @DiscountName, @DiscountCode, @Status , @DiscountAmount";
+            SqlCommand cmd = new SqlCommand(query, conn);
+            cmd.Parameters.AddWithValue("DiscountName", DiscountName);
+            cmd.Parameters.AddWithValue("DiscountCode", DiscountCode);
+            cmd.Parameters.AddWithValue("Status", Status);
+            cmd.Parameters.AddWithValue("DiscountAmount", DiscountAmount);
+
+            cmd.ExecuteNonQuery();
+
+            closeConnection();
+        }
     }
-    
+
 }

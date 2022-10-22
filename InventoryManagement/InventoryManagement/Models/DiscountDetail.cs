@@ -38,9 +38,9 @@ namespace InventoryManagement.Models
 
                 temp.DiscountId = Convert.ToInt32(reader["DiscountId"]);
                 temp.DiscountName = reader["DiscountName"].ToString();
-                temp.DiscountCode = reader["DiscountCode"].ToString(); 
-                temp.Status = Convert.ToBoolean(reader["Status"]); 
-                temp.DiscountDetailId = Convert.ToInt32(reader["DiscountDetailId"]); 
+                temp.DiscountCode = reader["DiscountCode"].ToString();
+                temp.Status = Convert.ToBoolean(reader["Status"]);
+                temp.DiscountDetailId = Convert.ToInt32(reader["DiscountDetailId"]);
                 temp.SupplierId = Convert.ToInt32(reader["SupplierId"]);
                 temp.AppliedDate = reader["DiscountCode"].ToString();
                 temp.RedeemedInTotal = Convert.ToInt32(reader["RedeemedInTotal"]);
@@ -145,6 +145,20 @@ namespace InventoryManagement.Models
 
             closeConnection();
             return list;
+        }
+        public void addDiscountDetails()
+        {
+            createConnection();
+
+            string query = "exec insertIntoDiscountDetails @DiscountId, @SupplierId, @RedeemedInTotal";
+            SqlCommand cmd = new SqlCommand(query, conn);
+            cmd.Parameters.AddWithValue("DiscountId", DiscountId);
+            cmd.Parameters.AddWithValue("SupplierId", SupplierId);
+            cmd.Parameters.AddWithValue("RedeemedInTotal", RedeemedInTotal);
+
+            cmd.ExecuteNonQuery();
+
+            closeConnection();
         }
     }
 }
