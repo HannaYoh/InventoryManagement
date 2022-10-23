@@ -74,6 +74,17 @@ namespace InventoryManagement
                 adminRecentActivities2.Message = modelInv.FullName + " removed " + modelInv.ProductName;
             else
                 adminRecentActivities2.Message = modelInv.FullName + " updated " + modelInv.ProductName;
+
+            Models.RecentActivity modelEmp = new Models.RecentActivity();
+            modelEmp = recent.returnEmployee();
+            adminRecentActivities3.Date = modelEmp.ActivityDate;
+            adminRecentActivities3.Title = "Staff";
+            if (modelEmp.ActivityType == 'I')
+                adminRecentActivities3.Message =   " added " + modelEmp.FullName;
+            else if (modelEmp.ActivityType == 'D')
+                adminRecentActivities3.Message =  " removed " + modelEmp.FullName;
+            else
+                adminRecentActivities3.Message =  " updated " + modelEmp.FullName;
         }
 
         private void dtLowOnStock_CellContentClick(object sender, DataGridViewCellEventArgs e)

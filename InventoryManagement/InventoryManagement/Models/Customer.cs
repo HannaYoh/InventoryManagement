@@ -45,7 +45,7 @@ namespace InventoryManagement.Models
 
             List<Customer> list = new List<Customer>();
 
-            string query = "select * from searchCustomerByName(@fullname)";
+            string query = "select * from searchByCustomerName(@Fullname)";
             SqlCommand cmd = new SqlCommand(query, conn);
             cmd.Parameters.AddWithValue("FullName", FullName);
 
@@ -55,13 +55,13 @@ namespace InventoryManagement.Models
             {
                 Customer temp = new Customer();
 
-                temp.CustId = Convert.ToInt32(reader["CustId"]);
+               // temp.CustId = Convert.ToInt32(reader["CustId"]);
                 temp.FullName = reader["FullName"].ToString();
                 temp.Email = reader["Email"].ToString();
                 temp.Address = reader["Address"].ToString();
                 temp.Phone = reader["Phone"].ToString();
                 temp.Gender = reader["Gender"].ToString();
-                temp.BirthOfDate = reader["BirthOfDate"].ToString();
+               // temp.BirthOfDate = reader["BirthOfDate"].ToString();
 
 
                 list.Add(temp);

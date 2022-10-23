@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminDashboardChild));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -60,6 +60,7 @@
             this.panel7 = new System.Windows.Forms.Panel();
             this.chartGrossRevenue = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.label6 = new System.Windows.Forms.Label();
+            this.adminRecentActivities3 = new InventoryManagement.AdminRecentActivities();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -80,6 +81,7 @@
             this.flowLayoutPanel1.Controls.Add(this.panel1);
             this.flowLayoutPanel1.Controls.Add(this.adminRecentActivities1);
             this.flowLayoutPanel1.Controls.Add(this.adminRecentActivities2);
+            this.flowLayoutPanel1.Controls.Add(this.adminRecentActivities3);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Right;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(894, 0);
             this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
@@ -310,8 +312,8 @@
             // dtLowOnStock
             // 
             this.dtLowOnStock.AllowUserToResizeColumns = false;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dtLowOnStock.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dtLowOnStock.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dtLowOnStock.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtLowOnStock.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dtLowOnStock.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -319,14 +321,14 @@
             this.dtLowOnStock.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Product,
             this.Unit});
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(81)))), ((int)(((byte)(91)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtLowOnStock.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(81)))), ((int)(((byte)(91)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtLowOnStock.DefaultCellStyle = dataGridViewCellStyle2;
             this.dtLowOnStock.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dtLowOnStock.Location = new System.Drawing.Point(0, 32);
             this.dtLowOnStock.Margin = new System.Windows.Forms.Padding(4);
@@ -378,27 +380,27 @@
             // chartGrossRevenue
             // 
             this.chartGrossRevenue.BackColor = System.Drawing.Color.WhiteSmoke;
-            chartArea2.AxisX.IsMarginVisible = false;
-            chartArea2.AxisX.LineWidth = 0;
-            chartArea2.AxisX.MajorGrid.LineWidth = 0;
-            chartArea2.AxisY.LineWidth = 0;
-            chartArea2.AxisY.MajorTickMark.LineColor = System.Drawing.Color.WhiteSmoke;
-            chartArea2.BackColor = System.Drawing.Color.WhiteSmoke;
-            chartArea2.Name = "ChartArea1";
-            this.chartGrossRevenue.ChartAreas.Add(chartArea2);
+            chartArea1.AxisX.IsMarginVisible = false;
+            chartArea1.AxisX.LineWidth = 0;
+            chartArea1.AxisX.MajorGrid.LineWidth = 0;
+            chartArea1.AxisY.LineWidth = 0;
+            chartArea1.AxisY.MajorTickMark.LineColor = System.Drawing.Color.WhiteSmoke;
+            chartArea1.BackColor = System.Drawing.Color.WhiteSmoke;
+            chartArea1.Name = "ChartArea1";
+            this.chartGrossRevenue.ChartAreas.Add(chartArea1);
             this.chartGrossRevenue.Location = new System.Drawing.Point(0, -1);
             this.chartGrossRevenue.Name = "chartGrossRevenue";
             this.chartGrossRevenue.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.EarthTones;
-            series2.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.TopBottom;
-            series2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(81)))), ((int)(((byte)(91)))));
-            series2.BorderWidth = 2;
-            series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.SplineArea;
-            series2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(250)))), ((int)(((byte)(231)))));
-            series2.MarkerSize = 7;
-            series2.Name = "Total Revenue";
-            series2.YValuesPerPoint = 2;
-            this.chartGrossRevenue.Series.Add(series2);
+            series1.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.TopBottom;
+            series1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(81)))), ((int)(((byte)(91)))));
+            series1.BorderWidth = 2;
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.SplineArea;
+            series1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(250)))), ((int)(((byte)(231)))));
+            series1.MarkerSize = 7;
+            series1.Name = "Total Revenue";
+            series1.YValuesPerPoint = 2;
+            this.chartGrossRevenue.Series.Add(series1);
             this.chartGrossRevenue.Size = new System.Drawing.Size(816, 253);
             this.chartGrossRevenue.TabIndex = 0;
             this.chartGrossRevenue.Text = "chart1";
@@ -414,6 +416,19 @@
             this.label6.Size = new System.Drawing.Size(184, 28);
             this.label6.TabIndex = 10;
             this.label6.Text = "Gross Revenue";
+            // 
+            // adminRecentActivities3
+            // 
+            this.adminRecentActivities3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.adminRecentActivities3.Date = null;
+            this.adminRecentActivities3.ForeColor = System.Drawing.Color.Silver;
+            this.adminRecentActivities3.Location = new System.Drawing.Point(4, 431);
+            this.adminRecentActivities3.Margin = new System.Windows.Forms.Padding(4);
+            this.adminRecentActivities3.Message = null;
+            this.adminRecentActivities3.Name = "adminRecentActivities3";
+            this.adminRecentActivities3.Size = new System.Drawing.Size(235, 164);
+            this.adminRecentActivities3.TabIndex = 3;
+            this.adminRecentActivities3.Title = null;
             // 
             // AdminDashboardChild
             // 
@@ -484,5 +499,6 @@
         private System.Windows.Forms.Label label8;
         private AdminRecentActivities adminRecentActivities1;
         private AdminRecentActivities adminRecentActivities2;
+        private AdminRecentActivities adminRecentActivities3;
     }
 }

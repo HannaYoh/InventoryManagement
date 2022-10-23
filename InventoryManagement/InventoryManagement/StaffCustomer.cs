@@ -59,15 +59,15 @@ namespace InventoryManagement
             else
             {
                 customer.FullName = txtSearchCustomer.Text;
-
-
-                List<Models.Customer> list = new List<Models.Customer>();
-                list = customer.searchCustomerByName();
                 label4.Text = customer.FullName;
                 label5.Text = customer.Email;
                 label7.Text = customer.Phone;
                 label9.Text = customer.Gender;
                 label11.Text = customer.Address;
+
+                List<Models.Customer> list = new List<Models.Customer>();
+                list = customer.searchCustomerByName();
+                
 
                 foreach (var transaction in list)
                 {

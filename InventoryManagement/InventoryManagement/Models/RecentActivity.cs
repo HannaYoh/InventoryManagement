@@ -68,5 +68,27 @@ namespace InventoryManagement.Models
             return this;
         }
 
+        public RecentActivity returnEmployee()
+        {
+            createConnection();
+
+            string query = "select * from returnRecentEmployeeInfo()";
+            SqlCommand cmd = new SqlCommand(query, conn);
+
+            SqlDataReader reader = cmd.ExecuteReader();
+
+            // RecentActivity temp = new RecentActivity();
+
+            while (reader.Read())
+            {
+                this.FullName = reader["FullName"].ToString();
+                this.ActivityType = Convert.ToChar(reader["ActivityType"]);
+                this.ActivityDate = reader["ActivityDate"].ToString();               
+            }
+
+            closeConnection();
+            return this;
+        }
+
     }
 }

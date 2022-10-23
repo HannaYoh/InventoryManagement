@@ -391,6 +391,13 @@ as
 return (select R.ActivityDate, R.ActivityType, E.FullName, I.ProductName from RecentActivity R join Employee E on R.EmployeeId = E.EmployeeId join Inventory I on R.ProductId = I.ProductId) 
 select * from returnRecentInventoryInfo()
 
+create function returnRecentEmployeeInfo()          --added return recent emp info     
+returns table
+as 
+return (select R.ActivityDate, R.ActivityType, E.FullName 
+from RecentActivity R join Employee E on R.EmployeeId = E.EmployeeId) 
+select * from returnRecentEmployeeInfo()
+
 create function categoryBySupplierId(@id varchar(50)) --added new
 returns table
 as
@@ -489,6 +496,29 @@ set @EmployeeId = 1
 insert into RecentActivity values (cast(getdate() as date), @ActivityType, @EmployeeId, @SupplierId, @ProductId)
 end
 
+create trigger addIntoRecentsEmployee             --added trigger
+on Employee
+after insert, update, delete
+as
+begin
+declare @ActivityType char, @EmployeeId int, @SupplierId int, @ProductId int
+if (select count(*) from deleted) = 0 and (select count(*) from inserted) >=1
+  begin
+  set @ActivityType = 'I'
+  select @EmployeeId = EmployeeId from inserted
+  end
+else if (select count(*) from inserted) = 0 and (select count(*) from deleted) >=1
+  begin
+  set @ActivityType = 'D'
+  select @EmployeeId = EmployeeId from deleted
+  end
+else
+  begin
+  set @ActivityType = 'U'
+  select @EmployeeId = EmployeeId from inserted
+  end
+insert into RecentActivity values (cast(getdate() as date), @ActivityType, @EmployeeId, @SupplierId, @ProductId)
+end
 
 
 
