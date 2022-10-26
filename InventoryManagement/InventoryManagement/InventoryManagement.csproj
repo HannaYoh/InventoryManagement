@@ -64,6 +64,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AccessCode.cs" />
     <Compile Include="AddCustomer.cs">
       <SubType>Form</SubType>
     </Compile>

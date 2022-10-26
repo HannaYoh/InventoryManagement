@@ -124,7 +124,7 @@
             // panel6
             // 
             this.panel6.AutoScroll = true;
-            this.panel6.BackColor = System.Drawing.SystemColors.Control;
+            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(247)))), ((int)(((byte)(249)))));
             this.panel6.Controls.Add(this.dtLowOnStock);
             this.panel6.Controls.Add(this.label7);
             this.panel6.Location = new System.Drawing.Point(45, 411);
@@ -140,7 +140,7 @@
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.dtLowOnStock.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dtLowOnStock.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dtLowOnStock.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dtLowOnStock.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(247)))), ((int)(((byte)(249)))));
             this.dtLowOnStock.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dtLowOnStock.ColumnHeadersHeight = 40;
             this.dtLowOnStock.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {

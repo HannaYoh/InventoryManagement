@@ -171,6 +171,7 @@
             this.Name = "GenerateAccessCode";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "GenerateAccessCode";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.GenerateAccessCode_FormClosing);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.pnlCopyCode.ResumeLayout(false);

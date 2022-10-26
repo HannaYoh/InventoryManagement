@@ -15,6 +15,15 @@ namespace InventoryManagement
         public GenerateAccessCode()
         {
             InitializeComponent();
+
+            if(AccessCode.Code != "000000")
+            {
+                lblCode.Text = AccessCode.Code;
+                timer1.Enabled = true;
+                pbar.Value = AccessCode.Time;
+                pnlCopyCode.Visible = true;
+
+            }
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -31,7 +40,9 @@ namespace InventoryManagement
                 pbar.Text = "Remaining Time";
                 pnlCopyCode.Visible = false;
                 pbar.Value = 100;
-
+                AccessCode.Code = "000000";
+                AccessCode.Time = 0;
+                timer1.Dispose();
             }
         }
 
@@ -39,14 +50,14 @@ namespace InventoryManagement
         {
 
         }
-
+        String r;
         private void btnLogin_Click(object sender, EventArgs e)
         {
             pbar.Value = 100;
             timer1.Start();
             pnlCopyCode.Visible = true;
             Random generator = new Random();
-            String r = generator.Next(0, 1000000).ToString("D6");
+             r = generator.Next(0, 1000000).ToString("D6");
             lblCode.Text = r;
         }
 
@@ -54,6 +65,15 @@ namespace InventoryManagement
         {
             Clipboard.SetText(lblCode.Text);
             MessageBox.Show("Access code Copied");
+        }
+
+        private void GenerateAccessCode_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (timer1.Enabled)
+            {
+                 AccessCode.Code = lblCode.Text;
+                 AccessCode.Time = pbar.Value;
+            }
         }
     }
 }
