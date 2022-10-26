@@ -14,6 +14,7 @@ namespace InventoryManagement
     public partial class StaffCustomer : Form
     {
         Models.Customer customer = new Models.Customer();
+       
         public StaffCustomer()
         {
             InitializeComponent();
@@ -56,7 +57,7 @@ namespace InventoryManagement
             {
                 errorProvider1.SetError(btnSearchCustomers, "Enter Customer Name!");
             }
-            else
+           /* else
             {
                 customer.FullName = txtSearchCustomer.Text;
                 label4.Text = customer.FullName;
@@ -81,7 +82,7 @@ namespace InventoryManagement
                     });
 
                 }
-            }
+            }*/
         }
 
         private void btnSearchCustomers_MouseHover(object sender, EventArgs e)
@@ -144,6 +145,7 @@ namespace InventoryManagement
         {
             txtSearchCustomer.Visible = false;
             lblTitle1.Visible = true;
+            customer.Email = lblEmail1.Text;
             customer.deleteCustomer();
             MessageBox.Show("cutomer deleted");
         }
@@ -162,14 +164,65 @@ namespace InventoryManagement
             {
                 customer.FullName = txtSearchCustomer.Text;
 
+                flowLayoutPanel1.Controls.Clear();
 
-                List<Models.Customer> list = new List<Models.Customer>();
-                list = customer.searchCustomerByName();
-
-
-
+                foreach (var cust in customer.searchCustomer())
+                {
+                    CustomerListControl card = new CustomerListControl();
+                    card.Names = cust.FullName;
+                    card.Email = cust.Email;                                  
+                   
+                    flowLayoutPanel1.Controls.Add(card);
+                    card.Click += new System.EventHandler(this.CustomerListControl_Click);
+                }
 
             }
         }
+
+        private void CustomerListControl_Click(object sender, EventArgs e)
+        {        
+            CustomerListControl obj = (CustomerListControl)sender;
+            lblFullName1.Text = obj.Names;
+            lblEmail1.Text = obj.Email;
+
+            customer.Email = lblEmail1.Text;
+            Models.Customer tempCust = new Models.Customer();
+            tempCust = customer.returnCustomerInfo();
+
+            label4.Text = tempCust.FullName;
+            label5.Text = tempCust.Email;
+            label7.Text = tempCust.Phone;
+            label9.Text = tempCust.Gender;
+            label11.Text = tempCust.Address;
+
+            int custId = customer.returnCustomerId();
+            customer.CustId = custId;
+
+            this.dataGridView1.Rows.Clear();
+
+            List<Models.Customer> list = new List<Models.Customer>();
+            list = customer.searchOrderByCustId();
+
+
+            foreach (var transaction in list)
+            {
+                dataGridView1.Rows.Add(new object[]
+                {
+                   transaction.OrderId,
+                   transaction.OrderDate,
+                   transaction.ProductId,
+                   transaction.Quantity,
+                   transaction.TotalPrice
+                });
+
+            }
+
+
+
+        }
+
+
+
+
     }
 }

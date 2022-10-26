@@ -77,7 +77,7 @@ namespace InventoryManagement
             customer.Address = txtCustomerAddress.Text;
             customer.Phone = txtCustomerPhone.Text;
             customer.Gender = gbCustomerGender.ToString();
-            customer.BirthOfDate = dtpDateofBirth.Value.ToString();
+            customer.DateOfBirth = dtpDateofBirth.Value.ToString();
 
             customer.addCustomer();
             MessageBox.Show("Customer Added");
