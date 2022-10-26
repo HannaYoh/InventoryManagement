@@ -16,5 +16,27 @@ namespace InventoryManagement
         {
             InitializeComponent();
         }
+
+        private string lName;
+
+        public string Names
+        {
+            get { return lName; }
+            set { lName = value; lblName.Text = value; }
+        }
+
+        private string lEmail;
+
+        public string Email
+        {
+            get { return lEmail; }
+            set { lEmail = value; lblEmail.Text = value; }
+        }
+
+
+
+
+
+
     }
 }
