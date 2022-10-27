@@ -15,6 +15,7 @@ namespace InventoryManagement
     {
         Models.OrderDetail orderDetail = new Models.OrderDetail();
         Models.Employee employee = new Models.Employee();
+        Models.Discount discount = new Models.Discount();
         Login loginPage = new Login();
         public AddOrders(string email)
         {
@@ -56,7 +57,13 @@ namespace InventoryManagement
                     detail.ProductId = 3;
                 }
                 detail.Quantity = (int)nudQty.Value;
-                detail.TotalPrice = Convert.ToDouble(lblPrice.Text);
+                if(discount.searchDiscountCode(cmbDiscount.SelectedText) == null)
+                    detail.TotalPrice = Convert.ToDouble(lblPrice.Text);
+                else
+                {
+                    int disPercent = discount.getDiscountPercentageByCode(cmbDiscount.SelectedText);
+                    detail.TotalPrice = Convert.ToDouble(lblPrice.Text) - Convert.ToDouble(lblPrice.Text) - disPercent/100;
+                }
                 //detail.Quantity = Convert.ToInt32(listView1.Items[i].SubItems[1].Text);
                 //detail.TotalPrice = Convert.ToDouble(listView1.Items[i].SubItems[2].Text);
                 

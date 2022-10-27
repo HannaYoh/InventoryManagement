@@ -270,6 +270,22 @@ namespace InventoryManagement
             panelSubMenu.Visible = false;
             if (txtProducts.Text == "" || txtProducts.Text == "Search for Products")
                 errorProvider1.SetError(pictureBox3,"Enter Product!");
+            else
+            {
+                panelSubMenu.Visible = false;
+                pnlDashboardActive.Visible = false;
+                pnlManageStaffActive.Visible = false;
+                pnlOrdersActive.Visible = false;
+                pnlProductsActive.Visible = true;
+                pnlSupplierActive.Visible = false;
+                pnlEditProfile.Visible = false;
+
+                lblActiveTab.Text = "Products - Inventory";
+                openChildForm(new AdminInventory());
+
+                AdminInventory a = new AdminInventory();
+                a.filterProductById(txtProducts.Text);
+            }
 
         }
 
