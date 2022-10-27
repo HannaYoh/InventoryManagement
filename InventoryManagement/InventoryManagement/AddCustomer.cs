@@ -12,9 +12,23 @@ namespace InventoryManagement
 {
     public partial class AddCustomer : Form
     {
+        Models.Customer sentCustomer = new Models.Customer();
+        
+        string identifier;
         public AddCustomer()
         {
             InitializeComponent();
+        }
+
+        public AddCustomer(string fullname, string email, string address, string phone)
+        {
+            InitializeComponent();
+            sentCustomer.Email = email;
+            identifier = "editing";
+            txtCustomerName.Text = fullname;
+            txtCustomerEmail.Text = email;
+            txtCustomerAddress.Text = address;
+            txtCustomerPhone.Text = phone;
         }
 
         private void txtCustomerName_Leave(object sender, EventArgs e)
@@ -70,17 +84,45 @@ namespace InventoryManagement
 
         private void btnAddCustomer_Click(object sender, EventArgs e)
         {
-            Models.Customer customer = new Models.Customer();
+            if (identifier == "editing")
+            {
 
-            customer.FullName = txtCustomerName.Text;
-            customer.Email = txtCustomerEmail.Text;
-            customer.Address = txtCustomerAddress.Text;
-            customer.Phone = txtCustomerPhone.Text;
-            customer.Gender = gbCustomerGender.ToString();
-            customer.DateOfBirth = dtpDateofBirth.Value.ToString();
+                sentCustomer.FullName = txtCustomerName.Text;
+                sentCustomer.NewEmail = txtCustomerEmail.Text;
+                sentCustomer.Address = txtCustomerAddress.Text;
+                sentCustomer.Phone = txtCustomerPhone.Text;
+                if (rbAdmin.Checked)
+                {
+                    sentCustomer.Gender = "Male";
+                }
+                else
+                {
+                    sentCustomer.Gender = "Female";
+                }
+                sentCustomer.DateOfBirth = dtpDateofBirth.Value.ToString();
+                sentCustomer.updateCustomerInfo();
 
-            customer.addCustomer();
-            MessageBox.Show("Customer Added");
+                MessageBox.Show("customer edited");
+                
+            }
+            else
+            {
+
+                Models.Customer customer = new Models.Customer();
+
+                customer.FullName = txtCustomerName.Text;
+                customer.Email = txtCustomerEmail.Text;
+                customer.Address = txtCustomerAddress.Text;
+                customer.Phone = txtCustomerPhone.Text;
+                customer.Gender = gbCustomerGender.ToString();
+                customer.DateOfBirth = dtpDateofBirth.Value.ToString();
+
+                customer.addCustomer();
+                MessageBox.Show("Customer Added");
+            }
         }
+
+
+
     }
 }

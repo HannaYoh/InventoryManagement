@@ -134,11 +134,16 @@ namespace InventoryManagement
             txtSearchCustomer.Visible = false;
             lblTitle1.Visible = true;
 
-            AddCustomer add = new AddCustomer
-            {
-                Owner = this
-            };
+            string email = lblEmail1.Text;
+            string fullname = label4.Text;
+            string phone = label7.Text;
+            string address = label11.Text;
+            AddCustomer add = new AddCustomer(fullname ,email, address, phone);
+
+            add.Owner = this;
+            
             add.ShowDialog();
+            
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)

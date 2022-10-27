@@ -15,10 +15,13 @@ namespace InventoryManagement.Models
         public int CustId { get; set; }
         public string FullName { get; set; }
         public string Email { get; set; }
+        public string NewEmail { get; set; }
+
         public string Address { get; set; }
         public string Phone { get; set; }
         public string Gender { get; set; }
         public string DateOfBirth { get; set; }
+
         public int OrderId { get; set; }
         public string OrderDate { get; set; }
         public int ProductId { get; set; }
@@ -201,6 +204,25 @@ namespace InventoryManagement.Models
             return (int)result;
         }
 
+        public void updateCustomerInfo()
+        {
+            createConnection();
+
+            string query = "exec updateCustomerInfo @FullName, @Email, @NewEmail, @Address, @Phone, @DateOfBirth, @Gender";
+            SqlCommand cmd = new SqlCommand(query, conn);
+            cmd.Parameters.AddWithValue("FullName", FullName);
+            cmd.Parameters.AddWithValue("Email", Email);
+            cmd.Parameters.AddWithValue("NewEmail", NewEmail);
+            cmd.Parameters.AddWithValue("Address", Address);
+            cmd.Parameters.AddWithValue("Phone", Phone);            
+            cmd.Parameters.AddWithValue("DateOfBirth", DateOfBirth);
+            cmd.Parameters.AddWithValue("Gender", Gender);
+
+            cmd.ExecuteNonQuery();
+
+            closeConnection();
+
+        }
 
 
 

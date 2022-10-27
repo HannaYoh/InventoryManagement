@@ -34,6 +34,7 @@ namespace InventoryManagement
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StaffCustomer));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.txtSearchCustomer = new System.Windows.Forms.TextBox();
             this.btnSearchCustomers = new System.Windows.Forms.PictureBox();
@@ -68,7 +69,6 @@ namespace InventoryManagement
             this.label1 = new System.Windows.Forms.Label();
             this.lblEmail1 = new System.Windows.Forms.Label();
             this.lblFullName1 = new System.Windows.Forms.Label();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnSearchCustomers)).BeginInit();
@@ -94,6 +94,13 @@ namespace InventoryManagement
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(413, 428);
             this.panel1.TabIndex = 0;
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 3);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(407, 425);
+            this.flowLayoutPanel1.TabIndex = 0;
             // 
             // panel2
             // 
@@ -131,7 +138,7 @@ namespace InventoryManagement
             this.btnSearchCustomers.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSearchCustomers.Image = ((System.Drawing.Image)(resources.GetObject("btnSearchCustomers.Image")));
             this.btnSearchCustomers.Location = new System.Drawing.Point(321, 31);
-            this.btnSearchCustomers.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSearchCustomers.Margin = new System.Windows.Forms.Padding(4);
             this.btnSearchCustomers.Name = "btnSearchCustomers";
             this.btnSearchCustomers.Size = new System.Drawing.Size(27, 23);
             this.btnSearchCustomers.TabIndex = 38;
@@ -143,7 +150,7 @@ namespace InventoryManagement
             this.btnAddCustomers.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAddCustomers.Image = ((System.Drawing.Image)(resources.GetObject("btnAddCustomers.Image")));
             this.btnAddCustomers.Location = new System.Drawing.Point(368, 31);
-            this.btnAddCustomers.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAddCustomers.Margin = new System.Windows.Forms.Padding(4);
             this.btnAddCustomers.Name = "btnAddCustomers";
             this.btnAddCustomers.Size = new System.Drawing.Size(21, 23);
             this.btnAddCustomers.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -304,7 +311,7 @@ namespace InventoryManagement
             this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
             this.pictureBox3.Location = new System.Drawing.Point(39, 143);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(35, 34);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -325,6 +332,7 @@ namespace InventoryManagement
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.OrderId,
@@ -333,7 +341,7 @@ namespace InventoryManagement
             this.Quantity,
             this.TotalPrice});
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.Size = new System.Drawing.Size(323, 364);
@@ -392,7 +400,7 @@ namespace InventoryManagement
             this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(569, 28);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(35, 34);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -405,7 +413,7 @@ namespace InventoryManagement
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(511, 28);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(35, 34);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -473,13 +481,6 @@ namespace InventoryManagement
             this.lblFullName1.Size = new System.Drawing.Size(129, 27);
             this.lblFullName1.TabIndex = 1;
             this.lblFullName1.Text = "Full Name";
-            // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 3);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(407, 425);
-            this.flowLayoutPanel1.TabIndex = 0;
             // 
             // StaffCustomer
             // 
