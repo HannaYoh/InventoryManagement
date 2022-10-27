@@ -42,6 +42,35 @@ namespace InventoryManagement.Models
 
             closeConnection();
         }
+        public string searchDiscountCode(string code)
+        {
+            createConnection();
+
+            string query = "select dbo.searchDiscountCode(@code)";
+            SqlCommand cmd = new SqlCommand(query, conn);
+            cmd.Parameters.AddWithValue("code", code);
+
+            var result = cmd.ExecuteScalar();
+
+            closeConnection();
+            return (string)result;
+
+        }
+
+        public int getDiscountPercentageByCode(string code)
+        {
+            createConnection();
+
+            string query = "select dbo.getDiscountPercentageByCode(@code)";
+            SqlCommand cmd = new SqlCommand(query, conn);
+            cmd.Parameters.AddWithValue("code", code);
+
+            var result = cmd.ExecuteScalar();
+
+            closeConnection();
+            return (int)result;
+
+        }
     }
 
 }

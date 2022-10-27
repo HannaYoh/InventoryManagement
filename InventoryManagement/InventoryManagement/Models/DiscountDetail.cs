@@ -4,6 +4,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace InventoryManagement.Models
 {
@@ -160,5 +161,8 @@ namespace InventoryManagement.Models
 
             closeConnection();
         }
+
+
+       
     }
 }

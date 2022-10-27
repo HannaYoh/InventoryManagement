@@ -35,6 +35,35 @@ namespace InventoryManagement
         {
             txtSearchById.Text = "Search by ID";
         }
+       
+        public void filterProductById(string id)
+        {
+            MessageBox.Show("Test");
+            inventory.ProductId = int.Parse(id);
+
+            pnlAddInventory.Visible = false;
+            this.dataGridView1.Rows.Clear();
+
+            List<Models.Inventory> list = new List<Models.Inventory>();
+            list = inventory.searchByProductId();
+            foreach (var products in list)
+            {
+                dataGridView1.Rows.Add(new object[]
+                {
+                   products.ProductId,
+                   products.ProductName,
+                   products.RetailPrice,
+                   products.WholesalePrice,
+                   products.ManufactureDate,
+                   products.AmountAvailable,
+                   products.isAvailable,
+                   products.SupplierId
+                });
+
+            }
+        }
+
+
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
@@ -44,28 +73,7 @@ namespace InventoryManagement
                 errorProviderTxt.SetError(pictureBox3, "Enter Product!");
             else
             {
-                inventory.ProductId = int.Parse(txtSearchById.Text);
-
-
-                this.dataGridView1.Rows.Clear();
-
-                List<Models.Inventory> list = new List<Models.Inventory>();
-                list = inventory.searchByProductId();
-                foreach (var products in list)
-                {
-                    dataGridView1.Rows.Add(new object[]
-                    {
-                   products.ProductId,
-                   products.ProductName,
-                   products.RetailPrice,
-                   products.WholesalePrice,
-                   products.ManufactureDate,
-                   products.AmountAvailable,
-                   products.isAvailable,
-                   products.SupplierId
-                    });
-
-                }
+                filterProductById(txtSearchById.Text);
             }
         }
 
