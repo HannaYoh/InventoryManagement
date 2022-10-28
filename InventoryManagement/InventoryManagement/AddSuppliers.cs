@@ -13,10 +13,23 @@ namespace InventoryManagement
     public partial class AddSuppliers : Form
     {
         Models.Supplier addSupplier = new Models.Supplier();
+        Models.Supplier sentSupplier = new Models.Supplier();
+        string identifier;
 
         public AddSuppliers()
         {
             InitializeComponent();
+        }
+
+        public AddSuppliers(int supplierId, string name, string email, string address, string phone)
+        {
+            InitializeComponent();
+            identifier = "editing";
+            sentSupplier.SupplierId = supplierId;
+            txtSupplierName.Text = name;
+            txtEmail.Text = email;
+            txtAddress.Text = address;
+            txtMobile.Text = phone;
         }
 
         private void txtSupplierName_Enter(object sender, EventArgs e)
@@ -70,16 +83,29 @@ namespace InventoryManagement
 
         private void btnAddSupplier_Click(object sender, EventArgs e)
         {
-            Models.Supplier supplier = new Models.Supplier();
+            if (identifier == "editing")
+            {
+                sentSupplier.SupplierName = txtSupplierName.Text;
+                sentSupplier.Email = txtEmail.Text;
+                sentSupplier.Address = txtAddress.Text;
+                sentSupplier.Phone = txtMobile.Text;
+                sentSupplier.updateSupplierInfo();
 
-            supplier.SupplierName = txtSupplierName.Text;
-            supplier.Email = txtEmail.Text;
-            supplier.Address = txtAddress.Text;
-            supplier.Phone = txtMobile.Text;
+                MessageBox.Show("Supplier Edited");
+            }
+            else
+            {
+                Models.Supplier supplier = new Models.Supplier();
 
-          
-            supplier.addSupplier();
-            MessageBox.Show("Supplier Added");
+                supplier.SupplierName = txtSupplierName.Text;
+                supplier.Email = txtEmail.Text;
+                supplier.Address = txtAddress.Text;
+                supplier.Phone = txtMobile.Text;
+
+
+                supplier.addSupplier();
+                MessageBox.Show("Supplier Added");
+            }
             
         }
     }

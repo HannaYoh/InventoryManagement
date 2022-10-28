@@ -79,11 +79,20 @@ namespace InventoryManagement
         {
             if (e.ColumnIndex == 5)
             {
+                int id = (int)dataGridViewSupplier.CurrentRow.Cells[0].Value;
+                string name = dataGridViewSupplier.CurrentRow.Cells[1].Value.ToString();
+                string email = dataGridViewSupplier.CurrentRow.Cells[2].Value.ToString();
+                string address = dataGridViewSupplier.CurrentRow.Cells[3].Value.ToString();
+                string phone = dataGridViewSupplier.CurrentRow.Cells[4].Value.ToString();
 
-                AddSuppliers sup = new AddSuppliers();
+                AddSuppliers sup = new AddSuppliers(id, name, email, address, phone);
                 sup.Show();
-
-
+            }
+            else if (e.ColumnIndex == 6)
+            {
+                supplier.SupplierId = (int)dataGridViewSupplier.CurrentRow.Cells[0].Value;
+                supplier.deleteSupplier();
+                MessageBox.Show("Supplier deleted");
             }
         }
 

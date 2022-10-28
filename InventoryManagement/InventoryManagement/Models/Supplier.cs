@@ -92,6 +92,37 @@ namespace InventoryManagement.Models
             return list;
         }
 
+        public void updateSupplierInfo()
+        {
+            createConnection();
+
+            string query = "exec updateSupplier @SupplierId, @SupplierName, @Email, @Address, @Phone";
+            SqlCommand cmd = new SqlCommand(query, conn);
+            cmd.Parameters.AddWithValue("SupplierId", SupplierId);
+            cmd.Parameters.AddWithValue("SupplierName", SupplierName);
+            cmd.Parameters.AddWithValue("Email", Email);          
+            cmd.Parameters.AddWithValue("Address", Address);
+            cmd.Parameters.AddWithValue("Phone", Phone);
+            
+            cmd.ExecuteNonQuery();
+
+            closeConnection();
+
+        }
+
+        public void deleteSupplier()
+        {
+            createConnection();
+
+            string query = "exec deleteSupplier @SupplierId";
+            SqlCommand cmd = new SqlCommand(query, conn);
+            cmd.Parameters.AddWithValue("SupplierId", SupplierId);
+
+            cmd.ExecuteNonQuery();
+
+            closeConnection();
+            
+        }
 
     }
 }
