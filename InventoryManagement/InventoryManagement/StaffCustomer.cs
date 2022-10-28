@@ -212,9 +212,7 @@ namespace InventoryManagement
             foreach (var transaction in list)
             {
                 dataGridView1.Rows.Add(new object[]
-                {
-                   transaction.OrderId,
-                   transaction.OrderDate,
+                {                
                    transaction.ProductId,
                    transaction.Quantity,
                    transaction.TotalPrice

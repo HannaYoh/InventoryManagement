@@ -210,14 +210,14 @@ namespace InventoryManagement
 
         private void cmbCatagory_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cmbSupplier.SelectedIndex == 0)
+            if (cmbCatagory.SelectedIndex == 0)
             {
-                inventory.SupplierId = 1;
+                inventory.isAvailable = true;
 
                 this.dataGridView1.Rows.Clear();
 
                 List<Models.Inventory> list = new List<Models.Inventory>();
-                list = inventory.categoryBySupplierId();
+                list = inventory.categoryByAvailability();
                 foreach (var products in list)
                 {
                     dataGridView1.Rows.Add(new object[]
@@ -235,14 +235,14 @@ namespace InventoryManagement
                 }
 
             }
-            else if (cmbSupplier.SelectedIndex == 1)
+            else if (cmbCatagory.SelectedIndex == 1)
             {
-                inventory.SupplierId = 2;
+                inventory.isAvailable = false;
 
                 this.dataGridView1.Rows.Clear();
 
                 List<Models.Inventory> list = new List<Models.Inventory>();
-                list = inventory.categoryBySupplierId();
+                list = inventory.categoryByAvailability();
                 foreach (var products in list)
                 {
                     dataGridView1.Rows.Add(new object[]
@@ -262,11 +262,11 @@ namespace InventoryManagement
             }
             else
             {
-                cmbSupplier.SelectedIndex = -1;
+                cmbCatagory.SelectedIndex = -1;
                 this.dataGridView1.Rows.Clear();
 
                 List<Models.Inventory> list = new List<Models.Inventory>();
-                list = inventory.categoryBySupplierId();
+                list = inventory.categoryByAvailability();
                 foreach (var products in list)
                 {
                     dataGridView1.Rows.Add(new object[]

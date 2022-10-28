@@ -113,12 +113,14 @@ namespace InventoryManagement
         {
             Models.Employee model = new Models.Employee();
             model = employee.returnEmployeeInfo();
-
+            
             lblEmployeeId.Text = model.EmployeeId.ToString();
             lblName.Text = model.FullName;
             lblGender.Text = model.Gender;
             lblDob.Text = model.DateOfBirth;
             lblAddress.Text = model.Address;
+            int age = model.employeeAge();
+            lblAge.Text = age.ToString();
 
 
         }

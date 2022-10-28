@@ -30,14 +30,27 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StaffInventory));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.txtSearchById = new System.Windows.Forms.TextBox();
             this.errorProviderTxt = new System.Windows.Forms.ErrorProvider(this.components);
             this.cmbCatagory = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.cmbSupplier = new System.Windows.Forms.ComboBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.ProductId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ProductName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RetailPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.WholesalePrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ManufactureDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.AmountAvailable = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.isAvailable = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SupplierId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderTxt)).BeginInit();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox3
@@ -83,18 +96,20 @@
             this.cmbCatagory.FormattingEnabled = true;
             this.cmbCatagory.ItemHeight = 25;
             this.cmbCatagory.Items.AddRange(new object[] {
-            "Male",
-            "Female"});
+            "Available",
+            "Unavailable"});
             this.cmbCatagory.Location = new System.Drawing.Point(472, 35);
             this.cmbCatagory.Margin = new System.Windows.Forms.Padding(17, 4, 4, 4);
             this.cmbCatagory.Name = "cmbCatagory";
             this.cmbCatagory.Size = new System.Drawing.Size(230, 33);
             this.cmbCatagory.TabIndex = 31;
             this.cmbCatagory.Text = "Catagory";
+            this.cmbCatagory.SelectedIndexChanged += new System.EventHandler(this.cmbCatagory_SelectedIndexChanged);
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.panel1.Controls.Add(this.dataGridView1);
             this.panel1.Location = new System.Drawing.Point(45, 110);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1008, 460);
@@ -108,14 +123,108 @@
             this.cmbSupplier.FormattingEnabled = true;
             this.cmbSupplier.ItemHeight = 25;
             this.cmbSupplier.Items.AddRange(new object[] {
-            "Male",
-            "Female"});
+            "SupA",
+            "SupB"});
             this.cmbSupplier.Location = new System.Drawing.Point(823, 35);
             this.cmbSupplier.Margin = new System.Windows.Forms.Padding(17, 4, 4, 4);
             this.cmbSupplier.Name = "cmbSupplier";
             this.cmbSupplier.Size = new System.Drawing.Size(230, 33);
             this.cmbSupplier.TabIndex = 32;
             this.cmbSupplier.Text = "Supplier";
+            this.cmbSupplier.SelectedIndexChanged += new System.EventHandler(this.cmbSupplier_SelectedIndexChanged);
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToOrderColumns = true;
+            this.dataGridView1.AllowUserToResizeColumns = false;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle11;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ProductId,
+            this.ProductName,
+            this.RetailPrice,
+            this.WholesalePrice,
+            this.ManufactureDate,
+            this.AmountAvailable,
+            this.isAvailable,
+            this.SupplierId});
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(81)))), ((int)(((byte)(91)))));
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle12;
+            this.dataGridView1.Location = new System.Drawing.Point(-5, 1);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowHeadersVisible = false;
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.Size = new System.Drawing.Size(1019, 458);
+            this.dataGridView1.TabIndex = 1;
+            // 
+            // ProductId
+            // 
+            this.ProductId.HeaderText = "Product Id";
+            this.ProductId.MinimumWidth = 6;
+            this.ProductId.Name = "ProductId";
+            this.ProductId.ReadOnly = true;
+            // 
+            // ProductName
+            // 
+            this.ProductName.HeaderText = "Product Name";
+            this.ProductName.MinimumWidth = 6;
+            this.ProductName.Name = "ProductName";
+            this.ProductName.ReadOnly = true;
+            // 
+            // RetailPrice
+            // 
+            this.RetailPrice.HeaderText = "Retail Price";
+            this.RetailPrice.MinimumWidth = 6;
+            this.RetailPrice.Name = "RetailPrice";
+            this.RetailPrice.ReadOnly = true;
+            // 
+            // WholesalePrice
+            // 
+            this.WholesalePrice.HeaderText = "Wholesale Price";
+            this.WholesalePrice.MinimumWidth = 6;
+            this.WholesalePrice.Name = "WholesalePrice";
+            this.WholesalePrice.ReadOnly = true;
+            // 
+            // ManufactureDate
+            // 
+            this.ManufactureDate.HeaderText = "Manufacture Date";
+            this.ManufactureDate.MinimumWidth = 6;
+            this.ManufactureDate.Name = "ManufactureDate";
+            this.ManufactureDate.ReadOnly = true;
+            // 
+            // AmountAvailable
+            // 
+            this.AmountAvailable.HeaderText = "Amount Available";
+            this.AmountAvailable.MinimumWidth = 6;
+            this.AmountAvailable.Name = "AmountAvailable";
+            this.AmountAvailable.ReadOnly = true;
+            // 
+            // isAvailable
+            // 
+            this.isAvailable.HeaderText = "is Available";
+            this.isAvailable.MinimumWidth = 6;
+            this.isAvailable.Name = "isAvailable";
+            this.isAvailable.ReadOnly = true;
+            // 
+            // SupplierId
+            // 
+            this.SupplierId.HeaderText = "Supplier Id";
+            this.SupplierId.MinimumWidth = 6;
+            this.SupplierId.Name = "SupplierId";
+            this.SupplierId.ReadOnly = true;
             // 
             // StaffInventory
             // 
@@ -130,8 +239,11 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "StaffInventory";
             this.Text = "StaffInventory";
+            this.Load += new System.EventHandler(this.StaffInventory_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderTxt)).EndInit();
+            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -145,5 +257,14 @@
         private System.Windows.Forms.ComboBox cmbCatagory;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.ComboBox cmbSupplier;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ProductId;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ProductName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn RetailPrice;
+        private System.Windows.Forms.DataGridViewTextBoxColumn WholesalePrice;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ManufactureDate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn AmountAvailable;
+        private System.Windows.Forms.DataGridViewTextBoxColumn isAvailable;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SupplierId;
     }
 }

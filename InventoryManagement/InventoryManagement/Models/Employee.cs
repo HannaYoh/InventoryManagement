@@ -267,6 +267,20 @@ namespace InventoryManagement.Models
             }
         }
 
+        public int employeeAge()
+        {
+            createConnection();
+
+            string query = "select dbo.returnAge(@Email)";
+            SqlCommand cmd = new SqlCommand(query, conn);
+            cmd.Parameters.AddWithValue("Email", Email);
+
+            var result = cmd.ExecuteScalar();
+
+            closeConnection();
+            return (int)result;
+        }
+
 
     }
 }

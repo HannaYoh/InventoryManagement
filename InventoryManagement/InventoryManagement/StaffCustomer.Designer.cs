@@ -55,11 +55,6 @@ namespace InventoryManagement
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.OrderId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.OrderDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ProductId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TotalPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnlSeparetor = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -69,6 +64,9 @@ namespace InventoryManagement
             this.label1 = new System.Windows.Forms.Label();
             this.lblEmail1 = new System.Windows.Forms.Label();
             this.lblFullName1 = new System.Windows.Forms.Label();
+            this.ProductId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TotalPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnSearchCustomers)).BeginInit();
@@ -335,8 +333,6 @@ namespace InventoryManagement
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.OrderId,
-            this.OrderDate,
             this.ProductId,
             this.Quantity,
             this.TotalPrice});
@@ -346,46 +342,6 @@ namespace InventoryManagement
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.Size = new System.Drawing.Size(323, 364);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // OrderId
-            // 
-            this.OrderId.HeaderText = "Order Id";
-            this.OrderId.MinimumWidth = 6;
-            this.OrderId.Name = "OrderId";
-            this.OrderId.ReadOnly = true;
-            this.OrderId.Width = 125;
-            // 
-            // OrderDate
-            // 
-            this.OrderDate.HeaderText = "Order Date";
-            this.OrderDate.MinimumWidth = 6;
-            this.OrderDate.Name = "OrderDate";
-            this.OrderDate.ReadOnly = true;
-            this.OrderDate.Width = 125;
-            // 
-            // ProductId
-            // 
-            this.ProductId.HeaderText = "Product Id";
-            this.ProductId.MinimumWidth = 6;
-            this.ProductId.Name = "ProductId";
-            this.ProductId.ReadOnly = true;
-            this.ProductId.Width = 125;
-            // 
-            // Quantity
-            // 
-            this.Quantity.HeaderText = "Quantity";
-            this.Quantity.MinimumWidth = 6;
-            this.Quantity.Name = "Quantity";
-            this.Quantity.ReadOnly = true;
-            this.Quantity.Width = 125;
-            // 
-            // TotalPrice
-            // 
-            this.TotalPrice.HeaderText = "TotalPrice";
-            this.TotalPrice.MinimumWidth = 6;
-            this.TotalPrice.Name = "TotalPrice";
-            this.TotalPrice.ReadOnly = true;
-            this.TotalPrice.Width = 125;
             // 
             // pnlSeparetor
             // 
@@ -482,6 +438,30 @@ namespace InventoryManagement
             this.lblFullName1.TabIndex = 1;
             this.lblFullName1.Text = "Full Name";
             // 
+            // ProductId
+            // 
+            this.ProductId.HeaderText = "Product Id";
+            this.ProductId.MinimumWidth = 6;
+            this.ProductId.Name = "ProductId";
+            this.ProductId.ReadOnly = true;
+            this.ProductId.Width = 125;
+            // 
+            // Quantity
+            // 
+            this.Quantity.HeaderText = "Quantity";
+            this.Quantity.MinimumWidth = 6;
+            this.Quantity.Name = "Quantity";
+            this.Quantity.ReadOnly = true;
+            this.Quantity.Width = 125;
+            // 
+            // TotalPrice
+            // 
+            this.TotalPrice.HeaderText = "TotalPrice";
+            this.TotalPrice.MinimumWidth = 6;
+            this.TotalPrice.Name = "TotalPrice";
+            this.TotalPrice.ReadOnly = true;
+            this.TotalPrice.Width = 125;
+            // 
             // StaffCustomer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -548,11 +528,9 @@ namespace InventoryManagement
         private Label label3;
         private PictureBox pictureBox3;
         private DataGridView dataGridView1;
-        private DataGridViewTextBoxColumn OrderId;
-        private DataGridViewTextBoxColumn OrderDate;
+        private FlowLayoutPanel flowLayoutPanel1;
         private DataGridViewTextBoxColumn ProductId;
         private DataGridViewTextBoxColumn Quantity;
         private DataGridViewTextBoxColumn TotalPrice;
-        private FlowLayoutPanel flowLayoutPanel1;
     }
 }
