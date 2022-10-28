@@ -15,6 +15,7 @@ namespace InventoryManagement
     {
         Models.OrderDetail orderDetail = new Models.OrderDetail();
         Models.Employee employee = new Models.Employee();
+        Models.Inventory inventory = new Models.Inventory();
         Models.Discount discount = new Models.Discount();
         Login loginPage = new Login();
         public AddOrders(string email)
@@ -70,7 +71,7 @@ namespace InventoryManagement
                 detail.SoldById = result;
                 detail.addOrderDetails();
             }
-
+            inventory.updateAvailableProduct();
 
             MessageBox.Show("order added");
 

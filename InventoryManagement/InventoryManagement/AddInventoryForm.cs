@@ -75,8 +75,7 @@ namespace InventoryManagement
         }
 
         private void btnAddProduct_Click(object sender, EventArgs e)
-        {
-            Models.Inventory inventory = new Models.Inventory();
+        {           
             if (cmbSupplier.SelectedIndex == 0)
             {
                 inventory.SupplierId = 1;

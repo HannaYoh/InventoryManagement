@@ -145,23 +145,17 @@ namespace InventoryManagement.Models
         {
             createConnection();
 
-            List<Inventory> list = new List<Inventory>();
-
-            foreach (var products in list)
-            {
-                string query = "exec insertIntoInventory @ProductId, @ProductName, @RetailPrice, @WholesalePrice, @AmountAvailable, @isAvailable, @SupplierId";
-                SqlCommand cmd = new SqlCommand(query, conn);
-                cmd.Parameters.AddWithValue("@ProductId", products.ProductId.ToString());
-                cmd.Parameters.AddWithValue("@ProductName", products.ProductName.ToString());
-                cmd.Parameters.AddWithValue("@RetailPrice", products.RetailPrice.ToString());
-                cmd.Parameters.AddWithValue("@WholesalePrice", products.WholesalePrice.ToString());
-                cmd.Parameters.AddWithValue("@AmountAvailable", products.AmountAvailable.ToString());
-                cmd.Parameters.AddWithValue("@isAvailable", products.isAvailable.ToString());
-                cmd.Parameters.AddWithValue("@SupplierId", products.SupplierId.ToString());
+                string query = "exec insertIntoInventory @ProductName, @RetailPrice, @WholesalePrice, @AmountAvailable, @isAvailable, @SupplierId";
+                SqlCommand cmd = new SqlCommand(query, conn);               
+                cmd.Parameters.AddWithValue("@ProductName", ProductName);
+                cmd.Parameters.AddWithValue("@RetailPrice", RetailPrice);
+                cmd.Parameters.AddWithValue("@WholesalePrice", WholesalePrice);
+                cmd.Parameters.AddWithValue("@AmountAvailable", AmountAvailable);
+                cmd.Parameters.AddWithValue("@isAvailable", isAvailable);
+                cmd.Parameters.AddWithValue("@SupplierId", SupplierId);
 
                 cmd.ExecuteNonQuery();
-            }
-
+            
             closeConnection();
 
         }
@@ -196,5 +190,14 @@ namespace InventoryManagement.Models
             closeConnection();
             return list;
         }
+
+        public void updateAvailableProduct()
+        {
+            createConnection();
+            string query = "exec updateAvailAmountProduct";
+            SqlCommand cmd = new SqlCommand(query, conn);
+            closeConnection();
+        }
+
     }
 }
