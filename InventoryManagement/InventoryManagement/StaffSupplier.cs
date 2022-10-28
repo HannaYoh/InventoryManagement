@@ -42,13 +42,13 @@ namespace InventoryManagement
                 supplier.SupplierId = int.Parse(txtSearchEmployee.Text);
 
 
-                this.dataGridViewStaffSupplier.Rows.Clear();
+                this.dataGridViewSupplier.Rows.Clear();
 
                 List<Models.Supplier> list = new List<Models.Supplier>();
                 list = supplier.searchBySupplierId();
                 foreach (var supplier in list)
                 {
-                    dataGridViewStaffSupplier.Rows.Add(new object[]
+                    dataGridViewSupplier.Rows.Add(new object[]
                     {
                     supplier.SupplierId,
                    supplier.SupplierName,

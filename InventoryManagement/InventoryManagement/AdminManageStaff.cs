@@ -139,7 +139,7 @@ namespace InventoryManagement
         {
                 Models.Employee employee = new Models.Employee();
 
-            MessageBox.Show("Deactivated!");
+            MessageBox.Show("Contact developer to deactivate");
 
         }
     }

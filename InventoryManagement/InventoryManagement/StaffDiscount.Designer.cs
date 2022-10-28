@@ -30,14 +30,29 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StaffDiscount));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.txtSearchByName = new System.Windows.Forms.TextBox();
             this.errorProviderTxt = new System.Windows.Forms.ErrorProvider(this.components);
             this.cmbStatus = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.cmbSupplier = new System.Windows.Forms.ComboBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.DiscountId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DiscountName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DiscountCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DiscountAmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DiscountDetailId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SupplierId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.AppliedDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RedeemedInTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderTxt)).BeginInit();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox3
@@ -83,18 +98,20 @@
             this.cmbStatus.FormattingEnabled = true;
             this.cmbStatus.ItemHeight = 25;
             this.cmbStatus.Items.AddRange(new object[] {
-            "Male",
-            "Female"});
+            "Active",
+            "Deactive"});
             this.cmbStatus.Location = new System.Drawing.Point(474, 34);
             this.cmbStatus.Margin = new System.Windows.Forms.Padding(17, 4, 4, 4);
             this.cmbStatus.Name = "cmbStatus";
             this.cmbStatus.Size = new System.Drawing.Size(230, 33);
             this.cmbStatus.TabIndex = 37;
             this.cmbStatus.Text = "Status";
+            this.cmbStatus.SelectedIndexChanged += new System.EventHandler(this.cmbStatus_SelectedIndexChanged);
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.panel1.Controls.Add(this.dataGridView1);
             this.panel1.Location = new System.Drawing.Point(41, 109);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1008, 460);
@@ -108,14 +125,125 @@
             this.cmbSupplier.FormattingEnabled = true;
             this.cmbSupplier.ItemHeight = 25;
             this.cmbSupplier.Items.AddRange(new object[] {
-            "Male",
-            "Female"});
+            "SupA",
+            "SupB"});
             this.cmbSupplier.Location = new System.Drawing.Point(819, 34);
             this.cmbSupplier.Margin = new System.Windows.Forms.Padding(17, 4, 4, 4);
             this.cmbSupplier.Name = "cmbSupplier";
             this.cmbSupplier.Size = new System.Drawing.Size(230, 33);
             this.cmbSupplier.TabIndex = 38;
             this.cmbSupplier.Text = "Supplier";
+            this.cmbSupplier.SelectedIndexChanged += new System.EventHandler(this.cmbSupplier_SelectedIndexChanged);
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToOrderColumns = true;
+            this.dataGridView1.AllowUserToResizeColumns = false;
+            dataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Control;
+            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
+            this.dataGridView1.ColumnHeadersHeight = 50;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.DiscountId,
+            this.DiscountName,
+            this.DiscountCode,
+            this.Status,
+            this.DiscountAmount,
+            this.DiscountDetailId,
+            this.SupplierId,
+            this.AppliedDate,
+            this.RedeemedInTotal});
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle15.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(81)))), ((int)(((byte)(91)))));
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle15;
+            this.dataGridView1.Location = new System.Drawing.Point(0, 6);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowHeadersVisible = false;
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.Size = new System.Drawing.Size(1008, 448);
+            this.dataGridView1.TabIndex = 1;
+            // 
+            // DiscountId
+            // 
+            this.DiscountId.HeaderText = "Discount Id";
+            this.DiscountId.MinimumWidth = 6;
+            this.DiscountId.Name = "DiscountId";
+            this.DiscountId.ReadOnly = true;
+            this.DiscountId.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // DiscountName
+            // 
+            this.DiscountName.HeaderText = "Discount Name";
+            this.DiscountName.MinimumWidth = 6;
+            this.DiscountName.Name = "DiscountName";
+            this.DiscountName.ReadOnly = true;
+            // 
+            // DiscountCode
+            // 
+            this.DiscountCode.HeaderText = "Discount Code";
+            this.DiscountCode.MinimumWidth = 6;
+            this.DiscountCode.Name = "DiscountCode";
+            this.DiscountCode.ReadOnly = true;
+            // 
+            // Status
+            // 
+            this.Status.HeaderText = "Status";
+            this.Status.MinimumWidth = 6;
+            this.Status.Name = "Status";
+            this.Status.ReadOnly = true;
+            // 
+            // DiscountAmount
+            // 
+            this.DiscountAmount.HeaderText = "Discount Amount";
+            this.DiscountAmount.MinimumWidth = 6;
+            this.DiscountAmount.Name = "DiscountAmount";
+            this.DiscountAmount.ReadOnly = true;
+            // 
+            // DiscountDetailId
+            // 
+            this.DiscountDetailId.HeaderText = "Dicount Detail Id";
+            this.DiscountDetailId.MinimumWidth = 6;
+            this.DiscountDetailId.Name = "DiscountDetailId";
+            this.DiscountDetailId.ReadOnly = true;
+            // 
+            // SupplierId
+            // 
+            this.SupplierId.HeaderText = "Supplier Id";
+            this.SupplierId.MinimumWidth = 6;
+            this.SupplierId.Name = "SupplierId";
+            this.SupplierId.ReadOnly = true;
+            // 
+            // AppliedDate
+            // 
+            this.AppliedDate.HeaderText = "Applied Date";
+            this.AppliedDate.MinimumWidth = 6;
+            this.AppliedDate.Name = "AppliedDate";
+            this.AppliedDate.ReadOnly = true;
+            // 
+            // RedeemedInTotal
+            // 
+            this.RedeemedInTotal.HeaderText = "Redeemed In Total";
+            this.RedeemedInTotal.MinimumWidth = 6;
+            this.RedeemedInTotal.Name = "RedeemedInTotal";
+            this.RedeemedInTotal.ReadOnly = true;
             // 
             // StaffDiscount
             // 
@@ -130,8 +258,11 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "StaffDiscount";
             this.Text = "StaffDiscount";
+            this.Load += new System.EventHandler(this.StaffDiscount_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderTxt)).EndInit();
+            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -145,5 +276,15 @@
         private System.Windows.Forms.ComboBox cmbStatus;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.ComboBox cmbSupplier;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DiscountId;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DiscountName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DiscountCode;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Status;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DiscountAmount;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DiscountDetailId;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SupplierId;
+        private System.Windows.Forms.DataGridViewTextBoxColumn AppliedDate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn RedeemedInTotal;
     }
 }
