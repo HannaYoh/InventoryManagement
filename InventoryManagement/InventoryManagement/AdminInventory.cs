@@ -38,7 +38,7 @@ namespace InventoryManagement
        
         public void filterProductById(string id)
         {
-            MessageBox.Show("Test");
+           // MessageBox.Show("Test");
             inventory.ProductId = int.Parse(id);
 
             pnlAddInventory.Visible = false;
