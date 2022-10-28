@@ -16,6 +16,34 @@ namespace InventoryManagement.Models
         public string Address { get; set; }
         public string Phone { get; set; }
 
+        public List<Supplier> searchSupplier()
+        {
+            createConnection();
+            List<Supplier> list = new List<Supplier>();
+
+            string query = "select * from Supplier";
+            SqlCommand cmd = new SqlCommand(query, conn);
+
+            SqlDataReader reader = cmd.ExecuteReader();
+
+            while (reader.Read())
+            {
+                Supplier temp = new Supplier();
+
+                temp.SupplierId = Convert.ToInt32(reader["SupplierId"]);
+                temp.SupplierName = reader["SupplierName"].ToString();
+                temp.Email = reader["Email"].ToString();
+                temp.Address = reader["Address"].ToString();
+                temp.Phone = reader["Phone"].ToString();
+
+                list.Add(temp);
+            }
+
+            closeConnection();
+            return list;
+
+        }
+
         public void addSupplier()
         {
             createConnection();

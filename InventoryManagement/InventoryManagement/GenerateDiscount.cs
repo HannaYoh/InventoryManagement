@@ -1,4 +1,5 @@
-﻿using System;
+﻿using InventoryManagement.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,8 @@ namespace InventoryManagement
 {
     public partial class GenerateDiscount : Form
     {
+        Models.Supplier sup = new Models.Supplier();
+
         public GenerateDiscount()
         {
             InitializeComponent();
@@ -120,25 +123,29 @@ namespace InventoryManagement
 
             Models.DiscountDetail discountDetail = new Models.DiscountDetail();
 
-            if (cmbSupplier.SelectedIndex == 0)
+            for (int i = 0; i < listBox1.Items.Count; i++)
             {
-                discountDetail.SupplierId = 1;
-            }
-            else if (cmbSupplier.SelectedIndex == 1)
-            {
-                discountDetail.SupplierId = 2;
-            }
-            else
-            {
-                discountDetail.SupplierId = 3;
-            }
 
-            discountDetail.DiscountId = discount.totalDiscount();
-            discountDetail.RedeemedInTotal = 1;
+                discountDetail.SupplierName = listBox1.Items[i].ToString();
+                discountDetail.DiscountId = discount.totalDiscount();
+                discountDetail.RedeemedInTotal = 1;
 
-            discountDetail.addDiscountDetails();
-
+                discountDetail.addDiscountDetails();
+            }
             MessageBox.Show("discount added");
+        }
+
+        private void GenerateDiscount_Load(object sender, EventArgs e)
+        {
+            List<Models.Supplier> list = new List<Models.Supplier>();
+
+            list = sup.searchSupplier();
+cmbSupplier.Items.Clear();
+            foreach (var Supplier in list)
+            {
+                
+                cmbSupplier.Items.Add(Supplier.SupplierName);
+            }
         }
     }
 }
