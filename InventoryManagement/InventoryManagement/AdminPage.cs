@@ -281,9 +281,10 @@ namespace InventoryManagement
                 pnlEditProfile.Visible = false;
 
                 lblActiveTab.Text = "Products - Inventory";
-                openChildForm(new AdminInventory());
-
                 AdminInventory a = new AdminInventory();
+
+                openChildForm(a);
+
                 a.filterProductById(txtProducts.Text);
             }
 
