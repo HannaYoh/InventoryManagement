@@ -139,15 +139,7 @@ namespace InventoryManagement
         {
                 Models.Employee employee = new Models.Employee();
 
-            string Roll = null;
-            if (e.ColumnIndex == 7 && Roll == "Staff" )
-            {
-                employee.Roll = txtSearchEmployee.Text;
-                
-
-
-                employee.deactivateAccount();
-            }
+            MessageBox.Show("Deactivated!");
 
         }
     }
