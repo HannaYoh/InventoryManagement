@@ -12,27 +12,53 @@ namespace InventoryManagement
 {
     public partial class StaffSupplier : Form
     {
+        Models.Supplier supplier = new Models.Supplier();
+
         public StaffSupplier()
         {
+
             InitializeComponent();
         }
 
-        private void txtSearchByName_Leave(object sender, EventArgs e)
+        private void txtSearchEmployee_Leave(object sender, EventArgs e)
         {
-            txtSearchByName.Text = "Search by Name";
+            txtSearchEmployee.Text = "Search by Id";
         }
 
-        private void txtSearchByName_Enter(object sender, EventArgs e)
+        private void txtSearchEmployee_Enter(object sender, EventArgs e)
         {
-            txtSearchByName.Text = "";
+            txtSearchEmployee.Text = "";
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
             errorProviderTxt.Clear();
 
-            if (txtSearchByName.Text == "" || txtSearchByName.Text == "Search by Name")
-                errorProviderTxt.SetError(pictureBox3, "Enter Supplier Name!");
+            if (txtSearchEmployee.Text == "" || txtSearchEmployee.Text == "Search by ID")
+                errorProviderTxt.SetError(pictureBox3, "Enter Employee!");
+
+            else
+            {
+                supplier.SupplierId = int.Parse(txtSearchEmployee.Text);
+
+
+                this.dataGridViewStaffSupplier.Rows.Clear();
+
+                List<Models.Supplier> list = new List<Models.Supplier>();
+                list = supplier.searchBySupplierId();
+                foreach (var supplier in list)
+                {
+                    dataGridViewStaffSupplier.Rows.Add(new object[]
+                    {
+                    supplier.SupplierId,
+                   supplier.SupplierName,
+                   supplier.Email,
+                   supplier.Address,
+                   supplier.Phone,
+                });
+
+                }
+            }
         }
     }
 }

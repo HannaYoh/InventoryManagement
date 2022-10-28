@@ -43,15 +43,15 @@ namespace InventoryManagement
                     {
                     employee.EmployeeId,
                     employee.FullName,
+                    employee.Gender,
+                    employee.DateOfBirth,
                     employee.Email,
+                    employee.Roll,
+                    employee.DepId,
                     employee.Address,
                     employee.Phone,
                     employee.Password,
                     employee.BackupPassword,
-                    employee.Gender,
-                    employee.DateOfBirth,
-                    employee.Roll,
-                    employee.DepId,
                 });
 
                 }
