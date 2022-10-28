@@ -1,4 +1,4 @@
-﻿using InventoryManagement.Models;
+﻿//using InventoryManagement.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -43,6 +43,8 @@ namespace InventoryManagement
                    discountdetail.DiscountName,
                    discountdetail.DiscountCode,
                    discountdetail.Status,
+                                      discountdetail.DiscountAmount,
+
                    discountdetail.DiscountDetailId,
                    discountdetail.SupplierId,
                    discountdetail.AppliedDate,
@@ -103,6 +105,7 @@ namespace InventoryManagement
                    discountdetail.DiscountName,
                    discountdetail.DiscountCode,
                    discountdetail.Status,
+                   discountdetail.DiscountAmount,
                    discountdetail.DiscountDetailId,
                    discountdetail.SupplierId,
                    discountdetail.AppliedDate,
@@ -128,6 +131,7 @@ namespace InventoryManagement
                    discountdetail.DiscountName,
                    discountdetail.DiscountCode,
                    discountdetail.Status,
+                                     discountdetail.DiscountAmount,
                    discountdetail.DiscountDetailId,
                    discountdetail.SupplierId,
                    discountdetail.AppliedDate,
@@ -152,6 +156,7 @@ namespace InventoryManagement
                    discountdetail.DiscountName,
                    discountdetail.DiscountCode,
                    discountdetail.Status,
+                   discountdetail.DiscountAmount,
                    discountdetail.DiscountDetailId,
                    discountdetail.SupplierId,
                    discountdetail.AppliedDate,
@@ -175,6 +180,8 @@ namespace InventoryManagement
                    discountdetail.DiscountName,
                    discountdetail.DiscountCode,
                    discountdetail.Status,
+                                      discountdetail.DiscountAmount,
+
                    discountdetail.DiscountDetailId,
                    discountdetail.SupplierId,
                    discountdetail.AppliedDate,
@@ -202,6 +209,7 @@ namespace InventoryManagement
                    discountdetail.DiscountName,
                    discountdetail.DiscountCode,
                    discountdetail.Status,
+                   discountdetail.DiscountAmount,
                    discountdetail.DiscountDetailId,
                    discountdetail.SupplierId,
                    discountdetail.AppliedDate,

@@ -41,6 +41,8 @@
             this.lblAdd = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.pnlAddDiscount = new System.Windows.Forms.Panel();
+            this.cmbSupplier = new System.Windows.Forms.ComboBox();
             this.DiscountId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DiscountName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DiscountCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -50,9 +52,6 @@
             this.SupplierId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.AppliedDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RedeemedInTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DeleteDiscount = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.pnlAddDiscount = new System.Windows.Forms.Panel();
-            this.cmbSupplier = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderTxt)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
@@ -67,7 +66,7 @@
             this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
             this.pictureBox3.Location = new System.Drawing.Point(305, 33);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(40, 34);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -119,7 +118,7 @@
             // 
             this.pictureBox11.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox11.Image")));
             this.pictureBox11.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox11.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox11.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox11.Name = "pictureBox11";
             this.pictureBox11.Size = new System.Drawing.Size(37, 36);
             this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -178,8 +177,7 @@
             this.DiscountDetailId,
             this.SupplierId,
             this.AppliedDate,
-            this.RedeemedInTotal,
-            this.DeleteDiscount});
+            this.RedeemedInTotal});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -189,7 +187,7 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView1.Location = new System.Drawing.Point(-1, -1);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersVisible = false;
@@ -198,6 +196,36 @@
             this.dataGridView1.Size = new System.Drawing.Size(1008, 448);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // pnlAddDiscount
+            // 
+            this.pnlAddDiscount.Controls.Add(this.pictureBox11);
+            this.pnlAddDiscount.Controls.Add(this.lblAdd);
+            this.pnlAddDiscount.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pnlAddDiscount.Location = new System.Drawing.Point(949, 34);
+            this.pnlAddDiscount.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pnlAddDiscount.Name = "pnlAddDiscount";
+            this.pnlAddDiscount.Size = new System.Drawing.Size(104, 36);
+            this.pnlAddDiscount.TabIndex = 33;
+            this.pnlAddDiscount.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlAddInventory_Paint);
+            // 
+            // cmbSupplier
+            // 
+            this.cmbSupplier.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.cmbSupplier.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbSupplier.Font = new System.Drawing.Font("Century Gothic", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbSupplier.FormattingEnabled = true;
+            this.cmbSupplier.ItemHeight = 25;
+            this.cmbSupplier.Items.AddRange(new object[] {
+            "Sup A",
+            "Sup B"});
+            this.cmbSupplier.Location = new System.Drawing.Point(671, 34);
+            this.cmbSupplier.Margin = new System.Windows.Forms.Padding(17, 4, 4, 4);
+            this.cmbSupplier.Name = "cmbSupplier";
+            this.cmbSupplier.Size = new System.Drawing.Size(231, 33);
+            this.cmbSupplier.TabIndex = 32;
+            this.cmbSupplier.Text = "Supplier";
+            this.cmbSupplier.SelectedIndexChanged += new System.EventHandler(this.cmbSupplier_SelectedIndexChanged);
             // 
             // DiscountId
             // 
@@ -263,44 +291,6 @@
             this.RedeemedInTotal.Name = "RedeemedInTotal";
             this.RedeemedInTotal.ReadOnly = true;
             // 
-            // DeleteDiscount
-            // 
-            this.DeleteDiscount.HeaderText = "Delete Discount";
-            this.DeleteDiscount.MinimumWidth = 6;
-            this.DeleteDiscount.Name = "DeleteDiscount";
-            this.DeleteDiscount.ReadOnly = true;
-            this.DeleteDiscount.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            // 
-            // pnlAddDiscount
-            // 
-            this.pnlAddDiscount.Controls.Add(this.pictureBox11);
-            this.pnlAddDiscount.Controls.Add(this.lblAdd);
-            this.pnlAddDiscount.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pnlAddDiscount.Location = new System.Drawing.Point(949, 34);
-            this.pnlAddDiscount.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pnlAddDiscount.Name = "pnlAddDiscount";
-            this.pnlAddDiscount.Size = new System.Drawing.Size(104, 36);
-            this.pnlAddDiscount.TabIndex = 33;
-            this.pnlAddDiscount.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlAddInventory_Paint);
-            // 
-            // cmbSupplier
-            // 
-            this.cmbSupplier.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.cmbSupplier.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmbSupplier.Font = new System.Drawing.Font("Century Gothic", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbSupplier.FormattingEnabled = true;
-            this.cmbSupplier.ItemHeight = 25;
-            this.cmbSupplier.Items.AddRange(new object[] {
-            "Sup A",
-            "Sup B"});
-            this.cmbSupplier.Location = new System.Drawing.Point(671, 34);
-            this.cmbSupplier.Margin = new System.Windows.Forms.Padding(17, 4, 4, 4);
-            this.cmbSupplier.Name = "cmbSupplier";
-            this.cmbSupplier.Size = new System.Drawing.Size(231, 33);
-            this.cmbSupplier.TabIndex = 32;
-            this.cmbSupplier.Text = "Supplier";
-            this.cmbSupplier.SelectedIndexChanged += new System.EventHandler(this.cmbSupplier_SelectedIndexChanged);
-            // 
             // AdminDiscount
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -313,7 +303,7 @@
             this.Controls.Add(this.pnlAddDiscount);
             this.Controls.Add(this.cmbSupplier);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "AdminDiscount";
             this.Text = "AdminDiscount";
             this.Load += new System.EventHandler(this.AdminDiscount_Load);
@@ -350,6 +340,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn SupplierId;
         private System.Windows.Forms.DataGridViewTextBoxColumn AppliedDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn RedeemedInTotal;
-        private System.Windows.Forms.DataGridViewButtonColumn DeleteDiscount;
     }
 }

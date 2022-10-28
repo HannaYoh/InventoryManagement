@@ -13,6 +13,7 @@ namespace InventoryManagement
     public partial class AdminOrders : Form
     {
         Models.OrderDetail detail = new Models. OrderDetail();
+        Models.Supplier sup = new Models.Supplier();
 
         public AdminOrders()
         {
@@ -126,6 +127,16 @@ namespace InventoryManagement
                    orders.WholesalePrice
                 });
 
+                List<Models.Supplier> list2 = new List<Models.Supplier>();
+
+               
+                list2 = sup.searchSupplier();
+                cmbSupplier.Items.Clear();
+                foreach (var Supplier in list2)
+                {
+
+                    cmbSupplier.Items.Add(Supplier.SupplierName);
+                }
             }
         }
 

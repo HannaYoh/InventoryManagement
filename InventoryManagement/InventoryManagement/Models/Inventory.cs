@@ -149,9 +149,9 @@ namespace InventoryManagement.Models
 
             foreach (var products in list)
             {
-                string query = "exec insertIntoInventory @ProductId, @ProductName, @RetailPrice, @WholesalePrice, @AmountAvailable, @isAvailable, @SupplierId";
+                string query = "exec insertIntoInventory @ProductName, @RetailPrice, @WholesalePrice, @AmountAvailable, @isAvailable, @SupplierId";
                 SqlCommand cmd = new SqlCommand(query, conn);
-                cmd.Parameters.AddWithValue("@ProductId", products.ProductId.ToString());
+                //cmd.Parameters.AddWithValue("@ProductId", products.ProductId.ToString());
                 cmd.Parameters.AddWithValue("@ProductName", products.ProductName.ToString());
                 cmd.Parameters.AddWithValue("@RetailPrice", products.RetailPrice.ToString());
                 cmd.Parameters.AddWithValue("@WholesalePrice", products.WholesalePrice.ToString());
