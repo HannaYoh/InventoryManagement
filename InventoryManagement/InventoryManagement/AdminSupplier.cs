@@ -72,11 +72,24 @@ namespace InventoryManagement
             AddSuppliers sup = new AddSuppliers();
             sup.Owner = this;
             sup.ShowDialog();
+
         }
 
         private void dataGridViewSupplier_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            if (e.ColumnIndex == 5)
+            {
 
+                AddSuppliers sup = new AddSuppliers();
+                sup.Show();
+
+
+            }
+        }
+
+        private void pictureBox11_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

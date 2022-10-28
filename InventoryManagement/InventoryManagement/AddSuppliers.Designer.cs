@@ -30,7 +30,7 @@
         {
             this.label11 = new System.Windows.Forms.Label();
             this.txtMobile = new System.Windows.Forms.TextBox();
-            this.btnAddProduct = new System.Windows.Forms.Button();
+            this.btnAddSupplier = new System.Windows.Forms.Button();
             this.txtAddress = new System.Windows.Forms.TextBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.txtSupplierName = new System.Windows.Forms.TextBox();
@@ -61,19 +61,19 @@
             this.txtMobile.Enter += new System.EventHandler(this.txtMobile_Enter);
             this.txtMobile.Leave += new System.EventHandler(this.txtMobile_Leave);
             // 
-            // btnAddProduct
+            // btnAddSupplier
             // 
-            this.btnAddProduct.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(46)))), ((int)(((byte)(46)))));
-            this.btnAddProduct.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddProduct.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddProduct.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnAddProduct.Location = new System.Drawing.Point(82, 261);
-            this.btnAddProduct.Name = "btnAddProduct";
-            this.btnAddProduct.Size = new System.Drawing.Size(158, 37);
-            this.btnAddProduct.TabIndex = 45;
-            this.btnAddProduct.Text = "Add Supplier";
-            this.btnAddProduct.UseVisualStyleBackColor = false;
-            this.btnAddProduct.Click += new System.EventHandler(this.btnAddProduct_Click);
+            this.btnAddSupplier.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(46)))), ((int)(((byte)(46)))));
+            this.btnAddSupplier.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddSupplier.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddSupplier.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnAddSupplier.Location = new System.Drawing.Point(82, 261);
+            this.btnAddSupplier.Name = "btnAddSupplier";
+            this.btnAddSupplier.Size = new System.Drawing.Size(158, 37);
+            this.btnAddSupplier.TabIndex = 45;
+            this.btnAddSupplier.Text = "Add Supplier";
+            this.btnAddSupplier.UseVisualStyleBackColor = false;
+            this.btnAddSupplier.Click += new System.EventHandler(this.btnAddSupplier_Click);
             // 
             // txtAddress
             // 
@@ -133,11 +133,11 @@
             this.ClientSize = new System.Drawing.Size(337, 373);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.txtMobile);
-            this.Controls.Add(this.btnAddProduct);
+            this.Controls.Add(this.btnAddSupplier);
             this.Controls.Add(this.txtAddress);
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.txtSupplierName);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "AddSuppliers";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "AddSuppliers";
@@ -150,7 +150,7 @@
 
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox txtMobile;
-        private System.Windows.Forms.Button btnAddProduct;
+        private System.Windows.Forms.Button btnAddSupplier;
         private System.Windows.Forms.TextBox txtAddress;
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.TextBox txtSupplierName;

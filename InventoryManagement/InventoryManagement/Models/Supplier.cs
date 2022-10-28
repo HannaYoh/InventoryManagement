@@ -32,6 +32,9 @@ namespace InventoryManagement.Models
             closeConnection();
 
         }
+
+
+
         public List<Supplier> searchBySupplierId()
         {
             createConnection();

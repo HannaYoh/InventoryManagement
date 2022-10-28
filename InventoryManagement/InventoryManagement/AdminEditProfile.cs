@@ -141,5 +141,10 @@ namespace InventoryManagement
             txtEmail.Text = list.Email;
             txtAddress.Text = list.Address;
         }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

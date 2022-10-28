@@ -185,5 +185,10 @@ namespace InventoryManagement
         {
 
         }
+
+        private void rbAdmin_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

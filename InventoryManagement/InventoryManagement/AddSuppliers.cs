@@ -12,14 +12,11 @@ namespace InventoryManagement
 {
     public partial class AddSuppliers : Form
     {
+        Models.Supplier addSupplier = new Models.Supplier();
+
         public AddSuppliers()
         {
             InitializeComponent();
-        }
-
-        private void txtSupplierName_Leave(object sender, EventArgs e)
-        {
-            txtSupplierName.Text = "Supplier Name";
         }
 
         private void txtSupplierName_Enter(object sender, EventArgs e)
@@ -27,10 +24,16 @@ namespace InventoryManagement
             txtSupplierName.Text = "";
 
         }
-
+        private void txtSupplierName_Leave(object sender, EventArgs e)
+        {
+            if (txtSupplierName.Text == "")
+            txtSupplierName.Text = "Supplier Name";
+        }
         private void txtEmail_Leave(object sender, EventArgs e)
         {
-            txtEmail.Text = "Email";
+            if (txtEmail.Text == "")
+
+                txtEmail.Text = "Email";
         }
 
         private void txtEmail_Enter(object sender, EventArgs e)
@@ -41,7 +44,9 @@ namespace InventoryManagement
 
         private void txtAddress_Leave(object sender, EventArgs e)
         {
-            txtAddress.Text = "Address"; 
+            if (txtAddress.Text == "")
+
+                txtAddress.Text = "Address"; 
         }
 
         private void txtAddress_Enter(object sender, EventArgs e)
@@ -52,7 +57,9 @@ namespace InventoryManagement
 
         private void txtMobile_Leave(object sender, EventArgs e)
         {
-            txtMobile.Text = "Phone";
+            if (txtMobile.Text == "")
+
+                txtMobile.Text = "Phone";
         }
 
         private void txtMobile_Enter(object sender, EventArgs e)
@@ -61,9 +68,20 @@ namespace InventoryManagement
 
         }
 
-        private void btnAddProduct_Click(object sender, EventArgs e)
+        private void btnAddSupplier_Click(object sender, EventArgs e)
         {
+            Models.Supplier supplier = new Models.Supplier();
 
+            supplier.SupplierName = txtSupplierName.Text;
+            supplier.Email = txtEmail.Text;
+            supplier.Address = txtAddress.Text;
+            supplier.Phone = txtMobile.Text;
+
+          
+            supplier.addSupplier();
+            MessageBox.Show("Supplier Added");
+            
         }
     }
+    
 }

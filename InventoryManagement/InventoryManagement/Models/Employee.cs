@@ -190,6 +190,21 @@ namespace InventoryManagement.Models
 
         }
 
+        public void deactivateAccount()
+        {
+            createConnection();
+
+            string query = "exec deactivteAccount @FullName";
+            SqlCommand cmd = new SqlCommand(query, conn);
+
+            cmd.Parameters.AddWithValue("FullName", FullName);
+
+
+            cmd.ExecuteNonQuery();
+
+            closeConnection();
+
+        }
         public bool backupPwdLoginAdmin()
         {
             createConnection();

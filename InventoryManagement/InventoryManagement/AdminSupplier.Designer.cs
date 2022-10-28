@@ -60,10 +60,9 @@
             this.pictureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(305, 33);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox3.Location = new System.Drawing.Point(229, 27);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(40, 34);
+            this.pictureBox3.Size = new System.Drawing.Size(30, 28);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox3.TabIndex = 36;
             this.pictureBox3.TabStop = false;
@@ -75,11 +74,11 @@
             this.txtSearchById.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtSearchById.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSearchById.ForeColor = System.Drawing.Color.Black;
-            this.txtSearchById.Location = new System.Drawing.Point(43, 33);
-            this.txtSearchById.Margin = new System.Windows.Forms.Padding(4, 55, 4, 4);
+            this.txtSearchById.Location = new System.Drawing.Point(32, 27);
+            this.txtSearchById.Margin = new System.Windows.Forms.Padding(3, 45, 3, 3);
             this.txtSearchById.Multiline = true;
             this.txtSearchById.Name = "txtSearchById";
-            this.txtSearchById.Size = new System.Drawing.Size(267, 34);
+            this.txtSearchById.Size = new System.Drawing.Size(200, 28);
             this.txtSearchById.TabIndex = 35;
             this.txtSearchById.Text = "Search by Supplier Id";
             this.txtSearchById.WordWrap = false;
@@ -94,12 +93,12 @@
             // 
             this.pictureBox11.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox11.Image")));
             this.pictureBox11.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox11.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.Size = new System.Drawing.Size(37, 36);
+            this.pictureBox11.Size = new System.Drawing.Size(28, 29);
             this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox11.TabIndex = 24;
             this.pictureBox11.TabStop = false;
+            this.pictureBox11.Click += new System.EventHandler(this.pictureBox11_Click);
             // 
             // lblAdd
             // 
@@ -107,10 +106,9 @@
             this.lblAdd.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.lblAdd.Font = new System.Drawing.Font("Century Gothic", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAdd.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblAdd.Location = new System.Drawing.Point(43, 5);
-            this.lblAdd.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblAdd.Location = new System.Drawing.Point(32, 4);
             this.lblAdd.Name = "lblAdd";
-            this.lblAdd.Size = new System.Drawing.Size(59, 25);
+            this.lblAdd.Size = new System.Drawing.Size(49, 21);
             this.lblAdd.TabIndex = 25;
             this.lblAdd.Text = "Add";
             this.lblAdd.Click += new System.EventHandler(this.lblAdd_Click);
@@ -120,10 +118,10 @@
             this.panel1.BackColor = System.Drawing.SystemColors.ControlLight;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.dataGridViewSupplier);
-            this.panel1.Location = new System.Drawing.Point(43, 110);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel1.Location = new System.Drawing.Point(32, 89);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1008, 460);
+            this.panel1.Size = new System.Drawing.Size(756, 374);
             this.panel1.TabIndex = 40;
             // 
             // dataGridViewSupplier
@@ -154,13 +152,12 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridViewSupplier.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridViewSupplier.Location = new System.Drawing.Point(0, -1);
-            this.dataGridViewSupplier.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataGridViewSupplier.Name = "dataGridViewSupplier";
             this.dataGridViewSupplier.ReadOnly = true;
             this.dataGridViewSupplier.RowHeadersVisible = false;
             this.dataGridViewSupplier.RowHeadersWidth = 51;
             this.dataGridViewSupplier.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewSupplier.Size = new System.Drawing.Size(1007, 460);
+            this.dataGridViewSupplier.Size = new System.Drawing.Size(755, 374);
             this.dataGridViewSupplier.TabIndex = 0;
             this.dataGridViewSupplier.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewSupplier_CellContentClick);
             // 
@@ -222,24 +219,23 @@
             this.pnlAddSuppliers.Controls.Add(this.pictureBox11);
             this.pnlAddSuppliers.Controls.Add(this.lblAdd);
             this.pnlAddSuppliers.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pnlAddSuppliers.Location = new System.Drawing.Point(949, 34);
-            this.pnlAddSuppliers.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pnlAddSuppliers.Location = new System.Drawing.Point(712, 28);
+            this.pnlAddSuppliers.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pnlAddSuppliers.Name = "pnlAddSuppliers";
-            this.pnlAddSuppliers.Size = new System.Drawing.Size(104, 36);
+            this.pnlAddSuppliers.Size = new System.Drawing.Size(78, 29);
             this.pnlAddSuppliers.TabIndex = 39;
             this.pnlAddSuppliers.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlAddSuppliers_Paint);
             // 
             // AdminSupplier
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1153, 657);
+            this.ClientSize = new System.Drawing.Size(865, 534);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.txtSearchById);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pnlAddSuppliers);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "AdminSupplier";
             this.Text = "AdminSupplier";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
