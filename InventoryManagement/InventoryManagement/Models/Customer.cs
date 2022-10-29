@@ -135,6 +135,35 @@ namespace InventoryManagement.Models
             return list;
         }
 
+        public List<Customer> searchAllCustomer()
+        {
+            createConnection();
+
+            List<Customer> list = new List<Customer>();
+
+            string query = "select * from customer";
+            SqlCommand cmd = new SqlCommand(query, conn);
+            SqlDataReader reader = cmd.ExecuteReader();
+
+            while (reader.Read())
+            {
+                Customer temp = new Customer();
+
+                temp.CustId = Convert.ToInt32(reader["CustId"]);
+                temp.FullName = reader["FullName"].ToString();
+                temp.Email = reader["Email"].ToString();
+                temp.Address = reader["Address"].ToString();
+                temp.Phone = reader["Phone"].ToString();
+                temp.Gender = reader["Gender"].ToString();
+                temp.DateOfBirth = reader["DateOfBirth"].ToString();
+
+                list.Add(temp);
+            }
+
+            closeConnection();
+            return list;
+        }
+
         public Customer returnCustomerInfo()
         {
             createConnection();
@@ -160,6 +189,8 @@ namespace InventoryManagement.Models
             closeConnection();
             return temp;
         }
+
+
 
         public List<Customer> searchOrderByCustId()
         {

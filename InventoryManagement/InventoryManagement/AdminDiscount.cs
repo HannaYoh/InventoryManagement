@@ -14,6 +14,7 @@ namespace InventoryManagement
     public partial class AdminDiscount : Form
     {
         Models.DiscountDetail discountDetail = new Models.DiscountDetail();
+        Models.Supplier sup = new Models.Supplier();
 
         public AdminDiscount()
         {
@@ -24,7 +25,7 @@ namespace InventoryManagement
         {
             errorProviderTxt.Clear();
 
-            if (txtSearchByName.Text == "" || txtSearchByName.Text == "Search by Name")
+            if (txtSearchByName.Text == "" || txtSearchByName.Text == "Search by Id")
                 errorProviderTxt.SetError(pictureBox3, "Enter Discount Name!");
             else
             {
@@ -72,7 +73,7 @@ namespace InventoryManagement
 
         private void lblAdd_Click(object sender, EventArgs e)
         {
-            GenerateDiscount gn = new GenerateDiscount();
+            GenerateDiscount gn = new GenerateDiscount(this);
             gn.Owner = this;
             gn.ShowDialog();
         }
@@ -168,7 +169,30 @@ namespace InventoryManagement
             }
         }
 
-        private void AdminDiscount_Load(object sender, EventArgs e)
+        public void reloadTable()
+        {
+            dataGridView1.Rows.Clear();
+            List<Models.DiscountDetail> list = new List<Models.DiscountDetail>();
+            list = discountDetail.viewAllDiscounts();
+            foreach (var discountdetail in list)
+            {
+                dataGridView1.Rows.Add(new object[]
+                {
+                   discountdetail.DiscountId,
+                   discountdetail.DiscountName,
+                   discountdetail.DiscountCode,
+                   discountdetail.Status,
+                                      discountdetail.DiscountAmount,
+
+                   discountdetail.DiscountDetailId,
+                   discountdetail.SupplierId,
+                   discountdetail.AppliedDate,
+                   discountdetail.RedeemedInTotal
+                });
+
+            }
+        }
+            private void AdminDiscount_Load(object sender, EventArgs e)
         {
             List<Models.DiscountDetail> list = new List<Models.DiscountDetail>();
             list = discountDetail.viewAllDiscounts();
@@ -188,6 +212,17 @@ namespace InventoryManagement
                    discountdetail.RedeemedInTotal
                 });
 
+            }
+
+            List<Models.Supplier> list2 = new List<Models.Supplier>();
+
+
+            list2 = sup.searchSupplier();
+            cmbSupplier.Items.Clear();
+            foreach (var Supplier in list2)
+            {
+
+                cmbSupplier.Items.Add(Supplier.SupplierName);
             }
         }
 

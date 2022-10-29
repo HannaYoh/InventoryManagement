@@ -13,6 +13,7 @@ namespace InventoryManagement
     public partial class StaffInventory : Form
     {
         Models.Inventory inventory = new Models.Inventory();
+        Models.Supplier sup = new Models.Supplier();
 
         public StaffInventory()
         {
@@ -86,7 +87,16 @@ namespace InventoryManagement
                 });
 
             }
+            List<Models.Supplier> list2 = new List<Models.Supplier>();
 
+
+            list2 = sup.searchSupplier();
+            cmbSupplier.Items.Clear();
+            foreach (var Supplier in list2)
+            {
+
+                cmbSupplier.Items.Add(Supplier.SupplierName);
+            }
 
         }
 

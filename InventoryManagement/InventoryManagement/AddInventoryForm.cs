@@ -14,10 +14,11 @@ namespace InventoryManagement
     {
 
         Models.Inventory inventory = new Models.Inventory();
-
-        public AddInventoryForm()
+        AdminInventory adminInventory = new AdminInventory();
+        public AddInventoryForm(AdminInventory ad)
         {
             InitializeComponent();
+            adminInventory = ad;
         }
 
         private void txtProductName_Enter(object sender, EventArgs e)
@@ -101,7 +102,7 @@ namespace InventoryManagement
 
             MessageBox.Show("product added");
 
-
+            adminInventory.reloadTable();
         }
     }
 }

@@ -118,8 +118,8 @@ namespace InventoryManagement
 
         private void btnAddCustomers_Click(object sender, EventArgs e)
         {
-            txtSearchCustomer.Visible = false;
-            lblTitle1.Visible = true;
+            //txtSearchCustomer.Visible = false;
+            //lblTitle1.Visible = true;
 
             AddCustomer add = new AddCustomer
             {
@@ -224,8 +224,19 @@ namespace InventoryManagement
 
         }
 
+        private void StaffCustomer_Load(object sender, EventArgs e)
+        {
+            flowLayoutPanel1.Controls.Clear();
 
+            foreach (var cust in customer.searchAllCustomer())
+            {
+                CustomerListControl card = new CustomerListControl();
+                card.Names = cust.FullName;
+                card.Email = cust.Email;
 
-
+                flowLayoutPanel1.Controls.Add(card);
+                card.Click += new System.EventHandler(this.CustomerListControl_Click);
+            }
+        }
     }
 }

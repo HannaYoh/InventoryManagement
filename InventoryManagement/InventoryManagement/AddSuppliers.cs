@@ -16,9 +16,11 @@ namespace InventoryManagement
         Models.Supplier sentSupplier = new Models.Supplier();
         string identifier;
 
-        public AddSuppliers()
+        AdminSupplier adminSupplier = new AdminSupplier();
+        public AddSuppliers(AdminSupplier ad)
         {
             InitializeComponent();
+            adminSupplier = ad;
         }
 
         public AddSuppliers(int supplierId, string name, string email, string address, string phone)
@@ -105,6 +107,7 @@ namespace InventoryManagement
 
                 supplier.addSupplier();
                 MessageBox.Show("Supplier Added");
+                adminSupplier.reloadTable();
             }
             
         }

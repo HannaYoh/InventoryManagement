@@ -12,6 +12,7 @@ namespace InventoryManagement
 {
     public partial class StaffOrders : Form
     {
+        Models.Supplier sup = new Models.Supplier();
         Models.OrderDetail detail = new Models.OrderDetail();
         Models.Employee employee = new Models.Employee();
         Login login = new Login();
@@ -23,10 +24,15 @@ namespace InventoryManagement
             detail.Email = email;
         }
 
+        public StaffOrders()
+        {
+            InitializeComponent();
+        }
+
         private void lblAdd_Click(object sender, EventArgs e)
         {
 
-            AddOrders add = new AddOrders(detail.Email);
+            AddOrders add = new AddOrders(detail.Email,this);
             add.Owner = this;
             add.ShowDialog();
         }
@@ -82,6 +88,30 @@ namespace InventoryManagement
 
         }
 
+        public void reloadTable()
+        {
+            dataGridView1.Rows.Clear();
+            List<Models.OrderDetail> list = new List<Models.OrderDetail>();
+            list = detail.viewAllOrders();
+            foreach (var orders in list)
+            {
+                dataGridView1.Rows.Add(new object[]
+                {
+                   orders.FullName,
+                   orders.OrderId,
+                   orders.OrderDate,
+                   orders.DeliveryDate,
+                   orders.SupplierId,
+                   orders.SupplierName,
+                   orders.ProductId,
+                   orders.ProductName,
+                   orders.Quantity,
+                   orders.TotalPrice,
+                   orders.RetailPrice,
+                   orders.WholesalePrice
+                });
+            }
+        }
         private void StaffOrders_Load(object sender, EventArgs e)
         {
             List<Models.OrderDetail> list = new List<Models.OrderDetail>();
@@ -104,6 +134,17 @@ namespace InventoryManagement
                    orders.WholesalePrice
                 });
 
+            }
+
+            List<Models.Supplier> list2 = new List<Models.Supplier>();
+
+
+            list2 = sup.searchSupplier();
+            cmbSupplier.Items.Clear();
+            foreach (var Supplier in list2)
+            {
+
+                cmbSupplier.Items.Add(Supplier.SupplierName);
             }
         }
 

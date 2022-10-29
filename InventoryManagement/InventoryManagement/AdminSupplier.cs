@@ -69,7 +69,7 @@ namespace InventoryManagement
 
         private void lblAdd_Click(object sender, EventArgs e)
         {
-            AddSuppliers sup = new AddSuppliers();
+            AddSuppliers sup = new AddSuppliers(this);
             sup.Owner = this;
             sup.ShowDialog();
 
@@ -99,6 +99,45 @@ namespace InventoryManagement
         private void pictureBox11_Click(object sender, EventArgs e)
         {
             
+        }
+
+        private void AdminSupplier_Load(object sender, EventArgs e)
+        {
+            List<Models.Supplier> list = new List<Models.Supplier>();
+            list = supplier.loadAllSuppliers();
+            foreach (var supplier in list)
+            {
+                dataGridViewSupplier.Rows.Add(new object[]
+                {
+                   supplier.SupplierId,
+                   supplier.SupplierName,
+                   supplier.Email,
+                   supplier.Address,
+                   supplier.Phone,
+
+                });
+
+            }
+        }
+
+        public void reloadTable()
+        {
+            dataGridViewSupplier.Rows.Clear();
+            List<Models.Supplier> list = new List<Models.Supplier>();
+            list = supplier.loadAllSuppliers();
+            foreach (var supplier in list)
+            {
+                dataGridViewSupplier.Rows.Add(new object[]
+                {
+                   supplier.SupplierId,
+                   supplier.SupplierName,
+                   supplier.Email,
+                   supplier.Address,
+                   supplier.Phone,
+
+                });
+
+            }
         }
     }
 }

@@ -55,6 +55,9 @@ namespace InventoryManagement
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.ProductId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TotalPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnlSeparetor = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -64,9 +67,7 @@ namespace InventoryManagement
             this.label1 = new System.Windows.Forms.Label();
             this.lblEmail1 = new System.Windows.Forms.Label();
             this.lblFullName1 = new System.Windows.Forms.Label();
-            this.ProductId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TotalPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label13 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnSearchCustomers)).BeginInit();
@@ -95,6 +96,7 @@ namespace InventoryManagement
             // 
             // flowLayoutPanel1
             // 
+            this.flowLayoutPanel1.AutoScroll = true;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 3);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(407, 425);
@@ -105,10 +107,10 @@ namespace InventoryManagement
             this.panel2.Controls.Add(this.txtSearchCustomer);
             this.panel2.Controls.Add(this.btnSearchCustomers);
             this.panel2.Controls.Add(this.btnAddCustomers);
-            this.panel2.Location = new System.Drawing.Point(52, 45);
+            this.panel2.Location = new System.Drawing.Point(52, 63);
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(413, 75);
+            this.panel2.Size = new System.Drawing.Size(413, 65);
             this.panel2.TabIndex = 0;
             // 
             // txtSearchCustomer
@@ -118,14 +120,13 @@ namespace InventoryManagement
             this.txtSearchCustomer.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSearchCustomer.ForeColor = System.Drawing.Color.Black;
             this.txtSearchCustomer.HideSelection = false;
-            this.txtSearchCustomer.Location = new System.Drawing.Point(52, 31);
+            this.txtSearchCustomer.Location = new System.Drawing.Point(8, 31);
             this.txtSearchCustomer.Margin = new System.Windows.Forms.Padding(4, 55, 4, 4);
             this.txtSearchCustomer.Multiline = true;
             this.txtSearchCustomer.Name = "txtSearchCustomer";
-            this.txtSearchCustomer.Size = new System.Drawing.Size(261, 27);
+            this.txtSearchCustomer.Size = new System.Drawing.Size(305, 27);
             this.txtSearchCustomer.TabIndex = 39;
             this.txtSearchCustomer.Text = "Search Customers";
-            this.txtSearchCustomer.Visible = false;
             this.txtSearchCustomer.WordWrap = false;
             this.txtSearchCustomer.TextChanged += new System.EventHandler(this.txtSearchCustomer_TextChanged);
             this.txtSearchCustomer.Enter += new System.EventHandler(this.txtSearchByName_Enter);
@@ -343,6 +344,30 @@ namespace InventoryManagement
             this.dataGridView1.Size = new System.Drawing.Size(323, 364);
             this.dataGridView1.TabIndex = 0;
             // 
+            // ProductId
+            // 
+            this.ProductId.HeaderText = "Product Id";
+            this.ProductId.MinimumWidth = 6;
+            this.ProductId.Name = "ProductId";
+            this.ProductId.ReadOnly = true;
+            this.ProductId.Width = 125;
+            // 
+            // Quantity
+            // 
+            this.Quantity.HeaderText = "Quantity";
+            this.Quantity.MinimumWidth = 6;
+            this.Quantity.Name = "Quantity";
+            this.Quantity.ReadOnly = true;
+            this.Quantity.Width = 125;
+            // 
+            // TotalPrice
+            // 
+            this.TotalPrice.HeaderText = "TotalPrice";
+            this.TotalPrice.MinimumWidth = 6;
+            this.TotalPrice.Name = "TotalPrice";
+            this.TotalPrice.ReadOnly = true;
+            this.TotalPrice.Width = 125;
+            // 
             // pnlSeparetor
             // 
             this.pnlSeparetor.Location = new System.Drawing.Point(265, 126);
@@ -438,29 +463,15 @@ namespace InventoryManagement
             this.lblFullName1.TabIndex = 1;
             this.lblFullName1.Text = "Full Name";
             // 
-            // ProductId
+            // label13
             // 
-            this.ProductId.HeaderText = "Product Id";
-            this.ProductId.MinimumWidth = 6;
-            this.ProductId.Name = "ProductId";
-            this.ProductId.ReadOnly = true;
-            this.ProductId.Width = 125;
-            // 
-            // Quantity
-            // 
-            this.Quantity.HeaderText = "Quantity";
-            this.Quantity.MinimumWidth = 6;
-            this.Quantity.Name = "Quantity";
-            this.Quantity.ReadOnly = true;
-            this.Quantity.Width = 125;
-            // 
-            // TotalPrice
-            // 
-            this.TotalPrice.HeaderText = "TotalPrice";
-            this.TotalPrice.MinimumWidth = 6;
-            this.TotalPrice.Name = "TotalPrice";
-            this.TotalPrice.ReadOnly = true;
-            this.TotalPrice.Width = 125;
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Consolas", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(165, 34);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(181, 27);
+            this.label13.TabIndex = 52;
+            this.label13.Text = "All Customers";
             // 
             // StaffCustomer
             // 
@@ -468,6 +479,7 @@ namespace InventoryManagement
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(247)))), ((int)(((byte)(249)))));
             this.ClientSize = new System.Drawing.Size(1153, 657);
+            this.Controls.Add(this.label13);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -475,6 +487,7 @@ namespace InventoryManagement
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "StaffCustomer";
             this.Text = "StaffCustomer";
+            this.Load += new System.EventHandler(this.StaffCustomer_Load);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
@@ -493,6 +506,7 @@ namespace InventoryManagement
             this.pnlContainerOverviewttl.ResumeLayout(false);
             this.pnlContainerOverviewttl.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -532,5 +546,6 @@ namespace InventoryManagement
         private DataGridViewTextBoxColumn ProductId;
         private DataGridViewTextBoxColumn Quantity;
         private DataGridViewTextBoxColumn TotalPrice;
+        private Label label13;
     }
 }

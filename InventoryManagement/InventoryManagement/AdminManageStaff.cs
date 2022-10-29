@@ -123,6 +123,24 @@ namespace InventoryManagement
             lblAge.Text = age.ToString();
 
 
+            this.dataGridViewStaff.Rows.Clear();
+
+                List<Models.Employee> list = new List<Models.Employee>();
+                list = employee.loadAllEmployees();
+            foreach (var employee in list)
+            {
+                dataGridViewStaff.Rows.Add(new object[]
+                {
+                    employee.EmployeeId,
+                    employee.FullName,
+                    employee.Gender,
+                    employee.DateOfBirth,
+                    employee.Email,
+                    employee.Roll,
+                    employee.DepId,
+                    
+            });
+            }
         }
 
         private void label4_Click(object sender, EventArgs e)

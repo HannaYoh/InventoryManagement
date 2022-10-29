@@ -43,9 +43,9 @@
             this.panel3.Controls.Add(this.lblEmail);
             this.panel3.Controls.Add(this.lblName);
             this.panel3.Controls.Add(this.pictureBox4);
-            this.panel3.Location = new System.Drawing.Point(22, 26);
+            this.panel3.Location = new System.Drawing.Point(17, 26);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(369, 68);
+            this.panel3.Size = new System.Drawing.Size(335, 68);
             this.panel3.TabIndex = 2;
             // 
             // lblEmail
@@ -88,7 +88,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panel3);
             this.Name = "CustomerListControl";
-            this.Size = new System.Drawing.Size(414, 122);
+            this.Size = new System.Drawing.Size(374, 122);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();

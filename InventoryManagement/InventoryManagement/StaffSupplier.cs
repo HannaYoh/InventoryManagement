@@ -60,5 +60,24 @@ namespace InventoryManagement
                 }
             }
         }
+
+        private void StaffSupplier_Load(object sender, EventArgs e)
+        {
+            List<Models.Supplier> list = new List<Models.Supplier>();
+            list = supplier.loadAllSuppliers();
+            foreach (var supplier in list)
+            {
+                dataGridViewSupplier.Rows.Add(new object[]
+                {
+                   supplier.SupplierId,
+                   supplier.SupplierName,
+                   supplier.Email,
+                   supplier.Address,
+                   supplier.Phone,
+
+                });
+
+            }
+        }
     }
 }

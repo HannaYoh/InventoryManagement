@@ -267,6 +267,7 @@
             this.Name = "AddOrders";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "AddOrders";
+            this.Load += new System.EventHandler(this.AddOrders_Load);
             this.GrpProduct.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.nudQty)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();

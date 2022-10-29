@@ -1,4 +1,5 @@
-﻿using System;
+﻿using InventoryManagement.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -18,7 +19,8 @@ namespace InventoryManagement
         Models.Inventory inventory = new Models.Inventory();
         Models.Discount discount = new Models.Discount();
         Login loginPage = new Login();
-        public AddOrders(string email)
+        StaffOrders staffSupplier = new StaffOrders();
+        public AddOrders(string email, StaffOrders ss)
         {
             InitializeComponent();
             employee.Email = email;
@@ -57,8 +59,9 @@ namespace InventoryManagement
                 {
                     detail.ProductId = 3;
                 }
+                string dis = discount.searchDiscountCode(cmbDiscount.SelectedText);
                 detail.Quantity = (int)nudQty.Value;
-                if(discount.searchDiscountCode(cmbDiscount.SelectedText) == null)
+                if(dis == null)
                     detail.TotalPrice = Convert.ToDouble(lblPrice.Text);
                 else
                 {
@@ -74,7 +77,7 @@ namespace InventoryManagement
             inventory.updateAvailableProduct();
 
             MessageBox.Show("order added");
-
+            staffSupplier.reloadTable();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -127,5 +130,20 @@ namespace InventoryManagement
 
 
         }
+
+        private void AddOrders_Load(object sender, EventArgs e)
+        {
+            List<Models.Discount> list2 = new List<Models.Discount>();
+
+
+            list2 = discount.searchSupplier();
+            cmbDiscount.Items.Clear();
+            foreach (var Discount in list2)
+            {
+
+                cmbDiscount.Items.Add(Discount.DiscountCode);
+            }
+        }
+
     }
 }

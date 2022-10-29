@@ -37,7 +37,6 @@
             this.errorProviderTxt = new System.Windows.Forms.ErrorProvider(this.components);
             this.cmbCatagory = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.cmbSupplier = new System.Windows.Forms.ComboBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.ProductId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ProductName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -47,6 +46,7 @@
             this.AmountAvailable = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.isAvailable = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SupplierId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cmbSupplier = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderTxt)).BeginInit();
             this.panel1.SuspendLayout();
@@ -115,24 +115,6 @@
             this.panel1.Size = new System.Drawing.Size(1008, 460);
             this.panel1.TabIndex = 34;
             // 
-            // cmbSupplier
-            // 
-            this.cmbSupplier.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.cmbSupplier.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmbSupplier.Font = new System.Drawing.Font("Century Gothic", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbSupplier.FormattingEnabled = true;
-            this.cmbSupplier.ItemHeight = 25;
-            this.cmbSupplier.Items.AddRange(new object[] {
-            "SupA",
-            "SupB"});
-            this.cmbSupplier.Location = new System.Drawing.Point(823, 35);
-            this.cmbSupplier.Margin = new System.Windows.Forms.Padding(17, 4, 4, 4);
-            this.cmbSupplier.Name = "cmbSupplier";
-            this.cmbSupplier.Size = new System.Drawing.Size(230, 33);
-            this.cmbSupplier.TabIndex = 32;
-            this.cmbSupplier.Text = "Supplier";
-            this.cmbSupplier.SelectedIndexChanged += new System.EventHandler(this.cmbSupplier_SelectedIndexChanged);
-            // 
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToOrderColumns = true;
@@ -167,7 +149,7 @@
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(1019, 458);
+            this.dataGridView1.Size = new System.Drawing.Size(1008, 462);
             this.dataGridView1.TabIndex = 1;
             // 
             // ProductId
@@ -225,6 +207,24 @@
             this.SupplierId.MinimumWidth = 6;
             this.SupplierId.Name = "SupplierId";
             this.SupplierId.ReadOnly = true;
+            // 
+            // cmbSupplier
+            // 
+            this.cmbSupplier.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.cmbSupplier.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbSupplier.Font = new System.Drawing.Font("Century Gothic", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbSupplier.FormattingEnabled = true;
+            this.cmbSupplier.ItemHeight = 25;
+            this.cmbSupplier.Items.AddRange(new object[] {
+            "SupA",
+            "SupB"});
+            this.cmbSupplier.Location = new System.Drawing.Point(823, 35);
+            this.cmbSupplier.Margin = new System.Windows.Forms.Padding(17, 4, 4, 4);
+            this.cmbSupplier.Name = "cmbSupplier";
+            this.cmbSupplier.Size = new System.Drawing.Size(230, 33);
+            this.cmbSupplier.TabIndex = 32;
+            this.cmbSupplier.Text = "Supplier";
+            this.cmbSupplier.SelectedIndexChanged += new System.EventHandler(this.cmbSupplier_SelectedIndexChanged);
             // 
             // StaffInventory
             // 

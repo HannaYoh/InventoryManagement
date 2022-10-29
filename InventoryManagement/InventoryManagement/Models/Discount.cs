@@ -53,7 +53,15 @@ namespace InventoryManagement.Models
             var result = cmd.ExecuteScalar();
 
             closeConnection();
+            if(result == null || result == DBNull.Value)
+            {
+                return null;
+            }
+            else
+            {
             return (string)result;
+
+            }
 
         }
 
@@ -69,6 +77,30 @@ namespace InventoryManagement.Models
 
             closeConnection();
             return (int)result;
+
+        }
+
+        public List<Discount> searchSupplier()
+        {
+            createConnection();
+            List<Discount> list = new List<Discount>();
+
+            string query = "select * from Discount";
+            SqlCommand cmd = new SqlCommand(query, conn);
+
+            SqlDataReader reader = cmd.ExecuteReader();
+
+            while (reader.Read())
+            {
+                Discount temp = new Discount();
+
+                temp.DiscountCode = reader["DiscountCode"].ToString();
+
+                list.Add(temp);
+            }
+
+            closeConnection();
+            return list;
 
         }
     }

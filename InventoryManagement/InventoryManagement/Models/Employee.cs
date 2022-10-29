@@ -117,6 +117,38 @@ namespace InventoryManagement.Models
             return list;
         }
 
+        public List<Employee> loadAllEmployees()
+        {
+            createConnection();
+
+            List<Employee> list = new List<Employee>();
+
+            string query = "select * from Employee";
+            SqlCommand cmd = new SqlCommand(query, conn);
+            SqlDataReader reader = cmd.ExecuteReader();
+
+
+
+            while (reader.Read())
+            {
+                Employee temp = new Employee();
+
+                temp.EmployeeId = Convert.ToInt32(reader["EmployeeId"]);
+                temp.FullName = reader["FullName"].ToString();
+                temp.Gender = reader["Gender"].ToString();
+                temp.DateOfBirth = reader["DateOfBirth"].ToString();
+                temp.Email = reader["Email"].ToString();
+                temp.Roll = reader["Roll"].ToString();
+                temp.DepId = Convert.ToInt32(reader["DepId"]);
+
+             
+                list.Add(temp);
+            }
+
+            closeConnection();
+            return list;
+        }
+
         public Employee returnEmployeeInfo()
         {
             createConnection();           

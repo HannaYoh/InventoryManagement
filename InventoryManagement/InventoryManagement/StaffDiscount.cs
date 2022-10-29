@@ -13,6 +13,7 @@ namespace InventoryManagement
     public partial class StaffDiscount : Form
     {
         Models.DiscountDetail discountDetail = new Models.DiscountDetail();
+        Models.Supplier sup = new Models.Supplier();
 
         public StaffDiscount()
         {
@@ -86,6 +87,16 @@ namespace InventoryManagement
 
             }
 
+            List<Models.Supplier> list2 = new List<Models.Supplier>();
+
+
+            list2 = sup.searchSupplier();
+            cmbSupplier.Items.Clear();
+            foreach (var Supplier in list2)
+            {
+
+                cmbSupplier.Items.Add(Supplier.SupplierName);
+            }
 
         }
 

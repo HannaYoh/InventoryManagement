@@ -85,9 +85,31 @@ namespace InventoryManagement
 
         private void lblAdd_Click(object sender, EventArgs e)
         {
-            AddInventoryForm add = new AddInventoryForm();
+            AddInventoryForm add = new AddInventoryForm(this);
             add.Owner = this;
             add.ShowDialog();
+        }
+
+        public void reloadTable()
+        {
+            dataGridView1.Rows.Clear();
+            List<Models.Inventory> list = new List<Models.Inventory>();
+            list = inventory.viewAllProducts();
+            foreach (var products in list)
+            {
+                dataGridView1.Rows.Add(new object[]
+                {
+                   products.ProductId,
+                   products.ProductName,
+                   products.RetailPrice,
+                   products.WholesalePrice,
+                   products.ManufactureDate,
+                   products.AmountAvailable,
+                   products.isAvailable,
+                   products.SupplierId
+                });
+
+            }
         }
 
         private void AdminInventory_Load(object sender, EventArgs e)

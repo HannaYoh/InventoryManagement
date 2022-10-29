@@ -14,10 +14,11 @@ namespace InventoryManagement
     public partial class GenerateDiscount : Form
     {
         Models.Supplier sup = new Models.Supplier();
-
-        public GenerateDiscount()
+        AdminDiscount adminDiscount = new AdminDiscount();
+        public GenerateDiscount(AdminDiscount ad)
         {
             InitializeComponent();
+            adminDiscount = ad;
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -133,6 +134,7 @@ namespace InventoryManagement
                 discountDetail.addDiscountDetails();
             }
             MessageBox.Show("discount added");
+            adminDiscount.reloadTable();
         }
 
         private void GenerateDiscount_Load(object sender, EventArgs e)
