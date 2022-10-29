@@ -114,55 +114,61 @@ namespace InventoryManagement
             }
             else
             {
-                Models.Employee employee = new Models.Employee();
-                employee.FullName = txtName.Text;
-                employee.Email = txtEmail.Text;
-                employee.BackupPassword = txtBackupPwd.Text;
-                employee.DateOfBirth = dateTimePicker1.Value.ToString();
-                employee.Password = txtPassword.Text;
-                employee.Phone = txtMobile.Text;                          
-                employee.Address = txtAddress.Text;
-                
-               
-                if (comboBox2.SelectedIndex == 0)
+                if (AccessCode.Code == "000000" || AccessCode.Code != txtAccessCode.Text)
                 {
-                    employee.DepId = 1;
-                }
-                else if (comboBox2.SelectedIndex == 1)
-                {
-                    employee.DepId = 2;
+                    MessageBox.Show("Access code not compatable");
                 }
                 else
                 {
-                    employee.DepId = 3;
-                }
+                    Models.Employee employee = new Models.Employee();
+                    employee.FullName = txtName.Text;
+                    employee.Email = txtEmail.Text;
+                    employee.BackupPassword = txtBackupPwd.Text;
+                    employee.DateOfBirth = dateTimePicker1.Value.ToString();
+                    employee.Password = txtPassword.Text;
+                    employee.Phone = txtMobile.Text;
+                    employee.Address = txtAddress.Text;
 
-                if (comboBox1.SelectedIndex == 0)
-                {
-                    employee.Gender = "Male";
-                }
-                else if (comboBox1.SelectedIndex == 1)
-                {
-                    employee.Gender = "Female";
-                }
-                else
-                {
-                    employee.Gender = " ";
-                }
 
-                if (rbAdmin.Checked)
-                {
-                    employee.Roll = "Admin";
+                    if (comboBox2.SelectedIndex == 0)
+                    {
+                        employee.DepId = 1;
+                    }
+                    else if (comboBox2.SelectedIndex == 1)
+                    {
+                        employee.DepId = 2;
+                    }
+                    else
+                    {
+                        employee.DepId = 3;
+                    }
+
+                    if (comboBox1.SelectedIndex == 0)
+                    {
+                        employee.Gender = "Male";
+                    }
+                    else if (comboBox1.SelectedIndex == 1)
+                    {
+                        employee.Gender = "Female";
+                    }
+                    else
+                    {
+                        employee.Gender = " ";
+                    }
+
+                    if (rbAdmin.Checked)
+                    {
+                        employee.Roll = "Admin";
+                    }
+                    else
+                    {
+                        employee.Roll = "Staff";
+                    }
+
+                    employee.addEmployee();
+
+                    MessageBox.Show("Account created");
                 }
-                else
-                {
-                    employee.Roll = "Staff";
-                }
-
-                employee.addEmployee();
-
-                MessageBox.Show("Account created");
-
             }
 
 
