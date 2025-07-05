@@ -1,5 +1,6 @@
 # InventoryManagement
 <h1>This Inventory Management System is a desktop application built with C# and .NET, designed to help businesses efficiently track, manage, and optimize their inventory. The system provides a user-friendly interface for managing products, suppliers, orders, and stock levels while ensuring data accuracy and reducing manual errors.</h1>
+
 ![Screenshot (186)](https://github.com/user-attachments/assets/ac1428a0-adce-46bc-b41b-391e99514eee)
 ![Screenshot (235)](https://github.com/user-attachments/assets/823ecfc2-157a-40db-a5ba-fe6b2fc7b2a1)
 ![Screenshot (243)](https://github.com/user-attachments/assets/b4c42f4a-dd18-417e-9d44-d07882b82775)
